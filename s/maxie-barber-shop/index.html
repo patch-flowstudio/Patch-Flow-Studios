@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maxie Barber Shop | Haircuts 7 Days a Week in Magnolia, AR</title>
+<meta name="description" content="Maxie Barber Shop on E North St in Magnolia, Arkansas. Haircuts with Timothy, open seven days a week with evening hours. Call (870) 949-9868.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0e1320;--panel:#171e30;--neon:#39d4ff;--mag:#ff4fa3;--txt:#e9edf6;--mute:#9aa5bd;--spring:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 1rem/1.55 Inter,system-ui,sans-serif;background:var(--night);color:var(--txt);overflow-x:hidden;padding-bottom:84px;font-optical-sizing:auto}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+.concept{background:#000;color:#cfd6e6;font-size:.75rem;text-align:center;padding:8px 14px}
+header{padding:2.4rem 1.15rem 2rem;text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(57,212,255,.18),transparent 65%)}
+.open{display:inline-flex;align-items:center;gap:.5rem;font:600 .75rem/1 Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--neon);border:1px solid rgba(57,212,255,.45);border-radius:999px;padding:.45rem .8rem}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+h1{font:700 clamp(2.8rem,13vw,4.8rem)/1 Oswald,sans-serif;letter-spacing:-.01em;text-transform:uppercase;margin:.9rem 0 .5rem;text-shadow:0 0 18px rgba(255,79,163,.45)}
+h1 span{color:var(--mag)}
+.lead{max-width:30rem;margin:0 auto;color:var(--mute)}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.3rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.25rem;border-radius:14px;font:600 1rem/1 Inter;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease-out,filter .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97);filter:brightness(.9)}
+.btn.n{background:var(--neon);color:#04202b}.btn.g{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+section{padding:1.8rem 1.15rem;max-width:46rem;margin:0 auto}
+h2{font:700 1.7rem/1.1 Oswald;letter-spacing:.01em;text-transform:uppercase;margin-bottom:.4rem}
+.sub{color:var(--mute);font-size:.95rem;margin-bottom:1rem}
+.dial{display:flex;gap:.45rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.4rem}
+.dial button{flex:0 0 64px;scroll-snap-align:start;min-height:72px;border:0;border-radius:16px;background:var(--panel);color:var(--txt);font:inherit;cursor:pointer;transition:transform .12s ease-out,background-color .25s,box-shadow .3s var(--spring)}
+.dial button:active{transform:scale(.95)}
+.dial b{display:block;font:700 1.05rem/1.2 Oswald;text-transform:uppercase}
+.dial small{font-size:.7rem;color:var(--mute)}
+.dial button[aria-pressed="true"]{background:#0f2a36;box-shadow:inset 0 0 0 1.5px var(--neon)}
+.screen{margin-top:.8rem;background:var(--panel);border-radius:20px;padding:1.2rem;text-align:center;transition:opacity .22s var(--spring),transform .32s var(--spring)}
+.screen.swap{opacity:0;transform:scale(.98)}
+.screen .t{font:700 2rem/1.1 Oswald;letter-spacing:.01em;color:var(--neon);font-variant-numeric:tabular-nums}
+.screen p{color:var(--mute);font-size:.92rem;margin-top:.3rem}
+.kids{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.kids div{background:var(--panel);border-radius:18px;padding:1rem}
+.kids b{font:700 1.1rem/1.2 Oswald;text-transform:uppercase;color:var(--mag)}
+.kids p{font-size:.9rem;color:var(--mute);margin-top:.3rem}
+.sample{display:inline-block;font:600 .625rem/1 Inter;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,79,163,.18);color:#ff9fcb;padding:3px 6px;border-radius:5px;vertical-align:middle}
+blockquote{background:var(--panel);border-radius:18px;padding:1rem;margin:.6rem 0}
+blockquote cite{display:block;font:500 .75rem/1.3 Inter;color:var(--neon);margin-top:.5rem;font-style:normal}
+footer{text-align:center;font-size:.75rem;color:var(--mute);padding:1.5rem 1rem 2rem}
+.bar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;gap:.5rem;padding:.5rem;border-radius:20px;background:rgba(23,30,48,.7);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:0 10px 30px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.1);z-index:5;max-width:32rem;margin:0 auto}
+.bar .btn{flex:1}
+@media (max-width:360px){.kids{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.btn,.dial button,.screen{transition:opacity .2s}.btn:active,.dial button:active{transform:none}.screen.swap{transform:none}}
+@media (prefers-reduced-transparency:reduce){.bar{background:var(--panel);-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Maxie Barber Shop's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+  <span class="open"><i></i>Open 7 days a week</span>
+  <h1>Maxie <span>Barber</span> Shop</h1>
+  <p class="lead">Good cuts at reasonable prices on E North St in Magnolia, with evening hours every day and Sundays too.</p>
+  <div class="cta"><a class="btn n" href="tel:+18709499868">Call (870) 949-9868</a><a class="btn g" href="https://www.google.com/maps/dir/?api=1&destination=1108+E+North+St+Magnolia+AR+71753">Directions</a></div>
+</header>
+
+<section>
+  <h2>When can you come in?</h2>
+  <p class="sub">Tap a day to see the hours.</p>
+  <div class="dial" id="dial">
+    <button data-d="1" data-h="8 AM – 8 PM"><b>Mon</b><small>til 8</small></button>
+    <button data-d="2" data-h="8 AM – 8:30 PM"><b>Tue</b><small>til 8:30</small></button>
+    <button data-d="3" data-h="8 AM – 8:30 PM"><b>Wed</b><small>til 8:30</small></button>
+    <button data-d="4" data-h="8 AM – 8:30 PM"><b>Thu</b><small>til 8:30</small></button>
+    <button data-d="5" data-h="8 AM – 8:30 PM"><b>Fri</b><small>til 8:30</small></button>
+    <button data-d="6" data-h="8 AM – 7:30 PM"><b>Sat</b><small>til 7:30</small></button>
+    <button data-d="0" data-h="9 AM – 8 PM"><b>Sun</b><small>til 8</small></button>
+  </div>
+  <div class="screen" id="scr" aria-live="polite"><div class="t"></div><p></p></div>
+</section>
+
+<section>
+  <h2>Bring the kids</h2>
+  <div class="kids">
+    <div><b>Takes his time</b><p>A parent says Timothy made sure their kid's cut was perfect every step of the way.</p></div>
+    <div><b>Comfortable spot</b><p>Parents mention being comfortable with the atmosphere.</p></div>
+    <div><b>After school</b><p>Open until 8:30 PM most weekdays.</p></div>
+    <div><b>Walk-ins</b><p>Call ahead to check the wait <span class="sample">sample</span></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Word around Magnolia</h2>
+  <blockquote>My son love going here and I’m comfortable with the atmosphere 2 thumbs up!!!!<cite>Google review · January 2026</cite></blockquote>
+  <blockquote>Good cut reasonable price<cite>Google review · November 2025</cite></blockquote>
+  <blockquote>Fabulous customer service and the nicest haircut my kiddo has ever had. Timothy took his time and made sure it was perfect every step of the way. We’ll be back!!!!! 10/10<cite>Google review · November 2024</cite></blockquote>
+</section>
+
+<section>
+  <h2>Find the shop</h2>
+  <p>1108 E North St, Magnolia, AR 71753</p>
+  <p><a href="tel:+18709499868">(870) 949-9868</a></p>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="bar" aria-label="Quick actions"><a class="btn n" href="tel:+18709499868">Call the shop</a><a class="btn g" href="https://www.google.com/maps/dir/?api=1&destination=1108+E+North+St+Magnolia+AR+71753">Directions</a></nav>
+<script>
+var N={0:'Sunday',1:'Monday',2:'Tuesday',3:'Wednesday',4:'Thursday',5:'Friday',6:'Saturday'},scr=document.getElementById('scr'),today=new Date().getDay();
+function pick(b){document.querySelectorAll('#dial button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');scr.classList.add('swap');setTimeout(function(){scr.querySelector('.t').textContent=b.dataset.h;scr.querySelector('p').textContent=(+b.dataset.d===today?'Today, ':'')+N[b.dataset.d];scr.classList.remove('swap')},110)}
+document.querySelectorAll('#dial button').forEach(function(b){b.setAttribute('aria-pressed','false');b.addEventListener('click',function(){pick(b)})});
+pick(document.querySelector('#dial [data-d="'+today+'"]'));
+</script>
+</body>
+</html>

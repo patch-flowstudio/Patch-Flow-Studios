@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ethel's Retro Coffee | Payette, ID</title>
+<meta name="description" content="Ethel's Retro Coffee on S Main St in Payette, Idaho: custom espresso drinks made your way in a retro coffee shop. Open Monday to Saturday, 7 AM to 3 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#3fb8af;--teal2:#1f7f79;--pink:#ff7ea5;--cream:#fff7ea;--check:#2a2a2a;--ink:#24201d;--spring:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:100%/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;padding-bottom:5.5rem}
+a,button{color:inherit;-webkit-tap-highlight-color:transparent}
+.concept{background:var(--ink);color:#fbeee0;font-size:.75rem;text-align:center;padding:.45rem .8rem}
+.concept b{color:var(--pink)}
+header{background:var(--teal);color:#fff;text-align:center;padding:2.2rem 1.1rem 2.4rem;position:relative}
+header:after{content:"";position:absolute;left:0;right:0;bottom:-1rem;height:1rem;background:conic-gradient(var(--check) 25%,#fff 0 50%,var(--check) 0 75%,#fff 0) 0 0/1rem 1rem}
+.star{display:block;margin:0 auto .3rem}
+h1{font-family:Lobster,cursive;font-weight:400;font-size:clamp(3rem,14vw,5.2rem);line-height:1;letter-spacing:-.01em;text-shadow:.18rem .18rem 0 var(--teal2)}
+.sub{font-weight:700;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-top:.4rem;color:#e4fffc}
+.lede{max-width:26rem;margin:.7rem auto 0;color:#f2fffe}
+main{max-width:50rem;margin:0 auto;padding:1.6rem 1rem 2.5rem}
+section{margin-top:2.4rem}
+h2{font-family:Lobster,cursive;font-weight:400;font-size:2rem;line-height:1.1;color:var(--teal2);margin-bottom:.3rem}
+.muted{color:#5b5048}
+/* drink builder */
+.build{background:#fff;border-radius:1.4rem;padding:1.1rem;margin-top:.9rem;box-shadow:0 .6rem 1.8rem rgba(36,32,29,.08)}
+.row{margin-top:.9rem}
+.row:first-child{margin-top:0}
+.row label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a6c60;margin-bottom:.35rem}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem}
+.seg button{border:2px solid #eadfcf;background:var(--cream);font:600 .92rem/1 system-ui,sans-serif;min-height:2.75rem;padding:0 .95rem;border-radius:999px;cursor:pointer;transition:transform .12s ease-out,background .2s,border-color .2s,color .2s;touch-action:manipulation}
+.seg button:active{transform:scale(.96)}
+.seg button[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:#fff}
+.ticket{margin-top:1rem;background:var(--teal);color:#fff;border-radius:1rem;padding:.9rem 1rem;transition:transform .35s var(--spring)}
+.ticket b{font-family:Lobster,cursive;font-weight:400;font-size:1.3rem;display:block}
+.ticket.bump{transform:scale(1.02)}
+.note{font-size:.8rem;color:#7a6c60;margin-top:.6rem}
+.tag{display:inline-block;font:700 .68rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:#ffe6a6;color:#6a4a00;border-radius:.3rem;padding:.1rem .45rem;vertical-align:middle}
+.favs{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin-top:.8rem}
+.fav{background:#fff;border-radius:1.1rem;padding:1rem;border-top:.35rem solid var(--pink)}
+.fav b{display:block;letter-spacing:-.005em}
+.fav span{font-size:.85rem;color:#6b5f55}
+.hrs{background:#fff;border-radius:1.1rem;padding:1rem 1.1rem;margin-top:.8rem}
+.hrs div{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid #f1e6d6}
+.hrs div:last-child{border:0}
+.q{background:#fff;border-radius:1.1rem;padding:1rem 1.1rem;margin-top:.8rem;border-left:.3rem solid var(--teal)}
+.q small{display:block;margin-top:.4rem;font-weight:700;color:var(--teal2);font-size:.8rem}
+.bar{position:fixed;left:.75rem;right:.75rem;bottom:.75rem;z-index:5;display:flex;gap:.5rem;padding:.5rem;border-radius:1.4rem;background:rgba(255,247,234,.72);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.6);box-shadow:0 .6rem 2rem rgba(36,32,29,.18);max-width:30rem;margin:0 auto}
+.btn{flex:1;min-height:2.9rem;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:.95rem;border-radius:1rem;transition:transform .12s ease-out,filter .12s ease-out;touch-action:manipulation}
+.btn:active{transform:scale(.97);filter:brightness(.93)}
+.c{background:var(--pink);color:#fff}.d{background:#fff}
+footer{text-align:center;font-size:.8rem;padding:1.5rem 1rem;color:#7a6c60}
+@media (prefers-reduced-motion:reduce){.ticket,.seg button,.btn{transition:none}.ticket.bump{transform:none}.btn:active,.seg button:active{transform:none}}
+@media (prefers-reduced-transparency:reduce){.bar{background:var(--cream);-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Ethel's Retro Coffee's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+ <svg class="star" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l5 12 13 1-10 8 3 13-11-7-11 7 3-13L2 15l13-1z" fill="#ff7ea5"/></svg>
+ <h1>Ethel's</h1>
+ <div class="sub">Retro Coffee &middot; Payette, Idaho</div>
+ <p class="lede">A darling retro coffee shop on Main Street where every drink is made the way you like it.</p>
+</header>
+<main>
+<section>
+ <h2>Tell us how you like it</h2>
+ <p class="muted">Regulars don't order off a list. They say hot or cold, a flavor, how much caffeine "octane", and how sweet, and the drink is built from there. Try it:</p>
+ <div class="build">
+  <div class="row"><label>Temperature</label><div class="seg" data-k="t"><button aria-pressed="true">Hot</button><button aria-pressed="false">Iced</button></div></div>
+  <div class="row"><label>Flavor</label><div class="seg" data-k="f"><button aria-pressed="true">Maple nut</button><button aria-pressed="false">Almond</button><button aria-pressed="false">Surprise me</button></div></div>
+  <div class="row"><label>Octane</label><div class="seg" data-k="o"><button aria-pressed="false">Low</button><button aria-pressed="true">Regular</button><button aria-pressed="false">High</button></div></div>
+  <div class="row"><label>Sweetness</label><div class="seg" data-k="s"><button aria-pressed="false">Light</button><button aria-pressed="true">Just right</button><button aria-pressed="false">Sweet</button></div></div>
+  <div class="ticket" aria-live="polite"><b>Your order</b><span id="out">Hot, maple nut, regular octane, just right sweet</span></div>
+  <p class="note">Just a way to plan what to ask for at the counter. Nothing is sent anywhere. <span class="tag">sample</span></p>
+ </div>
+</section>
+<section>
+ <h2>Favorites</h2>
+ <div class="favs">
+  <div class="fav"><b>Candy maple nut</b><span>A regular's go-to</span></div>
+  <div class="fav"><b>Almond breve</b><span>"Excellent"</span></div>
+  <div class="fav"><b>Custom anything</b><span>Built to your taste</span></div>
+ </div>
+</section>
+<section>
+ <h2>Hours</h2>
+ <div class="hrs"><div><span>Monday to Saturday</span><b>7 AM to 3 PM</b></div><div><span>Sunday</span><b>Closed</b></div></div>
+ <p class="muted" style="margin-top:.5rem">441 S Main St, Payette, ID 83661</p>
+</section>
+<section>
+ <h2>Overheard</h2>
+ <div class="q">"Super yummy coffee, great prices, and the nicest owner ever!"<small>Google review, March 2026</small></div>
+ <div class="q">"She remembers what I like I always recommend her coffee shop to all and everyone love my candy maple nut it's amazing"<small>Google review, December 2025</small></div>
+ <div class="q">"My almond breve was excellent, super service, and a darling retro atmosphere!!"<small>Google review, August 2025</small></div>
+</section>
+</main>
+<nav class="bar" aria-label="Quick actions"><a class="btn c" href="tel:+12084052106">Call (208) 405-2106</a><a class="btn d" href="https://www.google.com/maps/dir/?api=1&amp;destination=441+S+Main+St,+Payette,+ID+83661">Directions</a></nav>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){var out=document.getElementById('out'),tk=document.querySelector('.ticket'),segs=[].slice.call(document.querySelectorAll('.seg'));
+function txt(k){var b=document.querySelector('.seg[data-k="'+k+'"] [aria-pressed="true"]');return b?b.textContent:''}
+segs.forEach(function(s){[].slice.call(s.children).forEach(function(b){b.addEventListener('pointerdown',function(){go(s,b)});b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go(s,b)}})})});
+function go(s,b){[].slice.call(s.children).forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+out.textContent=txt('t')+', '+txt('f').toLowerCase()+', '+txt('o').toLowerCase()+' octane, '+txt('s').toLowerCase()+' sweet';
+tk.classList.add('bump');setTimeout(function(){tk.classList.remove('bump')},160)}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe Utopia · Espresso &amp; sandwiches on Hwy 2 West, Kalispell</title>
+<meta name="description" content="Family-owned espresso and sandwich shop at 3472 US Hwy 2 W, Kalispell. London Fog, breakfast burritos, deli sandwiches. Mon to Sat.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--hwy:#0b6b3a;--pine:#163428;--sky:#f5efe2;--mustard:#e3a72f;--ink:#1a221d;--muted:#5f6a62}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{background:var(--sky);color:var(--ink);font:400 1rem/1.6 Overpass,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.pf-concept{background:var(--pine);color:#cdd9d1;font:13px/1.45 system-ui,sans-serif;text-align:center;padding:8px 14px}
+.hero{position:relative;padding:3rem 1.1rem 0;padding-bottom:150px;background:linear-gradient(180deg,#f9e9c8 0%,var(--sky) 55%);overflow:hidden}
+.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px}
+.sign{position:relative;z-index:2;max-width:560px;margin:0 auto;background:var(--hwy);color:#fff;border-radius:14px;padding:1.6rem 1.6rem 1.4rem;box-shadow:0 0 0 4px #fff,0 0 0 6px var(--hwy),0 24px 40px -18px rgba(22,52,40,.6);text-align:center}
+.shield{display:inline-grid;place-items:center;width:58px;height:58px;background:#fff;color:var(--ink);font:800 1.5rem/1 Overpass,sans-serif;clip-path:path("M29 0 C40 6 52 6 58 4 C58 30 50 48 29 58 C8 48 0 30 0 4 C6 6 18 6 29 0Z");margin-bottom:.6rem}
+.sign h1{font:800 clamp(2rem,9vw,3.4rem)/1 Overpass,sans-serif;letter-spacing:-.01em}
+.sign p{font:600 1rem/1.4 Overpass,sans-serif;opacity:.92;margin-top:.5rem}
+.sign .arrow{display:flex;justify-content:center;align-items:center;gap:.6rem;margin-top:1rem;font:800 1.05rem/1 Overpass,sans-serif;letter-spacing:.04em}
+.post{position:relative;z-index:1;width:14px;height:90px;margin:0 auto;background:linear-gradient(90deg,#8a9089,#c7ccc6,#8a9089)}
+.tagline{position:relative;z-index:2;text-align:center;font:400 clamp(1.4rem,5vw,2rem)/1.2 "DM Serif Display",serif;max-width:24ch;margin:1.4rem auto 0}
+.tagline i{color:var(--hwy)}
+.btns{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+.btn{min-height:50px;display:inline-flex;align-items:center;padding:0 1.4rem;border-radius:12px;font:800 1rem/1 Overpass,sans-serif;text-decoration:none;transition:transform 100ms ease-out,box-shadow .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn.g{background:var(--hwy);color:#fff}.btn.g:hover{box-shadow:0 10px 22px -10px var(--hwy)}
+.btn.m{background:var(--mustard);color:var(--ink)}.btn.m:hover{box-shadow:0 10px 22px -10px #b17d12}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+/* finding it */
+.find{background:var(--pine);color:#e8efe9;padding:4rem 1.1rem}
+.find .in{max-width:980px;margin:0 auto}
+.find h2,.menu h2,.visit h2{font:400 clamp(1.8rem,6vw,2.8rem)/1.05 "DM Serif Display",serif}
+.road{margin-top:2rem;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.road:before{content:"";position:absolute;left:0;right:0;top:22px;height:6px;background:repeating-linear-gradient(90deg,var(--mustard) 0 28px,transparent 28px 46px);border-radius:3px}
+.stop{position:relative;padding-top:3.4rem}
+.stop:before{content:"";position:absolute;top:10px;left:0;width:30px;height:30px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px var(--hwy)}
+.stop:last-child:before{background:var(--mustard)}
+.stop b{display:block;font:800 1.05rem/1.3 Overpass,sans-serif}
+.stop p{color:#b9c8bf;font-size:.95rem;margin-top:.3rem}
+.find q{display:block;margin-top:2.4rem;font:400 1.2rem/1.45 "DM Serif Display",serif;font-style:italic;color:#fff}
+.find cite{display:block;margin-top:.4rem;font:600 .74rem/1 Overpass,sans-serif;letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--mustard)}
+/* chalkboard */
+.menu{padding:4.5rem 1.1rem}
+.menu .in{max-width:980px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:2.6rem;align-items:start}
+.menu p.lead{color:var(--muted);margin-top:1rem;font-size:1.05rem}
+.board{background:#22302a;color:#f2f0e8;border-radius:10px;padding:1.8rem 1.6rem;box-shadow:inset 0 0 0 10px #6b4f33,inset 0 0 0 12px #4e3824,0 20px 40px -20px rgba(0,0,0,.5);background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:6px 6px}
+.board h3{font:400 1.1rem/1 "DM Serif Display",serif;font-style:italic;color:var(--mustard);margin:1rem 0 .4rem}
+.board h3:first-child{margin-top:0}
+.board li{list-style:none;display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px dashed rgba(242,240,232,.2)}
+.board li span{font-size:.85rem;color:#bfc9c1;text-align:right}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+/* visit */
+.visit{background:#efe4cc;padding:4rem 1.1rem}
+.visit .in{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.clock{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;font-size:1.05rem;margin-top:1.2rem}
+.clock b{font-weight:800}
+.visit .btns{justify-content:flex-start}
+.revs blockquote{font:400 1.15rem/1.45 "DM Serif Display",serif;margin-bottom:.3rem}
+.revs cite{display:block;font:600 .72rem/1 Overpass,sans-serif;letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--muted);margin-bottom:1.4rem}
+.pf-foot{background:var(--pine);color:#a9bab0;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:22px 14px 30px}
+.pf-foot a{font-weight:700;color:#fff}
+@media (max-width:720px){.menu .in,.visit .in{grid-template-columns:1fr}.road{grid-template-columns:1fr;gap:1.4rem}.road:before{left:13px;right:auto;top:0;bottom:0;width:6px;height:auto;background:repeating-linear-gradient(180deg,var(--mustard) 0 20px,transparent 20px 34px)}.stop{padding:0 0 0 3.2rem}.stop:before{top:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:active{transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Cafe Utopia's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+ <div class="sign">
+  <span class="shield">2</span>
+  <h1>Cafe Utopia</h1>
+  <p>Espresso · Sandwiches · Breakfast</p>
+  <div class="arrow">NEXT RIGHT, 3472 HWY 2 W <svg width="26" height="18" viewBox="0 0 26 18" aria-hidden="true"><path d="M2 9h20M15 2l7 7-7 7" stroke="#fff" stroke-width="3" fill="none"/></svg></div>
+ </div>
+ <div class="post" aria-hidden="true"></div>
+ <p class="tagline">A family-owned espresso and sandwich stop on <i>Highway 2 West</i>, worth the turn off.</p>
+ <div class="btns" style="position:relative;z-index:2;padding-bottom:1.5rem">
+  <a class="btn g" href="https://www.google.com/maps/dir/?api=1&amp;destination=3472%20US%20Hwy%202%20W%2C%20Kalispell%2C%20MT%2059901">Directions</a>
+  <a class="btn m" href="tel:+14063001281">Call (406) 300-1281</a>
+ </div>
+ <svg class="mtn" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 150 L0 90 L140 30 L260 85 L380 20 L520 95 L640 40 L780 100 L900 35 L1040 90 L1200 45 L1200 150Z" fill="#cfd8c8"/><path d="M0 150 L0 115 L180 70 L330 120 L470 75 L640 125 L820 80 L980 120 L1200 85 L1200 150Z" fill="#163428"/></svg>
+</header>
+
+<section class="find">
+ <div class="in">
+  <h2>Keep an eye out, it's easy to drive past</h2>
+  <div class="road">
+   <div class="stop"><b>Heading west on Hwy 2</b><p>Out of Kalispell toward Kila.</p></div>
+   <div class="stop"><b>Watch the right side</b><p>The sign is small, so slow down a little.</p></div>
+   <div class="stop"><b>3472 US Hwy 2 W</b><p>Coffee, a sandwich, and back on the road.</p></div>
+  </div>
+  <q>All good, sign is hard to see from the road but no other issues. They serve gooood coffee!</q>
+  <cite>Google review · Jul 2025</cite>
+ </div>
+</section>
+
+<section class="menu">
+ <div class="in">
+  <div>
+   <h2>On the board</h2>
+   <p class="lead">Specialty espresso drinks and deli sandwiches off the grill, with breakfast all morning. These are the items customers mention most.</p>
+   <div class="btns" style="justify-content:flex-start"><a class="btn g" href="tel:+14063001281">Call ahead</a></div>
+  </div>
+  <div class="board" aria-label="Menu highlights">
+   <h3>From the espresso bar</h3>
+   <ul><li>London Fog<span>a regular's favorite</span></li><li>Iced caramel macchiato<span></span></li><li>Blended lotus drinks<span>seasonal colors</span></li></ul>
+   <h3>Breakfast</h3>
+   <ul><li>Breakfast burrito<span>"best in a while"</span></li><li>Everything bagel breakfast sandwich<span></span></li></ul>
+   <h3>Deli sandwiches</h3>
+   <ul><li>The Little Dipper<span>roast beef, roasted red pepper, grilled onions, Swiss, horseradish mayo, au jus</span></li><li>Paninis off the grill<span>more daily <span class="smp">sample</span></span></li></ul>
+  </div>
+ </div>
+</section>
+
+<section class="visit">
+ <div class="in">
+  <div>
+   <h2>Hours</h2>
+   <div class="clock"><b>Mon – Fri</b><span>6:30am – 3pm</span><b>Saturday</b><span>8am – 3pm</span><b>Sunday</b><span>Closed</span></div>
+   <div class="btns">
+    <a class="btn g" href="https://www.google.com/maps/dir/?api=1&amp;destination=3472%20US%20Hwy%202%20W%2C%20Kalispell%2C%20MT%2059901">Directions</a>
+    <a class="btn m" href="tel:+14063001281">Call</a>
+   </div>
+  </div>
+  <div class="revs">
+   <blockquote>"Awesome sandwiches and an excellent London Fog!"</blockquote><cite>Google review · Feb 2026</cite>
+   <blockquote>"Very nice people, never have I had a bad coffee! Top favorite place for coffee."</blockquote><cite>Google review · Feb 2026</cite>
+   <blockquote>"You can tell the owner really puts her heart into this place."</blockquote><cite>Google review · Jun 2023</cite>
+  </div>
+ </div>
+</section>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+</body>
+</html>

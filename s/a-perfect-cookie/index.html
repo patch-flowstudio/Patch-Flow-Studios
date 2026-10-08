@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Perfect Cookie | Macarons, Dubai chocolate &amp; cheesecake in Perryville, KY</title>
+<meta name="description" content="Macarons, Dubai chocolate treats, cheesecakes, scones and cookies made in house at A Perfect Cookie, 103 N Bragg St, Perryville, Kentucky.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--pist:#b9cf9a;--pist2:#7f9a5c;--pink:#f4c6cf;--pink2:#e48aa0;--choc:#3d2a22;--cream:#fffaf4;--line:#efe2d6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font:400 16px/1.6 'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--choc);overflow-x:hidden}
+a{color:inherit}
+.pf-concept{font:13px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px;background:var(--pink);color:var(--choc)}
+.hero{display:grid;gap:24px;max-width:1100px;margin:0 auto;padding:48px 22px 24px;align-items:center}
+@media(min-width:820px){.hero{grid-template-columns:1.1fr .9fr;padding:80px 22px 40px}}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pist2)}
+.tag:before{content:"";width:22px;height:2px;background:currentColor}
+h1{font-family:Gloock,serif;font-weight:400;font-size:clamp(50px,11.5vw,104px);line-height:.95;letter-spacing:-.02em;margin:16px 0 18px}
+h1 span{display:block;color:var(--pink2)}
+.hero p{font-size:18px;max-width:38ch;color:#6b5247}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:16px;text-decoration:none;font-weight:700;transition:transform 100ms ease-out,box-shadow .25s,background-color .25s;touch-action:manipulation}
+.btn.p{background:var(--choc);color:var(--cream);box-shadow:0 10px 24px -12px rgba(61,42,34,.8)}
+.btn.s{background:#fff;border:1.5px solid var(--line)}
+.btn:hover{box-shadow:0 14px 30px -14px rgba(61,42,34,.7)}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible,.t:focus-visible{outline:3px solid var(--pink2);outline-offset:3px}
+/* macaron tower */
+.tower{display:grid;justify-items:center;gap:6px;padding:10px 0}
+.mac{width:min(220px,58vw);height:64px;position:relative;filter:drop-shadow(0 12px 14px rgba(61,42,34,.15))}
+.mac i{position:absolute;left:0;right:0;height:26px;border-radius:50%/60%;background:var(--c)}
+.mac i:first-child{top:0}
+.mac i:last-child{bottom:0}
+.mac b{position:absolute;left:6%;right:6%;top:24px;height:16px;border-radius:8px;background:var(--f)}
+.mac i:after{content:"";position:absolute;left:4%;right:4%;bottom:-3px;height:7px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--c) 0 4px,rgba(0,0,0,.08) 4px 6px)}
+.mac:nth-child(2){width:min(200px,52vw)}.mac:nth-child(3){width:min(180px,48vw)}
+section{max-width:1100px;margin:0 auto;padding:70px 22px}
+h2{font-family:Gloock,serif;font-weight:400;font-size:clamp(34px,6vw,58px);line-height:1;letter-spacing:-.01em;margin-bottom:12px}
+.lead{color:#6b5247;max-width:52ch;margin-bottom:30px}
+/* signature: build-a-box */
+.builder{display:grid;gap:22px}
+@media(min-width:880px){.builder{grid-template-columns:1.3fr .7fr;align-items:start}}
+.treats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.t{appearance:none;font:inherit;color:inherit;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:14px;min-height:96px;cursor:pointer;transition:transform 100ms ease-out,border-color .2s,background-color .2s;display:flex;flex-direction:column;gap:6px}
+.t:active{transform:scale(.97)}
+.t .dot{width:26px;height:26px;border-radius:50%;background:var(--c);box-shadow:inset 0 -4px 0 rgba(0,0,0,.08)}
+.t b{font-size:15px;line-height:1.25}
+.t small{font-size:12.5px;color:#8b7064;line-height:1.35}
+.t[aria-pressed=true]{border-color:var(--choc);background:#fff4f6}
+.box{position:sticky;top:16px;background:var(--choc);color:var(--cream);border-radius:24px;padding:22px}
+.box h3{font-family:Gloock,serif;font-weight:400;font-size:26px}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0;padding:12px;border-radius:16px;background:#2c1e18;box-shadow:inset 0 2px 10px rgba(0,0,0,.4)}
+.slot{aspect-ratio:1;border-radius:50%;border:1.5px dashed rgba(255,250,244,.25);transition:background-color .35s cubic-bezier(.2,.8,.2,1),transform .35s cubic-bezier(.3,1.5,.5,1)}
+.slot.on{border:0;background:var(--c);transform:scale(1.04)}
+.box p{font-size:14px;color:#e8d8cc}
+.box .btn{margin-top:14px;width:100%;background:var(--pink);color:var(--choc)}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.85;vertical-align:middle}
+.notes{display:grid;gap:16px}
+@media(min-width:760px){.notes{grid-template-columns:repeat(3,1fr)}}
+.n{border-radius:20px;padding:22px;background:var(--bg)}
+.n blockquote{font-size:17px;line-height:1.5}
+.n cite{display:block;margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-style:normal;opacity:.75}
+.visit{display:grid;gap:26px;background:#fff;border:1.5px solid var(--line);border-radius:28px;padding:30px}
+@media(min-width:820px){.visit{grid-template-columns:1fr 1fr;padding:44px}}
+.hrs{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;font-size:15.5px}
+.hrs dd{text-align:right}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:28px 16px 36px;color:#7a6157}
+.pf-foot a{font-weight:700}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not A Perfect Cookie's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+<div>
+<span class="tag">N Bragg St · Perryville, Kentucky</span>
+<h1>Made in house,<span>boxed with care.</span></h1>
+<p>Macarons in any flavor, Dubai chocolate treats, cheesecakes, scones and cookies. Stop in, or call Kati to put together a box for a gift or a gathering.</p>
+<div class="row"><a class="btn p" href="tel:+18594904979">Call (859) 490-4979</a><a class="btn s" href="https://www.google.com/maps/dir/?api=1&amp;destination=103%20N%20Bragg%20St%2C%20Perryville%2C%20KY%2040468">Directions</a></div>
+</div>
+<div class="tower" aria-hidden="true">
+<div class="mac" style="--c:#f4c6cf;--f:#fff3e8"><i></i><b></b><i></i></div>
+<div class="mac" style="--c:#b9cf9a;--f:#5b3f30"><i></i><b></b><i></i></div>
+<div class="mac" style="--c:#f6dd8a;--f:#fff3e8"><i></i><b></b><i></i></div>
+</div>
+</header>
+
+<section>
+<h2>Plan a box</h2>
+<p class="lead">Tap the treats you'd like to see what a box could look like, then call to order. Nothing is sent from this page. Availability changes, so check with Kati.</p>
+<div class="builder">
+<div class="treats" id="treats">
+<button class="t" style="--c:#b9cf9a" aria-pressed="false"><span class="dot"></span><b>Dubai chocolate bar</b><small>Also a cookie butter version for non-pistachio fans.</small></button>
+<button class="t" style="--c:#c89a6a" aria-pressed="false"><span class="dot"></span><b>Dubai chocolate hearts</b><small>Named as a favorite in February 2026.</small></button>
+<button class="t" style="--c:#e48aa0" aria-pressed="false"><span class="dot"></span><b>Dubai strawberry cups</b><small>And chocolate covered strawberries.</small></button>
+<button class="t" style="--c:#f6dd8a" aria-pressed="false"><span class="dot"></span><b>Pineapple macarons</b><small>With pineapple curd. "She can do any flavor."</small></button>
+<button class="t" style="--c:#f4c6cf" aria-pressed="false"><span class="dot"></span><b>Mini macarons</b><small>By the cup.</small></button>
+<button class="t" style="--c:#a8743f" aria-pressed="false"><span class="dot"></span><b>Apple pecan cheesecake</b><small>"Amazing," says one customer.</small></button>
+<button class="t" style="--c:#5b3f30" aria-pressed="false"><span class="dot"></span><b>Chocolate cheesecake</b><small>A family favorite.</small></button>
+<button class="t" style="--c:#d7b98f" aria-pressed="false"><span class="dot"></span><b>Biscoff brownie</b><small>Dubai and Biscoff, together.</small></button>
+<button class="t" style="--c:#efe0c4" aria-pressed="false"><span class="dot"></span><b>Scones</b><small>"Fresh and light."</small></button>
+</div>
+<aside class="box" aria-live="polite">
+<h3>Your box</h3>
+<div class="slots" id="slots"><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span></div>
+<p id="sum">Pick up to six treats.</p>
+<p style="margin-top:8px">Box sizes and gift extras <span class="smp">sample</span></p>
+<a class="btn" href="tel:+18594904979">Call to order</a>
+</aside>
+</div>
+</section>
+
+<section style="padding-top:0">
+<h2>Sweet words</h2>
+<div class="notes" style="margin-top:24px">
+<div class="n" style="--bg:#eef4e5"><blockquote>"You can tell it's all made in house and not something old or bought online for resell."</blockquote><cite>Google review, October 2025</cite></div>
+<div class="n" style="--bg:#fdebef"><blockquote>"Very helpful with every detail! Made it very easy one stop shop for me."</blockquote><cite>Google review, September 2025</cite></div>
+<div class="n" style="--bg:#fbf1d9"><blockquote>"The only place I get macarons from!!"</blockquote><cite>Google review, September 2025</cite></div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="visit">
+<div><h2>Visit</h2><p style="color:#6b5247;margin-bottom:20px">103 N Bragg St, Perryville, KY 40468</p><div class="row" style="margin:0"><a class="btn p" href="https://www.google.com/maps/dir/?api=1&amp;destination=103%20N%20Bragg%20St%2C%20Perryville%2C%20KY%2040468">Get directions</a><a class="btn s" href="tel:+18594904979">Call</a></div></div>
+<dl class="hrs"><dt>Monday</dt><dd>11 AM to 5 PM</dd><dt>Tuesday</dt><dd>11 AM to 5 PM</dd><dt>Wednesday</dt><dd>11 AM to 5 PM</dd><dt>Thursday</dt><dd>11 AM to 5 PM</dd><dt>Friday</dt><dd>11 AM to 5 PM</dd><dt>Saturday</dt><dd>11 AM to 5 PM</dd><dt>Sunday</dt><dd>Closed</dd></dl>
+</div>
+</section>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){var bs=[].slice.call(document.querySelectorAll('.t')),sl=[].slice.call(document.querySelectorAll('.slot')),sum=document.getElementById('sum'),picked=[];
+function draw(){sl.forEach(function(s,i){var b=picked[i];s.classList.toggle('on',!!b);s.style.setProperty('--c',b?b.style.getPropertyValue('--c'):'transparent')});sum.textContent=picked.length?picked.map(function(b){return b.querySelector('b').textContent}).join(', '):'Pick up to six treats.'}
+bs.forEach(function(b){b.addEventListener('click',function(){var i=picked.indexOf(b);if(i>-1){picked.splice(i,1);b.setAttribute('aria-pressed','false')}else if(picked.length<6){picked.push(b);b.setAttribute('aria-pressed','true')}draw()})});})();
+(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;var els=document.querySelectorAll('section h2, .treats, .n, .visit');els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>

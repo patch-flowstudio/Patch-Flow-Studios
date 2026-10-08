@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Essa Bakery · Baklava &amp; Middle Eastern desserts · SE Division, Portland</title>
+<meta name="description" content="Essa Bakery on SE Division St in Montavilla, Portland. Baklava made in house from family recipes from Iraq, kunafa, awameh and cookies, sold by the pound.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--walnut:#3a2416;--honey:#d99a2b;--honey2:#f0c069;--pist:#7f9a3a;--cream:#fbf3e4;--rose:#f3e1d6;--muted:#7a6656}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{background:var(--cream);color:var(--walnut);font:400 1rem/1.6 Outfit,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.pf-concept{background:var(--walnut);color:#e7d6c4;font:13px/1.45 system-ui,sans-serif;text-align:center;padding:8px 14px}
+header{background:var(--walnut);color:var(--cream);padding:3.4rem 1.2rem 5.4rem;position:relative;text-align:center}
+header:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--cream);-webkit-mask:radial-gradient(circle at 20px 0,transparent 20px,#000 21px) 0 0/40px 60px repeat-x;mask:radial-gradient(circle at 20px 0,transparent 20px,#000 21px) 0 0/40px 60px repeat-x}
+.drip{position:absolute;left:0;right:0;bottom:44px;height:30px;background:linear-gradient(var(--honey),var(--honey2));-webkit-mask:radial-gradient(ellipse 14px 18px at 50% 0,#000 98%,transparent) 0 0/56px 30px repeat-x;mask:radial-gradient(ellipse 14px 18px at 50% 0,#000 98%,transparent) 0 0/56px 30px repeat-x;opacity:.9}
+.small{font:500 .74rem/1 Outfit,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--honey2)}
+header h1{font:700 clamp(2.8rem,11vw,6rem)/.9 Amiri,serif;margin:1rem 0 .8rem}
+header p{max-width:38ch;margin:0 auto;color:#e7d6c4;font-size:1.06rem}
+.cta{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-top:1.8rem;position:relative;z-index:2}
+.btn{min-height:50px;display:inline-flex;align-items:center;padding:0 1.5rem;border-radius:14px;font:700 .98rem/1 Outfit,sans-serif;text-decoration:none;transition:transform 100ms ease-out,box-shadow .2s;touch-action:manipulation;border:0;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn.h{background:var(--honey);color:var(--walnut)}.btn.h:hover{box-shadow:0 10px 24px -10px var(--honey)}
+.btn.o{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(251,243,228,.6)}
+.btn:focus-visible{outline:3px solid var(--pist);outline-offset:3px}
+/* tray */
+.tray{max-width:1060px;margin:0 auto;padding:3.5rem 1.2rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+h2{font:700 clamp(2rem,6vw,3rem)/1 Amiri,serif}
+.lead{color:var(--muted);margin:.8rem 0 1.4rem}
+.pan{aspect-ratio:1;background:#7a4a24;border-radius:22px;padding:18px;box-shadow:inset 0 0 0 6px #5a3418,0 30px 50px -30px rgba(58,36,22,.7);position:relative;overflow:hidden}
+.grid{width:100%;height:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:0;transform:rotate(45deg) scale(1.42)}
+.dia{border:0;background:linear-gradient(135deg,#e9b866,#c9862e);box-shadow:inset 0 0 0 1px rgba(90,52,24,.6);cursor:pointer;position:relative;transition:filter .15s,transform 100ms ease-out}
+.dia:after{content:"";position:absolute;inset:34%;border-radius:50%;background:var(--n,#7f9a3a);box-shadow:0 0 0 3px rgba(255,255,255,.15)}
+.dia:active{transform:scale(.94)}
+.dia[aria-pressed="true"]{filter:brightness(1.15)}
+.dia:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+.readout{background:#fff;border-radius:18px;padding:1.4rem;margin-top:1.4rem;box-shadow:0 1px 0 #eadcc8;min-height:7.5rem}
+.readout b{font:700 1.5rem/1.1 Amiri,serif;display:block}
+.readout span{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.legend button{min-height:44px;border:0;border-radius:999px;padding:0 1rem;font:500 .9rem Outfit,sans-serif;background:var(--rose);color:var(--walnut);display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;transition:transform 100ms ease-out,background-color .2s}
+.legend button:active{transform:scale(.97)}
+.legend button[aria-pressed="true"]{background:var(--walnut);color:var(--cream)}
+.legend i{width:12px;height:12px;border-radius:50%;background:var(--n)}
+/* pound */
+.pound{background:var(--rose);padding:4rem 1.2rem}
+.pound .in{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pc{background:var(--cream);border-radius:20px;padding:1.6rem}
+.pc h3{font:700 1.4rem/1.1 Amiri,serif}
+.pc p{color:var(--muted);font-size:.95rem;margin-top:.4rem}
+.pc q{display:block;font:italic 400 1.05rem/1.45 Amiri,serif;margin-top:.8rem;color:var(--walnut)}
+.pc small{display:block;font:500 .7rem/1 Outfit,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+/* story */
+.story{max-width:820px;margin:0 auto;padding:5rem 1.2rem;text-align:center}
+.story p{font:400 clamp(1.25rem,3.6vw,1.6rem)/1.5 Amiri,serif;margin-top:1.2rem}
+.story .src{font:500 .72rem/1 Outfit,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:1rem}
+/* visit */
+.visit{background:var(--walnut);color:var(--cream);padding:4rem 1.2rem}
+.visit .in{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2.4rem}
+.visit dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.4rem}
+.visit dt{color:var(--honey2)}
+.visit .cta{justify-content:flex-start}
+.note{font-size:.88rem;color:#cdb8a3;margin-top:1rem}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+.pf-foot{background:#2a190f;color:#b9a593;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:22px 14px 30px}
+.pf-foot a{font-weight:700;color:var(--cream)}
+@media (max-width:780px){.tray,.visit .in{grid-template-columns:1fr}.pound .in{grid-template-columns:1fr}.pan{max-width:420px;margin:0 auto;width:100%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:active,.dia:active,.legend button:active{transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Essa Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+ <p class="small">Montavilla · 8243 SE Division St</p>
+ <h1>Essa Bakery</h1>
+ <p>Baklava made in house from family recipes brought from Iraq, with kunafa, awameh and cookies alongside. Ask for a sample, then fill a box.</p>
+ <div class="cta">
+  <a class="btn h" href="tel:+14259715541">Call (425) 971-5541</a>
+  <a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=8243%20SE%20Division%20St%2C%20Portland%2C%20OR%2097266">Directions</a>
+ </div>
+ <div class="drip" aria-hidden="true"></div>
+</header>
+
+<section class="tray">
+ <div>
+  <h2>Pick from the tray</h2>
+  <p class="lead">Tap a nut to see it in the pan. The variety of baklava is what customers mention first.</p>
+  <div class="legend" role="group" aria-label="Baklava by nut">
+   <button style="--n:#7f9a3a" data-k="p" aria-pressed="true"><i></i>Pistachio</button>
+   <button style="--n:#8b5a2b" data-k="w" aria-pressed="false"><i></i>Walnut</button>
+   <button style="--n:#b07a45" data-k="h" aria-pressed="false"><i></i>Hazelnut</button>
+   <button style="--n:#e3c99a" data-k="c" aria-pressed="false"><i></i>Cashew</button>
+  </div>
+  <div class="readout" aria-live="polite"><b id="rt">Pistachio</b><span id="rd">One of the varieties customers name first. Ask for a sample at the counter.</span></div>
+ </div>
+ <div class="pan" aria-hidden="true"><div class="grid" id="grid"></div></div>
+</section>
+
+<section class="pound">
+ <div class="in">
+  <div class="pc"><h3>By the pound</h3><p>Most items are weighed, so you can mix a box of different pieces.</p><q>"Everything in our (gorgeous) box was about $20."</q><small>Google review · Sep 2025</small></div>
+  <div class="pc"><h3>Awameh</h3><p>Little fried dough balls in syrup.</p><q>"Buy the little syrup balls! Of everything, they were the item most better-than-expected."</q><small>Google review · Nov 2025</small></div>
+  <div class="pc"><h3>Samples first</h3><p>Staff explain each pastry and offer tastes before you choose.</p><q>"Jafar was very kind, explaining each of their tasty morsels and offering samples."</q><small>Google review · Oct 2025</small></div>
+ </div>
+</section>
+
+<section class="story">
+ <h2>A father's recipes, on Division</h2>
+ <p>Essa Abdulsahib is a lifelong baker who brought his father's traditional recipes and techniques from Iraq to Portland, and opened in August 2025 in the old Stop By Bakery space.</p>
+ <p class="src">As reported by Montavilla News, Sep 2025</p>
+</section>
+
+<section class="visit">
+ <div class="in">
+  <div>
+   <h2>Come by for a box</h2>
+   <p style="margin-top:.8rem;color:#e7d6c4">8243 SE Division St, Portland, OR 97266</p>
+   <div class="cta"><a class="btn h" href="tel:+14259715541">Call the bakery</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=8243%20SE%20Division%20St%2C%20Portland%2C%20OR%2097266">Directions</a></div>
+  </div>
+  <div>
+   <dl><dt>Tue – Sun</dt><dd>11am – 7pm</dd><dt>Monday</dt><dd>Closed</dd><dt>Gift boxes</dt><dd>For holidays and events <span class="smp">sample</span></dd></dl>
+   <p class="note">Listings show slightly different hours, so call to confirm before a special trip.</p>
+  </div>
+ </div>
+</section>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){
+ var C={p:'#7f9a3a',w:'#8b5a2b',h:'#b07a45',c:'#e3c99a'};
+ var T={p:['Pistachio','One of the varieties customers name first. Ask for a sample at the counter.'],
+        w:['Walnut','Part of the lineup customers describe in the case. Ask for a taste.'],
+        h:['Hazelnut','One of the varieties customers list when they describe the case.'],
+        c:['Cashew','Also in the lineup. Tasting notes by the bakery (sample).']};
+ var g=document.getElementById('grid'),keys=['p','w','h','c'];
+ for(var i=0;i<16;i++){var b=document.createElement('button');b.className='dia';b.tabIndex=-1;var k=keys[(i+Math.floor(i/4))%4];b.dataset.k=k;b.style.setProperty('--n',C[k]);g.appendChild(b);}
+ function pick(k){document.querySelectorAll('.legend button').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.k===k)});
+  document.querySelectorAll('.dia').forEach(function(d){d.setAttribute('aria-pressed',d.dataset.k===k);d.style.opacity=d.dataset.k===k?1:.45});
+  document.getElementById('rt').textContent=T[k][0];document.getElementById('rd').textContent=T[k][1];}
+ document.querySelectorAll('.legend button,.dia').forEach(function(b){b.addEventListener('click',function(){pick(b.dataset.k)})});
+ pick('p');
+})();
+</script>
+</body>
+</html>

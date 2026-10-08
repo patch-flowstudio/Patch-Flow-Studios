@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greater Baking Cupcakery · 2300 E 71st St, Chicago (studio concept)</title>
+<meta name="description" content="Studio concept preview for Greater Baking, a cupcake bakery at 2300 E 71st St in Chicago.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff6ee;--pink:#f7c9cf;--rose:#d9506a;--cocoa:#3b2219;--cocoa2:#6b4337;--mint:#bfe5d6;--gold:#f1b24a;--line:rgba(59,34,25,.12);--r:26px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--cream);color:var(--cocoa);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--cocoa);color:#fbe9df;font-size:12.5px;line-height:1.45;text-align:center;padding:10px 18px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.press{transition:transform .14s cubic-bezier(.3,1.5,.5,1),background .2s,box-shadow .2s}
+.press:active{transform:scale(.97)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;background:var(--rose);color:#fff;box-shadow:0 10px 22px -12px rgba(217,80,106,.9)}
+.btn:hover{background:#c23f59}
+.btn.alt{background:#fff;color:var(--cocoa);box-shadow:inset 0 0 0 1.5px var(--line)}
+.sample{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:#fff;color:var(--rose);border:1px solid #f1b9c2;border-radius:6px;padding:2px 6px;vertical-align:middle}
+/* nav */
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+.brand{font-family:Corben,serif;font-weight:700;font-size:21px;letter-spacing:-.2px;text-decoration:none}
+.brand span{color:var(--rose)}
+.open{font-size:13px;font-weight:600;background:#fff;border-radius:999px;padding:8px 14px;box-shadow:inset 0 0 0 1.5px var(--line);white-space:nowrap}
+.open i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#aaa;margin-right:7px;vertical-align:1px}
+.open.on i{background:#2bb673;box-shadow:0 0 0 4px rgba(43,182,115,.18)}
+/* hero: big frosting swirl */
+.hero{position:relative;text-align:center;padding:30px 0 10px}
+.hero h1{font-family:Corben,serif;font-weight:700;font-size:clamp(44px,9vw,96px);line-height:.95;letter-spacing:-1.5px;max-width:11ch;margin:0 auto}
+.hero h1 span{color:var(--rose)}
+.hero p{max-width:34em;margin:18px auto 0;font-size:18px;color:var(--cocoa2)}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.swirl{display:block;width:min(360px,80vw);height:auto;margin:30px auto -6px}
+/* box builder */
+.builder{background:var(--pink);border-radius:40px 40px 0 0;margin-top:40px;padding:64px 0 70px;position:relative}
+.builder::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.55),transparent 40%);pointer-events:none}
+.bgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center;position:relative}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
+h2{font-family:Corben,serif;font-weight:700;font-size:clamp(30px,5vw,46px);line-height:1.04;letter-spacing:-.6px;margin:10px 0 14px}
+.sub{color:var(--cocoa2);font-size:16.5px;max-width:30em}
+.flavors{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:0;font:inherit;font-weight:600;font-size:15px;min-height:44px;padding:0 16px;border-radius:999px;background:#fff;color:var(--cocoa);cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 14px -10px rgba(59,34,25,.5)}
+.chip b{width:14px;height:14px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.08)}
+.chip:hover{background:#fffaf6}
+.box{background:#fff;border-radius:22px;padding:22px;box-shadow:0 40px 60px -40px rgba(59,34,25,.6)}
+.lid{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-bottom:14px}
+.lid small{font-weight:500;color:var(--cocoa2)}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:#fbeee6;border-radius:16px;padding:12px}
+.slot{aspect-ratio:1;border-radius:50%;background:#f3ddd1;box-shadow:inset 0 4px 10px rgba(59,34,25,.12);display:grid;place-items:center;position:relative;border:0;cursor:pointer;font:inherit}
+.slot svg{width:82%;height:82%;transform:scale(.3);opacity:0;transition:transform .45s cubic-bezier(.2,1.6,.4,1),opacity .2s}
+.slot.full svg{transform:scale(1);opacity:1}
+.slot .lbl{position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:700;background:#fff;border-radius:999px;padding:2px 8px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;box-shadow:0 2px 6px rgba(0,0,0,.08);opacity:0}
+.slot.full .lbl{opacity:1}
+.boxfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;font-size:14px;color:var(--cocoa2)}
+.reset{border:0;background:none;font:inherit;font-weight:600;color:var(--rose);min-height:44px;padding:0 6px;cursor:pointer}
+/* menu ribbon */
+.more{padding:70px 0}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.m{background:#fff;border-radius:var(--r);padding:26px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.m h3{font-family:Corben,serif;font-size:22px;margin-bottom:6px}
+.m p{color:var(--cocoa2);font-size:15.5px}
+.m .tag{display:inline-block;margin-bottom:12px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--mint)}
+.m.hl{background:var(--cocoa);color:#fbe9df;box-shadow:none}.m.hl p{color:#e8cfc4}.m.hl .tag{background:var(--gold);color:var(--cocoa)}
+/* reviews marquee-free stack */
+.say{background:var(--mint);border-radius:40px;padding:60px 0}
+.quotes{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin-top:26px}
+.qt{background:#fff;border-radius:var(--r);padding:26px}
+.qt p{font-size:17px}
+.qt.lg p{font-family:Corben,serif;font-size:23px;line-height:1.35}
+.qt cite{display:block;margin-top:12px;font-style:normal;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cocoa2)}
+.qcol{display:grid;gap:18px}
+/* visit */
+.visit{padding:70px 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:22px}
+.dy{text-align:center;border-radius:14px;padding:12px 2px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font-size:13px;font-weight:700}
+.dy small{display:block;font-weight:500;font-size:11px;color:var(--cocoa2);margin-top:4px}
+.dy.on{background:var(--rose);color:#fff;box-shadow:none}.dy.on small{color:#ffe1e6}
+.dy.today{outline:3px solid var(--gold);outline-offset:2px}
+.hrs{margin-top:14px;font-size:15.5px;color:var(--cocoa2)}
+.addr{font-family:Corben,serif;font-size:26px;line-height:1.25}
+.acts{display:grid;gap:10px;margin-top:20px}
+footer{text-align:center;padding:30px 0 120px;font-size:13px;color:var(--cocoa2)}
+.dock{position:fixed;left:12px;right:12px;bottom:12px;display:none;gap:10px;padding:10px;border-radius:26px;z-index:9;background:rgba(255,246,238,.72);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);box-shadow:0 12px 30px -12px rgba(59,34,25,.45)}
+.dock .btn{flex:1}
+@media (max-width:800px){
+  .bgrid,.quotes,.visit{grid-template-columns:1fr}
+  .mgrid{grid-template-columns:1fr}
+  .dock{display:flex}
+  .open{font-size:12px;padding:7px 11px}
+  .builder{padding:50px 0}
+  .week{gap:4px}.dy{padding:10px 0;font-size:12px}.dy small{font-size:9.5px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Greater Baking's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand press" href="#top">Greater <span>Baking</span></a>
+    <span class="open" id="openNow"><i></i><span>Thu to Sat, 11 to 7</span></span>
+  </nav>
+  <header class="hero" id="top">
+    <h1>Cupcakes worth the <span>drive.</span></h1>
+    <p>A small South Shore cupcakery at 2300 E 71st St, with flavors like peach cobbler, banana pudding and key lime, plus cinnamon rolls, cookies and ice cream.</p>
+    <div class="cta">
+      <a class="btn press" href="tel:+18478682368">Call (847) 868-2368</a>
+      <a class="btn alt press" href="#box">Build a half dozen</a>
+    </div>
+    <svg class="swirl" viewBox="0 0 360 230" aria-hidden="true">
+      <defs><linearGradient id="fr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbdde1"/><stop offset="1" stop-color="#f2aab5"/></linearGradient>
+      <linearGradient id="wr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c98a5e"/><stop offset=".5" stop-color="#e2a878"/><stop offset="1" stop-color="#b97a50"/></linearGradient></defs>
+      <path d="M110 140 L132 226 H228 L250 140 Z" fill="url(#wr)"/>
+      <g stroke="#a86a42" stroke-width="3" opacity=".55"><line x1="140" y1="146" x2="150" y2="222"/><line x1="165" y1="146" x2="170" y2="222"/><line x1="195" y1="146" x2="190" y2="222"/><line x1="220" y1="146" x2="210" y2="222"/></g>
+      <path d="M96 142c-8-26 18-40 36-34-4-26 26-40 46-26 8-24 46-26 54 2 22-6 40 14 30 34 22 6 18 30-4 30H104c-14 0-18-8-8-6z" fill="url(#fr)"/>
+      <path d="M122 120c20 8 52 10 80 0M140 96c16 6 34 6 50 0" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+      <circle cx="180" cy="58" r="13" fill="#d9506a"/><path d="M180 45c2-10 8-14 14-16" stroke="#3b2219" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <g fill="#f1b24a"><rect x="128" y="112" width="10" height="4" rx="2" transform="rotate(30 133 114)"/><rect x="214" y="104" width="10" height="4" rx="2" transform="rotate(-20 219 106)"/><rect x="170" y="128" width="10" height="4" rx="2"/></g>
+      <g fill="#bfe5d6"><rect x="150" y="104" width="10" height="4" rx="2" transform="rotate(-40 155 106)"/><rect x="236" y="128" width="10" height="4" rx="2" transform="rotate(50 241 130)"/></g>
+    </svg>
+  </header>
+</div>
+
+<section class="builder" id="box" aria-labelledby="bh">
+  <div class="wrap bgrid">
+    <div>
+      <div class="kicker">Half-dozen planner</div>
+      <h2 id="bh">Fill a box before you stop in.</h2>
+      <p class="sub">Tap the flavors customers rave about to sketch your six. Regulars say the lineup changes week to week, so call ahead to see what's in the case today. <span class="sample">sample</span></p>
+      <div class="flavors" id="flavors">
+        <button class="chip press" data-c="#f4b37a" data-n="Peach cobbler"><b style="background:#f4b37a"></b>Peach cobbler</button>
+        <button class="chip press" data-c="#f6e3a1" data-n="Banana pudding"><b style="background:#f6e3a1"></b>Banana pudding</button>
+        <button class="chip press" data-c="#cfe8a7" data-n="Key lime"><b style="background:#cfe8a7"></b>Key lime</button>
+        <button class="chip press" data-c="#c58c5c" data-n="Biscoff"><b style="background:#c58c5c"></b>Biscoff</button>
+        <button class="chip press" data-c="#f49aa9" data-n="Strawberry"><b style="background:#f49aa9"></b>Strawberry</button>
+        <button class="chip press" data-c="#e0b07f" data-n="Apple"><b style="background:#e0b07f"></b>Apple</button>
+        <button class="chip press" data-c="#fbe58a" data-n="Lemon"><b style="background:#fbe58a"></b>Lemon</button>
+      </div>
+    </div>
+    <div class="box" aria-live="polite">
+      <div class="lid"><span>Your half dozen</span><small id="count">0 of 6</small></div>
+      <div class="slots" id="slots"></div>
+      <div class="boxfoot"><span>Tap a cupcake to remove it.</span><button class="reset press" id="reset">Start over</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="mh">
+  <div class="wrap">
+    <div class="kicker">Beyond the cupcake</div>
+    <h2 id="mh">More from the case</h2>
+    <div class="mgrid">
+      <div class="m hl"><span class="tag">Holiday pans</span><h3>Banana pudding and peach cobbler</h3><p>Half and full pans have been offered for Christmas Eve pickup through the bakery's order links. Call to ask about the next holiday.</p></div>
+      <div class="m"><span class="tag">By the dozen</span><h3>Chocolate chip cookies</h3><p>Classic, or with walnuts. One regular pairs a cookie and a scoop of ice cream with every quarterly dozen.</p></div>
+      <div class="m"><span class="tag">Don't skip</span><h3>Cinnamon rolls and lattes</h3><p>"The cinnamon rolls!? Omg like no other," one customer wrote. Lattes and lemon get mentions too.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="say" aria-labelledby="sh">
+  <div class="wrap">
+    <div class="kicker">Overheard on Google</div>
+    <h2 id="sh">Thursdays are a family thing.</h2>
+    <div class="quotes">
+      <figure class="qt lg"><p>"I truly enjoy trying the different flavors every week. It's now something me and my family do every Thursday."</p><cite>Google review · Dec 2025</cite></figure>
+      <div class="qcol">
+        <figure class="qt"><p>"Tried 5 different cupcake flavors and they were all delicious. They were fresh and the icing on each reminded me of my grandmas."</p><cite>Google review · Nov 2025</cite></figure>
+        <figure class="qt"><p>"My family enjoyed each cupcake. I brought a half dozen, and there are none left."</p><cite>Google review · Jan 2026</cite></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="visit" aria-labelledby="vh">
+    <div>
+      <div class="kicker">When we bake for you</div>
+      <h2 id="vh">Three days a week.</h2>
+      <div class="week" id="week">
+        <div class="dy" data-d="1">Mon<small>Closed</small></div>
+        <div class="dy" data-d="2">Tue<small>Closed</small></div>
+        <div class="dy" data-d="3">Wed<small>Closed</small></div>
+        <div class="dy on" data-d="4">Thu<small>11 to 7</small></div>
+        <div class="dy on" data-d="5">Fri<small>11 to 7</small></div>
+        <div class="dy on" data-d="6">Sat<small>11 to 7</small></div>
+        <div class="dy" data-d="0">Sun<small>Closed</small></div>
+      </div>
+      <p class="hrs">Thursday, Friday and Saturday, 11 AM to 7 PM.</p>
+    </div>
+    <div>
+      <div class="kicker">Find the shop</div>
+      <p class="addr" style="margin-top:12px">2300 E 71st St<br>Chicago, IL 60649</p>
+      <div class="acts">
+        <a class="btn press" href="tel:+18478682368">Call (847) 868-2368</a>
+        <a class="btn alt press" href="https://www.google.com/maps/dir/?api=1&destination=2300+E+71st+St,+Chicago,+IL+60649" target="_blank" rel="noopener">Directions in Google Maps</a>
+        <a class="btn alt press" href="https://instagram.com/GreaterBaking" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+  <footer><a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/" target="_blank" rel="noopener">Studio concept. Sample design by Patch &amp; Flow Studio</a></footer>
+</div>
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn press" href="tel:+18478682368">Call</a>
+  <a class="btn alt press" href="https://www.google.com/maps/dir/?api=1&destination=2300+E+71st+St,+Chicago,+IL+60649" target="_blank" rel="noopener">Directions</a>
+</nav>
+<script>
+(function(){
+  var slots=document.getElementById('slots'),count=document.getElementById('count'),box=[];
+  function cup(c){return '<svg viewBox="0 0 60 60" aria-hidden="true"><path d="M17 33 21 54h18l4-21z" fill="#d9a074"/><path d="M13 34c-3-8 5-12 10-10 0-8 9-11 14-6 4-5 13-3 12 5 6 2 5 11-1 11H15c-3 0-4-1-2 0z" fill="'+c+'"/><circle cx="31" cy="14" r="4" fill="#d9506a"/></svg>';}
+  function draw(){
+    slots.innerHTML='';
+    for(var i=0;i<6;i++){var b=document.createElement('button');b.className='slot press';var f=box[i];
+      b.setAttribute('aria-label',f?('Remove '+f.n):'Empty spot');
+      b.innerHTML=cup(f?f.c:'#eee')+'<span class="lbl">'+(f?f.n:'')+'</span>';
+      (function(i,b,f){b.onclick=function(){if(f){box.splice(i,1);draw();}};})(i,b,f);
+      slots.appendChild(b);
+      if(f){requestAnimationFrame((function(b){return function(){b.classList.add('full');};})(b));}
+    }
+    count.textContent=box.length+' of 6';
+  }
+  document.querySelectorAll('#flavors .chip').forEach(function(ch){ch.onclick=function(){if(box.length<6){box.push({c:ch.dataset.c,n:ch.dataset.n});draw();}};});
+  document.getElementById('reset').onclick=function(){box=[];draw();};
+  draw();
+  var now=new Date(),d=now.getDay(),h=now.getHours();
+  var t=document.querySelector('#week [data-d="'+d+'"]');if(t)t.classList.add('today');
+  if(d>=4&&d<=6&&h>=11&&h<19){var o=document.getElementById('openNow');o.classList.add('on');o.lastChild.textContent='Open now, until 7 PM';}
+})();
+</script>
+</body>
+</html>

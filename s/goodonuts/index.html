@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Goodonuts | Donuts, Kolaches &amp; Custom Orders in Double Oak, TX</title>
+<meta name="description" content="Goodonuts on Justin Rd in Double Oak, Texas. Fresh donuts, cronuts, kolaches, coffee and boba, plus custom donuts for parties. Closed Tuesdays. Call or text (469) 998-6286.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff7eb6;--pinkD:#d9488a;--glaze:#fff2f7;--choc:#5a3220;--mint:#7fd8c3;--sky:#8fc9ff;--ink:#2b1d18;--spring:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 1rem/1.55 "DM Sans",system-ui,sans-serif;background:var(--glaze);color:var(--ink);overflow-x:hidden;padding-bottom:84px;font-optical-sizing:auto}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+.concept{background:var(--choc);color:#fbe6d8;font-size:.75rem;text-align:center;padding:8px 14px}
+header{text-align:center;padding:2rem 1.1rem 1.6rem}
+.ring{width:170px;height:170px;margin:0 auto 1rem;border-radius:50%;background:radial-gradient(circle,var(--glaze) 0 23%,transparent 24%),radial-gradient(circle at 50% 50%,var(--pink) 0 58%,#e8a76a 59% 70%,transparent 71%);position:relative;filter:drop-shadow(0 14px 22px rgba(217,72,138,.25))}
+.ring i{position:absolute;width:12px;height:4px;border-radius:2px}
+h1{font:800 clamp(2.6rem,12vw,4.4rem)/1 "Baloo 2",cursive;letter-spacing:-.02em;color:var(--pinkD)}
+.lead{max-width:30rem;margin:.6rem auto 0;color:#5b4740}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.2rem;border-radius:999px;font:700 1rem/1 "DM Sans";text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease-out,filter .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97);filter:brightness(.95)}
+.btn.p{background:var(--pinkD);color:#fff}.btn.c{background:#fff;color:var(--choc);box-shadow:inset 0 0 0 1.5px var(--choc)}
+section{padding:1.8rem 1.1rem;max-width:46rem;margin:0 auto}
+h2{font:800 1.75rem/1.1 "Baloo 2";letter-spacing:-.015em;color:var(--choc);margin-bottom:.4rem}
+.sub{color:#6b5a53;font-size:.95rem;margin-bottom:1rem}
+.case{background:linear-gradient(#fff,#fff) padding-box;border-radius:24px;padding:1rem;box-shadow:0 12px 30px rgba(90,50,32,.1)}
+.shelf{display:flex;gap:.7rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem .2rem 1rem;border-bottom:8px solid #f0d9c8;-webkit-overflow-scrolling:touch}
+.item{flex:0 0 120px;scroll-snap-align:start;text-align:center;border:0;background:none;font:inherit;color:inherit;cursor:pointer;transition:transform .12s ease-out}
+.item:active{transform:scale(.96)}
+.item svg{width:96px;height:72px;display:block;margin:0 auto .3rem;transition:transform .35s var(--spring)}
+.item[aria-pressed="true"] svg{transform:translateY(-6px) scale(1.04)}
+.item b{font:700 .95rem/1.2 "DM Sans"}
+.item[aria-pressed="true"] b{color:var(--pinkD)}
+.tag{margin-top:.9rem;background:var(--glaze);border-radius:16px;padding:.9rem 1rem;min-height:4.6rem;transition:opacity .22s var(--spring),transform .32s var(--spring)}
+.tag.swap{opacity:0;transform:translateY(6px)}
+.sample{display:inline-block;font:700 .625rem/1 "DM Sans";letter-spacing:.08em;text-transform:uppercase;background:#ffe0ef;color:var(--pinkD);padding:3px 6px;border-radius:5px;vertical-align:middle}
+.order{display:grid;gap:.6rem;counter-reset:s}
+.st{display:grid;grid-template-columns:44px 1fr;gap:.8rem;background:#fff;border-radius:18px;padding:.9rem}
+.st:before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--mint);color:#174a3f;display:flex;align-items:center;justify-content:center;font:800 1.2rem "Baloo 2"}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;text-align:center}
+.week div{background:#fff;border-radius:14px;padding:.6rem 0;font-size:.7rem;color:#7c6a62;font-variant-numeric:tabular-nums}
+.week b{display:block;font:700 .95rem/1.2 "DM Sans";color:var(--ink)}
+.week .off{background:#f3e7e0;opacity:.7}
+.week .today{box-shadow:0 0 0 2px var(--pinkD)}
+.note{margin-top:.7rem;font-size:.9rem;color:#6b5a53}
+blockquote{background:#fff;border-radius:18px;padding:1rem;margin:.6rem 0}
+blockquote cite{display:block;font:500 .75rem/1.3 "DM Sans";color:var(--pinkD);margin-top:.5rem;font-style:normal}
+footer{text-align:center;font-size:.75rem;color:#7c6a62;padding:1.5rem 1rem 2rem}
+.bar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;gap:.5rem;padding:.5rem;border-radius:999px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:0 10px 30px rgba(90,50,32,.18),inset 0 1px 0 rgba(255,255,255,.7);z-index:5;max-width:30rem;margin:0 auto}
+.bar .btn{flex:1}
+@media (prefers-reduced-motion:reduce){.btn,.item,.item svg,.tag{transition:opacity .2s}.btn:active,.item:active{transform:none}.item[aria-pressed="true"] svg,.tag.swap{transform:none}}
+@media (prefers-reduced-transparency:reduce){.bar{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Goodonuts's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+  <div class="ring" aria-hidden="true">
+    <i style="left:40px;top:44px;background:#7fd8c3;transform:rotate(30deg)"></i><i style="left:110px;top:40px;background:#fff;transform:rotate(-20deg)"></i><i style="left:124px;top:96px;background:#8fc9ff;transform:rotate(60deg)"></i><i style="left:36px;top:110px;background:#ffd36b;transform:rotate(-40deg)"></i><i style="left:84px;top:134px;background:#fff;transform:rotate(10deg)"></i><i style="left:72px;top:26px;background:#ffd36b;transform:rotate(80deg)"></i>
+  </div>
+  <h1>Goodonuts</h1>
+  <p class="lead">A small family donut shop on Justin Rd in Double Oak. Fresh donuts, cronuts, kolaches, coffee and boba from 5 AM, plus custom donuts for birthdays.</p>
+  <div class="cta"><a class="btn p" href="tel:+14699986286">Call or text</a><a class="btn c" href="https://www.google.com/maps/dir/?api=1&destination=8401+Justin+Rd+Suite+102+Double+Oak+TX+75077">Directions</a></div>
+</header>
+
+<section>
+  <h2>In the case</h2>
+  <p class="sub">Swipe the shelf and tap a favorite. Selection changes daily, so arrive early.</p>
+  <div class="case">
+    <div class="shelf" id="shelf">
+      <button class="item" aria-pressed="true" data-k="cro"><svg viewBox="0 0 96 72" aria-hidden="true"><ellipse cx="48" cy="44" rx="40" ry="20" fill="#e3a35e"/><ellipse cx="48" cy="38" rx="38" ry="16" fill="#f3c27f"/><path d="M14 38q34 10 68 0" stroke="#c97f3a" stroke-width="3" fill="none"/><path d="M18 30q30 8 60 0" stroke="#c97f3a" stroke-width="3" fill="none"/></svg><b>Cronut</b></button>
+      <button class="item" aria-pressed="false" data-k="bru"><svg viewBox="0 0 96 72" aria-hidden="true"><ellipse cx="48" cy="42" rx="38" ry="22" fill="#e8a76a"/><ellipse cx="48" cy="36" rx="34" ry="17" fill="#f6d89a"/><path d="M28 32l8 4M56 28l10 6M40 40l12 2" stroke="#b5651d" stroke-width="3"/><ellipse cx="48" cy="38" rx="9" ry="5" fill="#fff2f7"/></svg><b>Crème brûlée</b></button>
+      <button class="item" aria-pressed="false" data-k="kol"><svg viewBox="0 0 96 72" aria-hidden="true"><rect x="14" y="24" width="68" height="34" rx="17" fill="#f0c48a"/><rect x="20" y="30" width="56" height="10" rx="5" fill="#a5462a"/></svg><b>Kolaches</b></button>
+      <button class="item" aria-pressed="false" data-k="cus"><svg viewBox="0 0 96 72" aria-hidden="true"><ellipse cx="48" cy="42" rx="38" ry="22" fill="#e8a76a"/><ellipse cx="48" cy="36" rx="34" ry="17" fill="#2b2b33"/><path d="M30 34l8-6 4 6 6-8 6 8 4-6 8 6-18 8z" fill="#ffd36b"/><ellipse cx="48" cy="38" rx="8" ry="4" fill="#fff2f7"/></svg><b>Custom</b></button>
+      <button class="item" aria-pressed="false" data-k="bob"><svg viewBox="0 0 96 72" aria-hidden="true"><path d="M30 10h36l-5 58H35z" fill="#d9c2a5"/><rect x="28" y="8" width="40" height="6" rx="3" fill="#ff7eb6"/><rect x="50" y="0" width="5" height="22" fill="#5a3220"/><g fill="#3a2418"><circle cx="40" cy="60" r="3.5"/><circle cx="48" cy="62" r="3.5"/><circle cx="56" cy="59" r="3.5"/></g></svg><b>Boba &amp; coffee</b></button>
+    </div>
+    <div class="tag" id="tag" aria-live="polite"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Custom donuts for parties</h2>
+  <p class="sub">Customers have ordered Batman donuts for a four-year-old's party and other designs with very specific requests.</p>
+  <div class="order">
+    <div class="st"><div><b>Call or text your idea.</b> (469) 998-6286. Share the theme, colors and how many you need.</div></div>
+    <div class="st"><div><b>Talk it through.</b> Customers mention how well the shop communicates through the process.</div></div>
+    <div class="st"><div><b>Pick up fresh.</b> Ask how much notice to give and when to pick up <span class="sample">sample</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Hours</h2>
+  <div class="week" id="wk">
+    <div data-d="1"><b>Mon</b>5–12</div><div class="off" data-d="2"><b>Tue</b>Closed</div><div data-d="3"><b>Wed</b>5–12</div><div data-d="4"><b>Thu</b>5–12</div><div data-d="5"><b>Fri</b>5–1</div><div data-d="6"><b>Sat</b>5–1</div><div data-d="0"><b>Sun</b>5–1</div>
+  </div>
+  <p class="note">Opens 5 AM daily except Tuesday. Uber Eats and DoorDash for small orders.</p>
+</section>
+
+<section>
+  <h2>Sweet words</h2>
+  <blockquote>They made us the coolest Batman donuts for a 4 year old’s birthday party. The kids loved them.<cite>Google review · March 2026</cite></blockquote>
+  <blockquote>Ordered custom donuts with very specific wants and Goodonuts absolutely delivered!I'm also thankful to for how well they communicated with me through the process.<cite>Google review · February 2026</cite></blockquote>
+  <blockquote>So cute in there, the gentleman that helped us was so kind and generous with the portions. The cronut is always my favorite go to order!<cite>Google review · February 2026</cite></blockquote>
+</section>
+
+<section>
+  <h2>Visit</h2>
+  <p>8401 Justin Rd, Suite 102, Double Oak, TX 75077</p>
+  <p><a href="tel:+14699986286">(469) 998-6286</a> · <a href="mailto:goodonuts.tx@gmail.com">goodonuts.tx@gmail.com</a></p>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="bar" aria-label="Quick actions"><a class="btn p" href="tel:+14699986286">Call</a><a class="btn c" href="sms:+14699986286">Text an order idea</a></nav>
+<script>
+var T={cro:"<b>Cronut.</b> A regular's go-to order and one of the shop's popular picks.",bru:"<b>Crème brûlée donut.</b> Recommended by customers trying the popular menu for the first time.",kol:"<b>Kolaches.</b> Customers call the kolaches and pastries high quality and fresh in the morning.",cus:"<b>Custom donuts.</b> Themed donuts for birthdays and special orders. Call or text to plan yours.",bob:"<b>Boba and coffee.</b> Drinks from black coffee to chai to boba milk tea."};
+var tag=document.getElementById('tag');tag.innerHTML=T.cro;
+document.querySelectorAll('.item').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.item').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');tag.classList.add('swap');setTimeout(function(){tag.innerHTML=T[b.dataset.k];tag.classList.remove('swap')},110)})});
+var r=document.querySelector('#wk [data-d="'+new Date().getDay()+'"]');if(r)r.classList.add('today');
+</script>
+</body>
+</html>

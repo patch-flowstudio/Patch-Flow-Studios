@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Verdigre Bakery | Kolaches on Main Street, Verdigre NE</title>
+<meta name="description" content="Verdigre Bakery on Main Street in Verdigre, Nebraska. Kolaches, fried cinnamon rolls and fritters, with kolaches shipped by phone order.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Source+Sans+3:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#b3282d;--blue:#1d3f8f;--cream:#fbf5ea;--kraft:#d8b98a;--ink:#24201b;--green:#2f6b3f;--gold:#e4b23c}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.04rem/1.6 "Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.75rem;line-height:1.45;padding:.55rem 1rem;text-align:center;background:var(--blue);color:#eef2fb}
+.band{height:46px;background-color:var(--red);
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg fill='none'%3E%3Ccircle cx='23' cy='23' r='9' fill='%23fbf5ea'/%3E%3Ccircle cx='23' cy='23' r='4' fill='%23e4b23c'/%3E%3Cpath d='M23 4c3 5 3 8 0 10-3-2-3-5 0-10zM23 42c3-5 3-8 0-10-3 2-3 5 0 10zM4 23c5-3 8-3 10 0-2 3-5 3-10 0zM42 23c-5-3-8-3-10 0 2 3 5 3 10 0z' fill='%231d3f8f'/%3E%3C/g%3E%3C/svg%3E");background-size:46px 46px}
+header{text-align:center;padding:2.6rem 1.2rem 2.2rem;max-width:46rem;margin:0 auto}
+.k{font-weight:700;font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;color:var(--blue)}
+h1{font-family:"Rozha One",serif;font-weight:400;font-size:clamp(3rem,14vw,5.6rem);line-height:.95;letter-spacing:-.015em;color:var(--red);margin:.5rem 0 .6rem}
+.lede{font-size:1.15rem;max-width:32rem;margin:0 auto}
+.cta{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+.b{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 1.35rem;border-radius:999px;font-weight:700;text-decoration:none;
+ transition:transform .35s cubic-bezier(.2,.9,.25,1),filter .2s,background .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.b.r{background:var(--red);color:#fff}
+.b.w{background:#fff;border:2px solid var(--blue);color:var(--blue)}
+.b:hover{filter:brightness(1.07)}
+.b:active{transform:scale(.97);transition-duration:.1s}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* kolache row */
+.tray{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-top:2rem}
+.tray svg{width:64px;height:64px;transition:transform .45s cubic-bezier(.3,1.3,.5,1)}
+.tray svg:hover{transform:translateY(-4px) rotate(-6deg)}
+main{max-width:62rem;margin:0 auto;padding:0 1.2rem}
+section{padding-top:3.6rem}
+h2{font-family:"Rozha One",serif;font-weight:400;font-size:clamp(2rem,8vw,3rem);line-height:1.02;letter-spacing:-.01em;color:var(--blue)}
+/* signature: shipping label */
+.ship{display:grid;gap:1.6rem;align-items:center}
+@media(min-width:840px){.ship{grid-template-columns:1fr 1.1fr}}
+.parcel{position:relative;background:var(--kraft);border-radius:10px;padding:1.4rem;box-shadow:0 24px 50px -24px rgba(36,32,27,.55);
+ background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.025) 0 2px,transparent 2px 5px);transform:rotate(-1.2deg)}
+.parcel::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:46px;transform:translateX(-50%);background:rgba(240,226,196,.6)}
+.label{position:relative;background:#fff;border:2px solid var(--ink);border-radius:4px;padding:1rem;font-family:"Courier Prime",monospace;font-size:.92rem;line-height:1.45}
+.label .row{display:flex;justify-content:space-between;gap:.6rem;border-bottom:1px dashed var(--ink);padding:.45rem 0}
+.label .row:last-child{border:0}
+.label b{font-weight:700}
+.label .big{font-family:"Rozha One",serif;font-size:1.6rem;color:var(--red);line-height:1.1}
+.bars{height:46px;margin-top:.6rem;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 7px,transparent 7px 9px,var(--ink) 9px 10px,transparent 10px 13px)}
+.fragile{position:absolute;right:-10px;top:-14px;background:var(--red);color:#fff;font:700 .72rem/1 "Source Sans 3";letter-spacing:.14em;padding:.5rem .7rem;border-radius:4px;transform:rotate(6deg)}
+.steps{list-style:none;padding:0;display:grid;gap:.9rem;margin-top:1rem}
+.steps li{display:grid;grid-template-columns:2.4rem 1fr;gap:.8rem;align-items:start}
+.steps span{width:2.4rem;height:2.4rem;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700}
+.note{font-size:.8rem;opacity:.72;margin-top:.6rem}
+/* case */
+.case{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.case{grid-template-columns:repeat(4,1fr)}}
+.item{background:#fff;border-radius:16px;padding:1.2rem;border-top:6px solid var(--red);box-shadow:0 8px 24px -16px rgba(0,0,0,.4)}
+.item:nth-child(2){border-color:var(--blue)}.item:nth-child(3){border-color:var(--gold)}.item:nth-child(4){border-color:var(--green)}
+.item h3{font-family:"Rozha One",serif;font-weight:400;font-size:1.3rem;line-height:1.15}
+.item p{font-size:.95rem;margin-top:.3rem}
+.item small{display:block;margin-top:.5rem;font-size:.75rem;opacity:.65}
+.hours{display:grid;gap:1.2rem;margin-top:1.4rem;background:var(--blue);color:#fff;border-radius:22px;padding:1.8rem 1.4rem}
+@media(min-width:760px){.hours{grid-template-columns:1fr 1fr;padding:2.4rem}}
+.hours h2{color:#fff}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours .early td{color:var(--gold);font-weight:700}
+.quotes{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+blockquote{background:#fff;border-radius:16px;padding:1.2rem;border:1px solid rgba(36,32,27,.12);font-size:1rem}
+blockquote cite{display:block;font-style:normal;font-size:.78rem;opacity:.65;margin-top:.5rem}
+footer{text-align:center;font-size:.85rem;padding:4rem 1rem 2.6rem;opacity:.85}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.9,.25,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}.rv{opacity:1;transform:none}.parcel{transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Verdigre Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="band" aria-hidden="true"></div>
+<header>
+ <p class="k">Main Street · Verdigre, Nebraska</p>
+ <h1>Verdigre Bakery</h1>
+ <p class="lede">Kolaches people drive across states for, plus fried cinnamon rolls, fritters and a fresh cup of coffee.</p>
+ <div class="cta"><a class="b r" href="tel:+14026682233">Call (402) 668-2233</a><a class="b w" href="https://www.google.com/maps/search/?api=1&amp;query=Verdigre%20Bakery%20405%20S%20Main%20St%20Verdigre%20NE%2068783">Directions</a></div>
+ <div class="tray" aria-hidden="true">
+  <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#e7b46c"/><circle cx="32" cy="32" r="13" fill="#7b2440"/><circle cx="32" cy="32" r="26" fill="none" stroke="#c98a45" stroke-width="2"/></svg>
+  <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#e7b46c"/><circle cx="32" cy="32" r="13" fill="#e4b23c"/><circle cx="32" cy="32" r="26" fill="none" stroke="#c98a45" stroke-width="2"/></svg>
+  <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#e7b46c"/><circle cx="32" cy="32" r="13" fill="#3a2a5e"/><circle cx="32" cy="32" r="26" fill="none" stroke="#c98a45" stroke-width="2"/></svg>
+  <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#e7b46c"/><circle cx="32" cy="32" r="13" fill="#f4ecd8"/><circle cx="32" cy="32" r="26" fill="none" stroke="#c98a45" stroke-width="2"/></svg>
+ </div>
+</header>
+<div class="band" aria-hidden="true"></div>
+<main>
+<section class="rv">
+ <div class="ship">
+  <div>
+   <p class="k">Too far to drive?</p>
+   <h2>Kolaches, sent to the door</h2>
+   <p style="margin-top:.6rem">One customer had two dozen kolaches delivered fresh to their parents in Iowa for Easter: "They shipped quickly to the door... They were great to deal with over the phone and ship anywhere."</p>
+   <ol class="steps">
+    <li><span>1</span><div><b>Call the bakery</b> with how many dozen and where they are going.</div></li>
+    <li><span>2</span><div><b>Pick your flavors</b> and the date you want them to arrive.</div></li>
+    <li><span>3</span><div><b>They ship them out</b> to family anywhere.</div></li>
+   </ol>
+   <p class="note">Sample: shipping steps written from a customer review, to confirm with the bakery. Call for shipping costs.</p>
+   <p style="margin-top:1rem"><a class="b r" href="tel:+14026682233">Call to send kolaches</a></p>
+  </div>
+  <div class="parcel" aria-label="Illustrated shipping label">
+   <span class="fragile">FRESH · HANDLE WITH LOVE</span>
+   <div class="label">
+    <div class="row"><span>FROM</span><b>Verdigre Bakery, 405 S Main St, Verdigre NE</b></div>
+    <div class="row"><span>TO</span><b>Mom and Dad, anywhere</b></div>
+    <div class="row"><span>CONTENTS</span><span class="big">2 doz. kolaches</span></div>
+    <div class="row"><span>ORDER BY</span><b>Phone (402) 668-2233</b></div>
+    <div class="bars" aria-hidden="true"></div>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="rv">
+ <p class="k">In the case</p>
+ <h2>What customers come for</h2>
+ <div class="case">
+  <div class="item"><h3>Kolaches</h3><p>"A must stop for authentic kolaches."</p><small>Google review, Sep 2025</small></div>
+  <div class="item"><h3>Fried cinnamon rolls</h3><p>"The fried cinnamon rolls and fritters are amazing as well."</p><small>Google review, Sep 2025</small></div>
+  <div class="item"><h3>Breakfast sandwich</h3><p>"An absolutely phenomenal breakfast sandwich here as well as other delicious bakery goodies."</p><small>Google review, Dec 2024</small></div>
+  <div class="item"><h3>Peanut butter donut</h3><p>A Saturday morning favorite for one regular, with fresh coffee.</p><small>Google review, Jul 2023</small></div>
+ </div>
+ <p class="note">Selection changes daily. Call to check what is out today and to set aside a few dozen.</p>
+</section>
+<section class="rv">
+ <div class="hours">
+  <div><p class="k" style="color:var(--gold)">Early on weekends</p><h2>Bakery hours</h2><p style="margin-top:.6rem">Doors open at 5:30 am on Fridays and Saturdays.</p></div>
+  <table>
+   <tr><td>Monday to Thursday</td><td>7:30 am to noon</td></tr>
+   <tr class="early"><td>Friday</td><td>5:30 am to 2 pm</td></tr>
+   <tr class="early"><td>Saturday</td><td>5:30 am to 2 pm</td></tr>
+   <tr><td>Sunday</td><td>Closed</td></tr>
+  </table>
+ </div>
+ <p class="note">Hours as listed on Google. Call to confirm.</p>
+</section>
+<section class="rv">
+ <h2>Worth the drive</h2>
+ <div class="quotes">
+  <blockquote>"Drove all the way from New Mexico (family reunion) and made it a priority to stop and get my childhood memories…Kolaches!"<cite>Google review, Aug 2025</cite></blockquote>
+  <blockquote>"These were THE BEST kolaches I have ever had. Definitely worth the visit!"<cite>Google review, Jun 2025</cite></blockquote>
+  <blockquote>"In the area for a wedding. Had to grab some kolaches for the family."<cite>Google review, Oct 2025</cite></blockquote>
+ </div>
+</section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));})();
+</script>
+</body>
+</html>

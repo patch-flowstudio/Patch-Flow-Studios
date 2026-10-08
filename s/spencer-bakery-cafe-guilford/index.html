@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spencer Bakery &amp; Cafe | Homemade donuts and breakfast in Guilford, Maine</title>
+<meta name="description" content="Spencer Bakery & Cafe, 1 Bates St, Guilford, Maine. Homemade donuts, baked goods and scratch breakfast, Wednesday to Sunday mornings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1f3b2d;--pine2:#2c5240;--kraft:#efe3cc;--kraft2:#e2d1b1;--maple:#c4702b;--sky:#f7d48a;--ink:#1b1a17;--mute:#6b6253;--spring:cubic-bezier(.3,1.2,.45,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.65 "Libre Franklin",system-ui,sans-serif;color:var(--ink);background:var(--kraft);overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;background-image:radial-gradient(rgba(120,90,40,.07) 1px,transparent 1px);background-size:5px 5px}
+a{color:inherit}
+.concept{background:var(--pine);color:#e9e1cf;font-size:.74rem;line-height:1.45;text-align:center;padding:.55rem 1rem}
+.w{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+/* signature: sunrise window 7 to 10:45 */
+.hero{background:linear-gradient(180deg,#fbe7b8 0%,#f6cf86 55%,var(--kraft) 100%);padding:2.2rem 0 0;position:relative;overflow:hidden}
+.hero .w{position:relative;z-index:2}
+.tag{display:inline-block;font-weight:700;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pine);border:1.5px solid var(--pine);padding:.3rem .65rem;border-radius:4px}
+h1{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;font-size:clamp(2.5rem,11vw,5rem);line-height:.98;color:var(--pine);margin:.8rem 0 .7rem;letter-spacing:-.01em}
+.lede{max-width:30rem;font-size:1.08rem}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.btn{min-height:48px;display:inline-flex;align-items:center;padding:0 1.3rem;border-radius:8px;font-weight:700;text-decoration:none;touch-action:manipulation;transition:transform .45s var(--spring)}
+.btn:active{transform:scale(.97);transition:transform 90ms ease-out}
+.bp{background:var(--pine);color:#fbf3e2}
+.bk{background:rgba(255,255,255,.55);border:1.5px solid var(--pine);color:var(--pine)}
+.arc{position:relative;margin:1.6rem auto 0;max-width:34rem;padding:0 1.25rem}
+.arc svg{width:100%;height:auto;display:block;overflow:visible}
+.sun{transition:transform 1.6s var(--spring)}
+.ridge{display:block;width:100%;height:4rem;margin-top:.4rem}
+.arc-cap{text-align:center;font-weight:700;font-size:.92rem;color:var(--pine);margin-top:.3rem}
+section{padding:3rem 0}
+h2{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;font-size:clamp(1.7rem,6.8vw,2.6rem);line-height:1.08;color:var(--pine)}
+.k{font-weight:700;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--maple)}
+/* week strip */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:.3rem;margin-top:1.2rem}
+.d{border-radius:8px;padding:.6rem 0;text-align:center;background:#fff8ea;border:1px solid var(--kraft2);font-size:.72rem;line-height:1.3}
+.d b{display:block;font-size:.8rem}
+.d.x{background:transparent;color:#9b907c;border-style:dashed}
+.d.t{background:var(--pine);color:#fbf3e2;border-color:var(--pine)}
+/* counter: two sides */
+.counter{display:grid;gap:1rem;margin-top:1.5rem}
+@media(min-width:760px){.counter{grid-template-columns:1fr 1fr}}
+.side{background:#fffaf0;border-radius:14px;border:1px solid var(--kraft2);overflow:hidden}
+.side-h{background:var(--pine2);color:#fbf3e2;padding:.8rem 1.1rem;display:flex;justify-content:space-between;align-items:center}
+.side-h h3{font-family:"Alfa Slab One",serif;font-weight:400;font-size:1.15rem}
+.side-h span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+.side ul{list-style:none;padding:.4rem 1.1rem 1rem}
+.side li{padding:.7rem 0;border-bottom:1px dashed var(--kraft2)}
+.side li:last-child{border:0}
+.side li b{display:block}
+.side li small{color:var(--mute);font-size:.82rem}
+.side.bake .side-h{background:var(--maple)}
+/* phones down note */
+.unplug{background:var(--pine);color:#efe7d6;border-radius:18px;padding:1.5rem 1.3rem;display:grid;grid-template-columns:3.4rem 1fr;gap:1rem;align-items:start}
+.unplug svg{width:3.4rem;height:3.4rem}
+.unplug h3{font-family:"Alfa Slab One",serif;font-weight:400;font-size:1.25rem;color:var(--sky);line-height:1.15}
+.unplug p{font-size:.95rem;margin-top:.35rem}
+.unplug small{display:block;color:#a9bfb2;font-size:.78rem;margin-top:.4rem}
+/* baker */
+.baker{display:grid;gap:1.3rem;align-items:center}
+@media(min-width:760px){.baker{grid-template-columns:.8fr 1.2fr}}
+.big7{font-family:"Alfa Slab One",serif;font-size:clamp(6rem,30vw,10rem);line-height:.8;color:var(--maple);text-shadow:4px 4px 0 var(--kraft2)}
+.baker p{margin-top:.5rem}
+.quote{margin-top:1.4rem;padding-left:1rem;border-left:4px solid var(--maple);font-size:1.05rem}
+.quote cite{display:block;font-style:normal;font-size:.8rem;color:var(--mute);margin-top:.3rem}
+.visit{display:grid;gap:1rem;margin-top:1.2rem}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.card{background:#fffaf0;border:1px solid var(--kraft2);border-radius:14px;padding:1.2rem}
+.card h3{font-family:"Alfa Slab One",serif;font-weight:400;color:var(--pine);font-size:1.1rem;margin-bottom:.3rem}
+footer{text-align:center;font-size:.8rem;color:var(--mute);padding:2rem 1rem 6.5rem}
+.dock{position:fixed;left:50%;transform:translateX(-50%);bottom:max(.8rem,env(safe-area-inset-bottom));display:flex;gap:.35rem;padding:.35rem;border-radius:12px;background:rgba(239,227,204,.78);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(31,59,45,.2);box-shadow:0 12px 30px -12px rgba(0,0,0,.35);z-index:20}
+.dock a{min-height:44px;display:inline-flex;align-items:center;padding:0 1.15rem;border-radius:9px;font-weight:700;font-size:.9rem;text-decoration:none;transition:transform .4s var(--spring)}
+.dock a:first-child{background:var(--pine);color:#fbf3e2}
+.dock a:active{transform:scale(.95);transition:transform 90ms ease-out}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .9s var(--spring)}
+.rv.in-view{opacity:1;transform:none}
+@media(prefers-reduced-transparency:reduce){.dock{background:var(--kraft);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Spencer Bakery &amp; Cafe's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+  <div class="w">
+    <span class="tag">Guilford, Maine &middot; 1 Bates St</span>
+    <h1>Spencer Bakery &amp; Cafe</h1>
+    <p class="lede">Homemade donuts, baked goods and a scratch breakfast, served in the early hours from Wednesday to Sunday.</p>
+    <div class="row"><a class="btn bp" href="tel:+12078763463">Call (207) 876-3463</a><a class="btn bk" href="https://www.google.com/maps/search/?api=1&amp;query=Spencer+Bakery+%26+Cafe%2C+1+Bates+St%2C+Guilford%2C+ME+04443">Directions</a></div>
+  </div>
+  <div class="arc" aria-hidden="true">
+    <svg viewBox="0 0 340 150">
+      <path d="M20 140 A150 110 0 0 1 320 140" fill="none" stroke="#1f3b2d" stroke-width="1.5" stroke-dasharray="3 6" opacity=".45"/>
+      <text x="20" y="128" font-family="Libre Franklin" font-weight="700" font-size="11" fill="#1f3b2d">7:00</text>
+      <text x="320" y="128" font-family="Libre Franklin" font-weight="700" font-size="11" fill="#1f3b2d" text-anchor="end">10:45</text>
+      <g class="sun" id="sun"><circle cx="0" cy="0" r="17" fill="#f2a23a"/><circle cx="0" cy="0" r="24" fill="#f2a23a" opacity=".22"/></g>
+    </svg>
+    <div class="arc-cap" id="cap">Breakfast window: 7:00 to 10:45 AM</div>
+  </div>
+  <svg class="ridge" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 L0 34 L30 20 L52 30 L80 8 L104 26 L130 14 L160 32 L190 12 L222 28 L250 6 L280 26 L310 16 L340 30 L370 14 L400 26 L400 60Z" fill="#2c5240"/><path d="M0 60 L0 44 L40 34 L70 42 L110 30 L150 44 L200 32 L240 46 L290 34 L340 44 L400 36 L400 60Z" fill="#1f3b2d"/></svg>
+</header>
+
+<main>
+  <section class="rv" style="padding-top:2rem">
+    <div class="w">
+      <span class="k">Open five mornings</span>
+      <h2>Come early</h2>
+      <div class="week" id="week">
+        <div class="d x" data-d="1"><b>Mon</b>closed</div>
+        <div class="d x" data-d="2"><b>Tue</b>closed</div>
+        <div class="d" data-d="3"><b>Wed</b>7-10:45</div>
+        <div class="d" data-d="4"><b>Thu</b>7-10:45</div>
+        <div class="d" data-d="5"><b>Fri</b>7-10:45</div>
+        <div class="d" data-d="6"><b>Sat</b>7-10:45</div>
+        <div class="d" data-d="0"><b>Sun</b>7-10:45</div>
+      </div>
+      <p style="font-size:.84rem;color:var(--mute);margin-top:.6rem">Hours as listed on Google. Call ahead to confirm, especially on holidays.</p>
+
+      <div class="counter">
+        <div class="side"><div class="side-h"><h3>The breakfast side</h3><span>kitchen</span></div>
+          <ul>
+            <li><b>Biscuits and sausage gravy</b><small>"I'm a big fan" (March 2026 review)</small></li>
+            <li><b>Scratch corned beef hash, fried egg on top</b><small>A regular's favorite</small></li>
+            <li><b>Eggs, your way</b><small>"Eggs are spot on every time."</small></li>
+          </ul></div>
+        <div class="side bake"><div class="side-h"><h3>The bakery side</h3><span>pastry case</span></div>
+          <ul>
+            <li><b>Homemade donuts</b><small>"the donuts were AMAZING!" (October 2025 review)</small></li>
+            <li><b>Baked goods</b><small>A pastry shop inside the cafe</small></li>
+            <li><b>Today's case</b><small>Sample: ask what came out of the oven this morning</small></li>
+          </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv" style="padding-top:0">
+    <div class="w">
+      <div class="unplug">
+        <svg viewBox="0 0 54 54" aria-hidden="true"><path d="M8 30 h30 a8 8 0 0 1 0 16 h-30z" fill="none" stroke="#f7d48a" stroke-width="3"/><path d="M38 34 h4 a4 4 0 0 1 0 8 h-4" fill="none" stroke="#f7d48a" stroke-width="3"/><path d="M16 22 q3 -5 0 -10 M24 22 q3 -5 0 -10 M32 22 q3 -5 0 -10" stroke="#efe7d6" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        <div><h3>A breakfast table, not a desk</h3><p>Phones, laptops and tablets stay put away here, so the coffee, the conversation and the donuts get your full attention.</p><small>House rule as described in a February 2026 review. Confirm with the cafe.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="w baker">
+      <div class="big7" aria-hidden="true">7</div>
+      <div>
+        <span class="k">The baker</span>
+        <h2>Baking since age seven</h2>
+        <p>Owner and master baker Tom Spencer started baking when he was 7 years old, according to a profile in the Piscataquis Observer. A March 2026 reviewer adds that the owner is a veteran.</p>
+        <p class="quote">"Small town Maine with the best bakery you will see anywhere."<cite>Google review, August 2023</cite></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv" style="padding-top:0">
+    <div class="w">
+      <div class="visit">
+        <div class="card"><h3>Find us</h3><p>1 Bates St<br>Guilford, ME 04443</p><div class="row"><a class="btn bp" href="https://www.google.com/maps/search/?api=1&amp;query=Spencer+Bakery+%26+Cafe%2C+1+Bates+St%2C+Guilford%2C+ME+04443">Open in Maps</a></div></div>
+        <div class="card"><h3>Call the cafe</h3><p>Questions about the case or a big order? Call during the morning.</p><div class="row"><a class="btn bp" href="tel:+12078763463">(207) 876-3463</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="dock" aria-label="Quick actions"><a href="tel:+12078763463">Call</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Spencer+Bakery+%26+Cafe%2C+1+Bates+St%2C+Guilford%2C+ME+04443">Directions</a></nav>
+<script>
+(function(){
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));var h=n.getHours()+n.getMinutes()/60,d=n.getDay();
+var t=document.querySelector('.d[data-d="'+d+'"]');if(t&&!t.classList.contains('x'))t.classList.add('t');
+var openDay=d===0||d>=3;var p=Math.max(0,Math.min(1,(h-7)/3.75));if(!openDay||h<7)p=0;if(h>=10.75)p=1;
+var a=Math.PI*(1-p);var x=170+150*Math.cos(a),y=140-110*Math.sin(a);
+var s=document.getElementById('sun');s.style.transform='translate(20px,140px)';
+setTimeout(function(){s.style.transform='translate('+x+'px,'+y+'px)'},250);
+var c=document.getElementById('cap');if(openDay&&h>=7&&h<10.75)c.textContent='Serving now, until 10:45 AM';else c.textContent='Breakfast window: 7:00 to 10:45 AM, Wed to Sun';
+var r=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){r.forEach(function(e){e.classList.add('in-view')});return}
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});r.forEach(function(e){o.observe(e)})})();
+</script>
+</body>
+</html>

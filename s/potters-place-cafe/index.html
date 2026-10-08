@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potter's Place Cafe | Homemade Breakfast &amp; Lunch in Exeland, WI</title>
+<meta name="description" content="Potter's Place Cafe on WI-48 in Exeland, Wisconsin. Everything homemade, breakfast and lunch served all day with bottomless coffee. Closed Tuesdays. Call (715) 943-2321.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Alfa+Slab+One&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--plaidR:#a8262c;--plaidD:#4a1013;--pad:#eef4e3;--rule:#b9cfa7;--red:#b3262c;--pencil:#2d2d3a;--green:#2e5a3a;--text:#25281f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--text);line-height:1.5;overflow-x:hidden;background:#2a3a2e;
+       background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.5px);background-size:16px 16px}
+  a{color:inherit}
+  .flannel{height:120px;position:relative;
+    background:
+      repeating-linear-gradient(90deg,rgba(0,0,0,.45) 0 14px,transparent 14px 40px,rgba(0,0,0,.25) 40px 46px,transparent 46px 70px),
+      repeating-linear-gradient(0deg,rgba(0,0,0,.45) 0 14px,transparent 14px 40px,rgba(0,0,0,.25) 40px 46px,transparent 46px 70px),
+      var(--plaidR)}
+  .flannel .pines{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:46px}
+  .wrap{max-width:720px;margin:0 auto;padding:0 12px 40px}
+  .pad{background:var(--pad);margin-top:-46px;position:relative;border-radius:3px 3px 6px 6px;box-shadow:0 14px 30px rgba(0,0,0,.45);
+       background-image:linear-gradient(transparent 35px,var(--rule) 36px);background-size:100% 36px;background-position:0 8px;padding-bottom:26px}
+  .pad::before{content:"";display:block;height:14px;background:repeating-linear-gradient(90deg,#d9e3cd 0 8px,var(--pad) 8px 12px);border-bottom:2px dashed #a7b796;border-radius:3px 3px 0 0}
+  .checkhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px 10px;border-bottom:3px solid var(--red);background:var(--pad);flex-wrap:wrap}
+  .gc{font-family:"Alfa Slab One",serif;color:var(--red);font-size:16px;letter-spacing:.12em}
+  .no{font-family:"Alfa Slab One",serif;color:var(--red);font-size:15px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:2px solid var(--red);background:var(--pad);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--red)}
+  .grid div{padding:6px 8px;border-right:1px solid var(--red)}.grid div:last-child{border-right:0}
+  .grid .hand{display:block;font-size:20px;text-transform:none;letter-spacing:0;line-height:1.1;margin-top:2px}
+  .hand{font-family:Caveat,cursive;color:var(--pencil);font-weight:700}
+  .inner{padding:0 16px}
+  h1{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(40px,12.5vw,72px);line-height:.95;color:var(--green);margin:20px 0 6px}
+  .lede{font-size:18px;background:var(--pad);display:inline;line-height:2}
+  .ctas{display:grid;gap:10px;margin:20px 0 4px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;border-radius:999px;text-decoration:none;font-weight:600;font-size:19px;padding:12px 18px}
+  .call{background:var(--red);color:#fff;box-shadow:0 4px 0 #6f1519}
+  .dir{background:#fff;border:2px solid var(--green);color:var(--green)}
+  h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:24px;color:var(--red);margin:30px 0 8px;background:var(--pad);display:inline-block;padding-right:8px}
+  .orders{list-style:none}
+  .orders li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;min-height:36px;padding:2px 0}
+  .orders .hand{font-size:23px;line-height:1.2}
+  .orders .amt{font-family:Caveat,cursive;font-weight:700;font-size:23px;color:var(--red);white-space:nowrap}
+  .orders .dash{flex:1;border-bottom:2px dotted #9fb38c;margin:0 4px;min-width:16px;transform:translateY(-6px)}
+  .smallnote{font-size:14px;color:#5a6150;margin-top:6px;background:var(--pad);display:inline-block}
+  .ticket{background:#fff8d6;border:1px solid #e3d48b;padding:14px 14px;margin:14px 0 0;transform:rotate(-1deg);box-shadow:3px 4px 0 rgba(0,0,0,.12)}
+  .ticket strong{font-family:"Alfa Slab One",serif;font-weight:400;color:var(--green);font-size:18px;display:block}
+  .story p{font-size:17px;margin-bottom:12px;background:var(--pad)}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;gap:10px;min-height:36px;align-items:center;font-size:17px}
+  .hours .hand{font-size:24px}
+  .hours .x{color:var(--red);text-decoration:line-through}
+  .mug{display:block;margin:18px auto 0;width:120px;height:110px}
+  @keyframes steam{0%{opacity:0;transform:translateY(6px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-14px)}}
+  .steam{animation:steam 3s ease-in-out infinite}.steam.b{animation-delay:1s}.steam.c{animation-delay:2s}
+  .total{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:3px double var(--red);margin-top:26px;padding-top:10px;background:var(--pad);flex-wrap:wrap}
+  .total .hand{font-size:28px;color:var(--red)}
+  footer{text-align:center;margin-top:24px}
+  .credit{font-size:11px;color:#9fb3a3;text-decoration:none}
+  @media (min-width:700px){
+    .inner{padding:0 34px}
+    .ctas{grid-template-columns:1fr 1fr}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .flannel{height:160px}
+  }
+  @media (prefers-reduced-motion:reduce){.steam{animation:none;opacity:.5}}
+</style>
+</head>
+<body>
+<div class="flannel" aria-hidden="true">
+  <svg class="pines" viewBox="0 0 400 46" preserveAspectRatio="none">
+    <path fill="#1c2a20" d="M0 46V30l10-12 8 10 10-20 12 22 8-10 10 16 12-24 10 18 8-8 12 20 10-22 12 18 8-10 10 14 12-26 10 20 8-8 12 18 10-16 12 12 8-20 10 18 12-10 8 12 10-22 12 20 8-8 10 14 12-18 10 14 8-10 12 16 10-12V46z"/>
+  </svg>
+</div>
+<div class="wrap">
+  <div class="pad">
+    <div class="checkhead"><span class="gc">GUEST CHECK</span><span class="no">Exeland, WI</span></div>
+    <div class="grid">
+      <div>Table<span class="hand">Yours</span></div>
+      <div>Guests<span class="hand">All welcome</span></div>
+      <div>Coffee<span class="hand">Bottomless</span></div>
+    </div>
+    <div class="inner">
+      <h1>Potter's Place Cafe</h1>
+      <p class="lede">Everything homemade. Breakfast and lunch served all day, with bottomless coffee, right on Highway 48.</p>
+      <div class="ctas">
+        <a class="btn call" href="tel:+17159432321">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          Call (715) 943-2321</a>
+        <a class="btn dir" href="https://www.google.com/maps/search/?api=1&amp;query=11038+WI-48%2C+Exeland%2C+WI+54835" target="_blank" rel="noopener">Directions</a>
+      </div>
+
+      <h2>Made from scratch</h2>
+      <ul class="orders">
+        <li><span class="hand">Homemade soups</span><span class="dash"></span></li>
+        <li><span class="hand">Homemade gravies</span><span class="dash"></span></li>
+        <li><span class="hand">Homemade potatoes</span><span class="dash"></span></li>
+        <li><span class="hand">Homemade desserts</span><span class="dash"></span></li>
+        <li><span class="hand">½ Farmers special + drink</span><span class="dash"></span><span class="amt">$8.50</span></li>
+        <li><span class="hand">Homemade Bloody Mary</span><span class="dash"></span><span class="amt">$7</span></li>
+        <li><span class="hand">Fully loaded Bloody Mary</span><span class="dash"></span><span class="amt">$10</span></li>
+      </ul>
+      <p class="smallnote">Prices as posted by the cafe in October 2026. Call for today's specials.</p>
+
+      <div class="ticket"><strong>Veterans &amp; service members</strong>10% off every Monday. Thank you for your service.</div>
+
+      <div class="two">
+        <div class="story">
+          <h2>Our place</h2>
+          <p>Potter's Place is a hometown stop in Exeland. Snowmobilers and trail riders know it well: one riding group overflowed the place in 2025 and planned to come back in summer 2026.</p>
+          <p>It's a cafe that looks after its town too, like the meat raffle held to support a local family after a loss, with thanks to Exeland Fire &amp; Rescue.</p>
+          <p>Ask for Natoli.</p>
+        </div>
+        <div>
+          <h2>Hours</h2>
+          <ul class="hours">
+            <li><span>Monday</span><span class="hand">7 – 1:30</span></li>
+            <li><span>Tuesday</span><span class="hand x">Closed</span></li>
+            <li><span>Wed – Sat</span><span class="hand">7 – 1:30</span></li>
+            <li><span>Sunday</span><span class="hand">8 – 1:30</span></li>
+          </ul>
+          <p class="smallnote">All times AM to PM. Closed Tuesdays.</p>
+          <svg class="mug" viewBox="0 0 120 110" aria-hidden="true">
+            <path class="steam" d="M42 30c-6-8 6-12 0-22" stroke="#8aa38c" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path class="steam b" d="M58 30c-6-8 6-12 0-22" stroke="#8aa38c" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path class="steam c" d="M74 30c-6-8 6-12 0-22" stroke="#8aa38c" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M26 38h66v40a18 18 0 0 1-18 18H44a18 18 0 0 1-18-18z" fill="#fff" stroke="#2e5a3a" stroke-width="4"/>
+            <path d="M92 48h6a12 12 0 0 1 0 24h-6" fill="none" stroke="#2e5a3a" stroke-width="4"/>
+            <rect x="26" y="52" width="66" height="8" fill="#b3262c"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="total">
+        <span>11038 WI-48, Exeland, WI 54835</span>
+        <span class="hand">Thank you!</span>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a class="credit" href="https://patch-flowstudio.github.io/Patch-Flow-Studios/" target="_blank" rel="noopener">Sample design by Patch &amp; Flow Studio</a>
+  </footer>
+</div>
+</body>
+</html>

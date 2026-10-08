@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stan's Coffee Company · Thompsontown, PA</title>
+<meta name="description" content="Stan's Coffee Company: a coffee shop in a repurposed house on West Main Street in Thompsontown, PA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600;700&family=Architects+Daughter&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wall:#f4ede3; --wall-2:#ebe1d2; --ink:#2b2420; --soft:#6b5f55; --terra:#b65a3a; --terra-d:#93452b; --sage:#7d9473; --sage-d:#566b4e; --plan:#3c4a3f; --wood:#a57a52;
+  --line:rgba(43,36,32,.12); --spring:cubic-bezier(.22,1,.36,1.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Instrument Sans",system-ui,sans-serif;background:var(--wall);color:var(--ink);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{font-size:12.5px;line-height:1.45;padding:10px 18px;text-align:center;background:var(--plan);color:#e7ecdf}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hand{font-family:"Architects Daughter",cursive}
+
+/* HERO: house facade */
+.hero{padding:44px 0 24px;position:relative}
+.hero-in{display:grid;gap:28px;align-items:end}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-d)}
+h1{font-family:"Gloock",Georgia,serif;font-weight:400;font-size:clamp(46px,12.5vw,92px);line-height:.98;letter-spacing:-.025em;margin:12px 0 16px}
+h1 span{color:var(--terra)}
+.lede{font-size:18px;max-width:32ch;color:#463c35}
+.addr{margin-top:12px;font-size:14.5px;color:var(--soft)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:14px;font-weight:600;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;
+  transition:transform .4s var(--spring),background .2s ease,box-shadow .25s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn:active{transform:scale(.97);transition:transform 100ms ease-out}
+.b-terra{background:var(--terra);color:#fff;box-shadow:0 8px 20px -10px rgba(182,90,58,.8)}
+.b-terra:hover{background:var(--terra-d)}
+.b-line{background:rgba(255,255,255,.55);color:var(--ink);border:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.house{width:100%;max-width:420px;height:auto;justify-self:center;display:block}
+.steam path{animation:rise 3.2s ease-in-out infinite;transform-origin:center}
+.steam path:nth-child(2){animation-delay:.6s}.steam path:nth-child(3){animation-delay:1.2s}
+@keyframes rise{0%{opacity:0;transform:translateY(6px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-10px)}}
+
+/* hours as a door sign */
+.sign-row{padding:24px 0 8px}
+.sign{position:relative;margin:0 auto;max-width:520px;background:#fffaf2;border:1px solid var(--line);border-radius:18px;padding:26px 22px 22px;box-shadow:0 24px 40px -30px rgba(43,36,32,.6)}
+.sign::before{content:"";position:absolute;top:-30px;left:50%;width:120px;height:30px;transform:translateX(-50%);border:2px solid #8e7c6a;border-bottom:0;border-radius:60px 60px 0 0}
+.sign::after{content:"";position:absolute;top:-36px;left:50%;width:10px;height:10px;border-radius:50%;background:#8e7c6a;transform:translateX(-50%)}
+.sign h2{font-family:"Gloock",serif;font-weight:400;font-size:26px;text-align:center}
+.open{display:flex;justify-content:center;margin:10px 0 16px}
+.pill{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;padding:7px 14px;border-radius:999px;background:var(--wall-2)}
+.pill i{width:9px;height:9px;border-radius:50%;background:#a0958a;display:block}
+.pill.on{background:#e3ecdc;color:var(--sage-d)}.pill.on i{background:#4f8a45;box-shadow:0 0 0 4px rgba(79,138,69,.2)}
+.hrs{list-style:none;display:grid;gap:2px}
+.hrs li{display:flex;justify-content:space-between;padding:9px 6px;border-bottom:1px dashed var(--line);font-size:15.5px}
+.hrs li:last-child{border-bottom:0}
+.hrs li.today{font-weight:700;color:var(--terra-d)}
+.fine{font-size:12.5px;color:var(--soft);text-align:center;margin-top:12px}
+
+/* FLOOR PLAN */
+.plan-sec{padding:72px 0}
+.h2{font-family:"Gloock",serif;font-weight:400;font-size:clamp(32px,8vw,48px);line-height:1.06;letter-spacing:-.015em}
+.sub{color:var(--soft);margin-top:10px;max-width:48ch}
+.plan-grid{display:grid;gap:22px;margin-top:30px}
+.paper{background:
+  linear-gradient(rgba(60,74,63,.07) 1px,transparent 1px) 0 0/22px 22px,
+  linear-gradient(90deg,rgba(60,74,63,.07) 1px,transparent 1px) 0 0/22px 22px,#fbf8f1;
+  border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 30px 50px -40px rgba(43,36,32,.7)}
+.plan{width:100%;height:auto;display:block}
+.room{cursor:pointer;outline:none}
+.room rect{fill:rgba(125,148,115,.08);stroke:var(--plan);stroke-width:3;transition:fill .35s var(--spring)}
+.room text{font-family:"Architects Daughter",cursive;font-size:17px;fill:var(--plan);pointer-events:none}
+.room:hover rect,.room:focus-visible rect{fill:rgba(125,148,115,.22)}
+.room.sel rect{fill:rgba(182,90,58,.18);stroke:var(--terra-d)}
+.room:active rect{fill:rgba(182,90,58,.28)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tab{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font:600 14px "Instrument Sans",sans-serif;color:var(--ink);cursor:pointer;transition:transform .4s var(--spring),background .2s}
+.tab:active{transform:scale(.96);transition:transform 100ms ease-out}
+.tab[aria-selected="true"]{background:var(--plan);color:#fff;border-color:var(--plan)}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;min-height:260px;position:relative;overflow:hidden}
+.card .lbl{font-family:"Architects Daughter",cursive;color:var(--terra-d);font-size:17px}
+.card h3{font-family:"Gloock",serif;font-weight:400;font-size:30px;line-height:1.1;margin:6px 0 12px}
+.card ul{list-style:none;display:grid;gap:10px;margin-top:6px}
+.card li{padding-left:22px;position:relative}
+.card li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:2px;background:var(--sage);transform:rotate(45deg)}
+.card .src{font-size:12.5px;color:var(--soft);margin-top:16px}
+.panel{animation:slide .45s var(--spring)}
+@keyframes slide{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.q{font-family:"Gloock",serif;font-size:19px;line-height:1.4;margin-top:4px}
+
+/* voices: sticky notes on the fridge */
+.notes-sec{padding:16px 0 72px}
+.notes{display:grid;gap:18px;margin-top:28px}
+.note{padding:22px 20px 18px;border-radius:4px;box-shadow:0 14px 22px -16px rgba(43,36,32,.6);transition:transform .45s var(--spring)}
+.note:nth-child(1){background:#f3e0c6;transform:rotate(-1.2deg)}
+.note:nth-child(2){background:#dfe8d6;transform:rotate(1deg)}
+.note:nth-child(3){background:#f2d6cb;transform:rotate(-.6deg)}
+.note:hover{transform:rotate(0) translateY(-3px)}
+.note p{font-family:"Architects Daughter",cursive;font-size:17.5px;line-height:1.45}
+.note span{display:block;margin-top:12px;font-size:12.5px;font-weight:600;color:#5c5047;letter-spacing:.03em}
+
+/* visit */
+.visit{background:var(--plan);color:#eef1e8;border-radius:28px;padding:34px 24px;display:grid;gap:22px}
+.visit .h2{color:#fff}
+.visit dl{display:grid;gap:16px}
+.visit dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#b9c9b0}
+.visit dd{font-size:17px;margin-top:2px}
+.visit .b-line{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)}
+footer{text-align:center;padding:44px 20px 110px;font-size:13.5px;color:var(--soft)}
+footer a{font-weight:600;color:var(--plan)}
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:480px;margin:0 auto;display:flex;gap:10px;padding:8px;border-radius:20px;
+  background:rgba(244,237,227,.8);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);border:1px solid var(--line);box-shadow:0 14px 30px -16px rgba(0,0,0,.4);z-index:9}
+.dock .btn{flex:1;padding:0 10px}
+
+@media (min-width:820px){
+  .hero-in{grid-template-columns:1.1fr .9fr}
+  .plan-grid{grid-template-columns:1.25fr 1fr;align-items:start}
+  .notes{grid-template-columns:repeat(3,1fr)}
+  .visit{grid-template-columns:1fr 1fr;padding:48px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Stan's Coffee Company's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <div class="kicker">624 W Main St · Thompsontown, PA</div>
+      <h1>Stan's <span>Coffee</span> Company</h1>
+      <p class="lede">Coffee, chai and loose-leaf tea in a repurposed part of a house, right in town.</p>
+      <p class="addr">Juniata County, Pennsylvania</p>
+      <div class="cta">
+        <a class="btn b-terra" href="tel:+12232680402">Call (223) 268-0402</a>
+        <a class="btn b-line" href="#plan">Walk through the house</a>
+      </div>
+    </div>
+    <svg class="house" viewBox="0 0 420 330" role="img" aria-label="Illustration of a house with a coffee cup sign">
+      <g class="steam" fill="none" stroke="#8e7c6a" stroke-width="3" stroke-linecap="round">
+        <path d="M300 54 c-8-10 8-16 0-28"/><path d="M314 54 c-8-10 8-16 0-28"/><path d="M328 54 c-8-10 8-16 0-28"/>
+      </g>
+      <rect x="296" y="60" width="38" height="44" rx="3" fill="#8e7c6a"/>
+      <path d="M40 150 L210 40 L380 150Z" fill="#b65a3a"/>
+      <path d="M40 150 L210 40 L380 150" fill="none" stroke="#93452b" stroke-width="6" stroke-linejoin="round"/>
+      <rect x="62" y="148" width="296" height="168" fill="#fbf6ee" stroke="#3c4a3f" stroke-width="3"/>
+      <g stroke="#e3d8c8" stroke-width="2">
+        <line x1="62" y1="170" x2="358" y2="170"/><line x1="62" y1="192" x2="358" y2="192"/><line x1="62" y1="214" x2="358" y2="214"/><line x1="62" y1="236" x2="358" y2="236"/><line x1="62" y1="258" x2="358" y2="258"/><line x1="62" y1="280" x2="358" y2="280"/><line x1="62" y1="302" x2="358" y2="302"/>
+      </g>
+      <rect x="178" y="214" width="64" height="102" rx="4" fill="#a57a52" stroke="#3c4a3f" stroke-width="3"/>
+      <circle cx="230" cy="268" r="4" fill="#f3d27a"/>
+      <rect x="92" y="196" width="60" height="56" fill="#dfe8d6" stroke="#3c4a3f" stroke-width="3"/>
+      <line x1="122" y1="196" x2="122" y2="252" stroke="#3c4a3f" stroke-width="2"/><line x1="92" y1="224" x2="152" y2="224" stroke="#3c4a3f" stroke-width="2"/>
+      <rect x="268" y="196" width="60" height="56" fill="#dfe8d6" stroke="#3c4a3f" stroke-width="3"/>
+      <line x1="298" y1="196" x2="298" y2="252" stroke="#3c4a3f" stroke-width="2"/><line x1="268" y1="224" x2="328" y2="224" stroke="#3c4a3f" stroke-width="2"/>
+      <g fill="#7d9473"><ellipse cx="100" cy="258" rx="14" ry="8"/><ellipse cx="114" cy="254" rx="10" ry="7"/><ellipse cx="320" cy="258" rx="14" ry="8"/><ellipse cx="306" cy="254" rx="10" ry="7"/></g>
+      <g transform="translate(210 132)">
+        <circle r="34" fill="#fffaf2" stroke="#3c4a3f" stroke-width="3"/>
+        <path d="M-14 -6 h24 v14 a12 12 0 0 1 -12 12 h0 a12 12 0 0 1 -12 -12z" fill="#3c4a3f"/>
+        <path d="M10 -2 a7 7 0 0 1 0 12" fill="none" stroke="#3c4a3f" stroke-width="3"/>
+        <text y="-14" text-anchor="middle" font-family="Architects Daughter, cursive" font-size="11" fill="#93452b">Stan's</text>
+      </g>
+      <rect x="20" y="314" width="380" height="8" rx="4" fill="#cbbca8"/>
+    </svg>
+  </div>
+</header>
+
+<section class="sign-row" aria-labelledby="hrs-h">
+  <div class="wrap">
+    <div class="sign">
+      <h2 id="hrs-h">Come on in</h2>
+      <div class="open"><span class="pill" id="pill"><i></i><span id="pilltxt">Open weekdays 7 to 2</span></span></div>
+      <ul class="hrs" id="hrs">
+        <li data-d="1"><span>Monday</span><span>7 AM - 2 PM</span></li>
+        <li data-d="2"><span>Tuesday</span><span>7 AM - 2 PM</span></li>
+        <li data-d="3"><span>Wednesday</span><span>7 AM - 2 PM</span></li>
+        <li data-d="4"><span>Thursday</span><span>7 AM - 2 PM</span></li>
+        <li data-d="5"><span>Friday</span><span>7 AM - 2 PM</span></li>
+        <li data-d="6"><span>Saturday</span><span>8 AM - 1 PM</span></li>
+        <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <p class="fine">Hours as listed on Google. Call to confirm, especially around holidays.</p>
+    </div>
+  </div>
+</section>
+
+<section class="plan-sec" id="plan">
+  <div class="wrap">
+    <h2 class="h2">Walk through the house</h2>
+    <p class="sub">Stan's lives in part of a house on West Main Street. Tap a room to see what's in it.</p>
+    <div class="plan-grid">
+      <div>
+        <div class="paper">
+          <svg class="plan" viewBox="0 0 520 380" aria-label="Floor plan of the coffee shop">
+            <g class="room" data-r="counter" tabindex="0" role="button" aria-label="The counter"><rect x="16" y="16" width="250" height="160"/><text x="34" y="46">The counter</text>
+              <g fill="none" stroke="#3c4a3f" stroke-width="2"><rect x="40" y="120" width="190" height="26" rx="4"/><circle cx="80" cy="100" r="8"/><circle cx="130" cy="100" r="8"/><circle cx="180" cy="100" r="8"/></g></g>
+            <g class="room" data-r="bake" tabindex="0" role="button" aria-label="The bake case"><rect x="266" y="16" width="238" height="160"/><text x="284" y="46">Bake case</text>
+              <g fill="none" stroke="#3c4a3f" stroke-width="2"><rect x="300" y="78" width="170" height="70" rx="6"/><line x1="300" y1="113" x2="470" y2="113"/><circle cx="330" cy="98" r="9"/><circle cx="362" cy="98" r="9"/><circle cx="394" cy="98" r="9"/><rect x="330" y="122" width="22" height="16" rx="3"/><rect x="368" y="122" width="22" height="16" rx="3"/></g></g>
+            <g class="room" data-r="sit" tabindex="0" role="button" aria-label="The sitting room"><rect x="16" y="176" width="320" height="188"/><text x="34" y="206">Sitting room</text>
+              <g fill="none" stroke="#3c4a3f" stroke-width="2"><circle cx="100" cy="280" r="26"/><circle cx="66" cy="280" r="9"/><circle cx="134" cy="280" r="9"/><rect x="190" y="248" width="110" height="40" rx="18"/><path d="M300 330 c-6-20 10-26 4-40 M312 330 c6-18-6-24 2-38" /></g>
+              <g fill="#7d9473" opacity=".55"><circle cx="300" cy="334" r="12"/><circle cx="40" cy="340" r="10"/></g></g>
+            <g class="room" data-r="kids" tabindex="0" role="button" aria-label="The kids corner"><rect x="336" y="176" width="168" height="188"/><text x="352" y="206">Kids corner</text>
+              <g fill="none" stroke="#3c4a3f" stroke-width="2"><rect x="364" y="240" width="40" height="30" rx="3"/><rect x="420" y="250" width="56" height="40" rx="4"/><line x1="448" y1="250" x2="448" y2="290"/><circle cx="384" cy="314" r="14"/><path d="M372 314 h24 M384 302 v24"/></g></g>
+            <path d="M120 364 a26 26 0 0 1 26 -26" fill="none" stroke="#3c4a3f" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="150" y="376" font-family="Architects Daughter, cursive" font-size="13" fill="#6b5f55">front door</text>
+          </svg>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Rooms">
+          <button class="tab" role="tab" data-r="counter" aria-selected="true">Counter</button>
+          <button class="tab" role="tab" data-r="bake" aria-selected="false">Bake case</button>
+          <button class="tab" role="tab" data-r="sit" aria-selected="false">Sitting room</button>
+          <button class="tab" role="tab" data-r="kids" aria-selected="false">Kids corner</button>
+        </div>
+      </div>
+      <div class="card" aria-live="polite">
+        <div class="panel" data-p="counter">
+          <div class="lbl">Room 1 · the counter</div>
+          <h3>A lot of drink options</h3>
+          <ul>
+            <li>Stan's House Blend, made by Cedar Shed</li>
+            <li>Chai and loose-leaf tea</li>
+            <li>Iced cold brew with caramel and cold foam, a guest favorite in February 2026</li>
+            <li>Peppermint Mocha, recommended by a guest in December 2022</li>
+          </ul>
+          <p class="src">House blend, chai and tea per the Lewistown Sentinel (January 2023); other drinks from Google reviews. Sample: the full drink menu would go here once confirmed.</p>
+        </div>
+        <div class="panel" data-p="bake" hidden>
+          <div class="lbl">Room 2 · the bake case</div>
+          <h3>Something to go with it</h3>
+          <ul>
+            <li>Baked goods from Zimmerman's Farm Market, as reported in 2023</li>
+            <li>A homemade cookies and cream pop tart, picked by a guest's kid in February 2026</li>
+          </ul>
+          <p class="src">Sample: what's in the case changes, so the real site could show the day's picks.</p>
+        </div>
+        <div class="panel" data-p="sit" hidden>
+          <div class="lbl">Room 3 · the sitting room</div>
+          <h3>Stay a while</h3>
+          <p class="q">"There's plenty of comfortable space to sit and relax for a while, whether you're meeting someone or just enjoying a quiet moment."</p>
+          <p class="src">Google review, December 2025. Guests also mention boho plant vibes and woodworking by Against the Grain Woodworking.</p>
+        </div>
+        <div class="panel" data-p="kids" hidden>
+          <div class="lbl">Room 4 · the kids corner</div>
+          <h3>Room for little ones</h3>
+          <p class="q">"It even has a little kids area with some toys for children to play with, as well as some books."</p>
+          <p class="src">Google review, March 2026. Earlier guests mention coloring books for the kids too.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="notes-sec">
+  <div class="wrap">
+    <h2 class="h2">Notes left on the fridge</h2>
+    <p class="sub">A few words from guests, quoted as written.</p>
+    <div class="notes">
+      <div class="note"><p>"The shop itself is a cute, repurposed part of a house right in town, which gives it a warm, welcoming feel."</p><span>Google review · December 2025</span></div>
+      <div class="note"><p>"Super cute place with boho plant vibes. The 2 ladies working were very welcoming and friendly."</p><span>Google review · February 2026</span></div>
+      <div class="note"><p>"Great little coffee shop. Coffee is excellent and great atmosphere."</p><span>Google review · March 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="visit-h">
+  <div class="visit">
+    <div>
+      <h2 class="h2" id="visit-h">Find the house</h2>
+      <p style="margin-top:10px;color:#cdd8c6">Right on West Main Street in Thompsontown.</p>
+      <div class="cta">
+        <a class="btn b-terra" href="https://www.google.com/maps/dir/?api=1&amp;destination=Stan%27s+Coffee+Company+624+W+Main+St+Thompsontown+PA+17094" target="_blank" rel="noopener">Directions</a>
+        <a class="btn b-line" href="tel:+12232680402">Call the shop</a>
+      </div>
+    </div>
+    <dl>
+      <div><dt>Address</dt><dd>624 W Main St<br>Thompsontown, PA 17094</dd></div>
+      <div><dt>Phone</dt><dd>(223) 268-0402</dd></div>
+      <div><dt>Owners</dt><dd>Ben and Mary Sieber</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer><a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/" target="_blank" rel="noopener">Studio concept. Sample design by Patch &amp; Flow Studio</a></footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn b-terra" href="tel:+12232680402">Call</a>
+  <a class="btn b-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Stan%27s+Coffee+Company+624+W+Main+St+Thompsontown+PA+17094" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){
+  var rooms=document.querySelectorAll('.room'),tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  function pick(r){
+    rooms.forEach(function(x){x.classList.toggle('sel',x.dataset.r===r)});
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x.dataset.r===r?'true':'false')});
+    panels.forEach(function(p){p.hidden=p.dataset.p!==r});
+  }
+  rooms.forEach(function(x){
+    x.addEventListener('pointerdown',function(){pick(x.dataset.r)});
+    x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(x.dataset.r)}});
+  });
+  tabs.forEach(function(x){x.addEventListener('pointerdown',function(){pick(x.dataset.r)});x.addEventListener('click',function(){pick(x.dataset.r)})});
+  pick('counter');
+  try{
+    var n=new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"})),d=n.getDay(),m=n.getHours()*60+n.getMinutes();
+    var li=document.querySelector('#hrs li[data-d="'+d+'"]'); if(li) li.classList.add('today');
+    var o=d>=1&&d<=5?[420,840]:(d===6?[480,780]:null), on=o&&m>=o[0]&&m<o[1];
+    document.getElementById('pill').classList.toggle('on',!!on);
+    document.getElementById('pilltxt').textContent=on?('Open now until '+(d===6?'1 PM':'2 PM')):(o&&m<o[0]?('Opens today at '+(d===6?'8 AM':'7 AM')):'Closed right now');
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

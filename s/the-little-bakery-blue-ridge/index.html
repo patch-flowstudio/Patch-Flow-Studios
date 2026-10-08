@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Little Bakery | Retro dessert shop in downtown Blue Ridge, GA</title>
+<meta name="description" content="The Little Bakery on East 1st Street in Blue Ridge, GA: a retro-inspired, scratch-made dessert shop. Cheesecakes, old-school sweets and a menu that changes through the week.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Karla:wght@400;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--mint:#c9eadb;--mint2:#9fd3bd;--cherry:#d23f5b;--cream:#fff7ea;--choc:#3f2624;--felt:#1e1b1c;--s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Karla',system-ui,sans-serif;color:var(--choc);background:var(--cream);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--choc);color:#f6e7d6;font:12px/1.45 system-ui,sans-serif;text-align:center;padding:8px 14px}
+/* awning */
+.awning{height:46px;background:repeating-linear-gradient(90deg,var(--cherry) 0 34px,#fff 34px 68px);position:relative}
+.awning::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;background:radial-gradient(circle at 17px 0,var(--cherry) 16px,transparent 17px) 0 0/68px 16px repeat-x,radial-gradient(circle at 51px 0,#fff 16px,transparent 17px) 0 0/68px 16px repeat-x}
+header{padding:var(--s5) var(--s3) var(--s4);text-align:center;background:var(--mint)}
+.est{font:700 12px 'Courier Prime',monospace;letter-spacing:.24em;text-transform:uppercase;color:#2f6b55}
+h1{font-family:'Shrikhand',cursive;font-weight:400;font-size:clamp(46px,14vw,104px);line-height:.95;letter-spacing:-.01em;color:var(--cherry);margin:14px 0 10px;text-shadow:3px 3px 0 #fff}
+.lede{max-width:30ch;margin:0 auto;font-size:19px;font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:var(--s3)}
+.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15px;transition:transform 100ms ease-out,box-shadow 160ms ease-out;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.b1{background:var(--cherry);color:#fff;box-shadow:0 4px 0 #8f2238}
+.b1:active{box-shadow:0 1px 0 #8f2238}
+.b2{background:#fff;color:var(--choc);box-shadow:inset 0 0 0 2px var(--choc)}
+.btn:focus-visible{outline:3px solid var(--choc);outline-offset:3px}
+main{max-width:980px;margin:0 auto;padding:0 var(--s3)}
+section{padding:var(--s5) 0 0}
+h2{font-family:'Shrikhand',cursive;font-weight:400;font-size:clamp(30px,8vw,44px);letter-spacing:-.005em;line-height:1.05;color:var(--choc)}
+.kicker{font:700 12px 'Courier Prime',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--cherry);margin-bottom:6px}
+/* letterboard */
+.board{margin-top:var(--s3);background:var(--felt);border-radius:14px;padding:22px 18px;box-shadow:0 0 0 10px #8a5a3b,0 0 0 12px #6c4229,0 18px 40px rgba(63,38,36,.35);background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px)}
+.board p{font:700 clamp(15px,4.4vw,22px)/1.65 'Courier Prime',monospace;color:#f4f1ea;letter-spacing:.08em;text-transform:uppercase;text-align:center;word-break:break-word}
+.board p .r{color:#ff8fa3}
+.board small{display:block;margin-top:14px;text-align:center;color:#bdb6aa;font:12px/1.4 'Karla',sans-serif;letter-spacing:.02em;text-transform:none}
+.note{margin-top:22px;font-size:15px;max-width:60ch}
+/* recipe box */
+.box{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:var(--s3)}
+.card{background:#fff;border-radius:6px;padding:18px 16px 16px;box-shadow:0 1px 0 #e9dcc8,0 10px 24px rgba(63,38,36,.08);background-image:linear-gradient(transparent 33px,#f2b6c1 33px 35px,transparent 35px),repeating-linear-gradient(transparent 0 25px,#d9ecf5 25px 26px);background-position:0 0,0 36px;transition:transform 240ms cubic-bezier(.2,.8,.2,1)}
+.card:hover{transform:translateY(-3px) rotate(-.4deg)}
+.card b{font:700 16px 'Courier Prime',monospace;display:block;height:28px}
+.card span{display:block;font-size:14px;line-height:26px;padding-top:6px}
+/* misty mountain */
+.split{display:grid;grid-template-columns:1fr;gap:var(--s3);align-items:center;margin-top:var(--s3)}
+@media(min-width:760px){.split{grid-template-columns:1.1fr .9fr}}
+.slice{background:var(--mint);border-radius:22px;padding:24px;position:relative;overflow:hidden}
+.slice svg{width:100%;max-width:260px;height:auto;display:block;margin:0 auto}
+.days{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.days span{min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border-radius:12px;background:#fff;font-weight:800;border:2px solid var(--choc)}
+/* quotes */
+.quotes{columns:1;column-gap:16px;margin-top:var(--s3)}
+@media(min-width:760px){.quotes{columns:2}}
+blockquote{break-inside:avoid;background:#fff;border-radius:18px;padding:18px 18px 14px;margin-bottom:16px;border:2px solid #f1dfc7;font-size:16px}
+blockquote cite{display:block;margin-top:8px;font:700 12px 'Courier Prime',monospace;color:#8a6b5a;font-style:normal;letter-spacing:.06em}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr;gap:18px;margin-top:var(--s3)}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.hours{list-style:none;background:#fff;border-radius:18px;padding:6px 18px;border:2px solid var(--choc)}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed #e3cdb2;font-weight:600}
+.hours li:last-child{border:0}
+.hours li.today{color:var(--cherry)}
+.hours li.today span::after{content:" · today";font-weight:800}
+.addr{background:var(--choc);color:#fbeee0;border-radius:18px;padding:22px}
+.addr p{margin-bottom:14px}
+footer.pf{text-align:center;font:12px/1.5 system-ui,sans-serif;padding:var(--s5) 16px 40px;color:#8a6b5a}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not The Little Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="awning" aria-hidden="true"></div>
+<header>
+ <div class="est">Downtown Blue Ridge · East 1st Street</div>
+ <h1>The Little Bakery</h1>
+ <p class="lede">A retro-inspired dessert shop with sweets from days gone by, all made from scratch.</p>
+ <div class="cta"><a class="btn b1" href="tel:+19123126896">Call (912) 312-6896</a><a class="btn b2" href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Little+Bakery%2C+3558+E+1st+St+%23402%2C+Blue+Ridge%2C+GA+30513">Directions</a></div>
+</header>
+<main>
+<section class="rv">
+ <div class="kicker">The letterboard</div>
+ <h2>On the case today</h2>
+ <div class="board" role="img" aria-label="Sample letterboard showing a day's menu">
+  <p>Cheesecake <span class="r">·</span> chess bars<br>vanilla cake pops<br>strawberry crunch<br>cheesecake <span class="r">·</span> sugar cookies</p>
+  <small>Sample board built from favorites customers mention. The real menu changes and is posted each day on Facebook.</small>
+ </div>
+ <p class="note">Regulars check the daily post to see what made it into the case. Here, that board would live at the top of the page, so the morning's lineup is one tap away.</p>
+</section>
+
+<section class="rv">
+ <div class="kicker">From the recipe box</div>
+ <h2>Old-school sweets</h2>
+ <div class="box">
+  <div class="card"><b>Stack cakes</b><span>The layered mountain classic.</span></div>
+  <div class="card"><b>Grandma's potato candy</b><span>Rolled and sliced, the old way.</span></div>
+  <div class="card"><b>Preacher's cookies</b><span>No-bake, chocolate and oats.</span></div>
+  <div class="card"><b>Popcorn balls &amp; candy apples</b><span>County-fair favorites.</span></div>
+ </div>
+ <p class="note">Item names from the shop's Blue Ridge visitor listing. Short descriptions are sample copy to confirm with the bakery.</p>
+</section>
+
+<section class="rv">
+ <div class="split">
+  <div>
+   <div class="kicker">By the slice</div>
+   <h2>Wednesdays &amp; Fridays at Misty Mountain Hops</h2>
+   <p class="note">The bakery makes the desserts at Misty Mountain Hops every Wednesday and Friday, sold there by the slice.</p>
+   <div class="days"><span>Wed</span><span>Fri</span></div>
+  </div>
+  <div class="slice" aria-hidden="true">
+   <svg viewBox="0 0 260 180"><ellipse cx="130" cy="158" rx="118" ry="16" fill="#9fd3bd"/><path d="M34 120 L196 60 L226 104 L226 138 L34 154Z" fill="#fff3d9" stroke="#3f2624" stroke-width="3" stroke-linejoin="round"/><path d="M34 120 L196 60 L226 104 L64 128Z" fill="#ffe2a8" stroke="#3f2624" stroke-width="3" stroke-linejoin="round"/><path d="M34 140 L226 124" stroke="#d23f5b" stroke-width="6"/><path d="M34 154 L226 138 L226 146 L34 162Z" fill="#c98f5a" stroke="#3f2624" stroke-width="3"/><circle cx="150" cy="86" r="10" fill="#d23f5b"/><circle cx="174" cy="80" r="8" fill="#d23f5b"/><path d="M150 76 q6-14 16-16" stroke="#2f6b55" stroke-width="3" fill="none"/></svg>
+  </div>
+ </div>
+</section>
+
+<section class="rv">
+ <div class="kicker">Overheard at the counter</div>
+ <h2>What folks say</h2>
+ <div class="quotes">
+  <blockquote>"Arial puts so much love into everything she makes, so much so, you can taste it!"<cite>Google review · Jul 2025</cite></blockquote>
+  <blockquote>"We especially love the vanilla cake pops, strawberry crunch cheesecake, and my daughter loves the gumball machine."<cite>Google review · Jul 2025</cite></blockquote>
+  <blockquote>"I ordered a lemon cheesecake for my friend's 50th and we all said it was the best cheesecake we've ever had."<cite>Google review · Oct 2024</cite></blockquote>
+  <blockquote>"They post what's available everyday on Facebook, too!!"<cite>Google review · Feb 2025</cite></blockquote>
+ </div>
+</section>
+
+<section class="rv">
+ <div class="kicker">Come on in</div>
+ <h2>Hours &amp; the shop</h2>
+ <div class="visit">
+  <ul class="hours" data-hours>
+   <li data-d="0"><span>Monday</span><b>Closed</b></li>
+   <li data-d="1"><span>Tuesday</span><b>Closed</b></li>
+   <li data-d="2"><span>Wednesday</span><b>12 – 6 PM</b></li>
+   <li data-d="3"><span>Thursday</span><b>12 – 6 PM</b></li>
+   <li data-d="4"><span>Friday</span><b>12 – 6 PM</b></li>
+   <li data-d="5"><span>Saturday</span><b>12 – 5 PM</b></li>
+   <li data-d="6"><span>Sunday</span><b>Closed</b></li>
+  </ul>
+  <div class="addr">
+   <p><b>3558 E 1st St, Suite 402</b><br>Blue Ridge, GA 30513</p>
+   <p>Whole cheesecakes and special orders: call ahead. Lead times are sample details to confirm with Arial.</p>
+   <a class="btn b1" href="tel:+19123126896">Call to order</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="pf">Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){var m=[6,0,1,2,3,4,5][new Date().getDay()];document.querySelectorAll('[data-hours] li').forEach(function(li){if(+li.dataset.d===m)li.classList.add('today')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rv').forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>

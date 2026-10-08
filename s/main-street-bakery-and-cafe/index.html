@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Main Street Bakery and Café | Keystone, Iowa</title>
+<meta name="description" content="Main Street Bakery and Café in Keystone, Iowa. Custom birthday cakes by Kassie, cheesecake, cinnamon rolls, lunch, coffee and a little gift shop.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#cfe6f5;--navy:#173a5e;--cream:#fffbf3;--pink:#f48fb1;--yellow:#ffd25e;--mint:#8fd6b8;--coral:#ff8a65;--ink:#173a5e}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.03rem/1.6 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.75rem;line-height:1.45;padding:.55rem 1rem;text-align:center;background:var(--navy);color:#e8f2fa}
+.hero{background:var(--sky);position:relative;overflow:hidden;padding:0 1.2rem 3rem}
+.bunting{display:flex;justify-content:center;gap:0;height:64px;margin:0 -1.2rem;overflow:hidden}
+.bunting svg{flex:0 0 auto;height:64px}
+.flag{transform-origin:50% 0;animation:sway 4s ease-in-out infinite}
+.flag:nth-child(2n){animation-delay:-1.3s}.flag:nth-child(3n){animation-delay:-2.4s}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.hero-in{max-width:60rem;margin:0 auto;display:grid;gap:2rem;align-items:center;padding-top:1.2rem}
+@media(min-width:840px){.hero-in{grid-template-columns:1.15fr .85fr}}
+.k{font-weight:800;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase}
+h1{font-family:Gloock,serif;font-weight:400;font-size:clamp(2.7rem,11.5vw,4.8rem);line-height:.98;letter-spacing:-.02em;margin:.5rem 0 .8rem}
+h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.lede{font-size:1.1rem;max-width:30rem}
+.go{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
+.b{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 1.3rem;border-radius:999px;font-weight:800;text-decoration:none;
+ transition:transform .4s cubic-bezier(.3,1.3,.5,1),box-shadow .3s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.b.n{background:var(--navy);color:#fff;box-shadow:0 6px 0 #0d2741}
+.b.w{background:#fff;color:var(--navy);box-shadow:0 6px 0 rgba(23,58,94,.25)}
+.b:hover{transform:translateY(-2px)}
+.b:active{transform:translateY(4px) scale(.98);box-shadow:0 2px 0 #0d2741;transition-duration:.1s}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.cakeart{width:100%;max-width:320px;margin:0 auto;display:block}
+.sprinkle{animation:fall 6s linear infinite}
+@keyframes fall{from{transform:translateY(-10px)}to{transform:translateY(10px)}}
+main{max-width:60rem;margin:0 auto;padding:0 1.2rem}
+section{padding-top:3.8rem}
+h2{font-family:Gloock,serif;font-weight:400;font-size:clamp(2rem,8vw,3rem);line-height:1.02;letter-spacing:-.015em}
+/* signature: party planner timeline */
+.planner{margin-top:1.4rem;display:grid;gap:0;position:relative}
+.planner::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:3px;background:repeating-linear-gradient(var(--pink) 0 10px,var(--yellow) 10px 20px,var(--mint) 20px 30px)}
+.stop{display:grid;grid-template-columns:50px 1fr;gap:1rem;padding:.9rem 0;position:relative}
+.dot{width:48px;height:48px;border-radius:50%;background:#fff;border:3px solid var(--navy);display:grid;place-items:center;font-size:1.3rem;font-family:Gloock,serif;z-index:1}
+.stop h3{font-family:Gloock,serif;font-weight:400;font-size:1.35rem;line-height:1.15}
+.stop q{display:block;font-size:.95rem;margin-top:.3rem;opacity:.9}
+.stop small{display:block;font-size:.75rem;opacity:.65;margin-top:.25rem}
+.callout{background:var(--navy);color:#fff;border-radius:24px;padding:1.6rem 1.3rem;margin-top:1.2rem;display:grid;gap:1rem}
+@media(min-width:760px){.callout{grid-template-columns:1fr auto;align-items:center;padding:2rem}}
+.callout .b.w{box-shadow:0 6px 0 rgba(0,0,0,.3)}
+/* counter + shelf */
+.two{display:grid;gap:1.2rem;margin-top:1.4rem}
+@media(min-width:780px){.two{grid-template-columns:1fr 1fr}}
+.counter{background:#fff;border-radius:24px;padding:1.4rem;border:2px solid var(--navy)}
+.counter ul{list-style:none;padding:0;margin-top:.6rem}
+.counter li{display:flex;gap:.7rem;align-items:center;padding:.55rem 0;border-bottom:1px dashed rgba(23,58,94,.25)}
+.counter li:last-child{border:0}
+.counter li i{width:14px;height:14px;border-radius:4px;flex:0 0 14px;transform:rotate(20deg)}
+.shelf{background:linear-gradient(#fff 0 0) padding-box;border-radius:24px;padding:1.4rem;background:#fdf1e2;position:relative}
+.jars{display:flex;justify-content:space-around;align-items:flex-end;gap:.6rem;margin:1rem 0 0;border-bottom:10px solid #c89665;padding:0 .4rem}
+.jar{text-align:center;font-size:.78rem;font-weight:700;line-height:1.2;max-width:6.5rem}
+.jar svg{display:block;margin:0 auto .3rem;height:78px;width:auto;transition:transform .4s cubic-bezier(.3,1.3,.5,1)}
+.jar:hover svg{transform:translateY(-6px) rotate(-4deg)}
+.chuck{display:grid;grid-template-columns:90px 1fr;gap:1rem;align-items:center;margin-top:1.2rem;background:var(--sky);border-radius:20px;padding:1rem}
+.note{font-size:.8rem;opacity:.7;margin-top:.6rem}
+.visit{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.vc{background:#fff;border-radius:22px;padding:1.4rem;box-shadow:0 14px 30px -20px rgba(23,58,94,.5)}
+table{width:100%;border-collapse:collapse;margin-top:.5rem}
+td{padding:.45rem 0;border-bottom:1px solid rgba(23,58,94,.12)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+footer{text-align:center;font-size:.85rem;padding:4rem 1rem 2.6rem;opacity:.85}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.9,.25,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.flag,.sprinkle{animation:none}*{transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Main Street Bakery and Café's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+ <div class="bunting" aria-hidden="true">
+  <svg viewBox="0 0 760 64" width="760"><path d="M0 6 Q380 26 760 6" fill="none" stroke="#173a5e" stroke-width="2"/>
+   <g><path class="flag" d="M20 8l20 2-8 30z" fill="#f48fb1"/><path class="flag" d="M70 12l22 2-10 32z" fill="#ffd25e"/><path class="flag" d="M124 15l22 2-10 32z" fill="#8fd6b8"/><path class="flag" d="M178 18l22 1-10 32z" fill="#ff8a65"/><path class="flag" d="M232 20l22 1-10 32z" fill="#f48fb1"/><path class="flag" d="M286 21l22 0-10 32z" fill="#ffd25e"/><path class="flag" d="M340 22l22 0-10 32z" fill="#8fd6b8"/><path class="flag" d="M394 22l22 0-10 32z" fill="#ff8a65"/><path class="flag" d="M448 21l22 0-10 32z" fill="#f48fb1"/><path class="flag" d="M502 20l22-1-10 32z" fill="#ffd25e"/><path class="flag" d="M556 18l22-1-10 32z" fill="#8fd6b8"/><path class="flag" d="M610 15l22-2-10 32z" fill="#ff8a65"/><path class="flag" d="M664 12l22-2-10 32z" fill="#f48fb1"/><path class="flag" d="M716 8l22-2-10 30z" fill="#ffd25e"/></g></svg>
+ </div>
+ <div class="hero-in">
+  <div>
+   <p class="k">92 Main St · Keystone, Iowa</p>
+   <h1>Main Street Bakery <em>and Café</em></h1>
+   <p class="lede">Birthday cakes people drive in from Cedar Rapids for, weekly cheesecake slices, cinnamon rolls, lunch, coffee and a shop full of little gifts.</p>
+   <div class="go"><a class="b n" href="tel:+13194422253">Call (319) 442-2253</a><a class="b w" href="https://www.google.com/maps/search/?api=1&amp;query=Main%20Street%20Bakery%20and%20Cafe%2092%20Main%20St%20Keystone%20IA%2052249">Directions</a></div>
+  </div>
+  <svg class="cakeart" viewBox="0 0 300 300" role="img" aria-label="Illustrated birthday cake">
+   <g class="sprinkle"><rect x="40" y="40" width="10" height="4" rx="2" fill="#f48fb1" transform="rotate(30 45 42)"/><rect x="250" y="60" width="10" height="4" rx="2" fill="#ffd25e" transform="rotate(-20 255 62)"/><rect x="60" y="120" width="10" height="4" rx="2" fill="#8fd6b8"/><rect x="236" y="140" width="10" height="4" rx="2" fill="#ff8a65" transform="rotate(50 241 142)"/></g>
+   <ellipse cx="150" cy="268" rx="120" ry="14" fill="#173a5e" opacity=".15"/>
+   <rect x="54" y="170" width="192" height="90" rx="12" fill="#fff"/><path d="M54 186c16 18 32 18 48 0s32-18 48 0 32 18 48 0 32-18 48 0v-4H54z" fill="#f48fb1"/>
+   <rect x="84" y="108" width="132" height="66" rx="12" fill="#ffd25e"/><path d="M84 122c11 12 22 12 33 0s22-12 33 0 22 12 33 0 22-12 33 0v-4H84z" fill="#fff"/>
+   <g fill="#173a5e"><rect x="118" y="70" width="8" height="38" rx="3"/><rect x="146" y="64" width="8" height="44" rx="3"/><rect x="174" y="70" width="8" height="38" rx="3"/></g>
+   <g fill="#ff8a65"><ellipse cx="122" cy="62" rx="6" ry="10"/><ellipse cx="150" cy="56" rx="6" ry="10"/><ellipse cx="178" cy="62" rx="6" ry="10"/></g>
+   <g fill="#8fd6b8"><circle cx="90" cy="220" r="4"/><circle cx="130" cy="236" r="4"/><circle cx="170" cy="220" r="4"/><circle cx="210" cy="236" r="4"/></g>
+  </svg>
+ </div>
+</header>
+<main>
+<section class="rv">
+ <p class="k" style="color:#c2185b">Cakes by Kassie</p>
+ <h2>Every party, planned with Kassie</h2>
+ <p style="max-width:34rem;margin-top:.5rem">Customers say she works with you on exactly what you want. Here is the kind of year she bakes for.</p>
+ <div class="planner">
+  <div class="stop"><span class="dot">1</span><div><h3>First birthday smash cake</h3><q>Kassie has made my wedding reception cup cakes, my daughter first year smash cake, and a just for fun unicorn cake!!</q><small>Google review, Jul 2025</small></div></div>
+  <div class="stop"><span class="dot">✦</span><div><h3>Kids' birthday cakes, every year</h3><q>I get my kids birthday cakes from here every year. I'm always blown away by how beautiful they turn out.</q><small>Google review, Aug 2025</small></div></div>
+  <div class="stop"><span class="dot">♥</span><div><h3>Wedding reception cupcakes</h3><q>They were all exactly what I asked for, and the flavor? Top notch.</q><small>Google review, Jul 2025</small></div></div>
+  <div class="stop"><span class="dot">★</span><div><h3>Just-for-fun cakes</h3><q>I give her an idea and she just amazes me with what she can come up with!</q><small>Google review, Mar 2022</small></div></div>
+ </div>
+ <div class="callout"><div><h3 style="font-family:Gloock;font-weight:400;font-size:1.5rem">Planning a cake?</h3><p>Call with the date, the theme and how many you are feeding. Kassie will take it from there.</p><p class="note" style="color:#cfe6f5">Sample: ordering details to confirm with the bakery. Call for prices.</p></div><a class="b w" href="tel:+13194422253">Call about a cake</a></div>
+</section>
+<section class="rv">
+ <h2>The counter and the shelf</h2>
+ <div class="two">
+  <div class="counter"><h3 style="font-family:Gloock;font-weight:400;font-size:1.4rem">From the counter</h3>
+   <ul>
+    <li><i style="background:var(--pink)"></i>Cheesecake by the slice, like the Whopper cheesecake</li>
+    <li><i style="background:var(--yellow)"></i>Cinnamon rolls and cinnamon pecan rolls</li>
+    <li><i style="background:var(--mint)"></i>Sandwiches, soups and coffee</li>
+    <li><i style="background:var(--coral)"></i>Ice cream and drinks</li>
+   </ul>
+   <p class="note">Items mentioned by customers. The daily lineup varies.</p></div>
+  <div class="shelf"><h3 style="font-family:Gloock;font-weight:400;font-size:1.4rem">Take home</h3>
+   <div class="jars">
+    <div class="jar"><svg viewBox="0 0 50 80" aria-hidden="true"><rect x="16" y="2" width="18" height="12" rx="2" fill="#173a5e"/><path d="M14 14h22v8c8 4 10 10 10 18v32a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V40c0-8 2-14 10-18z" fill="#c8741e"/><rect x="10" y="44" width="30" height="16" rx="2" fill="#fffbf3"/></svg>Local maple syrup</div>
+    <div class="jar"><svg viewBox="0 0 50 80" aria-hidden="true"><rect x="8" y="10" width="34" height="10" rx="3" fill="#ff8a65"/><rect x="6" y="20" width="38" height="56" rx="8" fill="#7a2e1c"/><rect x="12" y="38" width="26" height="18" rx="2" fill="#fffbf3"/></svg>Bacon jam</div>
+    <div class="jar"><svg viewBox="0 0 50 80" aria-hidden="true"><rect x="19" y="2" width="12" height="14" rx="3" fill="#fffbf3" stroke="#173a5e" stroke-width="2"/><path d="M14 16h22l4 10v46a6 6 0 0 1-6 6H16a6 6 0 0 1-6-6V26z" fill="#c62828"/><rect x="14" y="40" width="22" height="16" rx="2" fill="#fffbf3"/></svg>Bacon ketchup</div>
+   </div>
+   <p class="note">Plus cute gift items around the shop.</p>
+  </div>
+ </div>
+ <div class="chuck">
+  <svg viewBox="0 0 90 90" aria-hidden="true"><circle cx="45" cy="45" r="44" fill="#fff"/><ellipse cx="45" cy="52" rx="24" ry="22" fill="#d9a066"/><ellipse cx="24" cy="38" rx="9" ry="16" fill="#9c6b3f" transform="rotate(20 24 38)"/><ellipse cx="66" cy="38" rx="9" ry="16" fill="#9c6b3f" transform="rotate(-20 66 38)"/><circle cx="37" cy="48" r="3.5" fill="#173a5e"/><circle cx="53" cy="48" r="3.5" fill="#173a5e"/><ellipse cx="45" cy="60" rx="6" ry="4.5" fill="#173a5e"/></svg>
+  <div><b>Say hi to Chuck.</b> One customer calls him "the best doggie mascot." <span class="note" style="display:block;margin-top:.2rem">Illustration is a sample.</span></div>
+ </div>
+</section>
+<section class="rv">
+ <h2>Stop in on Main Street</h2>
+ <div class="visit">
+  <div class="vc"><h3 style="font-family:Gloock;font-weight:400;font-size:1.4rem">Hours</h3>
+   <table><tr><td>Monday</td><td>Closed</td></tr><tr><td>Tuesday to Friday</td><td>7 am to 4:30 pm</td></tr><tr><td>Saturday</td><td>8 am to 2 pm</td></tr><tr><td>Sunday</td><td>Closed</td></tr></table>
+   <p class="note">As listed on Google. Call to confirm.</p></div>
+  <div class="vc"><h3 style="font-family:Gloock;font-weight:400;font-size:1.4rem">Find us</h3><p style="margin-top:.4rem">92 Main St<br>Keystone, IA 52249</p>
+   <div class="go"><a class="b n" href="https://www.google.com/maps/search/?api=1&amp;query=Main%20Street%20Bakery%20and%20Cafe%2092%20Main%20St%20Keystone%20IA%2052249">Directions</a><a class="b w" style="box-shadow:0 6px 0 rgba(23,58,94,.25);border:2px solid var(--navy)" href="tel:+13194422253">Call</a></div></div>
+ </div>
+</section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));})();
+</script>
+</body>
+</html>

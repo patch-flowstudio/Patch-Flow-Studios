@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailor it! · Gabriel Escobar · Temescal, Oakland</title>
+<meta name="description" content="Tailor it! by Gabriel Escobar, a third-generation tailor on Telegraph Ave in Oakland. Wedding suits, leather and suede, dresses and alterations by fitting appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--wool:#24262a;--wool2:#2e3136;--chalk:#f1eee8;--tape:#f2c94c;--cognac:#a3562a;--muted:#9a9a95}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{background:var(--wool);color:var(--chalk);font:400 1rem/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.pf-concept{background:#16171a;color:#b8b6b0;font:13px/1.45 system-ui,sans-serif;text-align:center;padding:8px 14px}
+.wool{background-color:var(--wool);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.08) 0 2px,transparent 2px 6px)}
+.hero{padding:4rem 1.2rem 0}
+.in{max-width:1040px;margin:0 auto}
+.kick{font:700 .72rem/1 Manrope,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--tape)}
+.hero h1{font:400 clamp(3rem,13vw,7rem)/.85 "Bodoni Moda",serif;letter-spacing:-.03em;margin:1rem 0 1.2rem}
+.hero h1 em{font-style:italic;color:var(--tape)}
+.hero p{max-width:40ch;color:#cfccc5;font-size:1.08rem}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap;margin:2rem 0 3rem}
+.btn{min-height:50px;display:inline-flex;align-items:center;padding:0 1.5rem;border-radius:4px;font:700 .95rem/1 Manrope,sans-serif;letter-spacing:.02em;text-decoration:none;transition:transform 100ms ease-out,background-color .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn.y{background:var(--tape);color:var(--wool)}.btn.y:hover{background:#ffd866}
+.btn.o{box-shadow:inset 0 0 0 1.5px #8d8c86}.btn.o:hover{background:rgba(255,255,255,.06)}
+.btn:focus-visible{outline:3px solid var(--tape);outline-offset:3px}
+/* tape timeline */
+.tape{position:relative;background:var(--tape);color:var(--wool);margin:0 -1.2rem;padding:2.4rem 1.2rem 1.4rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;box-shadow:0 18px 30px -16px rgba(0,0,0,.6)}
+.tape .ticks{position:absolute;left:0;top:0;height:24px;width:1500px;background:repeating-linear-gradient(90deg,var(--wool) 0 1.5px,transparent 1.5px 10px),repeating-linear-gradient(90deg,var(--wool) 0 2px,transparent 2px 50px);background-size:10px 12px,50px 24px;background-repeat:repeat-x;opacity:.85}
+.row{display:flex;gap:0;width:max-content;min-width:100%}
+.mark{scroll-snap-align:start;width:min(78vw,300px);padding:0 1.4rem 0 0;border-left:2px solid var(--wool);padding-left:1rem}
+.mark b{display:block;font:700 2.2rem/1 "Bodoni Moda",serif}
+.mark h3{font:700 .95rem/1.3 Manrope,sans-serif;margin:.4rem 0 .2rem}
+.mark p{font-size:.9rem;line-height:1.45}
+.hint{font:500 .75rem/1 Manrope,sans-serif;color:var(--muted);margin:.8rem 0 0;text-align:right}
+/* specialties */
+.spec{padding:5rem 1.2rem 4rem}
+h2{font:400 clamp(2rem,6vw,3.4rem)/1 "Bodoni Moda",serif;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:#45474c;border:1px solid #45474c;margin-top:2.2rem}
+.cell{background:var(--wool2);padding:1.6rem 1.4rem;grid-column:span 2;transition:background-color .2s}
+.cell:hover{background:#34373d}
+.cell.wide{grid-column:span 3}
+.cell small{font:700 .66rem/1 Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--cognac)}
+.cell h3{font:400 1.5rem/1.1 "Bodoni Moda",serif;margin:.6rem 0 .5rem}
+.cell p{color:#bdbab3;font-size:.95rem}
+.cell.leather{background:linear-gradient(140deg,#6d3a1d,#3f2312);}
+.cell.leather small{color:var(--tape)}
+/* fitting note */
+.fit{background:var(--chalk);color:var(--wool);padding:4.5rem 1.2rem}
+.fit .in{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.fit blockquote{font:400 1.35rem/1.4 "Bodoni Moda",serif;font-style:italic}
+.fit cite{display:block;margin-top:.8rem;font:700 .7rem/1 Manrope,sans-serif;letter-spacing:.18em;text-transform:uppercase;font-style:normal;color:var(--cognac)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:1rem 0 1rem 3rem;border-bottom:1px solid #d8d3c8;position:relative}
+.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1rem;font:700 1.2rem/1 "Bodoni Moda",serif;color:var(--cognac)}
+.steps b{display:block}
+.steps span{font-size:.92rem;color:#5c5a55}
+.fit .btn.y{background:var(--wool);color:var(--chalk)}
+.fit .btn.o{box-shadow:inset 0 0 0 1.5px var(--wool)}
+/* visit */
+.visit{padding:4.5rem 1.2rem}
+.visit .in{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}
+.hrs{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.4rem;margin-top:1.2rem;font-size:1.02rem}
+.hrs dt{color:var(--muted)}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+.pf-foot{background:#16171a;color:#9a9893;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:22px 14px 30px}
+.pf-foot a{font-weight:700;color:var(--chalk)}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.cell,.cell.wide{grid-column:auto}.fit .in,.visit .in{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:active{transform:none}.tape{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Tailor it's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero wool">
+ <div class="in">
+  <p class="kick">Temescal · 4691 Telegraph Ave</p>
+  <h1>Tailor <em>it!</em></h1>
+  <p>Professional tailoring, bespoke and alterations by Gabriel Escobar, a third-generation tailor. Leather and suede, wedding suits, dresses, and the pieces other shops won't touch.</p>
+  <div class="cta">
+   <a class="btn y" href="tel:+19256393969">Book a fitting · (925) 639-3969</a>
+   <a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=4691%20Telegraph%20Ave%2C%20Oakland%2C%20CA%2094609">Directions</a>
+  </div>
+  <div class="tape" role="region" aria-label="Timeline, scroll sideways" tabindex="0">
+   <div class="ticks" aria-hidden="true"></div>
+   <div class="row">
+    <div class="mark"><b>I</b><h3>Grandfather</h3><p>The first tailor in the family, in Bolivia.</p></div>
+    <div class="mark"><b>II</b><h3>Father &amp; mother</h3><p>His father taught him the skill. His mother taught him efficiency and timing.</p></div>
+    <div class="mark"><b>2018</b><h3>Tailor it! opens</h3><p>First shop at 40th Street and Martin Luther King Way.</p></div>
+    <div class="mark"><b>2021</b><h3>Telegraph Ave</h3><p>The move to Temescal, where the shop is now.</p></div>
+    <div class="mark"><b>Now</b><h3>Your fitting</h3><p>Measured quickly and precisely, ready when promised.</p></div>
+   </div>
+  </div>
+  <p class="hint">Scroll the tape →</p>
+ </div>
+</header>
+
+<section class="spec wool">
+ <div class="in">
+  <h2>What crosses the cutting table</h2>
+  <div class="grid">
+   <div class="cell wide leather"><small>Specialty</small><h3>Leather &amp; suede</h3><p>The machine needles, feet, thread and tools for leather. One customer's jacket sleeves came out looking like a factory crop.</p></div>
+   <div class="cell wide"><small>Weddings</small><h3>Suits for the day</h3><p>Jacket, shirt and trousers tailored together, with advice on buying the right suit first.</p></div>
+   <div class="cell"><small>Dresses</small><h3>Silk &amp; evening wear</h3><p>From a silk qipao to fine dresses taken in.</p></div>
+   <div class="cell"><small>Rescue</small><h3>Reconstruction</h3><p>Side zippers added, pockets adjusted, a faux fur hood rebuilt.</p></div>
+   <div class="cell"><small>Short notice</small><h3>Fast hems</h3><p>Dress trousers hemmed inside a 48-hour window.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="fit">
+ <div class="in">
+  <div>
+   <h2>How a fitting works</h2>
+   <ol class="steps" style="margin-top:1.6rem">
+    <li><b>Set an appointment</b><span>Call or message to pick a fitting time.</span></li>
+    <li><b>Try it on, get pinned</b><span>Gabriel explains why each change is needed.</span></li>
+    <li><b>Pick up on time</b><span>Often sooner than you need it. Typical turnaround by job <span class="smp">sample</span></span></li>
+   </ol>
+   <div class="cta" style="margin-bottom:0"><a class="btn y" href="tel:+19256393969">Call to book</a><a class="btn o" href="mailto:tailoritshop@gmail.com">Email</a></div>
+  </div>
+  <div>
+   <blockquote>"Gabriel has an expert eye and can you get measured not only quickly but precisely as well. I had my suit jacket, white dress shirt, and pants all tailored and they fit perfectly."</blockquote>
+   <cite>Google review · Nov 2025</cite>
+   <blockquote style="margin-top:2rem">"I am so impressed by the clean lines and work! My favorite jacket is good as new."</blockquote>
+   <cite>Google review · Dec 2025</cite>
+  </div>
+ </div>
+</section>
+
+<section class="visit wool">
+ <div class="in">
+  <div>
+   <h2>Within walking distance on Telegraph</h2>
+   <p style="color:#cfccc5;margin-top:1rem">4691 Telegraph Ave, Oakland, CA 94609</p>
+   <div class="cta"><a class="btn y" href="tel:+19256393969">(925) 639-3969</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=4691%20Telegraph%20Ave%2C%20Oakland%2C%20CA%2094609">Directions</a></div>
+  </div>
+  <dl class="hrs">
+   <dt>Mon – Fri</dt><dd>10am – 5pm</dd>
+   <dt>Saturday</dt><dd>10:30am – 4:30pm</dd>
+   <dt>Sunday</dt><dd>Closed</dd>
+  </dl>
+ </div>
+</section>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+</body>
+</html>

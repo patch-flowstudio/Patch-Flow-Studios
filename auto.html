@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.className+=" js";</script>
+<title>Northgate Auto Care · Showcase</title>
+<meta name="description" content="Studio concept by Patch & Flow Studio for a fictional family-run auto repair shop." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" />
+<style>
+:root{
+  --x-concrete:#E9EBEC;--x-white:#FFFFFF;--x-ink:#16202A;--x-ink-2:#4A5562;
+  --x-slate:#2C3E50;--x-slate-2:#22313F;--x-orange:#F26B1D;--x-orange-text:#B5420A;
+  --x-line:#C9CED3;--x-paper:#FFFDF7;--x-orange-light:#FF9A5C;
+  --x-display:"Archivo Black","Arial Black",Impact,sans-serif;
+  --x-body:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --x-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --x-pad:clamp(16px,4vw,40px);--x-max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;font:400 16px/1.6 var(--x-body);color:var(--x-ink);background:var(--x-white)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--x-orange);outline-offset:3px}
+.x-wrap{max-width:var(--x-max);margin:0 auto;padding:0 var(--x-pad)}
+.x-skip{position:absolute;left:-9999px;display:inline-flex;align-items:center;min-height:44px;min-width:44px}.x-skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:0 14px}
+
+/* notice */
+.x-notice{background:var(--x-ink);color:#fff;font:500 13px/1.4 var(--x-body);text-align:center;padding:2px var(--x-pad)}
+.x-notice a{color:#fff;text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
+
+/* header */
+.x-head{position:sticky;top:0;z-index:40;background:var(--x-white);border-bottom:4px solid var(--x-orange)}
+.x-head .x-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.x-logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
+.x-logo__mark{width:36px;height:36px;background:var(--x-slate);color:var(--x-orange);display:grid;place-items:center;font:20px/1 var(--x-display);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.x-logo__name{font:18px/1 var(--x-display);letter-spacing:.01em;text-transform:uppercase}
+.x-logo__name small{display:block;font:600 12px/1.4 var(--x-mono);letter-spacing:.14em;color:var(--x-ink-2)}
+.x-nav{display:flex;gap:4px;align-items:center}
+.x-nav a.x-navlink{font:600 14px/1 var(--x-body);text-decoration:none;padding:15px 12px;min-height:44px;display:inline-flex;align-items:center}
+.x-nav a.x-navlink:hover{color:var(--x-orange-text)}
+@media (max-width:860px){.x-nav a.x-navlink{display:none}}
+
+/* buttons */
+.x-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;font:700 16px/1.2 var(--x-body);text-decoration:none;border:2px solid var(--x-ink);border-radius:4px;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.x-btn:hover{transform:translateY(-2px)}
+.x-btn--orange{background:var(--x-orange);border-color:var(--x-orange);color:var(--x-ink)}
+.x-btn--orange:hover{background:#FF7F33}
+.x-btn--ghost{background:transparent;color:#fff;border-color:#fff}
+.x-btn--ghost:hover{background:rgba(255,255,255,.12)}
+.x-btn--dark{background:var(--x-ink);color:#fff}
+.x-btn svg{width:18px;height:18px;flex:none}
+@media (max-width:420px){.x-head .x-btn{padding:10px 14px;font-size:14px}}
+
+/* hero */
+.x-hero{position:relative;background:var(--x-slate-2);color:#fff;overflow:hidden}
+.x-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.x-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,27,36,.94) 0%,rgba(18,27,36,.82) 45%,rgba(18,27,36,.35) 100%)}
+@media (max-width:760px){.x-hero::after{background:linear-gradient(180deg,rgba(18,27,36,.78) 0%,rgba(18,27,36,.92) 60%)}}
+.x-hero .x-wrap{position:relative;z-index:1;padding-top:clamp(64px,10vw,128px);padding-bottom:clamp(64px,10vw,128px)}
+.x-tag{display:inline-block;font:600 12px/1 var(--x-mono);letter-spacing:.16em;text-transform:uppercase;padding:8px 10px;border:1.5px solid currentColor;border-radius:3px}
+.x-hero .x-tag{color:var(--x-orange-light)}
+.x-hero h1{font:clamp(40px,7.4vw,84px)/.98 var(--x-display);text-transform:uppercase;letter-spacing:-.01em;margin:20px 0 20px;max-width:12ch}
+.x-hero h1 span{color:var(--x-orange)}
+.x-hero p.x-sub{font-size:clamp(17px,2vw,20px);max-width:44ch;margin:0 0 32px;color:#E6EAEE}
+.x-btns{display:flex;flex-wrap:wrap;gap:12px}
+.x-hazard{height:12px;background:repeating-linear-gradient(-45deg,var(--x-orange) 0 16px,var(--x-ink) 16px 32px)}
+.x-hero__img{transform-origin:62% 48%}
+.x-wipe{display:none}
+
+/* shared motion */
+@keyframes x-rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes x-wipe{from{transform:translateX(0) skewX(-14deg)}to{transform:translateX(118%) skewX(-14deg)}}
+@keyframes x-push{from{transform:scale(1)}to{transform:scale(1.08)}}
+@media (prefers-reduced-motion:no-preference){
+  .js .x-wipe{display:block;position:absolute;z-index:3;top:-12%;bottom:-12%;left:-30%;width:160%;background:var(--x-orange);transform:translateX(118%) skewX(-14deg);animation:x-wipe 1.05s cubic-bezier(.77,0,.18,1) .2s both;pointer-events:none;will-change:transform}
+  .js .x-wipe::before{content:"";position:absolute;top:0;bottom:0;left:0;width:26px;background:repeating-linear-gradient(0deg,var(--x-ink) 0 14px,var(--x-orange) 14px 28px)}
+  .js .x-hero__img{animation:x-push 16s cubic-bezier(.25,.1,.25,1) .2s both}
+  .js .x-hero .x-wrap>*{animation:x-rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .js .x-hero .x-tag{animation-delay:.78s}
+  .js .x-hero h1{animation-delay:.9s}
+  .js .x-hero .x-sub{animation-delay:1.04s}
+  .js .x-hero .x-btns{animation-delay:1.16s}
+}
+
+/* sections */
+.x-sec{padding:clamp(56px,8vw,104px) 0}
+.x-sec--concrete{background:var(--x-concrete)}
+.x-sec--slate{background:var(--x-slate);color:#fff}
+.x-eyebrow{font:600 13px/1 var(--x-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--x-orange-text);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.x-eyebrow::before{content:"";width:28px;height:4px;background:var(--x-orange)}
+.x-sec--slate .x-eyebrow{color:var(--x-orange-light)}
+.x-h2{font:clamp(30px,4.6vw,52px)/1.02 var(--x-display);text-transform:uppercase;margin:0 0 16px;max-width:20ch}
+.x-lead{font-size:18px;color:var(--x-ink-2);max-width:56ch;margin:0 0 40px}
+.x-sec--slate .x-lead{color:#D5DCE3}
+
+/* services */
+.x-services{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;list-style:none;padding:0;margin:0}
+.x-svc{background:var(--x-white);border:2px solid var(--x-ink);border-radius:4px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:12px;position:relative;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.x-svc::after{content:"";position:absolute;inset:-2px;border-radius:4px;box-shadow:8px 8px 0 var(--x-orange),0 22px 34px -16px rgba(22,32,42,.55);opacity:0;transition:opacity .28s ease;pointer-events:none}
+.x-svc::before{content:"";position:absolute;left:-2px;right:-2px;top:-2px;height:5px;background:var(--x-orange);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.8,.2,1);pointer-events:none;border-radius:4px 4px 0 0}
+@media (hover:hover){.x-svc:hover{transform:translate(-4px,-4px)}.x-svc:hover::after{opacity:1}.x-svc:hover::before{transform:scaleX(1)}}
+.x-svc:focus-within{transform:translate(-4px,-4px)}.x-svc:focus-within::after{opacity:1}.x-svc:focus-within::before{transform:scaleX(1)}
+@media (prefers-reduced-motion:no-preference){
+  .js .x-svc:not(.is-in){opacity:0;transform:translateY(28px)}
+  .js .x-svc.is-in{animation:x-rise .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms) backwards}
+}
+.x-svc__code{font:600 12px/1 var(--x-mono);letter-spacing:.12em;color:var(--x-ink-2)}
+.x-svc h3{font:22px/1.1 var(--x-display);text-transform:uppercase;margin:0}
+.x-svc__price{margin-top:auto;padding-top:14px;border-top:2px dashed var(--x-line);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.x-svc__price small{font:600 12px/1 var(--x-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--x-ink-2)}
+.x-svc__price b{font:30px/1 var(--x-display)}
+.x-svc__price em{font-style:normal;font-size:14px;color:var(--x-ink-2)}
+.x-svc__price b.x-word{font-size:20px}
+.x-svc--feature{background:var(--x-ink);color:#fff;border-color:var(--x-ink)}
+.x-svc--feature .x-svc__code,.x-svc--feature .x-svc__price small,.x-svc--feature .x-svc__price em{color:#C5CED6}
+.x-svc--feature .x-svc__price b{color:var(--x-orange)}
+.x-svc--feature .x-svc__price{border-color:#4A5868}
+
+/* steps */
+.x-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;position:relative}
+.x-steps li{position:relative;padding:0 20px 0 0}
+.x-steps__num{width:64px;height:64px;border-radius:50%;background:var(--x-slate);border:3px solid var(--x-orange);display:grid;place-items:center;font:24px/1 var(--x-display);color:#fff;position:relative;z-index:1}
+.x-steps li::before{content:"";position:absolute;top:31px;left:64px;right:0;height:3px;background:repeating-linear-gradient(90deg,#7F93A6 0 10px,transparent 10px 18px)}
+.x-steps li:last-child::before{display:none}
+.x-steps h3{font:21px/1.15 var(--x-display);text-transform:uppercase;margin:22px 0 8px}
+.x-steps p{margin:0;color:#D5DCE3;max-width:28ch}
+@media (max-width:860px){
+  .x-steps{grid-template-columns:1fr;gap:28px}
+  .x-steps li{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:0}
+  .x-steps li::before{top:64px;bottom:-28px;left:30px;right:auto;width:3px;height:auto;background:repeating-linear-gradient(180deg,#7F93A6 0 10px,transparent 10px 18px)}
+  .x-steps h3{margin:6px 0 6px}
+  .x-steps__num{grid-row:span 2}
+}
+/* steps: scroll-linked rail (JS only; the dashed connectors above are the no-JS fallback) */
+@keyframes x-ping{from{opacity:.8;transform:scale(1)}to{opacity:0;transform:scale(1.45)}}
+.js .x-steps li::before{display:none}
+.js .x-steps::before,.js .x-steps::after{content:"";position:absolute;z-index:0;top:30px;left:32px;right:calc(25% - 32px);height:4px;pointer-events:none}
+.js .x-steps::before{background:repeating-linear-gradient(90deg,#7F93A6 0 10px,transparent 10px 18px)}
+.js .x-steps::after{background:var(--x-orange);transform:scaleX(var(--x-p,0));transform-origin:left center;will-change:transform}
+.js .x-steps__num::before,.js .x-steps__num::after{content:"";position:absolute;inset:-3px;border-radius:50%;pointer-events:none}
+.js .x-steps__num::before{border:3px solid var(--x-orange);opacity:0}
+.js .x-steps__num::after{content:attr(data-n);display:grid;place-items:center;background:var(--x-orange);color:var(--x-ink);opacity:0;transform:scale(.4);transition:opacity .3s ease,transform .5s cubic-bezier(.34,1.56,.64,1)}
+.js .x-steps li.is-active .x-steps__num::after{opacity:1;transform:none}
+.js .x-steps li.is-active .x-steps__num::before{animation:x-ping .8s ease-out}
+@media (max-width:860px){
+  .js .x-steps::before,.js .x-steps::after{top:32px;bottom:var(--x-rail-end,32px);left:30px;right:auto;width:4px;height:auto}
+  .js .x-steps::before{background:repeating-linear-gradient(180deg,#7F93A6 0 10px,transparent 10px 18px)}
+  .js .x-steps::after{transform:scaleY(var(--x-p,0));transform-origin:center top}
+}
+
+/* work order form */
+.x-quote{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,5vw,64px);align-items:start}
+@media (max-width:900px){.x-quote{grid-template-columns:1fr}}
+.x-ticket{background:var(--x-paper);border:2px solid var(--x-ink);border-radius:4px;box-shadow:8px 8px 0 var(--x-slate);position:relative}
+.x-ticket__top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--x-ink);color:#fff;padding:16px 22px}
+.x-ticket__title{font:20px/1 var(--x-display);text-transform:uppercase;letter-spacing:.02em}
+.x-ticket__no{font:600 13px/1 var(--x-mono);color:var(--x-orange);letter-spacing:.08em}
+.x-ticket__perf{height:14px;background:radial-gradient(circle at 7px 7px,var(--x-concrete) 4px,transparent 4.5px) 0 0/18px 14px repeat-x;border-bottom:2px dashed var(--x-line)}
+.x-ticket form{padding:8px 22px 24px}
+.x-field{display:grid;grid-template-columns:150px 1fr;align-items:center;border-bottom:1.5px solid var(--x-line);padding:10px 0;gap:12px}
+.x-field--area{align-items:start}
+.x-field label{font:600 12px/1.3 var(--x-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--x-ink-2)}
+.x-field--area label{padding-top:14px}
+.x-field input,.x-field textarea{width:100%;min-height:44px;font:500 17px/1.4 var(--x-body);color:var(--x-ink);background:transparent;border:0;border-bottom:2px solid transparent;padding:8px 2px;border-radius:0}
+.x-field textarea{min-height:120px;resize:vertical;background:repeating-linear-gradient(180deg,transparent 0 31px,#E2E5E8 31px 32px);line-height:32px;padding-top:4px}
+.x-field input:focus,.x-field textarea:focus{outline:none;background-color:#FFF4EA}
+.x-field{position:relative}
+.x-field::after{content:"";position:absolute;left:0;right:0;bottom:-1.5px;height:3px;background:var(--x-orange);transform:scaleX(0);transform-origin:left center;transition:transform .4s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.x-field:focus-within::after{transform:scaleX(1)}
+.x-field label{transition:transform .3s cubic-bezier(.2,.8,.2,1);transform-origin:left center}
+.x-field:focus-within label{transform:translateX(8px);color:var(--x-orange-text)}
+.x-stamplayer{position:absolute;inset:0;z-index:3;overflow:hidden;display:grid;place-items:center;pointer-events:none;opacity:0;border-radius:4px}
+.x-ticket.is-stamped .x-stamplayer{opacity:1}
+.x-bigstamp{display:grid;justify-items:center;gap:6px;padding:12px 22px 10px;border:5px solid var(--x-orange-text);outline:2px solid var(--x-orange-text);outline-offset:4px;border-radius:6px;background:rgba(255,253,247,.94);color:var(--x-orange-text);transform:rotate(-12deg);text-transform:uppercase}
+.x-bigstamp b{font:clamp(34px,8vw,52px)/1 var(--x-display);letter-spacing:.06em}
+.x-bigstamp small{font:600 12px/1 var(--x-mono);letter-spacing:.18em}
+@keyframes x-slam{0%{opacity:0;transform:scale(2.3) rotate(-4deg)}55%{opacity:1;transform:scale(.93) rotate(-12deg)}75%{transform:scale(1.03) rotate(-12deg)}100%{opacity:1;transform:scale(1) rotate(-12deg)}}
+@keyframes x-thump{0%,100%{transform:none}40%{transform:translateY(3px) scale(.995)}}
+@media (prefers-reduced-motion:no-preference){
+  .x-ticket.is-stamped .x-bigstamp{animation:x-slam .55s cubic-bezier(.3,.7,.3,1) both}
+  .x-ticket.is-stamped{animation:x-thump .32s ease-out .26s}
+  .x-thanks:not([hidden]){animation:x-rise .5s cubic-bezier(.2,.7,.2,1) .35s both}
+}
+.x-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.x-field input::placeholder,.x-field textarea::placeholder{color:#7A848F}
+@media (max-width:560px){.x-field{grid-template-columns:1fr;gap:2px}.x-field--area label{padding-top:0}}
+.x-ticket__foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:22px}
+.x-ticket__foot p{margin:0;font:500 13px/1.4 var(--x-mono);color:var(--x-ink-2)}
+.x-thanks{margin-top:18px;padding:14px 16px;border:2px solid var(--x-ink);background:#FFE7D6;font-weight:600;display:flex;gap:12px;align-items:center}
+.x-thanks[hidden]{display:none}
+.x-stamp{font:13px/1 var(--x-display);color:var(--x-orange-text);border:2px solid var(--x-orange-text);padding:6px 8px;transform:rotate(-6deg);text-transform:uppercase;flex:none}
+.x-notes{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.x-notes li{display:flex;gap:12px;align-items:flex-start}
+.x-notes a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--x-orange-text)}
+.x-notes li{align-items:center}
+.x-notes li::before{content:"";flex:none;width:12px;height:12px;margin-top:7px;background:var(--x-orange)}
+
+/* promise */
+.x-promise{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,6vw,72px);align-items:center}
+@media (max-width:800px){.x-promise{grid-template-columns:1fr}}
+.x-thanks svg{width:22px;height:22px;flex:none;color:var(--x-orange-text)}
+.x-gauge{width:240px;max-width:100%;margin:0 auto;text-align:center}
+.x-gauge svg{width:240px;max-width:100%;height:auto;aspect-ratio:240/212;display:block;overflow:visible}
+.x-gauge__track{fill:none;stroke:var(--x-line);stroke-width:12}
+.x-gauge__seg path{fill:none;stroke:var(--x-orange);stroke-width:12}
+.x-gauge__ticks line{stroke:var(--x-ink-2);stroke-width:1.5}
+.x-gauge__ticks line.is-major{stroke:var(--x-ink);stroke-width:2.5}
+.x-gauge__scale{font:600 13px/1 var(--x-mono);fill:var(--x-ink-2)}
+.x-gauge__needle{transform-box:view-box;transform-origin:120px 120px;transform:rotate(135deg)}
+.x-gauge__needle path{fill:var(--x-ink)}
+.x-gauge__hub{fill:var(--x-ink)}.x-gauge__pin{fill:var(--x-orange)}
+.x-gauge figcaption{margin-top:6px;display:grid;justify-items:center;gap:6px}
+.x-gauge__num{font:56px/1 var(--x-display);color:var(--x-ink);display:flex;align-items:baseline;gap:10px}
+.x-gauge__unit{font:600 13px/1 var(--x-mono);letter-spacing:.14em;color:var(--x-ink-2)}
+.x-gauge__alt{font:600 13px/1.4 var(--x-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--x-ink-2)}
+@keyframes x-needle{0%{transform:rotate(-135deg)}62%{transform:rotate(143deg)}78%{transform:rotate(132deg)}90%{transform:rotate(136.5deg)}100%{transform:rotate(135deg)}}
+@media (prefers-reduced-motion:no-preference){
+  .js .x-gauge:not(.is-on) .x-gauge__needle{transform:rotate(-135deg)}
+  .js .x-gauge.is-on .x-gauge__needle{animation:x-needle 2s cubic-bezier(.45,.05,.35,1) both}
+  .js .x-gauge:not(.is-on) .x-gauge__seg path{opacity:0}
+  .js .x-gauge__seg path{transition:opacity .22s ease calc(.12s + var(--i) * 92ms)}
+  .js .x-gauge:not(.is-on) figcaption{opacity:0;transform:translateY(12px)}
+  .js .x-gauge figcaption{transition:opacity .5s ease 1.2s,transform .5s cubic-bezier(.2,.7,.2,1) 1.2s}
+}
+.x-pledges{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.x-pledges li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;background:var(--x-white);border-left:6px solid var(--x-orange);padding:18px 20px}
+.x-pledges svg{width:40px;height:40px;color:var(--x-slate)}
+.x-pledges h3{font:20px/1.15 var(--x-display);text-transform:uppercase;margin:0 0 4px}
+.x-pledges p{margin:0;color:var(--x-ink-2)}
+
+/* contact */
+.x-contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,56px)}
+@media (max-width:800px){.x-contact{grid-template-columns:1fr}}
+.x-hours{width:100%;border-collapse:collapse;font-size:17px}
+.x-hours th,.x-hours td{text-align:left;padding:14px 0;border-bottom:2px solid var(--x-line)}
+.x-hours th{font:600 14px/1.3 var(--x-mono);letter-spacing:.08em;text-transform:uppercase}
+.x-hours td{text-align:right;font-weight:600}
+.x-hours tr.is-closed td{color:var(--x-orange-text)}
+.x-panel{background:var(--x-slate);color:#fff;padding:clamp(22px,4vw,36px);border-radius:4px}
+.x-panel h3{font:22px/1.1 var(--x-display);text-transform:uppercase;margin:0 0 6px}
+.x-panel p{margin:0 0 20px;color:#D5DCE3}
+.x-bigphone{display:inline-flex;align-items:center;min-height:48px;font:clamp(28px,5vw,40px)/1.1 var(--x-display);color:var(--x-orange-light);text-decoration:none;margin-bottom:22px}
+.x-bigphone:hover{text-decoration:underline}
+.x-addr{font:600 18px/1.4 var(--x-body);color:#fff!important}
+
+/* footer */
+.x-foot{background:var(--x-ink);color:#C5CED6;padding:36px 0 40px;font-size:14px}
+.x-foot .x-wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+.x-foot a{color:#fff;display:inline-flex;align-items:center;min-height:44px;text-underline-offset:3px}
+
+/* sticky mobile call bar */
+.x-callbar{display:none}
+@media (max-width:760px){
+  .x-callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--x-ink);border-top:4px solid var(--x-orange)}
+  .x-callbar .x-btn{flex:1;min-height:50px;padding:10px 12px;font-size:16px}
+  .x-callbar .x-btn--ghost{flex:0 0 auto}
+  body{padding-bottom:78px}
+  .x-head .x-call-top{display:none}
+}
+</style>
+</head>
+<body>
+<a class="x-skip" href="#main">Skip to content</a>
+<div class="x-notice">Studio concept by <a href="index.html" target="_blank" rel="noopener">Patch &amp; Flow Studio</a> · fictional business</div>
+
+<header class="x-head">
+  <div class="x-wrap">
+    <a class="x-logo" href="#top" aria-label="Northgate Auto Care, back to top">
+      <span class="x-logo__mark" aria-hidden="true">N</span>
+      <span class="x-logo__name">Northgate<small>Auto Care</small></span>
+    </a>
+    <nav class="x-nav" aria-label="Main">
+      <a class="x-navlink" href="#services">Services</a>
+      <a class="x-navlink" href="#how">How it works</a>
+      <a class="x-navlink" href="#promise">Promise</a>
+      <a class="x-navlink" href="#contact">Hours</a>
+      <a class="x-btn x-btn--orange x-call-top" href="#contact"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>(555) 014-3392</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="x-hero" id="top">
+    <img class="x-hero__img" src="sc_auto.jpg" alt="A clean repair bay with a car raised on a lift" />
+    <div class="x-wipe" aria-hidden="true"></div>
+    <div class="x-wrap">
+      <span class="x-tag">Family-run · All makes</span>
+      <h1>Straight answers. Fair prices. <span>Done right.</span></h1>
+      <p class="x-sub">Family-run repair and maintenance for all makes. We call before we fix anything.</p>
+      <div class="x-btns">
+        <a class="x-btn x-btn--orange" href="#contact"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call (555) 014-3392</a>
+        <a class="x-btn x-btn--ghost" href="#quote">Get a quote</a>
+      </div>
+    </div>
+  </section>
+  <div class="x-hazard" aria-hidden="true"></div>
+
+  <section class="x-sec x-sec--concrete" id="services">
+    <div class="x-wrap">
+      <p class="x-eyebrow">Services</p>
+      <h2 class="x-h2">Posted prices. No guesswork.</h2>
+      <p class="x-lead">Starting prices for the work we do every day. Your written estimate comes before any wrench turns.</p>
+      <ul class="x-services">
+        <li class="x-svc"><span class="x-svc__code">SVC-01</span><h3>Oil change</h3><div class="x-svc__price"><small>From</small><b>$59</b></div></li>
+        <li class="x-svc"><span class="x-svc__code">SVC-02</span><h3>Brake pads</h3><div class="x-svc__price"><small>From</small><b>$189</b><em>per axle</em></div></li>
+        <li class="x-svc x-svc--feature"><span class="x-svc__code">SVC-03</span><h3>Diagnostics</h3><div class="x-svc__price"><b>$95</b><em>applied to repair</em></div></li>
+        <li class="x-svc"><span class="x-svc__code">SVC-04</span><h3>Tire rotation</h3><div class="x-svc__price"><b>$29</b></div></li>
+        <li class="x-svc"><span class="x-svc__code">SVC-05</span><h3>AC recharge</h3><div class="x-svc__price"><small>From</small><b>$149</b></div></li>
+        <li class="x-svc"><span class="x-svc__code">SVC-06</span><h3>State inspection</h3><div class="x-svc__price"><b class="x-word">Price varies</b></div></li>
+        <li class="x-svc"><span class="x-svc__code">SVC-07</span><h3>Check-engine light diagnosis</h3><div class="x-svc__price"><a class="x-btn x-btn--dark" href="#quote">Ask for a quote</a></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="x-sec x-sec--slate" id="how">
+    <div class="x-wrap">
+      <p class="x-eyebrow">How it works</p>
+      <h2 class="x-h2">Four steps. One phone call before any repair.</h2>
+      <p class="x-lead">You stay in charge of every dollar.</p>
+      <ol class="x-steps">
+        <li><span class="x-steps__num" data-n="1">1</span><h3>Drop off or book</h3><p>Bring it in, or book a time that suits you.</p></li>
+        <li><span class="x-steps__num" data-n="2">2</span><h3>We inspect and call</h3><p>We find the problem and call you with a quote.</p></li>
+        <li><span class="x-steps__num" data-n="3">3</span><h3>You approve, we fix</h3><p>Nothing gets done until you say yes.</p></li>
+        <li><span class="x-steps__num" data-n="4">4</span><h3>Pick up</h3><p>Old parts handed back on request.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="x-sec" id="quote">
+    <div class="x-wrap x-quote">
+      <div>
+        <p class="x-eyebrow">Quote request</p>
+        <h2 class="x-h2">Tell us what's going on.</h2>
+        <p class="x-lead">Fill in the ticket and we'll call you back with a straight answer.</p>
+        <ul class="x-notes">
+          <li>Year, make and model help us price parts fast.</li>
+          <li>Noises, warning lights, smells: describe it in your own words.</li>
+          <li>Rather talk? Call <a href="tel:+15550143392">(555) 014-3392</a>.</li>
+        </ul>
+      </div>
+      <div class="x-ticket">
+        <div class="x-ticket__top"><span class="x-ticket__title">Work order</span><span class="x-ticket__no">No. NG-0450</span></div>
+        <div class="x-ticket__perf" aria-hidden="true"></div>
+        <form id="x-form" novalidate>
+          <div class="x-field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name" required /></div>
+          <div class="x-field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" required /></div>
+          <div class="x-field"><label for="f-vehicle">Vehicle</label><input id="f-vehicle" name="vehicle" placeholder="Year / make / model" /></div>
+          <div class="x-field x-field--area"><label for="f-issue">What's going on</label><textarea id="f-issue" name="issue" rows="4" placeholder="Squeal when braking, light on the dash…"></textarea></div>
+          <div class="x-ticket__foot">
+            <p>Estimate: written · Approval: required</p>
+            <button class="x-btn x-btn--orange" type="submit">Submit work order</button>
+          </div>
+          <div class="x-thanks" id="x-thanks" role="status" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Received.</b> Thanks — this is a demo form.</span></div>
+        </form>
+        <div class="x-stamplayer" aria-hidden="true"><div class="x-bigstamp"><b>Received</b><small>NG-0450 · Demo</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="x-sec x-sec--concrete" id="promise">
+    <div class="x-wrap">
+      <p class="x-eyebrow">Our promise</p>
+      <h2 class="x-h2">In writing, every time.</h2>
+      <div class="x-promise">
+        <figure class="x-gauge" id="x-gauge" style="margin:0 auto">
+          <svg viewBox="0 0 240 212" aria-hidden="true" focusable="false">
+            <path class="x-gauge__track" d="M57.8 182.2A88 88 0 1 1 182.2 182.2"/>
+            <g class="x-gauge__seg"><path style="--i:0" d="M56.5 180.9A88 88 0 0 1 39.4 155.4"/><path style="--i:1" d="M38.0 152.0A88 88 0 0 1 32.0 121.8"/><path style="--i:2" d="M32.0 118.2A88 88 0 0 1 38.0 88.0"/><path style="--i:3" d="M39.4 84.6A88 88 0 0 1 56.5 59.1"/><path style="--i:4" d="M59.1 56.5A88 88 0 0 1 84.6 39.4"/><path style="--i:5" d="M88.0 38.0A88 88 0 0 1 118.2 32.0"/><path style="--i:6" d="M121.8 32.0A88 88 0 0 1 152.0 38.0"/><path style="--i:7" d="M155.4 39.4A88 88 0 0 1 180.9 56.5"/><path style="--i:8" d="M183.5 59.1A88 88 0 0 1 200.6 84.6"/><path style="--i:9" d="M202.0 88.0A88 88 0 0 1 208.0 118.2"/><path style="--i:10" d="M208.0 121.8A88 88 0 0 1 202.0 152.0"/><path style="--i:11" d="M200.6 155.4A88 88 0 0 1 183.5 180.9"/></g>
+            <g class="x-gauge__ticks"><line x1="76.2" y1="163.8" x2="67.7" y2="172.3" class="is-major"/><line x1="62.7" y1="143.7" x2="57.2" y2="146.0"/><line x1="58.0" y1="120.0" x2="52.0" y2="120.0"/><line x1="62.7" y1="96.3" x2="51.6" y2="91.7" class="is-major"/><line x1="76.2" y1="76.2" x2="71.9" y2="71.9"/><line x1="96.3" y1="62.7" x2="94.0" y2="57.2"/><line x1="120.0" y1="58.0" x2="120.0" y2="46.0" class="is-major"/><line x1="143.7" y1="62.7" x2="146.0" y2="57.2"/><line x1="163.8" y1="76.2" x2="168.1" y2="71.9"/><line x1="177.3" y1="96.3" x2="188.4" y2="91.7" class="is-major"/><line x1="182.0" y1="120.0" x2="188.0" y2="120.0"/><line x1="177.3" y1="143.7" x2="182.8" y2="146.0"/><line x1="163.8" y1="163.8" x2="172.3" y2="172.3" class="is-major"/></g>
+            <g class="x-gauge__scale" text-anchor="middle" dominant-baseline="central"><text x="42" y="198">0</text><text x="18" y="78">3</text><text x="120" y="11">6</text><text x="222" y="78">9</text><text x="198" y="198">12</text></g>
+            <g class="x-gauge__needle"><path d="M120 60L125.5 124H114.5Z"/></g>
+            <circle class="x-gauge__hub" cx="120" cy="120" r="11"/><circle class="x-gauge__pin" cx="120" cy="120" r="4"/>
+          </svg>
+          <figcaption><span class="x-gauge__num">12 <span class="x-gauge__unit">MONTHS</span></span><span class="x-gauge__alt">or 12,000 miles</span></figcaption>
+        </figure>
+        <ul class="x-pledges">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg><div><h3>Written estimates</h3><p>You see the price on paper before work begins.</p></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><div><h3>No work without approval</h3><p>We call first. No surprises on the bill.</p></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><h3>12-month / 12,000-mile warranty</h3><p>Parts and labor, covered.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="x-sec" id="contact">
+    <div class="x-wrap">
+      <p class="x-eyebrow">Hours &amp; contact</p>
+      <h2 class="x-h2">Open early, six days a week.</h2>
+      <div class="x-contact">
+        <table class="x-hours">
+          <caption class="x-skip">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Mon–Fri</th><td>7:30–5:30</td></tr>
+            <tr><th scope="row">Saturday</th><td>8–12</td></tr>
+            <tr class="is-closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="x-panel">
+          <h3>Call the shop</h3>
+          <p>Tap to call. A real person answers during open hours.</p>
+          <a class="x-bigphone" href="tel:+15550143392">(555) 014-3392</a>
+          <h3>Find us</h3>
+          <p class="x-addr">450 Northgate Road</p>
+          <a class="x-btn x-btn--orange" href="#quote">Get a quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="x-foot">
+  <div class="x-wrap">
+    <span>© Northgate Auto Care (fictional)</span>
+    <span>Designed and built by <a href="index.html" target="_blank" rel="noopener">Patch &amp; Flow Studio</a></span>
+  </div>
+</footer>
+
+<div class="x-callbar" aria-label="Quick contact">
+  <a class="x-btn x-btn--orange" href="tel:+15550143392"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call (555) 014-3392</a>
+  <a class="x-btn x-btn--ghost" href="#quote">Quote</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hasIO="IntersectionObserver" in window;
+  try{
+    /* work order: stamp + inline message, no backend */
+    var form=document.getElementById("x-form"),thanks=document.getElementById("x-thanks"),ticket=form.closest(".x-ticket");
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      ticket.classList.remove("is-stamped");thanks.hidden=true;
+      void ticket.offsetWidth;
+      ticket.classList.add("is-stamped");thanks.hidden=false;form.reset();
+    });
+
+    /* reveal-once helper */
+    function onView(els,opts,fn){
+      if(!hasIO||reduce){els.forEach(function(el){fn(el,0);});return;}
+      var io=new IntersectionObserver(function(es){
+        var k=0;
+        es.forEach(function(en){if(en.isIntersecting){fn(en.target,k++);io.unobserve(en.target);}});
+      },opts);
+      els.forEach(function(el){io.observe(el);});
+    }
+
+    /* gauge */
+    onView([document.getElementById("x-gauge")],{threshold:.5},function(el){el.classList.add("is-on");});
+
+    /* services: staggered per batch entering view */
+    onView([].slice.call(document.querySelectorAll(".x-svc")),{threshold:.15,rootMargin:"0px 0px -8% 0px"},function(el,k){
+      el.style.setProperty("--d",(k*90)+"ms");el.classList.add("is-in");
+    });
+
+    /* how it works: scroll-linked rail */
+    var steps=document.querySelector(".x-steps"),lis=[].slice.call(steps.children);
+    var mq=matchMedia("(max-width:860px)"),ticking=false,last=-1,len=1;
+    function measure(){
+      if(mq.matches){
+        var lastLi=lis[lis.length-1];
+        len=Math.max(1,lastLi.offsetTop);
+        steps.style.setProperty("--x-rail-end",(steps.offsetHeight-lastLi.offsetTop-32)+"px");
+      }
+    }
+    function update(){
+      ticking=false;
+      var vh=window.innerHeight,r=steps.getBoundingClientRect(),p;
+      if(reduce){p=1;}
+      else if(mq.matches){p=(vh*.62-(r.top+32))/len;}
+      else{p=(vh*.82-r.top)/(vh*.42);}
+      p=Math.min(1,Math.max(0,p));
+      if(Math.abs(p-last)<.001)return;
+      last=p;
+      steps.style.setProperty("--x-p",p.toFixed(4));
+      lis.forEach(function(li,i){
+        var f=mq.matches?li.offsetTop/len:i/(lis.length-1);
+        li.classList.toggle("is-active",p>0&&p>=f-.002);
+      });
+    }
+    function req(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
+    measure();update();
+    if(!reduce){window.addEventListener("scroll",req,{passive:true});}
+    window.addEventListener("resize",function(){measure();last=-1;req();});
+    if(mq.addEventListener)mq.addEventListener("change",function(){measure();last=-1;req();});
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){measure();last=-1;req();});
+  }catch(err){root.classList.remove("js");}
+})();
+</script>
+</body>
+</html>

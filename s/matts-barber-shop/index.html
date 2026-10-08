@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matt's Barber Shop | Kid-Friendly Haircuts in Ozark, AL</title>
+<meta name="description" content="Matt's Barber Shop on W Andrews Ave in Ozark, Alabama. Patient, kid-friendly haircuts and beard work. Closed Wednesdays. Call (334) 685-1576.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14284b;--red:#c8312a;--white:#fdfcf8;--sky:#dfe8f5;--ink:#1b2333}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Work Sans",system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--navy);color:#e8eefb;font-size:12px;text-align:center;padding:7px 12px}
+header{display:grid;grid-template-columns:34px 1fr;gap:16px;padding:28px 18px;align-items:stretch}
+.pole{border-radius:17px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 28px,var(--navy) 28px 42px,#fff 42px 56px);background-size:100% 160px;animation:spin 3s linear infinite;border:3px solid #b9c3d6;min-height:220px}
+@keyframes spin{to{background-position:0 160px}}
+.kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:700}
+h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(44px,13vw,80px);line-height:.95;color:var(--navy)}
+.lead{margin-top:10px;font-size:16px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{padding:12px 18px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;display:inline-block}
+.btn.r{background:var(--red);color:#fff}.btn.n{background:var(--navy);color:#fff}
+section{padding:28px 18px;max-width:760px;margin:0 auto}
+h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:34px;color:var(--navy);letter-spacing:.02em;margin-bottom:10px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.day{background:var(--sky);border-radius:8px;padding:8px 2px;text-align:center;font-size:11px}
+.day b{display:block;font-family:"Bebas Neue",sans-serif;font-size:20px;font-weight:400;color:var(--navy)}
+.day.off{background:#f1d6d4}.day.off b{color:var(--red)}
+.day.today{outline:3px solid var(--navy)}
+.list{margin-top:12px;font-size:15px}
+.list div{display:flex;justify-content:space-between;border-bottom:1px solid #e3e7ef;padding:7px 0}
+.alert{margin-top:12px;background:#fff3f2;border-left:5px solid var(--red);padding:10px 12px;font-size:14px;border-radius:0 8px 8px 0}
+.kids{background:var(--navy);color:#fff;border-radius:16px;padding:20px}
+.kids h2{color:#fff}
+.kids ul{list-style:none}
+.kids li{padding:8px 0 8px 30px;position:relative;font-size:15px}
+.kids li:before{content:"";position:absolute;left:0;top:11px;width:18px;height:18px;border-radius:50%;background:var(--red);box-shadow:inset 0 0 0 5px #fff}
+.sample{font-size:10px;text-transform:uppercase;letter-spacing:.06em;background:#ffe2df;color:var(--red);padding:2px 6px;border-radius:4px;vertical-align:middle}
+.years{display:flex;align-items:center;gap:14px;background:var(--sky);border-radius:14px;padding:16px}
+.years .n{font-family:"Bebas Neue",sans-serif;font-size:54px;color:var(--red);line-height:1}
+blockquote{border-left:4px solid var(--navy);padding:8px 12px;margin:12px 0}
+blockquote cite{display:block;font-style:normal;font-size:12px;color:#5a6680;margin-top:4px}
+footer{text-align:center;font-size:12px;color:#5a6680;padding:24px 14px 34px}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Matt's Barber Shop's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+  <div class="pole" aria-hidden="true"></div>
+  <div>
+    <p class="kick">Ozark, Alabama</p>
+    <h1>Matt's Barber Shop</h1>
+    <p class="lead">Calm, patient haircuts and beard work on W Andrews Ave. Parents say it is the spot for toddlers and kids who usually dread the chair.</p>
+    <div class="cta"><a class="btn r" href="tel:+13346851576">Call (334) 685-1576</a><a class="btn n" href="https://www.google.com/maps/dir/?api=1&destination=2978+W+Andrews+Ave+Ozark+AL+36360">Directions</a></div>
+  </div>
+</header>
+
+<section>
+  <h2>This week at the shop</h2>
+  <div class="week" id="wk">
+    <div class="day" data-d="1"><b>Mon</b>8:30–6</div>
+    <div class="day" data-d="2"><b>Tue</b>8:30–6</div>
+    <div class="day off" data-d="3"><b>Wed</b>Closed</div>
+    <div class="day" data-d="4"><b>Thu</b>8:30–6</div>
+    <div class="day" data-d="5"><b>Fri</b>8:30–6</div>
+    <div class="day" data-d="6"><b>Sat</b>9–2</div>
+    <div class="day off" data-d="0"><b>Sun</b>Closed</div>
+  </div>
+  <p class="alert"><b>Heads up:</b> the shop is closed on Wednesdays. Saturday hours are 9 AM to 2 PM.</p>
+</section>
+
+<section>
+  <div class="kids">
+    <h2>First haircut? Bring them here.</h2>
+    <ul>
+      <li>Matt stays cool and collected with wiggly three-year-olds.</li>
+      <li>Families mention he was terrific with a grandson who has autism.</li>
+      <li>Grandparents bring three boys at once, so plan for a short wait.</li>
+      <li>Ask about the best time to bring little ones <span class="sample">sample</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="years">
+    <div class="n">18</div>
+    <div>years one customer says he has been getting his hair cut by Matt. Haircuts and beard trims, done with time taken on each one.</div>
+  </div>
+</section>
+
+<section>
+  <h2>From the chair</h2>
+  <blockquote>2nd time me and my lil boy has went to Matt. My boy is 3 and moving around all over the place. Matt is so cool and collective with him and does an awesome job!<cite>Google review, September 2025</cite></blockquote>
+  <blockquote>Matt did an awesome job with my hair and beard. I was extremely happy with the results.<cite>Google review, August 2025</cite></blockquote>
+  <blockquote>Been getting my hair cut by Matt for the past 18 years. He's an excellent barber who takes his time and provides an excellent haircut.<cite>Google review, July 2025</cite></blockquote>
+</section>
+
+<section>
+  <h2>Find us</h2>
+  <p>2978 W Andrews Ave, Ozark, AL 36360</p>
+  <p><a href="tel:+13346851576">(334) 685-1576</a></p>
+  <div class="cta"><a class="btn n" href="https://www.google.com/maps/dir/?api=1&destination=2978+W+Andrews+Ave+Ozark+AL+36360">Get directions</a></div>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>var e=document.querySelector('#wk [data-d="'+new Date().getDay()+'"]');if(e)e.classList.add('today');</script>
+</body>
+</html>

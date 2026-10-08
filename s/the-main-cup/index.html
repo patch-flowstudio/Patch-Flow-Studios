@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Main Cup | Coffee &amp; Café in Loreauville, LA</title>
+<meta name="description" content="The Main Cup in the historic Bank of Loreauville building, 101 N Main St. Coffee, breakfast, lunch and gumbo, plus Da's Table and community events. Call (337) 944-6003.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--brick:#8c3b2a;--cream:#f8f1e4;--coffee:#3b2418;--teal:#2f6e6a;--gold:#c99a4b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Source Sans 3",system-ui,sans-serif;background:var(--cream);color:var(--coffee);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:var(--coffee);color:#f3e6d0;font-size:12px;text-align:center;padding:7px 12px}
+.facade{background:var(--brick);background-image:linear-gradient(90deg,rgba(0,0,0,.08) 1px,transparent 1px),linear-gradient(rgba(0,0,0,.1) 1px,transparent 1px);background-size:28px 14px;padding:26px 16px 0;text-align:center;color:#fff}
+.sign{display:inline-block;border:3px solid var(--gold);padding:6px 14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,.25)}
+h1{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(40px,12vw,72px);line-height:1;margin:14px 0 6px}
+.since{font-size:14px;color:#f6dccb}
+.door{margin:22px auto 0;width:min(260px,70%);height:120px;background:var(--teal);border:6px solid var(--gold);border-bottom:none;border-radius:120px 120px 0 0;position:relative}
+.door:after{content:"";position:absolute;left:50%;top:22px;bottom:0;width:4px;background:var(--gold);transform:translateX(-50%)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:18px 16px 0}
+.btn{padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;display:inline-block}
+.btn.t{background:var(--teal);color:#fff}.btn.c{border:2px solid var(--coffee)}
+section{padding:28px 18px;max-width:760px;margin:0 auto}
+h2{font-family:"Playfair Display",serif;font-size:28px;margin-bottom:10px;color:var(--brick)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{font:inherit;font-weight:700;border:2px solid var(--coffee);background:transparent;color:var(--coffee);padding:7px 14px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--coffee);color:var(--cream)}
+.panel{background:#fff;border-radius:16px;padding:16px;box-shadow:0 6px 18px rgba(59,36,24,.1)}
+.panel ul{list-style:none}
+.panel li{padding:8px 0;border-bottom:1px dotted #d8c7ad}
+.panel li:last-child{border:none}
+.sample{font-size:10px;text-transform:uppercase;letter-spacing:.06em;background:#efe1c6;color:var(--brick);padding:2px 6px;border-radius:4px;vertical-align:middle}
+.events{display:grid;gap:12px}
+.ev{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:12px}
+.ev .ico{width:64px;height:64px;border-radius:12px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:13px;text-align:center;line-height:1.1;padding:4px}
+.ev h3{font-size:17px}
+.ev p{font-size:14px}
+.hours{background:var(--coffee);color:var(--cream);border-radius:16px;padding:16px}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.hours .today{color:var(--gold);font-weight:700}
+blockquote{background:#fff;border-radius:14px;padding:14px;margin:10px 0;border-left:5px solid var(--gold)}
+blockquote cite{display:block;font-style:normal;font-size:12px;color:#7b5c47;margin-top:6px}
+footer{text-align:center;font-size:12px;color:#7b5c47;padding:24px 14px 34px}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not The Main Cup's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="facade">
+  <span class="sign">Bank of Loreauville · c. 1910</span>
+  <h1>The Main Cup</h1>
+  <p class="since">Coffee, breakfast and lunch on Main Street, Loreauville. Opened October 2023.</p>
+  <div class="door" aria-hidden="true"></div>
+</div>
+<div class="cta"><a class="btn t" href="tel:+13379446003">Call (337) 944-6003</a><a class="btn c" href="https://www.google.com/maps/dir/?api=1&destination=101+N+Main+St+Loreauville+LA">Directions</a></div>
+
+<section>
+  <h2>At the counter</h2>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-p="cof">Coffee</button>
+    <button role="tab" aria-selected="false" data-p="eat">Breakfast &amp; lunch</button>
+    <button role="tab" aria-selected="false" data-p="sip">Other sips</button>
+  </div>
+  <div class="panel" id="cof"><ul><li>Drip coffee</li><li>Cold brew</li><li>Lattes, a favorite on the way to and from school</li></ul></div>
+  <div class="panel" id="eat" hidden><ul><li>Breakfast and brunch items</li><li>Sandwiches, flatbreads and salads, including the Loreau salad</li><li>Chicken and sausage gumbo with potato salad</li><li>Pastries and desserts</li></ul></div>
+  <div class="panel" id="sip" hidden><ul><li>Strawberry lavender lemonade</li><li>Seasonal drinks <span class="sample">sample</span></li></ul></div>
+  <p style="font-size:13px;margin-top:8px">Items come from the café's tourism listing and customer reviews. Ask in store for today's menu and prices.</p>
+</section>
+
+<section>
+  <h2>Gather at the Cup</h2>
+  <div class="events">
+    <div class="ev"><div class="ico">Da's Table</div><div><h3>Free community meal</h3><p>Every second Sunday, in honor of Wilda "Da" Hebert. Doors 10 AM, serving from 11 AM. Call to see what's on the menu.</p></div></div>
+    <div class="ev"><div class="ico">Table française</div><div><h3>French table</h3><p>French speakers and learners meet to talk Cajun-French culture. Started Tuesdays at 7 AM in February 2024. Call to confirm the current schedule.</p></div></div>
+    <div class="ev"><div class="ico">Your party</div><div><h3>Private gatherings</h3><p>Families have reserved the café for Christmas gatherings. Call (337) 944-6003 to ask about dates.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Hours</h2>
+  <div class="hours" id="hrs">
+    <div data-d="1"><span>Monday</span><span>6 AM – 6 PM</span></div>
+    <div data-d="2"><span>Tuesday</span><span>6 AM – 6 PM</span></div>
+    <div data-d="3"><span>Wednesday</span><span>6 AM – 6 PM</span></div>
+    <div data-d="4"><span>Thursday</span><span>6 AM – 6 PM</span></div>
+    <div data-d="5"><span>Friday</span><span>6 AM – 6 PM</span></div>
+    <div data-d="6"><span>Saturday</span><span>7 AM – 2 PM</span></div>
+    <div data-d="0"><span>Sunday</span><span>Closed</span></div>
+  </div>
+  <p style="font-size:13px;margin-top:8px">Hours as listed on Google. Call to confirm before a special trip.</p>
+</section>
+
+<section>
+  <h2>Kind words</h2>
+  <blockquote>We reserved the restaurant for our family Christmas gathering. Marti, Meagan and Conner made it the best. The atmosphere is so joyful! We couldn’t have chosen better. Thank you Main Cup!<cite>Google review, December 2025</cite></blockquote>
+  <blockquote>A home feeling cafe with good coffee, company, and Jesus!<cite>Google review, January 2026</cite></blockquote>
+</section>
+
+<section>
+  <h2>Visit</h2>
+  <p>101 N Main St, at the corner of Main St and Railroad Ave, Loreauville, LA</p>
+  <p><a href="tel:+13379446003">(337) 944-6003</a> · <a href="mailto:themaincupinfo@gmail.com">themaincupinfo@gmail.com</a></p>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+document.querySelectorAll('[role=tab]').forEach(function(b){b.onclick=function(){document.querySelectorAll('[role=tab]').forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.dataset.p).hidden=true});b.setAttribute('aria-selected','true');document.getElementById(b.dataset.p).hidden=false}});
+var r=document.querySelector('#hrs [data-d="'+new Date().getDay()+'"]');if(r)r.className='today';
+</script>
+</body>
+</html>

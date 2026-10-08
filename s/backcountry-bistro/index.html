@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backcountry Bistro | Seasonal Restaurant in Gardiner, MT, at Yellowstone's North Entrance</title>
+<meta name="description" content="Backcountry Bistro, the seasonal restaurant at 225 Main St in Gardiner, Montana, near Yellowstone's north entrance. Ribeye, pork chops, bourbon-glazed chicken, catering. Call (406) 848-9987.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1f3a2e;--pine2:#2c5240;--moss:#7d9a5a;--wood:#8a5a33;--wood2:#6b4223;--cream:#f4ecd8;--ember:#e0762b;--ink:#1b1a17}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Bitter,Georgia,serif;background:var(--cream);color:var(--ink);line-height:1.55;font-size:16px;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+/* hero: topo map */
+.hero{background:var(--pine);color:var(--cream);position:relative;overflow:hidden;padding:30px 0 0}
+.hero svg.topo{position:absolute;inset:0;width:100%;height:100%;opacity:.22}
+.hero .wrap{position:relative;z-index:2}
+.coords{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#cfe0b8}
+/* trailhead sign */
+.sign{margin:20px auto 0;max-width:350px;position:relative;padding-bottom:70px}
+.plank{background:var(--wood);border:3px solid var(--wood2);border-radius:6px;padding:18px 16px 16px;text-align:center;position:relative;
+ background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.08) 0 2px,transparent 2px 9px);box-shadow:0 6px 0 var(--wood2)}
+.plank::before,.plank::after{content:"";position:absolute;top:10px;width:9px;height:9px;border-radius:50%;background:var(--wood2)}
+.plank::before{left:10px}.plank::after{right:10px}
+.plank small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#f3dcc0}
+h1{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(30px,10vw,58px);line-height:.98;color:var(--cream);text-shadow:0 2px 0 var(--wood2);margin:6px 0 4px}
+.plank p{font-size:14px;color:#f8e9d2}
+.posts{position:absolute;bottom:0;left:0;right:0;height:72px}
+.posts i{position:absolute;bottom:0;width:16px;height:72px;background:var(--wood2);border-radius:2px}
+.posts i:first-child{left:20%}.posts i:last-child{right:20%}
+.ground{display:block;width:100%;height:38px;margin-top:-6px;position:relative;z-index:3}
+/* season banner */
+.season{margin:-4px 0 0;background:var(--ember);color:var(--ink);padding:16px 0}
+.season .wrap{display:flex;gap:12px;align-items:flex-start}
+.season svg{flex:none;margin-top:2px}
+.season b{display:block;font-family:"Alfa Slab One",serif;font-weight:400;font-size:20px;line-height:1.1}
+.season span{font-size:14px}
+.cta{display:grid;gap:12px;margin:24px 0 8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;border-radius:8px;font-weight:700;font-size:18px;text-decoration:none}
+.btn.call{background:var(--pine);color:var(--cream);box-shadow:0 5px 0 #0f2219}
+.btn.map{background:transparent;border:3px solid var(--pine);color:var(--pine)}
+.btn.fb{background:transparent;border:2px dashed var(--wood);color:var(--wood2);min-height:52px;font-size:16px}
+.rate{text-align:center;font-size:14px;margin-top:6px}
+.rate b{color:var(--ember)}
+h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:30px;line-height:1.05;margin:44px 0 16px;color:var(--pine)}
+h2 small{display:block;font-family:"Permanent Marker",cursive;font-size:17px;color:var(--wood);margin-bottom:4px}
+/* wood-burned menu board */
+.board{background:var(--wood);border:4px solid var(--wood2);border-radius:10px;padding:18px 16px;color:#fff3e0;
+ background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0 3px,transparent 3px 14px),radial-gradient(ellipse at 30% 40%,rgba(255,255,255,.08),transparent 60%)}
+.dish{padding:12px 0;border-bottom:2px dashed rgba(255,243,224,.35)}
+.dish:last-child{border-bottom:0}
+.dish h3{font-family:"Permanent Marker",cursive;font-weight:400;font-size:22px;line-height:1.15;color:#fff}
+.dish p{font-size:14px;color:#f6dfc2}
+.mnote{margin-top:12px;font-size:14px}
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{border:2px solid var(--pine);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;background:#fffaf0}
+/* story timeline as trail */
+.trail{position:relative;padding-left:34px}
+.trail::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;border-left:3px dashed var(--moss)}
+.stop{position:relative;margin-bottom:22px}
+.stop::before{content:"";position:absolute;left:-31px;top:4px;width:18px;height:18px;border-radius:50%;background:var(--cream);border:4px solid var(--pine)}
+.stop b{display:block;font-size:17px;color:var(--pine)}
+.stop p{font-size:15px}
+.quote{background:var(--pine);color:var(--cream);border-radius:10px;padding:18px;font-size:16px;margin-top:6px}
+.quote small{display:block;color:#bcd2a8;font-size:12px;margin-top:6px}
+/* hours */
+.hours{background:#fffaf0;border:3px solid var(--pine);border-radius:10px;padding:18px}
+.hours .big{font-family:"Alfa Slab One",serif;font-size:26px;line-height:1.1;color:var(--pine)}
+.hours p{font-size:15px;margin-top:6px}
+.addr{margin-top:14px;font-size:15px}
+.not{font-size:13px;color:#5c574c;margin-top:14px;border-top:1px dashed #c9bfa6;padding-top:12px}
+footer{margin-top:50px;padding:20px 0 28px;text-align:center;font-size:11px;color:#857d6a}
+footer a{color:#857d6a}
+@media(min-width:700px){.cta{grid-template-columns:1fr 1fr}.cta .fb{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<section class="hero">
+ <svg class="topo" viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="#cfe0b8" stroke-width="1.4">
+  <path d="M-20 80c60-30 110 10 170-10s120-50 270-10"/><path d="M-20 120c70-30 120 20 180 0s130-60 260-10"/><path d="M-20 165c80-20 130 25 190 5s140-55 250-5"/>
+  <path d="M60 300c0-50 40-90 100-90s110 30 110 80-50 80-110 80-100-20-100-70z"/><path d="M95 298c0-32 28-58 68-58s72 20 72 52-32 52-72 52-68-14-68-46z"/><path d="M128 296c0-16 14-30 36-30s38 10 38 26-16 26-38 26-36-6-36-22z"/>
+  <path d="M-20 390c80-30 160 10 230-10s140-40 220-10"/><path d="M280 40c30 0 60 20 60 50s-30 50-60 40-40-30-40-50 10-40 40-40z"/>
+ </svg>
+ <div class="wrap">
+  <div class="coords">Gardiner, Montana &middot; Yellowstone North Entrance</div>
+  <div class="sign">
+   <div class="plank"><small>Trailhead eats &middot; 225 Main St</small><h1>Backcountry Bistro</h1><p>Steaks and hearty plates, from food truck to Main Street.</p></div>
+   <div class="posts" aria-hidden="true"><i></i><i></i></div>
+  </div>
+ </div>
+ <svg class="ground" viewBox="0 0 400 38" preserveAspectRatio="none" aria-hidden="true"><path d="M0 38V20l30-12 30 10 40-14 46 16 40-12 44 12 40-16 40 14 50-10 40 12v24z" fill="#2c5240"/><path d="M0 38V28l50-6 60 8 70-8 60 6 70-8 90 8v10z" fill="#e0762b"/></svg>
+</section>
+<div class="season" role="note"><div class="wrap">
+ <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1b1a17" stroke-width="2"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+ <div><b>A summer-season restaurant</b><span>We open for the Yellowstone season. Follow us on Facebook for next season's opening day, and call ahead for catering.</span></div>
+</div></div>
+
+<div class="wrap">
+ <div class="cta">
+  <a class="btn call" href="tel:+14068489987"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (406) 848-9987</a>
+  <a class="btn map" href="https://www.google.com/maps/search/?api=1&amp;query=Backcountry+Bistro%2C+225+Main+St%2C+Gardiner%2C+MT+59030" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+  <a class="btn fb" href="https://www.facebook.com/p/Backcountry-Bistro-61575059109452/" target="_blank" rel="noopener">Season updates on Facebook</a>
+ </div>
+ <p class="rate"><b>&#9733; 4.5</b> from 131 Google reviews</p>
+
+ <h2><small>Off the grill</small>What people drive in for</h2>
+ <div class="board">
+  <div class="dish"><h3>14 oz Ribeye</h3><p>The steak reviewers name first.</p></div>
+  <div class="dish"><h3>Pork Chops</h3><p>Another reviewer favorite.</p></div>
+  <div class="dish"><h3>Bourbon-Glazed Chicken</h3><p>A dish reviewers call out by name.</p></div>
+  <div class="dish"><h3>Hot-Honey Peach Cheesecake</h3><p>The dessert to save room for.</p></div>
+ </div>
+ <p class="mnote">Menu and prices change with the season. Call for current prices.</p>
+
+ <h2><small>Good to know</small>For every appetite</h2>
+ <div class="tags">
+  <span>Montana-sourced meats &amp; produce</span><span>Gluten-free options</span><span>Keto-friendly options</span><span>Catering</span>
+ </div>
+
+ <h2><small>The trail so far</small>Our story</h2>
+ <div class="trail">
+  <div class="stop"><b>The food truck</b><p>Backcountry Bistro started out serving from a food truck.</p></div>
+  <div class="stop"><b>A building on Main Street</b><p>In May 2025 it moved into its own building at 225 Main St.</p></div>
+  <div class="stop"><b>Part of Gardiner</b><p>Welcomed as a new member of the Gardiner Chamber of Commerce in 2026.</p></div>
+ </div>
+ <div class="quote">Owned by two brothers who are also the chefs, and a must-stop on the way out of Yellowstone's north entrance.<small>What reviewers say, summarized</small></div>
+
+ <h2><small>When we're cooking</small>Hours</h2>
+ <div class="hours">
+  <div class="big">In season: daily, 4 &ndash; 9 PM</div>
+  <p>We are a summer-season restaurant. Opening day for next season is announced on Facebook. Call to confirm hours before you drive in.</p>
+  <p class="addr">225 Main St, Gardiner, MT 59030</p>
+  <p class="not">The Gardiner, Montana restaurant. Not affiliated with the freeze-dried backpacking meal company of the same name.</p>
+ </div>
+ <div class="cta">
+  <a class="btn call" href="tel:+14068489987">Call (406) 848-9987</a>
+  <a class="btn map" href="https://www.google.com/maps/search/?api=1&amp;query=Backcountry+Bistro%2C+225+Main+St%2C+Gardiner%2C+MT+59030" target="_blank" rel="noopener">Get directions</a>
+ </div>
+</div>
+<footer><a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/" target="_blank" rel="noopener">Sample design by Patch &amp; Flow Studio</a></footer>
+</body>
+</html>

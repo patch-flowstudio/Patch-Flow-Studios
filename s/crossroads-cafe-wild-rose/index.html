@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crossroads Cafe | Breakfast &amp; homemade turnovers in Wild Rose, WI</title>
+<meta name="description" content="A cozy seven-table breakfast and lunch cafe at N5503 County Rd W, Wild Rose, Wisconsin, known for homemade turnovers and the Crossroads platter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800;900&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--hwy:#0f6a4a;--hwy2:#0b4f37;--barn:#9e2b25;--wheat:#f3e7cf;--board:#fbf6ea;--ink:#1d2420;--fence:#d9c7a3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font:400 16px/1.6 Overpass,system-ui,sans-serif;background:var(--board);color:var(--ink);overflow-x:hidden}
+a{color:inherit}
+.pf-concept{font:13px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px;background:var(--hwy2);color:#e6f2ec}
+/* signature hero: a crossroads intersection drawn in CSS */
+.cross{position:relative;min-height:520px;background:#e8dcc0;overflow:hidden;display:grid;place-items:center;padding:40px 18px}
+.cross:before,.cross:after{content:"";position:absolute;background:#4a4a46}
+.cross:before{left:0;right:0;top:50%;height:120px;transform:translateY(-50%)}
+.cross:after{top:0;bottom:0;left:50%;width:120px;transform:translateX(-50%)}
+.cross .dash-h,.cross .dash-v{position:absolute;z-index:1}
+.cross .dash-h{left:0;right:0;top:50%;height:4px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,#f2c94c 0 26px,transparent 26px 50px)}
+.cross .dash-v{top:0;bottom:0;left:50%;width:4px;transform:translateX(-50%);background:repeating-linear-gradient(180deg,#f2c94c 0 26px,transparent 26px 50px)}
+.signpost{position:relative;z-index:2;display:grid;gap:10px;justify-items:center}
+.sg{background:var(--hwy);color:#fff;border-radius:10px;padding:14px 22px;border:3px solid #fff;box-shadow:0 0 0 2px var(--hwy),0 16px 30px -14px rgba(0,0,0,.6);text-align:center}
+.sg.main h1{font-weight:900;font-size:clamp(40px,10vw,84px);line-height:.95;letter-spacing:-.01em}
+.sg.main p{font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase;opacity:.9;margin-top:6px}
+.sg.r{background:#fff;color:var(--ink);border-color:var(--ink);box-shadow:0 0 0 2px #fff,0 12px 22px -12px rgba(0,0,0,.6);font-weight:800;font-size:15px;letter-spacing:.06em;padding:8px 16px}
+.sg.r.l{transform:rotate(-4deg)}.sg.r.rr{transform:rotate(3deg)}
+.post{width:10px;height:60px;background:#8b8f94;border-radius:2px}
+.acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;text-decoration:none;letter-spacing:.02em;transition:transform 100ms ease-out,background-color .2s,color .2s;touch-action:manipulation}
+.btn.g{background:var(--barn);color:#fff}
+.btn.w{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn:hover{background:var(--ink);color:#fff}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible{outline:3px solid #f2c94c;outline-offset:3px}
+main{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:68px 0}
+.ey{font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--barn)}
+h2{font-family:Lora,serif;font-weight:500;font-size:clamp(32px,5.6vw,52px);line-height:1.08;margin:6px 0 16px}
+.lead{max-width:52ch;color:#4b524d}
+/* seven tables */
+.room{margin-top:28px;background:repeating-linear-gradient(90deg,#efe3c8 0 46px,#e9dcbe 46px 48px);border:3px solid var(--fence);border-radius:22px;padding:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+@media(max-width:520px){.room{grid-template-columns:repeat(3,1fr);gap:12px;padding:16px}}
+.tb{aspect-ratio:1;border-radius:14px;background:#fff;box-shadow:0 8px 16px -10px rgba(0,0,0,.4);display:grid;place-items:center;position:relative;font-family:Lora,serif;font-size:22px;color:var(--hwy2);transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
+.tb:hover{transform:scale(1.05)}
+.tb:before,.tb:after{content:"";position:absolute;width:30%;height:9px;border-radius:5px;background:var(--barn);left:35%}
+.tb:before{top:-13px}.tb:after{bottom:-13px}
+.tb.door{background:transparent;box-shadow:none;border:2px dashed var(--hwy);font:800 12px/1.2 Overpass;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px}
+.tb.door:before,.tb.door:after{display:none}
+.roomnote{margin-top:14px;font-size:14px;color:#6b6f66}
+.menu{display:grid;gap:14px}
+@media(min-width:760px){.menu{grid-template-columns:1.2fr 1fr}}
+.plate{background:#fff;border-radius:20px;padding:24px;border:2px solid #efe6d2}
+.plate h3{font-family:Lora,serif;font-weight:500;font-size:24px}
+.plate ul{list-style:none;margin-top:10px}
+.plate li{display:flex;gap:10px;padding:10px 0;border-bottom:1px dotted #d8ccb2;font-size:16px}
+.plate li:last-child{border:0}
+.plate li b{color:var(--hwy2)}
+.turn{background:var(--barn);color:#fff6ee;border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;position:relative;overflow:hidden}
+.turn svg{position:absolute;right:-14px;bottom:-10px;opacity:.9}
+.turn h3{font-family:Lora,serif;font-weight:500;font-size:28px;line-height:1.15;max-width:12ch}
+.turn p{max-width:26ch;position:relative}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.85;vertical-align:middle}
+.q{display:grid;gap:18px}
+@media(min-width:760px){.q{grid-template-columns:repeat(3,1fr)}}
+.q blockquote{font-family:Lora,serif;font-style:italic;font-size:19px;line-height:1.5;border-top:4px solid var(--hwy);padding-top:14px}
+.q cite{display:block;font:800 11px/1.4 Overpass;letter-spacing:.16em;text-transform:uppercase;color:#6b6f66;margin-top:10px;font-style:normal}
+.visit{display:grid;gap:22px;background:var(--hwy);color:#eaf4ef;border-radius:24px;padding:32px}
+@media(min-width:800px){.visit{grid-template-columns:1.2fr 1fr;padding:44px}}
+.visit h2{color:#fff}
+.mile{display:inline-block;background:#fff;color:var(--hwy2);border-radius:8px;padding:12px 16px;font-weight:900;font-size:18px;line-height:1.2;border:3px solid var(--hwy2);box-shadow:0 0 0 2px #fff}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:28px 16px 36px;color:#5b615c}
+.pf-foot a{font-weight:700}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Crossroads Cafe's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="cross">
+<span class="dash-h" aria-hidden="true"></span><span class="dash-v" aria-hidden="true"></span>
+<div class="signpost">
+<div class="sg r l">County Rd W</div>
+<div class="sg main"><h1>Crossroads<br>Cafe</h1><p>Wild Rose, Wisconsin</p></div>
+<div class="sg r rr">Breakfast &amp; Lunch</div>
+<div class="post" aria-hidden="true"></div>
+<div class="acts"><a class="btn g" href="tel:+19206223323">Call (920) 622-3323</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&amp;destination=N5503%20County%20Rd%20W%2C%20Wild%20Rose%2C%20WI%2054984">Directions</a></div>
+</div>
+</header>
+<main>
+<section>
+<span class="ey">Seven tables, one cozy room</span>
+<h2>Pull up a chair.</h2>
+<p class="lead">A small farmhouse-style cafe with seven tables, big breakfasts and a welcome that makes road-trippers stop on the way home from Door County. Groups are welcome too: one party of six was "accommodated easily."</p>
+<div class="room" role="img" aria-label="Floor plan sketch of the cafe's seven tables">
+<div class="tb door">Front<br>door</div><div class="tb">1</div><div class="tb">2</div><div class="tb">3</div><div class="tb">4</div><div class="tb">5</div><div class="tb">6</div><div class="tb">7</div>
+</div>
+<p class="roomnote">Table layout is illustrative <span class="smp">sample</span></p>
+</section>
+
+<section style="padding-top:0">
+<span class="ey">From the griddle</span>
+<h2>What people order</h2>
+<div class="menu">
+<div class="plate"><h3>Breakfast &amp; lunch</h3><ul>
+<li><b>Crossroads platter</b>The house plate. Ask about the half order, it fills you up.</li>
+<li><b>Denver omelet</b>"Such good ham."</li>
+<li><b>Fried steak</b>A breakfast favorite.</li>
+<li><b>Classic two egg</b>Eggs, meat, potatoes and toast.</li>
+<li><b>Lunch menu</b>Daily items <span class="smp">sample</span></li>
+</ul></div>
+<div class="turn"><h3>Save room for a turnover.</h3><p>Homemade turnovers, like blueberry. Portions are big, so plenty of people take one to go.</p><a class="btn w" style="align-self:flex-start;position:relative" href="tel:+19206223323">Call ahead for turnovers</a>
+<svg width="150" height="110" viewBox="0 0 150 110" aria-hidden="true"><path d="M10 100L140 100L75 18Z" fill="#e9b872" stroke="#b9772f" stroke-width="5" stroke-linejoin="round"/><path d="M40 82l70 0" stroke="#b9772f" stroke-width="3" stroke-dasharray="6 6"/><circle cx="75" cy="72" r="6" fill="#4b2d6b"/><circle cx="62" cy="80" r="5" fill="#4b2d6b"/><circle cx="89" cy="80" r="5" fill="#4b2d6b"/></svg></div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<span class="ey">Overheard</span>
+<h2>Worth the detour</h2>
+<div class="q">
+<blockquote>"The homemade turnovers are one of the greatest pastries me and my wife ever had."<cite>Google review, October 2025</cite></blockquote>
+<blockquote>"Found this gem on way home from Door county..good food Great prices..and excellent service...did not disappoint!"<cite>Google review, November 2025</cite></blockquote>
+<blockquote>"Absolutely the most coziest diner I've been to."<cite>Google review, December 2024</cite></blockquote>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="visit">
+<div><h2>Meet us at the crossroads</h2><p style="margin-bottom:20px">N5503 County Rd W, Wild Rose, WI 54984</p><div class="acts" style="justify-content:flex-start"><a class="btn w" href="https://www.google.com/maps/dir/?api=1&amp;destination=N5503%20County%20Rd%20W%2C%20Wild%20Rose%2C%20WI%2054984">Get directions</a><a class="btn" style="box-shadow:inset 0 0 0 2px #fff;color:#fff" href="tel:+19206223323">Call</a></div></div>
+<div><span class="mile">Hours<br><span style="font-weight:600;font-size:15px">Call to confirm hours</span></span><p style="margin-top:14px;font-size:14px;opacity:.85">Breakfast and lunch service. Exact days and times <span class="smp">sample</span></p></div>
+</div>
+</section>
+</main>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<script>(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;var els=document.querySelectorAll('main h2, .room, .plate, .turn, .q blockquote, .visit');els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();</script>
+</body>
+</html>

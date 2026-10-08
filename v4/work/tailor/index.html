@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Atelier Morrow · Tailoring &amp; Alterations (studio concept)</title>
+<meta name="description" content="Atelier Morrow: alterations, repairs and made-to-measure suits, cut and finished by hand at 7 Linden Arcade. A studio concept by Patch &amp; Flow Studio; fictional business." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#f3efe7" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f3efe7'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%2322221f'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="preload" href="cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="inter-tight-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="am_hero_charcoal.jpg" as="image" />
+<script>document.documentElement.classList.add('js');</script>
+<style>
+@font-face{font-family:"Morrow Serif";src:url(cormorant-garamond-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Morrow Serif";src:url(cormorant-garamond-latin-300-italic.woff2) format("woff2");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"Morrow Sans";src:url(inter-tight-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Morrow Sans";src:url(inter-tight-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{
+  --ivory:#f3efe7;--ivory-2:#ece6db;--stone:#ddd5c7;--stone-2:#c9bfae;
+  --char:#22221f;--char-2:#5f5b53;--char-3:#8a857b;
+  --blue:#34578c;--blue-2:#26446f;--blue-soft:rgba(52,87,140,.12);
+  --rule:rgba(34,34,31,.16);--rule-2:rgba(34,34,31,.08);
+  --serif:"Morrow Serif","Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --sans:"Morrow Sans","Inter Tight","Helvetica Neue",Arial,system-ui,sans-serif;
+  --tape:44px;--pad:clamp(20px,4.6vw,72px);--padr:calc(var(--pad) + var(--tape));
+  --silk:cubic-bezier(.16,1,.3,1);--drape:cubic-bezier(.77,0,.18,1);--slow:1.6s;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--ivory);color:var(--char);font:400 1rem/1.65 var(--sans);font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;padding:0;cursor:pointer}
+::selection{background:var(--blue);color:var(--ivory)}
+:focus-visible{outline:1.5px solid var(--blue);outline-offset:4px}
+.caps{font:500 .6875rem/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+.serif{font-family:var(--serif);font-weight:300}
+.skip{position:absolute;left:-999px;top:8px;z-index:300;background:var(--char);color:var(--ivory);padding:12px 16px}
+.skip:focus{left:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- notice ---------- */
+.notice{display:flex;justify-content:center;align-items:center;min-height:44px;padding:0 var(--padr) 6px var(--pad);background:var(--char);color:var(--ivory);text-align:center}
+.notice a{display:inline-flex;align-items:center;min-height:44px;gap:.6em;opacity:.86;transition:opacity .6s var(--silk)}
+.notice a:hover{opacity:1}
+.notice i{font-style:normal;color:#9db4d6}
+
+/* ---------- header ---------- */
+.hd{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px;padding:0 var(--padr) 0 var(--pad);transition:background-color .8s var(--silk),box-shadow .8s var(--silk)}
+.hd.is-scrolled{background:rgba(243,239,231,.86);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 var(--rule-2)}
+.mark{display:inline-flex;align-items:baseline;gap:.5em;min-height:44px;padding-top:10px}
+.mark b{font:300 1.75rem/1 var(--serif);letter-spacing:.02em}
+.mark span{font:500 .625rem/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--char-2)}
+.nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,36px)}
+.nav a.lk{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+.nav a.lk::after{content:"";position:absolute;left:0;right:0;bottom:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .9s var(--silk)}
+.nav a.lk:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:0 26px;border:1px solid var(--char);overflow:hidden;isolation:isolate;transition:color .9s var(--silk),border-color .9s var(--silk),transform .15s ease-out}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--char);transform:scaleY(0);transform-origin:bottom;transition:transform .9s var(--silk)}
+.btn:hover{color:var(--ivory)}
+.btn:hover::before{transform:scaleY(1)}
+.btn:active{transform:scale(.98)}
+.btn--solid{background:var(--char);color:var(--ivory)}
+.btn--solid::before{background:var(--blue)}
+.btn--solid:hover{border-color:var(--blue)}
+.btn--sm{min-height:44px;padding:0 18px}
+.btn .ar{display:inline-block;transition:transform .9s var(--silk)}
+.btn:hover .ar{transform:translateX(5px)}
+.menu-btn{display:none;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.menu-btn i{position:relative;display:block;width:22px;height:1px;background:var(--char);transition:transform .7s var(--silk)}
+.menu-btn i::after{content:"";position:absolute;left:0;top:6px;width:22px;height:1px;background:var(--char);transition:transform .7s var(--silk),top .7s var(--silk)}
+.menu-btn[aria-expanded=true] i{transform:translateY(3px) rotate(45deg)}
+.menu-btn[aria-expanded=true] i::after{top:0;transform:rotate(-90deg)}
+.drawer{position:fixed;inset:0;z-index:45;background:var(--ivory);padding:120px var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path 1s var(--drape);visibility:hidden}
+.drawer.open{clip-path:inset(0 0 0 0);visibility:visible}
+.drawer ol{list-style:none;margin:0;padding:0;counter-reset:d}
+.drawer li{border-top:1px solid var(--rule)}
+.drawer a{display:flex;align-items:baseline;gap:18px;min-height:64px;padding:14px 0;font:300 2.6rem/1 var(--serif)}
+.drawer a small{font:500 .6875rem/1 var(--sans);letter-spacing:.24em;color:var(--char-3)}
+
+/* ---------- measuring tape (scroll progress) ---------- */
+.tape{position:fixed;z-index:60;top:0;right:0;bottom:0;width:var(--tape);background:#efe7d4;border-left:1px solid var(--rule);overflow:hidden;pointer-events:none}
+.tape__strip{position:absolute;left:0;top:0;width:100%;will-change:transform;
+  background:
+   linear-gradient(to bottom,var(--char) 1px,transparent 1px) 0 0/16px 48px no-repeat,
+   repeating-linear-gradient(to bottom,var(--char) 0 1px,transparent 1px 48px) 0 0/18px 100% no-repeat,
+   repeating-linear-gradient(to bottom,rgba(34,34,31,.7) 0 1px,transparent 1px 24px) 0 0/11px 100% no-repeat,
+   repeating-linear-gradient(to bottom,rgba(34,34,31,.45) 0 1px,transparent 1px 6px) 0 0/6px 100% no-repeat}
+.tape__strip span{position:absolute;left:21px;font:500 10px/1 var(--sans);letter-spacing:.02em;color:var(--char);transform:translateY(-50%)}
+.tape__strip span:nth-child(12n){color:var(--blue)}
+.tape__needle{position:absolute;left:0;right:0;top:24%;height:1px;background:var(--blue)}
+.tape__needle::before{content:"";position:absolute;left:0;top:-4px;border:4.5px solid transparent;border-left:6px solid var(--blue)}
+.tape__read{position:fixed;z-index:61;right:calc(var(--tape) + 10px);top:24%;transform:translateY(-50%);font:500 10px/1 var(--sans);letter-spacing:.16em;color:var(--blue);background:var(--ivory);padding:4px 6px;pointer-events:none;opacity:0;transition:opacity .8s var(--silk)}
+.tape__read.on{opacity:1}
+
+/* ---------- reveal primitives ---------- */
+.ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ln>span{display:inline-block;transform:translate3d(0,108%,0);transition:transform 1.7s var(--silk)}
+.in .ln>span,.ln.in>span{transform:none}
+.in .ln:nth-child(2)>span{transition-delay:.09s}.in .ln:nth-child(3)>span{transition-delay:.18s}.in .ln:nth-child(4)>span{transition-delay:.27s}
+[data-rv]{opacity:0;transform:translate3d(0,22px,0);transition:opacity 1.4s var(--silk),transform 1.6s var(--silk)}
+[data-rv].in{opacity:1;transform:none}
+.frame{position:relative;overflow:hidden;background:var(--stone);clip-path:inset(100% 0 0 0);transition:clip-path 1.9s var(--drape)}
+.frame.in{clip-path:inset(0 0 0 0)}
+.frame img{width:100%;height:118%;object-fit:cover;position:absolute;left:0;top:-9%;transform:scale(1.16);transition:transform 2.6s var(--silk);will-change:transform}
+.frame.in img{transform:scale(1)}
+.frame .par{position:absolute;inset:0;will-change:transform}
+.html-nojs .frame,.no-js .frame{clip-path:none}
+
+/* ---------- stitched lines ---------- */
+.stitch{display:block;width:100%;overflow:visible;pointer-events:none}
+.stitch .thread{fill:none;stroke:var(--blue);stroke-width:1.25;stroke-dasharray:7 6;stroke-linecap:round}
+.stitch .thread--char{stroke:var(--char-2)}
+.stitch .needle{fill:var(--blue)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,1.6vw,24px);min-height:calc(100svh - 108px);padding:clamp(16px,3vh,40px) var(--padr) clamp(28px,5vh,56px) var(--pad);align-items:end}
+.hero__copy{grid-column:1/9;grid-row:1;position:relative;z-index:2;align-self:center;padding-bottom:4vh}
+.hero__kick{display:flex;gap:18px;align-items:center;color:var(--char-2);margin:0 0 clamp(18px,3.4vh,40px)}
+.hero__kick::before{content:"";width:42px;height:1px;background:var(--char-2)}
+.hero h1{margin:0;font:300 clamp(3.2rem,8.6vw,9.4rem)/.9 var(--serif);letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:var(--blue);letter-spacing:-.01em}
+.hero h1 .ln:nth-child(2){padding-left:clamp(0px,7vw,120px)}
+.hero__sub{max-width:31ch;margin:clamp(22px,4vh,44px) 0 0 clamp(0px,7vw,120px);font-size:1.0625rem;color:var(--char-2)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:clamp(20px,3.6vh,36px) 0 0 clamp(0px,7vw,120px)}
+.tlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;border-bottom:1px solid var(--rule);transition:border-color .8s var(--silk)}
+.tlink:hover{border-color:var(--char)}
+.hero__media{grid-column:8/13;grid-row:1;position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;gap:18px}
+.look{position:relative;height:min(74vh,780px);min-height:420px;overflow:hidden;background:var(--stone);clip-path:inset(100% 0 0 0);transition:clip-path 2s var(--drape)}
+.look.in{clip-path:inset(0)}
+.look__l{position:absolute;inset:0;clip-path:inset(100% 0 0 0);transition:clip-path 1.5s var(--drape);will-change:clip-path}
+.look__l.on{clip-path:inset(0);z-index:2}
+.look__l.was{clip-path:inset(0);z-index:1}
+.look__l img{position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;object-position:50% 40%;transform:scale(1.12);transition:transform 2.4s var(--silk)}
+.look__l.on img{transform:scale(1)}
+.look__tag{position:absolute;z-index:3;left:16px;bottom:16px;display:flex;flex-direction:column;gap:2px;padding:10px 12px;background:rgba(243,239,231,.9);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.look__tag b{font:300 1.15rem/1.1 var(--serif)}
+.look__tag span{color:var(--char-2)}
+.swatches{display:flex;align-items:center;gap:14px}
+.swatches>p{margin:0 auto 0 0;color:var(--char-2)}
+.sw{position:relative;width:48px;height:48px;display:grid;place-items:center}
+.sw i{display:block;width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);transition:transform .9s var(--silk)}
+.sw::after{content:"";position:absolute;inset:3px;border-radius:50%;border:1px solid var(--char);transform:scale(.7);opacity:0;transition:transform .9s var(--silk),opacity .9s var(--silk)}
+.sw[aria-pressed=true]::after{transform:scale(1);opacity:1}
+.sw:hover i{transform:scale(1.08)}
+.sw--char i{background:repeating-linear-gradient(45deg,#3b3c3c 0 2px,#2f3030 2px 4px),#333}
+.sw--blue i{background:repeating-linear-gradient(-45deg,#3c64a0 0 2px,#335891 2px 4px)}
+.sw--stone i{background:repeating-linear-gradient(90deg,#d9cfbd 0 1px,#cfc4b0 1px 3px),repeating-linear-gradient(0deg,rgba(255,255,255,.25) 0 1px,transparent 1px 3px)}
+.hero__stitch{position:absolute;left:0;right:var(--tape);bottom:0;height:120px;z-index:1;pointer-events:none}
+.hero__idx{position:absolute;left:var(--pad);bottom:18px;color:var(--char-3);z-index:2}
+
+/* ---------- sections ---------- */
+.sec{position:relative;padding:clamp(96px,16vh,180px) var(--padr) clamp(80px,12vh,140px) var(--pad)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,1.6vw,24px)}
+.num{display:flex;align-items:center;gap:16px;color:var(--char-2);margin:0 0 28px}
+.num i{font:italic 300 1.35rem/1 var(--serif);letter-spacing:0;text-transform:none;color:var(--blue)}
+.h2{margin:0;font:300 clamp(2.6rem,6.2vw,6.6rem)/.94 var(--serif);letter-spacing:-.02em}
+.h2 em{font-style:italic;color:var(--blue)}
+.lede{max-width:36ch;color:var(--char-2);font-size:1.0625rem;margin:28px 0 0}
+.sep{padding:0 var(--padr) 0 var(--pad);height:60px}
+
+/* alterations */
+.alt__head{grid-column:1/6;align-self:start;position:sticky;top:120px}
+.alt__img{margin-top:48px;width:min(100%,380px);aspect-ratio:4/5.4}
+.alt__list{grid-column:7/13;list-style:none;margin:0;padding:0}
+.alt__list li{position:relative;display:flex;align-items:baseline;gap:14px;padding:26px 0 22px}
+.alt__list li .stitch{position:absolute;left:0;bottom:0;height:2px}
+.alt__list .nm{font:300 clamp(1.6rem,2.6vw,2.4rem)/1.1 var(--serif)}
+.alt__list .dot{flex:1;min-width:16px}
+.alt__list .pr{display:flex;align-items:baseline;gap:8px;white-space:nowrap}
+.alt__list .pr small{color:var(--char-3)}
+.alt__list .pr b{font:300 clamp(1.5rem,2.3vw,2.1rem)/1 var(--serif)}
+.alt__list li.quote .pr b{font-style:italic;color:var(--blue)}
+.alt__list li{transition:padding-left 1s var(--silk)}
+@media (hover:hover){.alt__list li:hover{padding-left:12px}}
+
+/* lookbook */
+.lb{padding-top:clamp(40px,8vh,100px)}
+.lb figure{margin:0}.lb__a{grid-column:2/7}.lb__a .frame{aspect-ratio:3/4.3}
+.lb .lb__b{grid-column:8/12;margin-top:clamp(120px,26vh,300px)}
+.lb__b .frame{aspect-ratio:3/4.1}.lb__cap{display:flex;justify-content:space-between;gap:12px;padding-top:14px;color:var(--char-2)}
+.lb__line{grid-column:1/13;margin:clamp(-120px,-12vh,-60px) 0 0;position:relative;z-index:2;pointer-events:none}
+.lb__q{grid-column:2/9;margin:clamp(56px,10vh,110px) 0 0;font:300 clamp(2rem,4.2vw,4.4rem)/1.02 var(--serif);letter-spacing:-.015em}
+.lb__q em{color:var(--blue)}
+
+/* made to measure: pinned timeline */
+.mtm{padding:0;background:var(--ivory-2)}
+.mtm__pin{position:relative;height:440vh}
+.mtm__stage{position:sticky;top:0;height:100svh;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,1.6vw,24px);align-content:center;padding:72px var(--padr) 40px var(--pad);overflow:hidden}
+.mtm__intro{grid-column:1/6}
+.mtm__big{position:relative;height:clamp(150px,30vh,300px);overflow:hidden;margin-top:24px;font:300 clamp(140px,28vh,290px)/1 var(--serif);letter-spacing:-.04em;color:var(--blue)}
+.mtm__big span{position:absolute;left:0;top:0;transition:transform 1.4s var(--silk),opacity 1.4s var(--silk)}
+.mtm__big span.up{transform:translateY(-105%);opacity:0}
+.mtm__big span.down{transform:translateY(105%);opacity:0}
+.mtm__steps{grid-column:7/13;position:relative;list-style:none;margin:0;padding:0 0 0 52px}
+.mtm__rail{position:absolute;left:12px;top:10px;bottom:10px;width:12px}
+.mtm__rail svg{width:12px;height:100%}
+.mtm__steps li{position:relative;padding:22px 0;opacity:.26;transition:opacity 1.2s var(--silk),transform 1.2s var(--silk);transform:translateX(10px)}
+.mtm__steps li.on,.mtm__steps li.done{opacity:1;transform:none}
+.mtm__steps li.done{opacity:.55}
+.mtm__steps li::before{content:"";position:absolute;left:-46px;top:34px;width:11px;height:11px;border-radius:50%;background:var(--ivory-2);border:1px solid var(--char-2);transition:background-color 1s var(--silk),border-color 1s var(--silk)}
+.mtm__steps li.on::before,.mtm__steps li.done::before{background:var(--blue);border-color:var(--blue)}
+.mtm__steps li.rail-wrap::before{display:none}.mtm__steps .k{color:var(--char-3)}
+.mtm__steps h3{margin:6px 0 4px;font:300 clamp(1.7rem,2.8vw,2.7rem)/1.05 var(--serif)}
+.mtm__steps p{margin:0;color:var(--char-2);max-width:40ch}
+.mtm__foot{grid-column:7/13;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-top:28px;padding:22px 0 0 52px;border-top:1px solid var(--rule)}
+.mtm__foot p{margin:0;font:300 1.6rem/1.2 var(--serif)}
+.mtm__foot p b{font-weight:300;color:var(--blue);font-size:2.2rem}
+
+/* turnaround */
+.ta__row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(12px,1.6vw,24px);align-items:end;margin-top:clamp(48px,8vh,96px)}
+.ta__card{position:relative;padding:28px 0 0}
+.ta__card:first-child{grid-column:1/6}
+.ta__card:last-child{grid-column:7/13}
+.ta__card .stitch{position:absolute;left:0;top:0;height:2px}
+.ta__n{display:flex;align-items:baseline;gap:16px;padding-bottom:.12em;font:300 clamp(7rem,17vw,16rem)/1 var(--serif);letter-spacing:-.045em}
+.ta__n small{font:500 .75rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--char-2)}
+.ta__card:last-child .ta__n{color:var(--blue)}
+.ta__meta{display:flex;justify-content:space-between;gap:16px;margin-top:22px;color:var(--char-2)}
+.rush{display:inline-block;padding:4px 10px;border:1px solid var(--blue);color:var(--blue)}
+
+/* booking */
+.bk{background:var(--char);color:var(--ivory)}
+.bk .num{color:#b9b4aa}.bk .num i{color:#9db4d6}
+.bk .h2 em{color:#9db4d6}
+.bk .lede{color:#c9c4ba}
+.bk__l{grid-column:1/7}.bk .h2{font-size:clamp(2.6rem,5.2vw,5.4rem)}
+.bk__f{grid-column:8/13;display:grid;grid-template-columns:1fr 1fr;gap:26px 22px;align-content:start}
+.fld{position:relative;display:flex;flex-direction:column;gap:6px}
+.fld.wide{grid-column:1/-1}
+.fld label{color:#b9b4aa}
+.fld input,.fld select{width:100%;min-height:48px;padding:10px 0;background:transparent;border:0;border-bottom:1px solid rgba(243,239,231,.3);border-radius:0;color:var(--ivory);font:300 1.4rem/1.2 var(--serif);transition:border-color .8s var(--silk)}
+.fld select{appearance:none;-webkit-appearance:none;background:linear-gradient(45deg,transparent 50%,#b9b4aa 50%) right 6px center/7px 7px no-repeat}
+.fld select option{color:var(--char)}
+.fld input:focus,.fld select:focus{outline:none;border-color:#9db4d6}
+.fld input::placeholder{color:rgba(243,239,231,.35)}
+.bk__f .row{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin-top:8px}
+.bk .btn{border-color:var(--ivory)}
+.bk .btn--solid{background:var(--ivory);color:var(--char)}
+.bk .btn--solid::before{background:#9db4d6}
+.bk .btn--solid:hover{color:var(--char);border-color:#9db4d6}
+.bk .tlink{border-color:rgba(243,239,231,.3)}
+.bk .tlink:hover{border-color:var(--ivory)}
+.bk__ok{grid-column:1/-1;margin:0;min-height:1.5em;color:#9db4d6;font:italic 300 1.35rem/1.3 var(--serif)}
+
+/* visit */
+.vi__a{grid-column:1/7}
+.vi__addr{margin:0;font:300 clamp(2.4rem,5vw,5rem)/1 var(--serif);letter-spacing:-.02em}
+.vi__tel{display:inline-flex;align-items:center;min-height:48px;margin-top:20px;font:300 1.8rem/1 var(--serif);border-bottom:1px solid var(--rule)}
+.vi__h{grid-column:8/13;margin:0;align-self:end}
+.vi__h div{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-top:1px solid var(--rule)}
+.vi__h div:last-child{border-bottom:1px solid var(--rule)}
+.vi__h dt{color:var(--char-2)}
+.vi__h dd{margin:0;font:300 1.45rem/1 var(--serif);text-transform:none;letter-spacing:0}
+
+/* footer */
+.ft{padding:clamp(60px,10vh,120px) var(--padr) 28px var(--pad);border-top:1px solid var(--rule);overflow:hidden}
+.ft__word{margin:0;font:300 clamp(5rem,23vw,26rem)/.78 var(--serif);letter-spacing:-.05em;white-space:nowrap}
+.ft__word em{color:var(--blue)}
+.ft__row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:40px;color:var(--char-2)}
+.ft__row a{display:inline-flex;align-items:center;min-height:44px;border-bottom:1px solid var(--rule)}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  :root{--tape:0px}
+  .tape{top:auto;left:0;right:0;bottom:0;width:auto;height:26px;border-left:0;border-top:1px solid var(--rule);padding-bottom:env(safe-area-inset-bottom)}
+  .tape__strip{top:0;left:0;height:100%;width:auto;
+    background:
+     repeating-linear-gradient(to right,var(--char) 0 1px,transparent 1px 48px) 0 0/100% 12px no-repeat,
+     repeating-linear-gradient(to right,rgba(34,34,31,.7) 0 1px,transparent 1px 24px) 0 0/100% 8px no-repeat,
+     repeating-linear-gradient(to right,rgba(34,34,31,.45) 0 1px,transparent 1px 6px) 0 0/100% 4px no-repeat}
+  .tape__strip span{left:auto;top:14px;transform:translateX(-50%)}
+  .tape__needle{left:50%;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .tape__needle::before{left:-4px;top:0;border:4.5px solid transparent;border-top:6px solid var(--blue)}
+  .tape__read{display:none}
+  body{padding-bottom:26px}
+  .nav a.lk{display:none}
+  .menu-btn{display:inline-flex}
+  .hero{grid-template-columns:1fr;min-height:0;padding-top:18px;row-gap:28px}
+  .hero__copy,.hero__media{grid-column:1;grid-row:auto}
+  .hero__copy{padding-bottom:0}
+  .hero h1 .ln:nth-child(2),.hero__sub,.hero__cta{padding-left:0;margin-left:0}
+  .look{height:auto;aspect-ratio:3/4;min-height:0}
+  .hero__idx{display:none}
+  .grid>*{grid-column:1/-1 !important}
+  .alt__head{position:static}
+  .alt__list{margin-top:56px}
+  .alt__img{width:100%;max-width:440px}
+  .lb .lb__b{margin-top:56px;width:78%;justify-self:end}
+  .lb__a{width:88%}
+  .lb__line{margin:-40px 0 0}
+  .mtm__pin{height:auto}
+  .mtm__stage{position:relative;height:auto;grid-template-columns:1fr;padding:96px var(--pad) 80px}
+  .mtm__intro,.mtm__steps,.mtm__foot{grid-column:1}
+  .mtm__big{display:none}
+  .mtm__steps{margin-top:40px}
+  .mtm__steps li{opacity:1;transform:none}
+  .ta__card:first-child,.ta__card:last-child{grid-column:1/-1}
+  .ta__card:last-child{margin-top:56px}
+  .bk__f{margin-top:48px}
+  .vi__h{margin-top:48px}
+}
+@media (max-width:560px){
+  .bk__f{grid-template-columns:1fr}
+  .mark span{display:none}
+  .hd{gap:10px}
+  .swatches>p{font-size:.625rem;letter-spacing:.18em}
+  .ta__n{font-size:clamp(6rem,30vw,9rem)}
+  .alt__list .nm{font-size:1.45rem}
+  .alt__list .pr b{font-size:1.45rem}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;transition-delay:0s !important}
+  .ln>span,[data-rv]{transform:none !important;opacity:1 !important}
+  .frame,.look,.look__l.on{clip-path:none !important}
+  .frame img,.look__l img{transform:none !important}
+  .look__l{clip-path:inset(0)!important;opacity:0}
+  .look__l.on{opacity:1}
+  .mtm__pin{height:auto}
+  .mtm__stage{position:relative;height:auto}
+  .mtm__steps li{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice caps"><a href="../../index.html">Studio concept by Patch &amp; Flow Studio <i aria-hidden="true">·</i> fictional business <span aria-hidden="true">↗</span></a></div>
+
+<header class="hd" id="hd">
+  <a class="mark" href="#top" aria-label="Atelier Morrow, back to top"><b>Morrow</b><span>Atelier</span></a>
+  <nav class="nav caps" aria-label="Primary">
+    <a class="lk" href="#prices">Alterations</a>
+    <a class="lk" href="#measure">Made to measure</a>
+    <a class="lk" href="#visit">Visit</a>
+    <a class="btn btn--sm" href="#fitting">Book</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer"><i></i><span class="sr">Menu</span></button>
+  </nav>
+</header>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <ol>
+    <li><a href="#prices"><small>i.</small>Alterations</a></li>
+    <li><a href="#measure"><small>ii.</small>Made to measure</a></li>
+    <li><a href="#turnaround"><small>iii.</small>Turnaround</a></li>
+    <li><a href="#fitting"><small>iv.</small>Book a fitting</a></li>
+    <li><a href="#visit"><small>v.</small>Visit</a></li>
+  </ol>
+</div>
+
+<div class="tape" aria-hidden="true"><div class="tape__strip" id="tapeStrip"></div><div class="tape__needle"></div></div>
+<div class="tape__read" id="tapeRead" aria-hidden="true">0 IN</div>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="hero__copy" id="heroCopy">
+      <p class="hero__kick caps" data-rv>Tailoring &amp; alterations · 7 Linden Arcade</p>
+      <h1 id="h1"><span class="ln"><span>Clothes that fit</span></span><span class="ln"><span>the way they</span></span><span class="ln"><span><em>should.</em></span></span></h1>
+      <p class="hero__sub" data-rv>Alterations, repairs and made-to-measure suits, cut and finished by hand.</p>
+      <div class="hero__cta" data-rv>
+        <a class="btn btn--solid caps" href="#fitting">Book a fitting <span class="ar" aria-hidden="true">→</span></a>
+        <a class="tlink caps" href="#prices">Alteration prices</a>
+      </div>
+    </div>
+    <div class="hero__media">
+      <div class="look" id="look">
+        <div class="look__l on" data-k="char"><img src="am_hero_charcoal.jpg" alt="A charcoal wool jacket on a tailor's dress form, basted and chalk-marked, in a bright atelier" width="1100" height="1639" fetchpriority="high" /></div>
+        <div class="look__l" data-k="blue"><img src="am_hero_blue.jpg" alt="A cloth-blue flannel jacket on a dress form in the atelier" width="1100" height="1970" loading="lazy" /></div>
+        <div class="look__l" data-k="stone"><img src="am_hero_stone.jpg" alt="A stone linen jacket on a dress form beside a stool with tailor's shears" width="1100" height="1639" loading="lazy" /></div>
+        <p class="look__tag" aria-live="polite"><b id="lookName">Charcoal flannel</b><span class="caps" id="lookSpec">No. 01 · 13 oz wool</span></p>
+      </div>
+      <div class="swatches" role="group" aria-label="Choose a cloth">
+        <p class="caps">The cloth</p>
+        <button class="sw sw--char" aria-pressed="true" data-k="char" data-name="Charcoal flannel" data-spec="No. 01 · 13 oz wool"><i></i><span class="sr">Charcoal flannel</span></button>
+        <button class="sw sw--blue" aria-pressed="false" data-k="blue" data-name="Cloth-blue flannel" data-spec="No. 02 · 12 oz wool"><i></i><span class="sr">Cloth-blue flannel</span></button>
+        <button class="sw sw--stone" aria-pressed="false" data-k="stone" data-name="Stone linen" data-spec="No. 03 · 9 oz Irish linen"><i></i><span class="sr">Stone linen</span></button>
+      </div>
+    </div>
+    <svg class="stitch hero__stitch" data-stitch="load" viewBox="0 0 1400 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 78 C 280 26, 520 104, 780 100 S 1180 116, 1400 110"/></svg>
+  </section>
+
+  <!-- i. ALTERATIONS -->
+  <section class="sec" id="prices" aria-labelledby="h-alt">
+    <div class="grid">
+      <div class="alt__head">
+        <p class="num caps" data-rv><i>i.</i> Alterations</p>
+        <h2 class="h2" id="h-alt" data-split><span class="ln"><span>Small changes,</span></span><span class="ln"><span><em>exact</em> fit.</span></span></h2>
+        <p class="lede" data-rv>Every garment is pinned on you, then altered by hand in the atelier.</p>
+        <div class="frame alt__img" data-reveal><div class="par" data-par="0.08"><img src="am_hands.jpg" alt="A tailor's hands basting a charcoal lapel with white thread" width="1100" height="1970" decoding="async" /></div></div>
+      </div>
+      <ul class="alt__list" aria-label="Alteration prices">
+        <li data-rv><span class="nm">Trouser hem</span><span class="dot"></span><span class="pr"><small class="caps">from</small><b>$18</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg></li>
+        <li data-rv><span class="nm">Taper trousers</span><span class="dot"></span><span class="pr"><small class="caps">from</small><b>$28</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg></li>
+        <li data-rv><span class="nm">Take in jacket</span><span class="dot"></span><span class="pr"><small class="caps">from</small><b>$45</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg></li>
+        <li data-rv><span class="nm">Shorten sleeves</span><span class="dot"></span><span class="pr"><small class="caps">from</small><b>$30</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg></li>
+        <li data-rv><span class="nm">Dress hem</span><span class="dot"></span><span class="pr"><small class="caps">from</small><b>$35</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg></li>
+        <li data-rv><span class="nm">Zip replacement</span><span class="dot"></span><span class="pr"><small class="caps">from</small><b>$22</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg></li>
+        <li class="quote" data-rv><span class="nm">Wedding &amp; formalwear</span><span class="dot"></span><span class="pr"><b>By quote</b></span><svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1 H600"/></svg></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK SPREAD -->
+  <section class="sec lb" aria-labelledby="h-lb">
+    <h2 class="sr" id="h-lb">The cutting room</h2>
+    <div class="grid">
+      <figure class="lb__a">
+        <div class="frame" data-reveal><div class="par" data-par="0.12"><img src="am_hero_blue.jpg" alt="A half-finished blue flannel jacket on a dress form" width="1100" height="1970" decoding="async" /></div></div>
+        <figcaption class="lb__cap caps" data-rv><span>Look 02</span><span>Cloth-blue flannel, basted</span></figcaption>
+      </figure>
+      <figure class="lb__b">
+        <div class="frame" data-reveal><div class="par" data-par="-0.06"><img src="am_hero_stone.jpg" alt="A stone linen jacket on a dress form, shears resting on a stool" width="1100" height="1639" decoding="async" /></div></div>
+        <figcaption class="lb__cap caps" data-rv><span>Look 03</span><span>Stone linen, final press</span></figcaption>
+      </figure>
+      <svg class="stitch lb__line" data-stitch viewBox="0 0 1400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 40 C 300 60, 420 250, 760 200 S 1200 60, 1410 150"/></svg>
+      <p class="lb__q" data-split><span class="ln"><span>The cutting room.</span></span><span class="ln"><span><em>Cut and finished</em></span></span><span class="ln"><span>by hand.</span></span></p>
+    </div>
+  </section>
+
+  <!-- ii. MADE TO MEASURE (pinned) -->
+  <section class="sec mtm" id="measure" aria-labelledby="h-mtm">
+    <div class="mtm__pin" id="mtmPin">
+      <div class="mtm__stage">
+        <div class="mtm__intro">
+          <p class="num caps" data-rv><i>ii.</i> Made to measure</p>
+          <h2 class="h2" id="h-mtm" data-split><span class="ln"><span>A suit in</span></span><span class="ln"><span><em>four</em> fittings.</span></span></h2>
+          <p class="lede" data-rv>From the first conversation to the final press, one tailor sees your suit through.</p>
+          <div class="mtm__big" aria-hidden="true" id="mtmBig"><span>1</span><span class="down">2</span><span class="down">3</span><span class="down">4</span></div>
+        </div>
+        <ol class="mtm__steps" id="mtmSteps">
+          <li class="rail-wrap" style="position:absolute;inset:0;padding:0;opacity:1;transform:none" aria-hidden="true"><span class="mtm__rail"><svg class="stitch" id="mtmRail" viewBox="0 0 12 400" preserveAspectRatio="none"><path d="M6 0 V400"/></svg></span></li>
+          <li class="on"><span class="k caps">Fitting 1</span><h3>Consultation &amp; cloth selection</h3><p>Style, occasion and cloth, chosen together.</p></li>
+          <li><span class="k caps">Fitting 2</span><h3>Measurements</h3><p>Taken by hand, with notes on posture and stance.</p></li>
+          <li><span class="k caps">Fitting 3</span><h3>Baste fitting</h3><p>A loosely stitched suit, refined on you.</p></li>
+          <li><span class="k caps">Fitting 4</span><h3>Final fitting</h3><p>Last adjustments, then it is yours.</p></li>
+        </ol>
+        <div class="mtm__foot">
+          <p>Suits from <b>$1,150</b>, ready in 6–8 weeks.</p>
+          <a class="btn caps" href="#fitting">Book a consultation <span class="ar" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- iii. TURNAROUND -->
+  <section class="sec" id="turnaround" aria-labelledby="h-ta">
+    <p class="num caps" data-rv><i>iii.</i> Turnaround</p>
+    <h2 class="h2" id="h-ta" data-split><span class="ln"><span>Ready in a week,</span></span><span class="ln"><span>or <em>sooner.</em></span></span></h2>
+    <div class="ta__row">
+      <div class="ta__card" data-rv>
+        <svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path class="thread--char" d="M0 1 H600"/></svg>
+        <p class="caps" style="margin:0 0 18px;color:var(--char-2)">Standard</p>
+        <div class="ta__n">7<small>days</small></div>
+        <div class="ta__meta"><span>Most alterations, collected within the week.</span></div>
+      </div>
+      <div class="ta__card" data-rv>
+        <svg class="stitch" data-stitch viewBox="0 0 600 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1 H600"/></svg>
+        <p class="caps" style="margin:0 0 18px;color:var(--char-2)">Rush <span class="rush">+$15</span></p>
+        <div class="ta__n">48<small>hours</small></div>
+        <div class="ta__meta"><span>For the wedding, the interview, the flight.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- iv. BOOK -->
+  <section class="sec bk" id="fitting" aria-labelledby="h-bk">
+    <div class="grid">
+      <div class="bk__l">
+        <p class="num caps" data-rv><i>iv.</i> Book a fitting</p>
+        <h2 class="h2" id="h-bk" data-split><span class="ln"><span>Come in and be</span></span><span class="ln"><span><em>measured.</em></span></span></h2>
+        <p class="lede" data-rv>Fittings take about thirty minutes. Bring the shoes you will wear.</p>
+      </div>
+      <form class="bk__f" id="bkForm" novalidate data-rv>
+        <div class="fld"><label class="caps" for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name" required /></div>
+        <div class="fld"><label class="caps" for="f-tel">Phone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="(555) 000-0000" required /></div>
+        <div class="fld"><label class="caps" for="f-svc">Fitting for</label>
+          <select id="f-svc" name="svc"><option>Alterations</option><option>Made-to-measure consultation</option><option>Wedding &amp; formalwear</option><option>Rush, 48 hours (+$15)</option></select></div>
+        <div class="fld"><label class="caps" for="f-day">Preferred day</label>
+          <select id="f-day" name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+        <div class="row">
+          <button class="btn btn--solid caps" type="submit">Request an appointment <span class="ar" aria-hidden="true">→</span></button>
+          <a class="tlink caps" href="tel:+15550145608">Call (555) 014-5608</a>
+        </div>
+        <p class="bk__ok" id="bkOk" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- v. VISIT -->
+  <section class="sec" id="visit" aria-labelledby="h-vi">
+    <div class="grid">
+      <div class="vi__a">
+        <p class="num caps" data-rv><i>v.</i> Visit</p>
+        <h2 class="vi__addr" id="h-vi" data-split><span class="ln"><span>7 Linden</span></span><span class="ln"><span><em style="color:var(--blue)">Arcade</em></span></span></h2>
+        <a class="vi__tel" href="tel:+15550145608" data-rv>(555) 014-5608</a>
+      </div>
+      <dl class="vi__h caps" data-rv>
+        <div><dt>Monday – Friday</dt><dd>10 – 6</dd></div>
+        <div><dt>Saturday</dt><dd>10 – 3</dd></div>
+        <div><dt>Sunday</dt><dd>Closed</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <p class="ft__word" aria-hidden="true" data-split><span class="ln"><span>Mor<em>row</em></span></span></p>
+  <div class="ft__row caps">
+    <span>© Atelier Morrow (fictional)</span>
+    <span>Designed and built by <a href="../../index.html">Patch &amp; Flow Studio</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document, w=window, root=d.documentElement;
+  var RM=w.matchMedia('(prefers-reduced-motion: reduce)');
+  var rm=RM.matches;
+  var clamp=function(v,a,b){return v<a?a:v>b?b:v};
+  var ease=function(t){return 1-Math.pow(1-t,3)};
+
+  /* ---------- reveals (IntersectionObserver) ---------- */
+  var rvEls=[].slice.call(d.querySelectorAll('[data-rv],[data-split],[data-reveal],#look'));
+  if(rm||!('IntersectionObserver' in w)){rvEls.forEach(function(e){e.classList.add('in')})}
+  else{
+    // clip-path'd frames are fully clipped at rest, so observe their parent and reveal the frame
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target._rv||e.target;t.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -12% 0px',threshold:0.01});
+    rvEls.forEach(function(e,i){
+      // gentle stagger for siblings revealed together
+      if(e.matches('[data-rv]')){var p=e.parentElement,sib=[].slice.call(p.children).filter(function(c){return c.hasAttribute('data-rv')});var k=sib.indexOf(e);e.style.transitionDelay=(Math.min(k,6)*0.08)+'s'}
+      if(e.matches('[data-reveal]')){e.parentElement._rv=e;io.observe(e.parentElement)}else io.observe(e)});
+  }
+  // hero intro: headline + curtain on load
+  var heroCopy=d.getElementById('heroCopy');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){heroCopy.classList.add('in');heroCopy.querySelectorAll('[data-rv]').forEach(function(e,i){e.style.transitionDelay=(0.45+i*0.12)+'s';e.classList.add('in')});d.getElementById('look').classList.add('in')})});
+
+  /* ---------- stitched lines: masked dashed thread that sews itself in ---------- */
+  var NS='http://www.w3.org/2000/svg', stitches=[];
+  [].slice.call(d.querySelectorAll('svg.stitch')).forEach(function(svg,i){
+    var path=svg.querySelector('path'); if(!path)return;
+    var len=path.getTotalLength(); var id='st'+i;
+    var defs=d.createElementNS(NS,'defs'), mask=d.createElementNS(NS,'mask');
+    mask.setAttribute('id',id); mask.setAttribute('maskUnits','userSpaceOnUse');
+    var vb=svg.viewBox.baseVal; mask.setAttribute('x',vb.x-20);mask.setAttribute('y',vb.y-20);mask.setAttribute('width',vb.width+40);mask.setAttribute('height',vb.height+40);
+    var mp=path.cloneNode(); mp.removeAttribute('class');
+    mp.setAttribute('fill','none');mp.setAttribute('stroke','#fff');mp.setAttribute('stroke-width','14');
+    mp.setAttribute('stroke-dasharray',len+' '+len); mp.setAttribute('stroke-dashoffset',rm?0:len);
+    mask.appendChild(mp); defs.appendChild(mask); svg.insertBefore(defs,svg.firstChild);
+    path.classList.add('thread'); path.setAttribute('mask','url(#'+id+')'); path.setAttribute('vector-effect','non-scaling-stroke');
+    var needle=null;
+    if(svg.dataset.stitch==='load'||svg.classList.contains('lb__line')){needle=d.createElementNS(NS,'circle');needle.setAttribute('r','3.2');needle.setAttribute('class','needle');needle.style.opacity=rm?0:1;svg.appendChild(needle)}
+    stitches.push({svg:svg,path:path,mp:mp,len:len,needle:needle,mode:svg.dataset.stitch||'',cur:rm?1:0,id:svg.id});
+  });
+  function setStitch(s,p){
+    s.cur=p; s.mp.setAttribute('stroke-dashoffset',(s.len*(1-p)).toFixed(1));
+    if(s.needle){var pt=s.path.getPointAtLength(s.len*p);s.needle.setAttribute('cx',pt.x);s.needle.setAttribute('cy',pt.y);s.needle.style.opacity=(p>0.002&&p<0.995)?1:0}
+  }
+  // hero stitch: sews in on load over ~2.4s
+  var heroSt=stitches.filter(function(s){return s.mode==='load'})[0];
+  if(heroSt&&!rm){var t0=null;setTimeout(function(){requestAnimationFrame(function run(t){if(!t0)t0=t;var p=clamp((t-t0)/2400,0,1);setStitch(heroSt,ease(p));if(p<1)requestAnimationFrame(run)})},700)}
+
+  /* ---------- measuring tape ---------- */
+  var strip=d.getElementById('tapeStrip'), read=d.getElementById('tapeRead');
+  var INCH=48, INCHES=72;
+  (function(){var f=d.createDocumentFragment();for(var i=0;i<=INCHES;i++){var s=d.createElement('span');s.textContent=i;s.dataset.i=i;f.appendChild(s)}strip.appendChild(f)})();
+  var horiz=false;
+  function layoutTape(){
+    horiz=w.matchMedia('(max-width:980px)').matches;
+    var L=INCH*INCHES;
+    strip.style.height=horiz?'100%':L+'px'; strip.style.width=horiz?L+'px':'100%';
+    [].forEach.call(strip.children,function(s){var v=(+s.dataset.i*INCH)+'px';if(horiz){s.style.left=v;s.style.top='';}else{s.style.top=v;s.style.left='';}});
+  }
+  var fr=['','⅛','¼','⅜','½','⅝','¾','⅞'];
+
+  /* ---------- swatch selector ---------- */
+  var look=d.getElementById('look'), layers=[].slice.call(look.querySelectorAll('.look__l')), sws=[].slice.call(d.querySelectorAll('.sw'));
+  var nm=d.getElementById('lookName'), sp=d.getElementById('lookSpec'), cur='char', swapT;
+  function pick(k,btn){
+    if(k===cur)return; cur=k;
+    sws.forEach(function(b){b.setAttribute('aria-pressed',b===btn)});
+    layers.forEach(function(l){l.classList.remove('was');if(l.classList.contains('on')){l.classList.remove('on');l.classList.add('was')}});
+    var next=layers.filter(function(l){return l.dataset.k===k})[0]; next.querySelector('img').loading='eager'; void next.offsetWidth; next.classList.add('on');
+    clearTimeout(swapT); swapT=setTimeout(function(){layers.forEach(function(l){if(!l.classList.contains('on'))l.classList.remove('was')})},1600);
+    nm.textContent=btn.dataset.name; sp.textContent=btn.dataset.spec;
+  }
+  sws.forEach(function(b){
+    b.addEventListener('pointerdown',function(){pick(b.dataset.k,b)});
+    b.addEventListener('click',function(){pick(b.dataset.k,b)});
+    b.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'){var img=layers.filter(function(l){return l.dataset.k===b.dataset.k})[0].querySelector('img');img.loading='eager'}});
+  });
+
+  /* ---------- menu ---------- */
+  var mb=d.getElementById('menuBtn'), dr=d.getElementById('drawer');
+  function setMenu(o){mb.setAttribute('aria-expanded',o);dr.classList.toggle('open',o);dr.setAttribute('aria-hidden',!o);root.style.overflow=o?'hidden':''}
+  mb.addEventListener('click',function(){setMenu(mb.getAttribute('aria-expanded')!=='true')});
+  dr.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  /* ---------- booking form (concept) ---------- */
+  var form=d.getElementById('bkForm'), ok=d.getElementById('bkOk');
+  form.addEventListener('submit',function(e){e.preventDefault();var n=form.elements.name.value.trim();
+    if(!n||!form.elements.tel.value.trim()){ok.textContent='Please add your name and a phone number.';(n?form.elements.tel:form.elements.name).focus();return}
+    ok.textContent='Thank you, '+n.split(' ')[0]+'. This is a studio concept, so nothing was sent, but this is where your fitting request would land.'});
+
+  /* ---------- scroll loop: lerped scroll drives parallax, tape, stitches, pinned timeline ---------- */
+  var hd=d.getElementById('hd'), pars=[].slice.call(d.querySelectorAll('[data-par]'));
+  var pin=d.getElementById('mtmPin'), steps=[].slice.call(d.querySelectorAll('#mtmSteps li:not(.rail-wrap)')), bigs=[].slice.call(d.querySelectorAll('#mtmBig span'));
+  var rail=stitches.filter(function(s){return s.id==='mtmRail'})[0];
+  var sy=w.scrollY, ty=sy, vh=w.innerHeight, maxS=1, lastStep=-1, smallScreen=false, readOn=false, readT;
+  function measure(){vh=w.innerHeight;maxS=Math.max(1,root.scrollHeight-vh);smallScreen=w.matchMedia('(max-width:980px)').matches;layoutTape()}
+  w.addEventListener('resize',measure,{passive:true}); w.addEventListener('load',measure);
+  w.addEventListener('scroll',function(){ty=w.scrollY;hd.classList.toggle('is-scrolled',ty>8);
+    if(!readOn){readOn=true;read.classList.add('on')} clearTimeout(readT); readT=setTimeout(function(){readOn=false;read.classList.remove('on')},1200)},{passive:true});
+  measure();
+
+  function frame(){
+    sy+= (ty-sy)*(rm?1:0.085); if(Math.abs(ty-sy)<0.05)sy=ty;
+    // tape
+    var p=clamp(sy/maxS,0,1), L=INCH*INCHES, off=p*L;
+    if(horiz){strip.style.transform='translate3d('+((w.innerWidth/2)-off).toFixed(1)+'px,0,0)'}
+    else{strip.style.transform='translate3d(0,'+((vh*0.24)-off).toFixed(1)+'px,0)'}
+    var inch=p*INCHES, whole=Math.floor(inch), e8=Math.round((inch-whole)*8); if(e8===8){whole++;e8=0}
+    read.textContent=whole+(fr[e8]?' '+fr[e8]:'')+' IN';
+    // parallax
+    if(!rm){pars.forEach(function(el){var r=el.parentElement.getBoundingClientRect();if(r.bottom<-100||r.top>vh+100)return;var c=(r.top+r.height/2-vh/2)+(ty-sy);el.style.transform='translate3d(0,'+(-c*(+el.dataset.par)).toFixed(1)+'px,0)'})}
+    // scroll-sewn stitches
+    stitches.forEach(function(s){if(s.mode==='load'||s===rail||rm)return;var r=s.svg.getBoundingClientRect(), top=r.top+(ty-sy);
+      var pr=clamp((vh*0.92-top)/(vh*0.55),0,1); if(Math.abs(pr-s.cur)>0.001)setStitch(s,pr)});
+    // pinned four fittings
+    if(!rm&&!smallScreen){var pr2=pin.getBoundingClientRect(), span=pr2.height-vh, q=clamp(-pr2.top/span,0,1);
+      if(rail)setStitch(rail,clamp(q*1.08,0,1));
+      var st=Math.min(3,Math.floor(q*4)); if(st!==lastStep){lastStep=st;
+        steps.forEach(function(li,i){li.classList.toggle('on',i===st);li.classList.toggle('done',i<st)});
+        bigs.forEach(function(b,i){b.classList.toggle('up',i<st);b.classList.toggle('down',i>st)})}}
+    else if(rail&&rail.cur<1&&smallScreen&&!rm){var rr=pin.getBoundingClientRect();setStitch(rail,clamp((vh*0.8-rr.top)/(rr.height*0.9),0,1))}
+    requestAnimationFrame(frame);
+  }
+  if(rm){steps.forEach(function(li){li.classList.add('on')}); if(rail)setStitch(rail,1); stitches.forEach(function(s){setStitch(s,1)})}
+  requestAnimationFrame(frame);
+  RM.addEventListener&&RM.addEventListener('change',function(){location.reload()});
+})();
+</script>
+</body>
+</html>

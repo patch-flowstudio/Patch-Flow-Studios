@@ -122,9 +122,9 @@ html.js .split:not(.is-in) .wd{transform:translateY(112%) rotateX(-55deg);opacit
 
 /* ---------- Includes strip ---------- */
 .strip{background:var(--ink);color:var(--paper);padding:18px 0;overflow:hidden}
-.strip ul{list-style:none;margin:0;padding:0 var(--pad);display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;max-width:var(--max);margin-inline:auto}
-.strip li{font:500 .78rem/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:28px}
-.strip li+li::before{content:"✳";color:var(--ox-soft);margin-left:-28px;margin-right:0;position:relative;left:-14px;width:0}
+.strip ul{list-style:none;margin:0;padding:0 var(--pad);display:flex;flex-wrap:wrap;gap:10px 0;justify-content:center;max-width:var(--max);margin-inline:auto}
+.strip li{font:500 .78rem/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:0;white-space:nowrap}
+.strip li:not(:last-child)::after{content:"✳";color:var(--ox-soft);margin:0 18px;display:inline-block}
 
 /* ---------- Sections ---------- */
 .sec{padding:clamp(88px,13vw,180px) 0}
@@ -438,10 +438,10 @@ html.menu-open body{overflow:hidden}
     <div class="menu__side">
       <span class="menu__lab mono">Studio concepts</span>
       <div class="menu__pv" id="menuPv">
-        <img class="is-on" src="../thumb_bakery.jpg" alt="" loading="lazy" />
-        <img src="../thumb_barber.jpg" alt="" loading="lazy" />
-        <img src="../thumb_tailor.jpg" alt="" loading="lazy" />
-        <img src="../thumb_auto.jpg" alt="" loading="lazy" />
+        <img class="is-on" src="work/bakery/thumb.jpg" alt="" loading="lazy" />
+        <img src="work/barber/thumb.jpg" alt="" loading="lazy" />
+        <img src="work/tailor/thumb.jpg" alt="" loading="lazy" />
+        <img src="work/auto/thumb.jpg" alt="" loading="lazy" />
       </div>
       <p class="menu__pvcap mono" id="menuCap">Proj. 01 · Hearth &amp; Crumb Bakery</p>
       <span class="menu__lab mono">Email</span>
@@ -485,39 +485,39 @@ html.menu-open body{overflow:hidden}
       <p class="lede rv">Studio concepts: fictional businesses we designed and built to show the range. Every client site gets the same care.</p>
       <ul class="work" id="work-list">
         <li class="row rv" data-i="0">
-          <a href="../bakery.html" aria-label="View live site: Hearth &amp; Crumb Bakery, studio concept">
+          <a href="work/bakery/" aria-label="View live site: Hearth &amp; Crumb Bakery, studio concept">
             <span class="row__n mono">Proj. 01</span>
             <span class="row__name">Hearth &amp; Crumb Bakery</span>
             <span class="row__meta"><span class="row__tag mono">Studio concept · Bakery &amp; café</span><span>Warm, editorial site with a printed-menu board that sets itself line by line.</span></span>
             <span class="row__go" aria-hidden="true">↗</span>
-            <span class="row__thumb reveal-img"><img src="../thumb_bakery.jpg" alt="" width="1200" height="669" loading="lazy" /></span>
+            <span class="row__thumb reveal-img"><img src="work/bakery/thumb.jpg" alt="" width="1600" height="1000" loading="lazy" /></span>
           </a>
         </li>
         <li class="row rv" data-i="1">
-          <a href="../barber.html" aria-label="View live site: Ledger &amp; Blade Barbers, studio concept">
+          <a href="work/barber/" aria-label="View live site: Ledger &amp; Blade Barbers, studio concept">
             <span class="row__n mono">Proj. 02</span>
             <span class="row__name">Ledger &amp; Blade Barbers</span>
             <span class="row__meta"><span class="row__tag mono">Studio concept · Barbershop</span><span>Booking-first site with a price ledger, brass details and a cinematic hero.</span></span>
             <span class="row__go" aria-hidden="true">↗</span>
-            <span class="row__thumb reveal-img"><img src="../thumb_barber.jpg" alt="" width="1200" height="669" loading="lazy" /></span>
+            <span class="row__thumb reveal-img"><img src="work/barber/thumb.jpg" alt="" width="1600" height="1000" loading="lazy" /></span>
           </a>
         </li>
         <li class="row rv" data-i="2">
-          <a href="../tailor.html" aria-label="View live site: Atelier Morrow, studio concept">
+          <a href="work/tailor/" aria-label="View live site: Atelier Morrow, studio concept">
             <span class="row__n mono">Proj. 03</span>
             <span class="row__name">Atelier Morrow</span>
             <span class="row__meta"><span class="row__tag mono">Studio concept · Tailoring &amp; alterations</span><span>Quiet-luxury atelier site with hand-sewn stitch lines and a measuring-tape scroll.</span></span>
             <span class="row__go" aria-hidden="true">↗</span>
-            <span class="row__thumb reveal-img"><img src="../thumb_tailor.jpg" alt="" width="1200" height="509" loading="lazy" /></span>
+            <span class="row__thumb reveal-img"><img src="work/tailor/thumb.jpg" alt="" width="1600" height="1000" loading="lazy" /></span>
           </a>
         </li>
         <li class="row rv" data-i="3">
-          <a href="../auto.html" aria-label="View live site: Northgate Auto Care, studio concept">
+          <a href="work/auto/" aria-label="View live site: Northgate Auto Care, studio concept">
             <span class="row__n mono">Proj. 04</span>
             <span class="row__name">Northgate Auto Care</span>
             <span class="row__meta"><span class="row__tag mono">Studio concept · Auto repair</span><span>Bold, trust-first garage site with tap-to-call, a live gauge and a work-order quote form.</span></span>
             <span class="row__go" aria-hidden="true">↗</span>
-            <span class="row__thumb reveal-img"><img src="../thumb_auto.jpg" alt="" width="1200" height="509" loading="lazy" /></span>
+            <span class="row__thumb reveal-img"><img src="work/auto/thumb.jpg" alt="" width="1600" height="1000" loading="lazy" /></span>
           </a>
         </li>
       </ul>
@@ -526,7 +526,7 @@ html.menu-open body{overflow:hidden}
   </section>
   <div class="peek" id="peek" aria-hidden="true">
     <div class="peek__strip" id="peekStrip">
-      <img src="../thumb_bakery.jpg" alt="" /><img src="../thumb_barber.jpg" alt="" /><img src="../thumb_tailor.jpg" alt="" /><img src="../thumb_auto.jpg" alt="" />
+      <img src="work/bakery/thumb.jpg" alt="" /><img src="work/barber/thumb.jpg" alt="" /><img src="work/tailor/thumb.jpg" alt="" /><img src="work/auto/thumb.jpg" alt="" />
     </div>
     <span class="peek__label mono">Open ↗</span>
   </div>

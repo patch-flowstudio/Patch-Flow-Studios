@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marissa's Bakery | 28th &amp; Nicollet, Minneapolis</title>
+<meta name="description" content="Marissa's Bakery at 2750 Nicollet Ave, Minneapolis. Mexican pan dulce baked on site, churros, empanadas and a breakfast and lunch counter. Open daily 6 am to 8 pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#22160f;--paper:#fbf3e6;--terra:#c4512b;--teal:#0f6b67;--mari:#f2a51a;--rose:#e98a8f;--line:rgba(34,22,15,.14);--s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2.5rem;--s5:4rem}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.6 "Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.74rem;line-height:1.45;padding:.6rem 1rem;text-align:center;background:var(--ink);color:#f6e9d6}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+header{padding:var(--s4) 1.25rem var(--s3);max-width:64rem;margin:0 auto}
+.addr{display:flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.addr svg{width:18px;height:18px}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(3.1rem,15vw,7rem);line-height:.88;letter-spacing:-.025em;margin:var(--s2) 0}
+h1 em{color:var(--terra)}
+.lede{font-size:1.12rem;max-width:30rem;line-height:1.5}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:var(--s3)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:50px;padding:0 1.3rem;border-radius:999px;font-weight:600;text-decoration:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .45s cubic-bezier(.2,1.3,.4,1),background .2s}
+.btn:active{transform:scale(.96);transition-duration:.1s}
+.btn.p{background:var(--terra);color:#fff}
+.btn.g{background:rgba(255,255,255,.7);border:1.5px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+/* signature: the block at 28th & Nicollet */
+.block{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+.mapwrap{position:relative;background:#efe2cc;border-radius:28px;padding:var(--s3) var(--s2) var(--s2);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.street{font-size:.7rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:rgba(34,22,15,.55)}
+.st-top{text-align:center;margin-bottom:.6rem}
+.city{display:grid;grid-template-columns:1fr;gap:.7rem}
+@media(min-width:720px){.city{grid-template-columns:1.25fr 1fr 1fr}}
+.shop{position:relative;border:0;font:inherit;text-align:left;color:inherit;cursor:pointer;border-radius:18px;padding:0;background:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .5s cubic-bezier(.2,1.3,.4,1)}
+.shop:active{transform:scale(.97);transition-duration:.1s}
+.facade{border-radius:18px 18px 6px 6px;overflow:hidden;box-shadow:0 1px 0 var(--line),0 10px 24px -14px rgba(34,22,15,.5)}
+.awning{height:30px;background:repeating-linear-gradient(90deg,var(--c1) 0 22px,#fff6e8 22px 44px);clip-path:polygon(0 0,100% 0,100% 70%,96% 100%,92% 70%,88% 100%,84% 70%,80% 100%,76% 70%,72% 100%,68% 70%,64% 100%,60% 70%,56% 100%,52% 70%,48% 100%,44% 70%,40% 100%,36% 70%,32% 100%,28% 70%,24% 100%,20% 70%,16% 100%,12% 70%,8% 100%,4% 70%,0 100%)}
+.win{background:var(--c2);padding:1rem 1rem 1.1rem;color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.win h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.9rem;line-height:1}
+.win small{font-size:.78rem;opacity:.85}
+.win svg{width:100%;height:56px}
+.shop[aria-expanded="true"] .facade{box-shadow:0 0 0 3px var(--ink),0 14px 30px -14px rgba(34,22,15,.6)}
+.s1{--c1:var(--terra);--c2:#8e3418}
+.s2{--c1:var(--teal);--c2:#0b4f4c}
+.s3{--c1:var(--mari);--c2:#7a5108}
+.sidewalk{margin-top:.8rem;height:10px;border-radius:5px;background:repeating-linear-gradient(90deg,rgba(34,22,15,.18) 0 40px,transparent 40px 44px)}
+.st-bot{display:flex;justify-content:space-between;margin-top:.5rem}
+.panel{margin-top:var(--s2);background:#fff;border-radius:20px;padding:var(--s3);box-shadow:0 1px 0 var(--line);min-height:9rem}
+.panel h4{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.6rem;line-height:1.1}
+.panel ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.45rem;margin:.8rem 0}
+.panel li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.9rem}
+.panel q{display:block;font-family:"Instrument Serif",serif;font-style:italic;font-size:1.15rem;line-height:1.4}
+.panel cite{display:block;font-style:normal;font-size:.75rem;opacity:.6;margin-top:.4rem}
+.fade{animation:in .5s cubic-bezier(.2,1,.3,1)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.hint{font-size:.85rem;opacity:.65;margin:.8rem 0 0}
+section{max-width:64rem;margin:0 auto;padding:var(--s5) 1.25rem 0}
+.eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.3rem,9vw,3.6rem);line-height:.98;letter-spacing:-.02em;margin:.4rem 0 var(--s2)}
+/* the clock */
+.clock{display:grid;gap:var(--s3);align-items:center}
+@media(min-width:720px){.clock{grid-template-columns:240px 1fr}}
+.dial{width:220px;height:220px;margin:0 auto}
+.clock p{font-size:1.08rem;max-width:30rem}
+.big{font-family:"Instrument Serif",serif;font-size:3.2rem;line-height:1;color:var(--teal)}
+/* weekly bread line */
+.story{background:var(--teal);color:#f3efe6;border-radius:28px;padding:var(--s4) var(--s3);position:relative;overflow:hidden}
+.story q{display:block;font-family:"Instrument Serif",serif;font-size:clamp(1.5rem,6vw,2.3rem);line-height:1.2;max-width:38rem}
+.story cite{display:block;font-style:normal;font-size:.78rem;opacity:.75;margin-top:var(--s2)}
+.route{position:absolute;right:-30px;bottom:-20px;width:220px;opacity:.25}
+.quotes{display:grid;gap:var(--s2);margin-top:var(--s3)}
+@media(min-width:720px){.quotes{grid-template-columns:1fr 1fr}}
+.qc{border-top:1.5px solid var(--ink);padding-top:var(--s2)}
+.qc q{font-size:1.02rem}
+.qc cite{display:block;font-style:normal;font-size:.75rem;opacity:.6;margin-top:.4rem}
+.visit{display:grid;gap:var(--s2)}
+@media(min-width:720px){.visit{grid-template-columns:1fr 1fr}}
+.vc{background:#fff;border-radius:22px;padding:var(--s3);box-shadow:0 1px 0 var(--line)}
+.vc h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.7rem}
+.note{font-size:.8rem;opacity:.65;margin-top:.5rem}
+footer{text-align:center;font-size:.85rem;padding:var(--s5) 1rem 2.5rem;opacity:.8}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .8s cubic-bezier(.2,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Marissa's Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+ <p class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>28th &amp; Nicollet · Minneapolis</p>
+ <h1>Marissa's <em>Bakery</em></h1>
+ <p class="lede">Mexican pan dulce baked right here on Nicollet, rows of it, fresh all day. Churros, empanadas and a counter for breakfast and lunch on the same block.</p>
+ <div class="cta"><a class="btn p" href="tel:+16128714519">Call (612) 871-4519</a><a class="btn g" href="https://www.google.com/maps/search/?api=1&amp;query=Marissa%27s%20Bakery%202750%20Nicollet%20Ave%20Minneapolis%20MN%2055408">Directions</a></div>
+</header>
+
+<div class="block rv">
+ <div class="mapwrap">
+  <p class="street st-top">Nicollet Ave S</p>
+  <div class="city" role="group" aria-label="What you'll find on the block">
+   <button class="shop s1" type="button" aria-expanded="true" data-k="bake"><div class="facade"><div class="awning"></div><div class="win"><svg viewBox="0 0 200 56" aria-hidden="true"><g fill="#f6d39a"><ellipse cx="30" cy="40" rx="22" ry="12"/><ellipse cx="80" cy="40" rx="22" ry="12"/><ellipse cx="130" cy="40" rx="22" ry="12"/><ellipse cx="178" cy="40" rx="18" ry="11"/></g><g fill="#e98a8f"><path d="M10 38c3-14 37-14 40 0z"/><path d="M110 38c3-14 37-14 40 0z"/></g><path d="M60 38c3-14 37-14 40 0z" fill="#f2a51a"/><path d="M0 52h200" stroke="#fff6e8" stroke-width="3"/></svg><div><h3>The bakery shelves</h3><small>Tap to look inside</small></div></div></div></button>
+   <button class="shop s2" type="button" aria-expanded="false" data-k="counter"><div class="facade"><div class="awning"></div><div class="win"><svg viewBox="0 0 200 56" aria-hidden="true"><path d="M20 44c0-18 50-18 50 0z" fill="#f2a51a"/><path d="M24 42c8-8 34-8 42 0" stroke="#3d8b3d" stroke-width="5" fill="none"/><ellipse cx="130" cy="44" rx="40" ry="9" fill="#fff6e8"/><circle cx="116" cy="40" r="7" fill="#7a3d1b"/><circle cx="140" cy="40" r="7" fill="#fff"/><path d="M0 52h200" stroke="#fff6e8" stroke-width="3"/></svg><div><h3>The counter</h3><small>Breakfast &amp; lunch</small></div></div></div></button>
+   <button class="shop s3" type="button" aria-expanded="false" data-k="grocery"><div class="facade"><div class="awning"></div><div class="win"><svg viewBox="0 0 200 56" aria-hidden="true"><g fill="#fff6e8"><rect x="12" y="20" width="22" height="26" rx="3"/><rect x="40" y="14" width="22" height="32" rx="3"/></g><circle cx="110" cy="38" r="10" fill="#c4512b"/><circle cx="128" cy="40" r="9" fill="#3d8b3d"/><circle cx="146" cy="38" r="10" fill="#f6d39a"/><path d="M0 52h200" stroke="#fff6e8" stroke-width="3"/></svg><div><h3>Groceries</h3><small>On the same block</small></div></div></div></button>
+  </div>
+  <div class="sidewalk" aria-hidden="true"></div>
+  <div class="st-bot"><span class="street">W 28th St</span><span class="street">2750</span></div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+ </div>
+ <p class="hint">Customers describe all three on the corner. Ask in store which counters are part of Marissa's (sample note to confirm).</p>
+</div>
+
+<section class="rv">
+ <p class="eyebrow">Open every day</p>
+ <div class="clock">
+  <svg class="dial" viewBox="0 0 220 220" role="img" aria-label="Open 6 am to 8 pm, seven days a week">
+   <circle cx="110" cy="110" r="104" fill="#fff" stroke="rgba(34,22,15,.14)" stroke-width="2"/>
+   <path d="M110 110 L110 16 A94 94 0 1 1 63 191.4 Z" fill="#f2a51a" opacity=".35"/>
+   <g stroke="#22160f" stroke-width="2">
+    <path d="M110 12v10M110 198v10M12 110h10M198 110h10"/></g>
+   <text x="110" y="40" text-anchor="middle" font-family="Bricolage Grotesque" font-size="12" font-weight="800">6 AM</text>
+   <text x="74" y="172" text-anchor="middle" font-family="Bricolage Grotesque" font-size="12" font-weight="800">8 PM</text>
+   <circle cx="110" cy="110" r="5" fill="#22160f"/>
+   <text x="110" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="22">14 hours</text>
+  </svg>
+  <div><p class="big">6 am to 8 pm</p><p>Monday through Sunday. Early enough for pan with your coffee, late enough for a box on the way home.</p><p class="note">Hours as listed on Google. Call to confirm holidays.</p></div>
+ </div>
+</section>
+
+<section class="rv">
+ <div class="story">
+  <svg class="route" viewBox="0 0 200 200" aria-hidden="true"><path d="M10 180C60 160 40 90 100 80s80-60 90-70" stroke="#fff" stroke-width="6" fill="none" stroke-dasharray="2 14" stroke-linecap="round"/><circle cx="190" cy="10" r="10" fill="#fff"/></svg>
+  <q>Another fellow customer told me that he comes all the way from St. Paul to get their bread every week, so I picked up half a dozen including empanadas and they were so good.</q>
+  <cite>Google review, Apr 2023</cite>
+ </div>
+ <div class="quotes">
+  <div class="qc"><q>Awesome selection of chips and salsa. And fresh hot churros!</q><cite>Google review, Mar 2026</cite></div>
+  <div class="qc"><q>I always like to come here for yummy baked goods when I'm in the neighborhood. So delicious and they have a nice variety of items.</q><cite>Google review, Jan 2026</cite></div>
+ </div>
+</section>
+
+<section class="rv">
+ <p class="eyebrow">Visit</p>
+ <h2>Find the corner</h2>
+ <div class="visit">
+  <div class="vc"><h3>2750 Nicollet Ave</h3><p>Minneapolis, MN 55408<br>At 28th St &amp; Nicollet Ave S</p><div class="cta"><a class="btn p" href="https://www.google.com/maps/search/?api=1&amp;query=Marissa%27s%20Bakery%202750%20Nicollet%20Ave%20Minneapolis%20MN%2055408">Open in Maps</a></div></div>
+  <div class="vc"><h3>Feeding a crowd?</h3><p>Call ahead about a big box of pan dulce or empanadas for a party or the office.</p><p class="note">Sample: ordering details to confirm with the bakery.</p><div class="cta"><a class="btn g" href="tel:+16128714519">Call the bakery</a></div></div>
+ </div>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{
+const D={
+ bake:{t:"The bakery shelves",tags:["Muffins","Rolls","Pastries","Donuts","Cookies","Empanadas","Churros"],q:"Baked right here in Minneapolis, you can't get more authentic than what you'll find in rows on the shelves, packed with freshly baked muffins, rolls, pastries, donuts, cookies, and treats!",c:"Google review, Dec 2023"},
+ counter:{t:"The breakfast and lunch counter",tags:["Tacos","Beans and rice","Chips and salsa","Seating area"],q:"They have a breakfast/lunch counter with a seating area where you can order an array of authentic cuisine including tacos, beans and rice",c:"Google review, Sep 2025"},
+ grocery:{t:"The grocery side",tags:["Spices","Fresh produce","Cooking vessels","Utensils"],q:"They sell an array of items from cooking vessels, utensils, dishes, to a whole isle of inexpensive spices, fresh produce, meats",c:"Google review, Sep 2025"}};
+const p=document.getElementById('panel'),bs=document.querySelectorAll('.shop');
+function show(k){const d=D[k];p.innerHTML='<div class="fade"><h4>'+d.t+'</h4><ul>'+d.tags.map(x=>'<li>'+x+'</li>').join('')+'</ul><q>'+d.q+'</q><cite>'+d.c+'</cite></div>';bs.forEach(b=>b.setAttribute('aria-expanded',b.dataset.k===k))}
+bs.forEach(b=>b.addEventListener('click',()=>show(b.dataset.k)));show('bake');
+const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));
+})();
+</script>
+</body>
+</html>

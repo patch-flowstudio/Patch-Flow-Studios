@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambino's Bistro | Italian kitchen in downtown Elkins, WV</title>
+<meta name="description" content="Pizza, pasta, garlic rolls and tiramisu at Bambino's Bistro, 121 3rd St, downtown Elkins, West Virginia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--rosso:#a8261d;--rosso2:#7d1912;--basil:#2f5d3a;--crema:#f8f1e3;--card:#fffaf0;--ink:#1d1a16;--muted:#6f6556;--line:#e3d6bd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font:300 17px/1.65 Jost,system-ui,sans-serif;background:var(--crema);color:var(--ink);overflow-x:hidden}
+a{color:inherit}
+.pf-concept{font:13px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px;background:var(--ink);color:#e9e0cf}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+/* hero: awning + facade */
+.awning{height:46px;background:repeating-linear-gradient(90deg,var(--rosso) 0 40px,var(--card) 40px 80px);position:relative}
+.awning:after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:radial-gradient(circle at 20px 0,var(--rosso) 19px,transparent 20px) 0 0/80px 14px repeat-x,radial-gradient(circle at 60px 0,var(--card) 19px,transparent 20px) 0 0/80px 14px repeat-x}
+.hero{text-align:center;padding:80px 0 60px}
+.est{font:500 12px/1 Jost;letter-spacing:.32em;text-transform:uppercase;color:var(--basil)}
+h1{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(56px,13vw,128px);line-height:.9;letter-spacing:-.02em;margin:18px 0 10px}
+h1 i{color:var(--rosso);font-weight:500}
+.tag{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(19px,3.4vw,24px);color:var(--muted)}
+.rule{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px auto;color:var(--rosso)}
+.rule:before,.rule:after{content:"";width:60px;height:1px;background:currentColor}
+.lede{max-width:46ch;margin:0 auto;color:#4a4339}
+.acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:2px;font:500 15px/1 Jost;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:transform 100ms ease-out,background-color .2s,color .2s;touch-action:manipulation}
+.btn.r{background:var(--rosso);color:#fff}
+.btn.r:hover{background:var(--rosso2)}
+.btn.o{border:1px solid var(--ink)}
+.btn.o:hover{background:var(--ink);color:var(--crema)}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible{outline:2px solid var(--basil);outline-offset:3px}
+/* signature: il menu card */
+.menu{background:var(--card);border:1px solid var(--line);box-shadow:0 40px 60px -40px rgba(60,30,10,.45),0 0 0 8px var(--card),0 0 0 9px var(--line);max-width:760px;margin:0 auto;padding:44px 24px 36px;position:relative}
+@media(min-width:720px){.menu{padding:56px 64px 48px}}
+.menu h2{font-family:'Bodoni Moda',serif;font-weight:500;font-style:italic;font-size:clamp(40px,8vw,64px);text-align:center;line-height:1}
+.menu .small{display:block;text-align:center;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;margin:30px 0 26px;border-bottom:1px solid var(--line)}
+.tabs button{appearance:none;background:none;border:0;font:500 13px/1 Jost;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);min-height:46px;padding:0 14px;cursor:pointer;position:relative;transition:color .2s,transform 100ms ease-out}
+.tabs button:active{transform:scale(.96)}
+.tabs button[aria-selected=true]{color:var(--rosso)}
+.tabs button[aria-selected=true]:after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--rosso)}
+.tabs button:focus-visible{outline:2px solid var(--basil);outline-offset:-2px}
+.panel{display:none}
+.panel.on{display:block;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dish{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px dotted var(--line)}
+.dish:last-child{border-bottom:0}
+.dish b{font-family:'Bodoni Moda',serif;font-weight:500;font-size:22px;line-height:1.25}
+.dish p{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.dish .heart{color:var(--rosso);font-size:13px;letter-spacing:.1em;text-transform:uppercase;align-self:center;white-space:nowrap}
+.menu .foot{text-align:center;font-size:13px;color:var(--muted);margin-top:22px}
+.smp{display:inline-block;font:600 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:3px;border:1px dashed currentColor;vertical-align:middle}
+section{padding:90px 0}
+/* kitchen */
+.kitchen{display:grid;gap:40px;align-items:center}
+@media(min-width:860px){.kitchen{grid-template-columns:.9fr 1.1fr}}
+.dough{width:100%;max-width:340px;margin:0 auto;display:block}
+.dough .pz{transform-origin:170px 120px;animation:toss 4s cubic-bezier(.45,0,.3,1) infinite}
+@keyframes toss{0%,100%{transform:translateY(0) rotate(0)}45%{transform:translateY(-34px) rotate(160deg)}55%{transform:translateY(-34px) rotate(200deg)}}
+.kitchen h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(34px,6vw,52px);line-height:1.05}
+.kitchen blockquote{font-family:'Bodoni Moda',serif;font-style:italic;font-size:21px;line-height:1.5;margin-top:22px;padding-left:20px;border-left:2px solid var(--rosso)}
+.kitchen cite{display:block;font:500 12px/1.4 Jost;font-style:normal;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+/* orario */
+.orario{background:var(--basil);color:#eef2e6}
+.orario .wrap{display:grid;gap:40px}
+@media(min-width:860px){.orario .wrap{grid-template-columns:1fr 1fr;align-items:start}}
+.orario h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(34px,6vw,52px);line-height:1.05;color:#fff}
+.hrs{list-style:none;font-size:17px}
+.hrs li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.hrs .x{opacity:.55}
+.hrs .now{color:#fff;font-weight:500}
+.orario .btn.o{border-color:#eef2e6}
+.orario .btn.o:hover{background:#eef2e6;color:var(--basil)}
+.orario .acts{justify-content:flex-start}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:28px 16px 40px;color:var(--muted)}
+.pf-foot a{font-weight:700}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Bambino's Bistro's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="awning" aria-hidden="true"></div>
+
+<header class="hero wrap">
+<span class="est">121 Third Street · Downtown Elkins</span>
+<h1>Bambino's <i>Bistro</i></h1>
+<p class="tag">Authentic Italian, made by owners who toss the crusts themselves.</p>
+<div class="rule" aria-hidden="true">✦</div>
+<p class="lede">Pizza, pasta, fresh salads and dolci in a warm, homey dining room, where the owners come out of the kitchen to meet their guests.</p>
+<div class="acts"><a class="btn r" href="tel:+13045914100">Call (304) 591-4100</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=121%203rd%20St%2C%20Elkins%2C%20WV%2026241">Directions</a></div>
+</header>
+
+<section style="padding-top:20px">
+<div class="wrap">
+<div class="menu">
+<h2>Il Menu</h2>
+<span class="small">Dishes our guests have written about</span>
+<div class="tabs" role="tablist" aria-label="Menu courses">
+<button role="tab" aria-selected="true" aria-controls="p1" id="t1">Antipasti</button>
+<button role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Primi</button>
+<button role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Pizza</button>
+<button role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1">Dolci</button>
+</div>
+<div class="panel on" role="tabpanel" id="p1" aria-labelledby="t1">
+<div class="dish"><b>Garlic rolls</b><span class="heart">"Sublime"</span><p>A guest favorite to start.</p></div>
+<div class="dish"><b>Fresh salads</b><span class="heart">"Gorgeous"</span><p>"Every bite of the salad was satisfying and unique."</p></div>
+<div class="dish"><b>Mussels</b><span class="heart"></span><p>Enjoyed "greatly," one diner wrote.</p></div>
+</div>
+<div class="panel" role="tabpanel" id="p2" aria-labelledby="t2">
+<div class="dish"><b>Eggplant stack</b><span class="heart">Signature</span><p>Breaded eggplant with arugula, baby roma tomatoes and sliced mozzarella, with a side of spaghetti in a simple, sweet marinara.</p></div>
+<div class="dish"><b>Shrimp &amp; crabmeat pasta</b><span class="heart"></span><p>In vodka sauce.</p></div>
+<div class="dish"><b>Chicken carbonara</b><span class="heart"></span><p>"Everything was delicious," wrote a guest who paired it with the lemon cake.</p></div>
+<div class="dish"><b>Shrimp scampi</b><span class="heart"></span><p>On the menu, and next on one regular's list.</p></div>
+</div>
+<div class="panel" role="tabpanel" id="p3" aria-labelledby="t3">
+<div class="dish"><b>Pizza</b><span class="heart">"Best in town"</span><p>Crusts tossed by hand in the kitchen. Toppings and sizes to list here. <span class="smp">sample</span></p></div>
+</div>
+<div class="panel" role="tabpanel" id="p4" aria-labelledby="t4">
+<div class="dish"><b>Tiramisu</b><span class="heart">"Amazing"</span><p>A must for the table.</p></div>
+<div class="dish"><b>Italian lemon cake</b><span class="heart"></span><p>A sweet way to end the meal.</p></div>
+</div>
+<p class="foot">A selection drawn from guest reviews. The full menu with prices can live here. <span class="smp">sample</span></p>
+</div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap kitchen">
+<svg class="dough" viewBox="0 0 340 260" role="img" aria-labelledby="dt"><title id="dt">Pizza dough tossed in the air</title>
+<ellipse cx="170" cy="240" rx="110" ry="10" fill="#e3d6bd"/>
+<g class="pz"><ellipse cx="170" cy="120" rx="118" ry="38" fill="#f0d8a8"/><ellipse cx="170" cy="116" rx="96" ry="28" fill="#f6e6c3"/><ellipse cx="170" cy="120" rx="118" ry="38" fill="none" stroke="#d9b06f" stroke-width="6"/></g>
+<g fill="#a8261d"><circle cx="40" cy="210" r="5"/><circle cx="300" cy="200" r="4"/></g>
+</svg>
+<div>
+<h3>The owners come out of the kitchen.</h3>
+<blockquote>"Absolutely all star touch that the owners come out of the kitchen and take time to get to know their diners, when not tossing crusts and creating authentic fare."<cite>Google review, October 2025</cite></blockquote>
+<blockquote>"We had family visiting for the weekend, and dinner was more than we could have asked for."<cite>Google review, January 2026</cite></blockquote>
+</div>
+</div>
+</section>
+
+<section class="orario">
+<div class="wrap">
+<div>
+<h3>Orario</h3>
+<p style="margin:14px 0 6px">121 3rd St, Elkins, WV 26241</p>
+<p style="opacity:.8">Closed Mondays. A shorter evening on Sundays.</p>
+<div class="acts"><a class="btn r" href="tel:+13045914100">Call for a table</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=121%203rd%20St%2C%20Elkins%2C%20WV%2026241">Get directions</a></div>
+</div>
+<ul class="hrs" id="hrs" aria-label="Weekly hours"></ul>
+</div>
+</section>
+
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on)})}
+tabs.forEach(function(t,i){t.addEventListener('pointerdown',function(){sel(t)});t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var n=tabs[(i+k+tabs.length)%tabs.length];sel(n);n.focus()}})})})();
+(function(){var H=[["Sunday","11:30 AM to 7 PM"],["Monday",""],["Tuesday","11 AM to 9 PM"],["Wednesday","11 AM to 9 PM"],["Thursday","11 AM to 9 PM"],["Friday","11 AM to 9 PM"],["Saturday","11 AM to 9 PM"]],t=new Date().getDay(),u=document.getElementById('hrs');
+[1,2,3,4,5,6,0].forEach(function(i){var l=document.createElement('li');l.className=(H[i][1]?'':'x ')+(i===t?'now':'');l.innerHTML='<span>'+H[i][0]+'</span><span>'+(H[i][1]||'Closed')+'</span>';u.appendChild(l)})})();
+</script>
+</body>
+</html>

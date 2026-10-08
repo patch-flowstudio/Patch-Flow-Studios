@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hometown Bakery | Custom cakes, cookies and pies in Mansfield, MA</title>
+<meta name="description" content="Hometown Bakery on North Main Street in Mansfield, MA, across from North Common. Custom cakes, cupcakes, cookies and pies. Call (774) 628-7272.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff7ef;--butter:#fde7c8;--pink:#f6a6b7;--rose:#e2577a;--cocoa:#4a2c22;--cocoa2:#6d4336;--mint:#bfe3d0;--spring:cubic-bezier(.3,1.3,.5,1);--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.05rem/1.6 Nunito,system-ui,sans-serif;color:var(--cocoa);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.concept{background:var(--cocoa);color:#fde7c8;font-size:.75rem;line-height:1.45;text-align:center;padding:.55rem 1rem}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+/* piped scallop edge */
+.scallop{height:22px;background:radial-gradient(circle at 11px -2px,transparent 12px,var(--butter) 13px) 0 0/22px 22px repeat-x}
+.hero{background:var(--butter);padding:2.8rem 0 1.6rem;text-align:center;position:relative}
+.hero small{display:inline-block;font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;background:#fff;border-radius:999px;padding:.35rem .9rem;color:var(--rose)}
+h1{font-family:Shrikhand,Georgia,serif;font-weight:400;font-size:clamp(2.7rem,12vw,5rem);line-height:1;color:var(--cocoa);margin:.9rem 0 .6rem;letter-spacing:.005em}
+.hero p{max-width:34rem;margin:0 auto;color:var(--cocoa2)}
+.cake{width:11rem;margin:1.4rem auto 0;display:block}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.4rem}
+.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.35rem;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:1rem;touch-action:manipulation;transition:transform .5s var(--spring),box-shadow .3s var(--ease)}
+.btn:active{transform:scale(.96);transition:transform 90ms ease-out}
+.b-rose{background:var(--rose);color:#fff;box-shadow:0 8px 0 #b33a5c}
+.b-rose:active{box-shadow:0 3px 0 #b33a5c}
+.b-white{background:#fff;color:var(--cocoa);box-shadow:inset 0 0 0 2px var(--cocoa)}
+section{padding:3rem 0}
+h2{font-family:Shrikhand,Georgia,serif;font-weight:400;font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.05;margin-bottom:.7rem}
+.eyebrow{font-weight:800;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+/* signature: order planner */
+.planner{background:#fff;border-radius:1.6rem;padding:1.4rem;box-shadow:0 2px 0 #f1dcc0,0 20px 40px rgba(74,44,34,.08);margin-top:1.2rem}
+.planner label{font-weight:800;display:block;margin-bottom:.4rem}
+.row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+input[type=date]{min-height:44px;border:2px solid var(--cocoa);border-radius:.8rem;padding:.5rem .8rem;font:700 1rem Nunito,sans-serif;color:var(--cocoa);background:var(--cream)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.chip{min-height:44px;padding:0 1rem;border-radius:999px;border:2px solid var(--pink);background:#fff;font:700 .95rem Nunito,sans-serif;color:var(--cocoa);cursor:pointer;transition:transform .45s var(--spring),background .2s}
+.chip[aria-pressed=true]{background:var(--pink);border-color:var(--pink)}
+.chip:active{transform:scale(.95);transition:transform 90ms ease-out}
+.result{border-radius:1rem;background:var(--butter);padding:1rem 1.1rem;transition:background .3s}
+.result b{font-size:1.15rem}
+.result.ok{background:var(--mint)}
+.result.late{background:#ffd5dc}
+.sample{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:1.5px dashed currentColor;border-radius:.3rem;padding:.02rem .35rem;margin-left:.3rem;vertical-align:middle;opacity:.8}
+/* menu of things */
+.treats{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1rem}
+@media(min-width:760px){.treats{grid-template-columns:repeat(4,1fr)}}
+.treat{background:#fff;border-radius:1.2rem;padding:1.1rem;text-align:center;box-shadow:0 10px 24px rgba(74,44,34,.06);transition:transform .5s var(--spring)}
+@media(hover:hover){.treat:hover{transform:translateY(-4px) rotate(-1deg)}}
+.treat svg{width:3.2rem;height:3.2rem}
+.treat b{display:block;margin-top:.4rem}
+.treat small{color:var(--cocoa2);font-size:.85rem}
+/* story strip */
+.story{background:var(--cocoa);color:var(--butter);border-radius:1.6rem;padding:1.8rem 1.4rem;display:grid;gap:1rem}
+@media(min-width:760px){.story{grid-template-columns:auto 1fr;align-items:center}}
+.story .yr{font-family:Shrikhand,serif;font-size:3.4rem;line-height:1;color:var(--pink)}
+.story h2{color:#fff}
+.story p{color:#f3dcc5}
+.quotes{display:grid;gap:.9rem;margin-top:1rem}
+@media(min-width:760px){.quotes{grid-template-columns:1fr 1fr}}
+blockquote{background:#fff;border-radius:1.2rem;padding:1.2rem;position:relative}
+blockquote:before{content:"\201C";font-family:Shrikhand,serif;font-size:2.6rem;color:var(--pink);position:absolute;top:-.6rem;left:.8rem}
+cite{display:block;font-style:normal;font-size:.8rem;color:var(--cocoa2);margin-top:.5rem}
+.visit{display:grid;gap:1rem}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border-radius:1.4rem;padding:1.3rem}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:.5rem 0;border-bottom:2px dotted #f1dcc0}
+.hours td:last-child{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+footer.studio{text-align:center;font-size:.8rem;color:var(--cocoa2);padding:2rem 1rem 3rem}
+.reveal{opacity:0;transform:translateY(16px) scale(.98);transition:opacity .6s var(--ease),transform .9s var(--spring)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}*,*:before,*:after{transition-duration:.01ms!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Hometown Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+  <small>Across from North Common &middot; Mansfield, MA</small>
+  <h1>Hometown Bakery</h1>
+  <p>Custom cakes, cupcakes, cookies and pies, baked by Arlene Coccia and her team a short walk from the commuter rail stop.</p>
+  <svg class="cake" viewBox="0 0 200 150" aria-hidden="true"><rect x="40" y="70" width="120" height="60" rx="10" fill="#f6a6b7"/><path d="M40 82 q10 12 20 0 q10 12 20 0 q10 12 20 0 q10 12 20 0 q10 12 20 0 q10 12 20 0" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><rect x="60" y="40" width="80" height="34" rx="8" fill="#fde7c8" stroke="#4a2c22" stroke-width="3"/><rect x="96" y="14" width="8" height="26" rx="3" fill="#e2577a"/><path d="M100 4 q6 6 0 12 q-6 -6 0 -12z" fill="#ffb020"/><rect x="24" y="128" width="152" height="8" rx="4" fill="#4a2c22"/></svg>
+  <div class="btns"><a class="btn b-rose" href="tel:+17746287272">Call (774) 628-7272</a><a class="btn b-white" href="#plan">Plan an order</a></div>
+</header>
+<div class="scallop" aria-hidden="true"></div>
+
+<main>
+  <section class="wrap reveal" id="plan">
+    <span class="eyebrow">Order planner</span>
+    <h2>When do you need it?</h2>
+    <p>Pick your party date and what you have in mind. Iced cookies need at least 3 days notice, per the bakery's own page.</p>
+    <div class="planner">
+      <label for="d">Your event date</label>
+      <div class="row"><input type="date" id="d"></div>
+      <div class="chips" role="group" aria-label="What are you ordering">
+        <button class="chip" aria-pressed="true" data-days="3" data-src="real">Iced cookies</button>
+        <button class="chip" aria-pressed="false" data-days="7" data-src="sample">Custom cake</button>
+        <button class="chip" aria-pressed="false" data-days="7" data-src="sample">Cupcake bouquet</button>
+        <button class="chip" aria-pressed="false" data-days="3" data-src="sample">Pies</button>
+      </div>
+      <div class="result" id="res" aria-live="polite"><b>Choose a date above.</b><br>We will show the last day to call in your order.</div>
+    </div>
+  </section>
+
+  <section class="wrap reveal">
+    <span class="eyebrow">From the case</span>
+    <h2>What people order</h2>
+    <div class="treats">
+      <div class="treat"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="30" width="44" height="26" rx="6" fill="#f6a6b7"/><rect x="14" y="20" width="36" height="14" rx="5" fill="#fde7c8" stroke="#4a2c22" stroke-width="2"/><rect x="30" y="8" width="4" height="12" fill="#e2577a"/></svg><b>Custom cakes</b><small>Themed birthdays to bridal showers</small></div>
+      <div class="treat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 34 h32 l-4 22 h-24z" fill="#e2577a"/><circle cx="32" cy="28" r="14" fill="#fde7c8" stroke="#4a2c22" stroke-width="2"/></svg><b>Cupcakes</b><small>Including cupcake bouquets</small></div>
+      <div class="treat"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="#e9b97a"/><circle cx="24" cy="26" r="3" fill="#4a2c22"/><circle cx="38" cy="36" r="3" fill="#4a2c22"/><circle cx="30" cy="42" r="2.5" fill="#4a2c22"/></svg><b>Decorated cookies</b><small>Iced cookies need 3 days notice</small></div>
+      <div class="treat"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 36 q24 -20 48 0 v8 h-48z" fill="#e9b97a"/><path d="M12 36 l40 0" stroke="#4a2c22" stroke-width="2"/><path d="M16 30 l32 0M20 25 l24 0" stroke="#b9653a" stroke-width="3"/></svg><b>Pies</b><small>Lattice pies and more</small></div>
+    </div>
+    <p style="margin-top:1rem;font-size:.92rem">Stopping by? One regular mentions free tea and coffee while you browse.</p>
+  </section>
+
+  <section class="wrap reveal">
+    <div class="story">
+      <span class="yr">2015</span>
+      <div><h2>From Arlene's kitchen to North Main Street</h2><p>Hometown Bakery started in 2015 in Arlene's home kitchen. As orders grew, she and her team opened the shop in November 2022, right across from North Common and the commuter rail stop.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap reveal">
+    <span class="eyebrow">Kind words</span>
+    <h2>Party-day reviews</h2>
+    <div class="quotes">
+      <blockquote>We ordered cupcakes for our daughter's bday, and she said they were her favorite part of her birthday. Thank you hometown bakery!<cite>Google review, January 2026</cite></blockquote>
+      <blockquote>Cutest little bakery with the friendliest people. Super reasonable prices and tasty treats. Best part: free tea and coffee!<cite>Google review, March 2026</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="wrap reveal">
+    <div class="visit">
+      <div class="box"><h2 style="font-size:1.6rem">Shop hours</h2>
+        <table class="hours"><tr><td>Monday</td><td>Closed</td></tr><tr><td>Tuesday</td><td>8 AM - 5:30 PM</td></tr><tr><td>Wednesday</td><td>8 AM - 5:30 PM</td></tr><tr><td>Thursday</td><td>8 AM - 5:30 PM</td></tr><tr><td>Friday</td><td>8 AM - 5:30 PM</td></tr><tr><td>Saturday</td><td>8 AM - 5 PM</td></tr><tr><td>Sunday</td><td>10 AM - 2 PM</td></tr></table></div>
+      <div class="box"><h2 style="font-size:1.6rem">Find us</h2><p style="margin:.3rem 0 1rem">300 N Main St, Suite 103A<br>Mansfield, MA 02048</p>
+        <div class="btns" style="justify-content:flex-start"><a class="btn b-rose" href="tel:+17746287272">Call to order</a><a class="btn b-white" href="https://www.google.com/maps/search/?api=1&amp;query=Hometown+Bakery%2C+300+N+Main+St+Ste+103A%2C+Mansfield%2C+MA+02048">Directions</a></div></div>
+    </div>
+  </section>
+</main>
+<footer class="studio">Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){
+var d=document.getElementById('d'),res=document.getElementById('res'),chips=[].slice.call(document.querySelectorAll('.chip'));
+var t=new Date();t.setDate(t.getDate()+14);d.value=t.toISOString().slice(0,10);
+function calc(){var c=chips.filter(function(x){return x.getAttribute('aria-pressed')==='true'})[0];if(!d.value){return}
+var ev=new Date(d.value+'T12:00:00'),days=+c.dataset.days,by=new Date(ev);by.setDate(by.getDate()-days);var today=new Date();today.setHours(0,0,0,0);
+var opts={weekday:'long',month:'long',day:'numeric'};var late=by<today;
+res.className='result '+(late?'late':'ok');
+res.innerHTML='<b>'+(late?'That is a tight timeline, so call the bakery today.':'Call by '+by.toLocaleDateString('en-US',opts)+'.')+'</b><br>'+c.textContent+': '+days+' days ahead'+(c.dataset.src==='sample'?' <span class="sample">sample</span> lead time to confirm with the bakery.':', as listed by the bakery.')}
+chips.forEach(function(c){c.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')});c.setAttribute('aria-pressed','true');calc()})});
+d.addEventListener('change',calc);calc();
+var r=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){r.forEach(function(e){e.classList.add('in')});return}
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});r.forEach(function(e){o.observe(e)})
+})();
+</script>
+</body>
+</html>

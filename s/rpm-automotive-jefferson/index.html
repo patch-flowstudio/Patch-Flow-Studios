@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPM Automotive | Family-owned auto repair on GA-124, Jefferson, GA</title>
+<meta name="description" content="RPM Automotive, 2632 GA-124 W, Jefferson, GA. Family owned and operated. Fast, honest repairs, and you can bring your own parts. Mon to Fri 9 to 5:30. Call (706) 387-1953.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Rethink+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1626;--navy2:#14213a;--steel:#9aa7ba;--chrome:#e6ebf2;--red:#e23b2e;--amber:#ffb627;--ink:#0b111c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:'Rethink Sans',system-ui,sans-serif;background:var(--navy);color:var(--chrome);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.concept{background:#060b14;color:var(--steel);font:12px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px}
+.hero{max-width:1100px;margin:0 auto;padding:36px 20px 40px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.gauge{position:relative;max-width:380px;width:100%;margin:0 auto;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#1b2a47,#0a1220 70%);box-shadow:0 0 0 10px #1a2640,0 0 0 12px #3a4a66,0 40px 80px rgba(0,0,0,.5)}
+.gauge svg{position:absolute;inset:0;width:100%;height:100%}
+#needle{transform-origin:200px 200px;transform:rotate(-120deg);transition:transform 1.4s cubic-bezier(.2,1.3,.4,1)}
+.gauge.go #needle{transform:rotate(58deg)}
+.readout{position:absolute;left:0;right:0;bottom:22%;text-align:center}
+.readout b{display:block;font:700 46px/1 'Teko';letter-spacing:.04em;color:#fff}
+.readout small{font:500 12px 'Rethink Sans';letter-spacing:.24em;color:var(--steel)}
+.eyebrow{font:500 12px 'Rethink Sans';letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+h1{font:700 clamp(68px,19vw,150px)/.78 'Teko',sans-serif;letter-spacing:.01em;margin:14px 0 6px}
+h1 span{display:block;font-size:.42em;letter-spacing:.2em;color:var(--steel);font-weight:500;margin-top:6px}
+.lede{font-size:clamp(17px,4.4vw,20px);color:#c9d2df;max-width:36ch;margin-top:12px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:12px;font:600 22px/1 'Teko';letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform 100ms ease-out,background 200ms;-webkit-tap-highlight-color:transparent;padding-top:3px}
+.btn:active{transform:scale(.97)}
+.btn.r{background:var(--red);color:#fff}.btn.r:hover{background:#f04a3d}
+.btn.c{background:rgba(230,235,242,.08);border:1px solid rgba(230,235,242,.2)}
+/* dash lights */
+.dash{max-width:1100px;margin:0 auto;padding:10px 20px 40px}
+.lights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.light{background:var(--navy2);border:1px solid #22314f;border-radius:16px;padding:16px;display:flex;gap:12px;align-items:flex-start}
+.lamp{flex:none;width:14px;height:14px;border-radius:50%;margin-top:6px;background:#1e2a40;box-shadow:inset 0 0 0 2px #2c3b58}
+.light.on .lamp{background:var(--amber);box-shadow:0 0 14px var(--amber)}
+.light.ok .lamp{background:#3ccf7b;box-shadow:0 0 14px #3ccf7b}
+.light b{display:block;font:600 22px/1 'Teko';letter-spacing:.06em;text-transform:uppercase;padding-top:4px}
+.light p{font-size:14.5px;color:#aeb9c9;margin-top:4px}
+/* bring your parts */
+section{max-width:1100px;margin:0 auto;padding:60px 20px}
+h2{font:700 clamp(44px,11vw,76px)/.9 'Teko';letter-spacing:.01em;text-transform:uppercase;margin:8px 0 16px}
+.parts{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch}
+.box{background:linear-gradient(160deg,#f1d9a9,#d9b674);color:#2a1d07;border-radius:6px;padding:24px;position:relative;box-shadow:0 30px 50px -20px rgba(0,0,0,.6)}
+.box:before{content:"";position:absolute;left:0;right:0;top:46%;height:30px;background:rgba(255,255,255,.35)}
+.box b{position:relative;display:block;font:700 40px/1 'Teko';text-transform:uppercase}
+.box p{position:relative;margin-top:10px;font-size:17px;max-width:40ch}
+.box small{position:relative;display:block;margin-top:14px;font-size:13px;color:#5a4318}
+.lane{background:var(--navy2);border:1px solid #22314f;border-radius:18px;padding:22px}
+.lane ol{list-style:none;counter-reset:n}
+.lane li{counter-increment:n;display:grid;grid-template-columns:40px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed #2b3a57}
+.lane li:last-child{border-bottom:0}
+.lane li:before{content:counter(n,decimal-leading-zero);font:600 24px/1 'Teko';color:var(--red);padding-top:3px}
+.crew{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mem{background:var(--navy2);border:1px solid #22314f;border-radius:20px;padding:20px;text-align:center;transition:transform 260ms cubic-bezier(.2,.8,.2,1)}
+.mem:hover{transform:translateY(-3px)}
+.av{width:62px;height:62px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;font:700 32px/1 'Teko';background:conic-gradient(var(--red) 0 30%,#2b3a57 30%);color:#fff;padding-top:4px}
+.mem b{font:600 26px/1 'Teko';letter-spacing:.06em;text-transform:uppercase}
+.mem p{font-size:14.5px;color:#aeb9c9;margin-top:6px}
+.mem small{display:block;font-size:12px;color:#7d8aa0;margin-top:8px}
+blockquote{margin-top:22px;background:linear-gradient(90deg,rgba(226,59,46,.12),transparent);border-left:3px solid var(--red);padding:18px 20px;border-radius:0 16px 16px 0}
+blockquote p{font-size:19px}
+blockquote cite{display:block;font-style:normal;font-size:13px;color:#8d99ad;margin-top:8px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--navy2);border:1px solid #22314f;border-radius:20px;padding:24px}
+.card h3{font:600 28px/1 'Teko';letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.hr{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #22314f}
+.hr:last-child{border-bottom:0}
+footer{text-align:center;padding:30px 20px 110px;font-size:13px;color:#7d8aa0;border-top:1px solid #1c2840}
+.dock{position:fixed;left:12px;right:12px;bottom:12px;max-width:460px;margin:0 auto;display:flex;gap:8px;padding:8px;border-radius:18px;background:rgba(13,22,38,.72);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border:1px solid #2b3a57;z-index:5}
+.dock .btn{flex:1;min-height:46px;font-size:20px}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.gauge{max-width:300px;order:-1}.lights{grid-template-columns:repeat(2,1fr)}.parts{grid-template-columns:1fr}.crew{grid-template-columns:1fr}.visit{grid-template-columns:1fr}}
+@media(min-width:900px){.dock{display:none}footer{padding-bottom:40px}}
+@media(prefers-reduced-motion:reduce){#needle{transition:none}*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not RPM Automotive's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">GA-124 West · Jefferson, Georgia</div>
+    <h1>RPM<span>AUTOMOTIVE</span></h1>
+    <p class="lede">Family owned and operated. In and out quickly, honest work, and if you'd rather bring your own parts, they'll work with you.</p>
+    <div class="cta"><a class="btn r" href="tel:+17063871953">Call (706) 387-1953</a><a class="btn c" href="https://www.google.com/maps/dir/?api=1&destination=2632+GA-124+W%2C+Jefferson%2C+GA+30549">Directions</a></div>
+  </div>
+  <div class="gauge" id="gauge" aria-hidden="true">
+    <svg viewBox="0 0 400 400">
+      <g fill="none" stroke-linecap="round">
+        <path d="M95 305 A150 150 0 1 1 305 305" stroke="#22314f" stroke-width="16"/>
+        <path d="M268 85 A150 150 0 0 1 305 305" stroke="#e23b2e" stroke-width="16" opacity=".85"/>
+      </g>
+      <g font-family="Teko" font-size="26" fill="#9aa7ba" text-anchor="middle">
+        <text x="96" y="296">0</text><text x="62" y="206">1</text><text x="90" y="118">2</text><text x="160" y="70">3</text><text x="240" y="70">4</text><text x="310" y="118">5</text><text x="338" y="206">6</text><text x="304" y="296" fill="#e23b2e">7</text>
+      </g>
+      <g id="needle"><path d="M200 200 L200 70" stroke="#ff5a4b" stroke-width="5" stroke-linecap="round"/></g>
+      <circle cx="200" cy="200" r="16" fill="#e6ebf2"/><circle cx="200" cy="200" r="6" fill="#0d1626"/>
+    </svg>
+    <div class="readout"><b>x1000</b><small>FAMILY OWNED</small></div>
+  </div>
+</header>
+
+<div class="dash">
+  <div class="lights">
+    <div class="light on"><span class="lamp"></span><div><b>Short notice</b><p>One driver showed up last minute and the crew helped right away.</p></div></div>
+    <div class="light ok"><span class="lamp"></span><div><b>Appointments</b><p>Schedule a time and get in and out quickly.</p></div></div>
+    <div class="light ok"><span class="lamp"></span><div><b>No pile of fees</b><p>A customer noted they don't charge a bunch of fees.</p></div></div>
+    <div class="light on"><span class="lamp"></span><div><b>Straight talk</b><p>No talking down to anyone, as one van owner put it.</p></div></div>
+  </div>
+</div>
+
+<section>
+  <div class="eyebrow">Your parts, our bay</div>
+  <h2>Bring your own parts</h2>
+  <div class="parts">
+    <div class="box"><b>Parts on hand?</b><p>A February 2026 customer scheduled a belt assembly replacement, brought their own parts, and was in and out quickly at a fair price.</p><small>From a Google review, February 2026</small></div>
+    <div class="lane"><ol>
+      <li><span>Call the shop and say what you're bringing. <em style="color:#7d8aa0">(sample step)</em></span></li>
+      <li><span>Pick an appointment time that works.</span></li>
+      <li><span>Drop off the car and your parts. <em style="color:#7d8aa0">(sample step)</em></span></li>
+      <li><span>Pick it up, done right.</span></li>
+    </ol></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="eyebrow">The family</div>
+  <h2>Who you'll meet</h2>
+  <div class="crew">
+    <div class="mem"><div class="av">D</div><b>Donnie</b><p>Fixes trucks in a timely manner, and has customers who drive 30 minutes to see him.</p><small>Reviews, 2018 and 2025</small></div>
+    <div class="mem"><div class="av">S</div><b>Shannon</b><p>Super friendly and knowledgeable about the truck a customer brought in.</p><small>Review, November 2024</small></div>
+    <div class="mem"><div class="av">+</div><b>The crew</b><p>"His staff was informative and friendly," as one customer put it.</p><small>Review, October 2025</small></div>
+  </div>
+  <blockquote><p>"Friendly, honest, and I feel a good price. I found my mechanic. I will be bringing my car there from now on."</p><cite>Google review · July 2025</cite></blockquote>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="eyebrow">Pull in</div>
+  <h2>Hours &amp; location</h2>
+  <div class="visit">
+    <div class="card"><h3>Shop hours</h3><div style="margin-top:10px"><div class="hr"><span>Monday to Friday</span><span>9:00 AM to 5:30 PM</span></div><div class="hr"><span>Saturday &amp; Sunday</span><span>Closed</span></div></div></div>
+    <div class="card"><h3>Address</h3><p style="margin:10px 0 16px;font-size:18px">2632 GA-124 W<br>Jefferson, GA 30549</p><a class="btn r" href="https://www.google.com/maps/dir/?api=1&destination=2632+GA-124+W%2C+Jefferson%2C+GA+30549">Get directions</a></div>
+  </div>
+</section>
+
+<footer>Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<nav class="dock"><a class="btn r" href="tel:+17063871953">Call</a><a class="btn c" href="#visit">Hours</a></nav>
+<script>
+var g=document.getElementById('gauge');requestAnimationFrame(function(){setTimeout(function(){g.classList.add('go')},250)});
+g.addEventListener('pointerdown',function(){g.classList.remove('go');setTimeout(function(){g.classList.add('go')},350)});
+</script>
+</body>
+</html>

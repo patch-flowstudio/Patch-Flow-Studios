@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eric's Barber Shop | Walk-ins welcome | Portsmouth, RI</title>
+<meta name="description" content="Eric's Barber Shop, 1980 E Main Rd, Portsmouth, RI. No appointments, walk-ins always welcome. Tuesday to Saturday. Call (401) 640-7827.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--ox:#6e1f24;--ox2:#8e2a30;--wood:#5a3b25;--wood2:#7a5234;--brass:#d2a64e;--cream:#f4ecdc;--ink:#1d1714;--mute:#6f6255;--navy:#1f2d4a;--spring:cubic-bezier(.3,1.2,.45,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.1rem/1.6 "Crimson Pro",Georgia,serif;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.concept{background:var(--ink);color:#eadfca;font:400 .74rem/1.45 system-ui,sans-serif;text-align:center;padding:.55rem 1rem}
+.w{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+/* wood panel hero with door sign */
+.hero{background:linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px) 0 0/84px 100%,repeating-linear-gradient(180deg,var(--wood) 0 7px,#61402a 7px 9px,var(--wood2) 9px 17px);color:var(--cream);padding:2.4rem 0 2.8rem;border-bottom:8px solid var(--ox)}
+.hero .w{display:grid;gap:1.8rem;align-items:center}
+@media(min-width:800px){.hero .w{grid-template-columns:1.2fr .8fr}}
+.est{font-family:Oswald,sans-serif;font-size:.8rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass)}
+h1{font-family:Graduate,serif;font-weight:400;font-size:clamp(2.5rem,11vw,4.8rem);line-height:1;margin:.6rem 0 .8rem;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.lede{font-size:1.2rem;max-width:30rem;color:#efe3cc}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{min-height:48px;display:inline-flex;align-items:center;padding:0 1.35rem;border-radius:4px;font:500 .95rem/1 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;touch-action:manipulation;transition:transform .45s var(--spring)}
+.btn:active{transform:scale(.97);transition:transform 90ms ease-out}
+.bb{background:var(--brass);color:var(--ink)}
+.bo{border:1.5px solid var(--brass);color:var(--brass)}
+/* signature 1: hanging door sign */
+.signwrap{justify-self:center;text-align:center}
+.string{width:2px;height:2.2rem;background:var(--brass);margin:0 auto;position:relative}
+.string:before,.string:after{content:"";position:absolute;top:0;width:2px;height:2.6rem;background:var(--brass)}
+.string:before{left:-1.6rem;transform:rotate(36deg);transform-origin:top}
+.string:after{left:1.6rem;transform:rotate(-36deg);transform-origin:top}
+.door{perspective:800px;margin-top:-.2rem}
+.plate{width:15rem;max-width:72vw;padding:1.1rem 1rem;border-radius:10px;background:var(--cream);color:var(--ox);box-shadow:0 14px 24px rgba(0,0,0,.35),inset 0 0 0 3px var(--ox),inset 0 0 0 6px var(--cream),inset 0 0 0 7px var(--ox);transform-origin:top center;animation:sway 4s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+.plate b{display:block;font-family:Graduate,serif;font-weight:400;font-size:2.1rem;line-height:1}
+.plate span{display:block;font-family:Oswald,sans-serif;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-top:.4rem}
+.plate.closed{color:#4a4a4a}
+.signnote{font:400 .82rem/1.3 system-ui,sans-serif;color:#e7d9bf;margin-top:.8rem}
+section{padding:3rem 0}
+.k{font-family:Oswald,sans-serif;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ox2)}
+h2{font-family:Graduate,serif;font-weight:400;font-size:clamp(1.6rem,6.6vw,2.5rem);line-height:1.1;color:var(--ox);margin:.4rem 0 .7rem}
+/* walk-in rules ticket */
+.rules{display:grid;gap:.8rem;margin-top:1.3rem}
+@media(min-width:800px){.rules{grid-template-columns:repeat(3,1fr)}}
+.rule{border:2px solid var(--ink);border-radius:6px;padding:1.1rem;background:#fbf6ec;position:relative}
+.rule .n{font-family:Graduate,serif;font-size:2rem;line-height:1;color:var(--ox)}
+.rule h3{font-family:Oswald,sans-serif;font-weight:500;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;margin:.4rem 0 .2rem}
+.rule p{font-size:1.02rem;color:var(--mute)}
+/* signature 2: memorabilia wall */
+.wall{background:repeating-linear-gradient(90deg,#2b3a5c 0 26px,#273554 26px 28px);border-radius:10px;padding:1.4rem 1rem;margin-top:1.4rem;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:4.2rem;gap:.7rem;box-shadow:inset 0 0 40px rgba(0,0,0,.35)}
+.fr{background:var(--cream);border:6px solid #3d2716;box-shadow:0 6px 10px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;text-align:center;padding:.3rem;transition:transform .6s var(--spring)}
+.fr:active{transform:scale(.96) rotate(0)}
+@media(hover:hover){.fr:hover{transform:translateY(-3px) rotate(0)!important}}
+.fr q{quotes:none;font-style:italic;font-size:.88rem;line-height:1.25;color:var(--ink)}
+.fr small{display:block;font:500 .62rem/1.2 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ox);margin-top:.25rem}
+.pen{background:none;border:0;box-shadow:none;padding:0}
+.pen svg{width:100%;height:100%}
+.f1{grid-column:1/5;grid-row:span 2;transform:rotate(-1deg)}
+.f2{grid-column:5/7;grid-row:span 1}
+.f3{grid-column:5/7;grid-row:span 1;transform:rotate(1.5deg);background:var(--brass)}
+.f4{grid-column:1/3;grid-row:span 2;transform:rotate(1deg)}
+.f5{grid-column:3/7;grid-row:span 2;transform:rotate(-.5deg)}
+.f6{grid-column:1/7;grid-row:span 2}
+.wallnote{font:400 .8rem/1.4 system-ui,sans-serif;color:var(--mute);margin-top:.6rem}
+/* hours board */
+.board{background:var(--ink);color:var(--cream);border-radius:8px;padding:1.3rem 1.2rem;margin-top:1rem;border:6px solid #3d2716}
+.board li{list-style:none;display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px dashed rgba(244,236,220,.25);font-family:Oswald,sans-serif;letter-spacing:.06em;font-size:1rem}
+.board li:last-child{border:0}
+.board li.off{color:#9a8f80}
+.board li.now{color:var(--brass)}
+.visit{display:grid;gap:1rem}
+@media(min-width:800px){.visit{grid-template-columns:1fr 1fr;align-items:start}}
+.card{background:#fbf6ec;border:2px solid var(--ink);border-radius:6px;padding:1.2rem}
+footer{text-align:center;font:400 .8rem/1.5 system-ui,sans-serif;color:var(--mute);padding:2rem 1rem 6.5rem}
+.dock{position:fixed;left:50%;transform:translateX(-50%);bottom:max(.8rem,env(safe-area-inset-bottom));display:flex;gap:.35rem;padding:.35rem;border-radius:8px;background:rgba(29,23,20,.78);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);box-shadow:0 12px 30px -10px rgba(0,0,0,.5);z-index:20}
+.dock a{min-height:44px;display:inline-flex;align-items:center;padding:0 1.1rem;border-radius:5px;color:var(--cream);font:500 .88rem/1 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:transform .4s var(--spring)}
+.dock a:first-child{background:var(--brass);color:var(--ink)}
+.dock a:active{transform:scale(.95);transition:transform 90ms ease-out}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .9s var(--spring)}
+.rv.in-view{opacity:1;transform:none}
+@media(prefers-reduced-transparency:reduce){.dock{background:var(--ink);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Eric's Barber Shop's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+  <div class="w">
+    <div>
+      <span class="est">Portsmouth &middot; Rhode Island</span>
+      <h1>Eric's Barber Shop</h1>
+      <p class="lede">A proper haircut with an old school feel on East Main Road. No appointments. Just walk in, grab a seat and Eric will take care of you.</p>
+      <div class="row"><a class="btn bb" href="tel:+14016407827">Call the shop</a><a class="btn bo" href="https://www.google.com/maps/search/?api=1&amp;query=Eric%27s+Barber+Shop%2C+1980+E+Main+Rd%2C+Portsmouth%2C+RI+02871">Directions</a></div>
+    </div>
+    <div class="signwrap" aria-live="polite">
+      <div class="string"></div>
+      <div class="plate" id="plate"><b id="pw">WALK-INS</b><span id="ps">Always welcome</span></div>
+      <p class="signnote" id="pn">Tue to Thu 9 to 5 &middot; Fri &amp; Sat 9 to 3</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="rv">
+    <div class="w">
+      <span class="k">How it works</span>
+      <h2>No appointment. Ever.</h2>
+      <div class="rules">
+        <div class="rule"><div class="n">01</div><h3>Walk in</h3><p>There's no booking and no app. Come by during shop hours.</p></div>
+        <div class="rule"><div class="n">02</div><h3>Take a seat</h3><p>"always has plenty of seating available," says a regular.</p></div>
+        <div class="rule"><div class="n">03</div><h3>Tell Eric the cut</h3><p>He "asks and listens to your cut requests," with a razor finish to clean it up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv" style="padding-top:0">
+    <div class="w">
+      <span class="k">The wall</span>
+      <h2>Look around while you wait</h2>
+      <p>Customers can't stop talking about the memorabilia Eric has collected over the years. Here are a few things they've said, framed.</p>
+      <div class="wall">
+        <div class="fr f1"><div><q>"Best barbershop in New England."</q><small>Google review, January 2025</small></div></div>
+        <div class="fr pen f2" aria-hidden="true"><svg viewBox="0 0 120 60"><path d="M4 4 L116 30 L4 56Z" fill="#8e2a30"/><text x="14" y="36" font-family="Graduate" font-size="16" fill="#f4ecdc">R.I.</text></svg></div>
+        <div class="fr f3"><div><q>"old school"</q><small>Nov 2025</small></div></div>
+        <div class="fr f4"><div><q>"plenty of candy to bribe your kids with for AFTER the haircut"</q><small>Aug 2021</small></div></div>
+        <div class="fr f5"><div><q>"I enjoy looking over the extensive memorabilia on the walls that he has acquired over the years."</q><small>Google review, January 2022</small></div></div>
+        <div class="fr f6"><div><q>"My youngest wanted a Mohawk and Eric didn't disappoint."</q><small>Google review, August 2021</small></div></div>
+      </div>
+      <p class="wallnote">Frames are illustrations of review quotes. The real memorabilia is better seen in person.</p>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="w visit">
+      <div>
+        <span class="k">Shop hours</span>
+        <h2>Open five days</h2>
+        <ul class="board" id="board">
+          <li data-d="1" class="off"><span>Monday</span><span>Closed</span></li>
+          <li data-d="2"><span>Tuesday</span><span>9 AM - 5 PM</span></li>
+          <li data-d="3"><span>Wednesday</span><span>9 AM - 5 PM</span></li>
+          <li data-d="4"><span>Thursday</span><span>9 AM - 5 PM</span></li>
+          <li data-d="5"><span>Friday</span><span>9 AM - 3 PM</span></li>
+          <li data-d="6"><span>Saturday</span><span>9 AM - 3 PM</span></li>
+          <li data-d="0" class="off"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:.4rem">
+        <span class="k">Find the shop</span>
+        <p style="font-size:1.25rem;margin:.5rem 0 1rem">1980 E Main Rd<br>Portsmouth, RI 02871</p>
+        <div class="row" style="margin-top:0"><a class="btn bb" href="https://www.google.com/maps/search/?api=1&amp;query=Eric%27s+Barber+Shop%2C+1980+E+Main+Rd%2C+Portsmouth%2C+RI+02871">Open in Maps</a><a class="btn bo" style="color:var(--ox);border-color:var(--ox)" href="tel:+14016407827">(401) 640-7827</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="dock" aria-label="Quick actions"><a href="tel:+14016407827">Call</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Eric%27s+Barber+Shop%2C+1980+E+Main+Rd%2C+Portsmouth%2C+RI+02871">Directions</a></nav>
+<script>
+(function(){
+var n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));var d=n.getDay(),h=n.getHours()+n.getMinutes()/60;
+var close={2:17,3:17,4:17,5:15,6:15}[d];var open=close&&h>=9&&h<close;
+var p=document.getElementById('plate');
+if(open){document.getElementById('pw').textContent='OPEN';document.getElementById('ps').textContent='Walk right in'}
+else{p.classList.add('closed');document.getElementById('pw').textContent='CLOSED';document.getElementById('ps').textContent='Walk-ins always welcome'}
+var li=document.querySelector('#board li[data-d="'+d+'"]');if(li&&!li.classList.contains('off'))li.classList.add('now');
+var r=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){r.forEach(function(e){e.classList.add('in-view')});return}
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});r.forEach(function(e){o.observe(e)})})();
+</script>
+</body>
+</html>

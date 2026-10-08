@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gary's Bakery | Scratch Donuts in Madison, SD</title>
+<meta name="description" content="Gary's Bakery on Egan Ave in Madison, South Dakota. Donuts made from scratch, open Tuesday to Saturday from 5:30 am.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--box:#f6c9cf;--box2:#eba9b3;--ink:#3a1d22;--glaze:#fff6ea;--teal:#1f7a78;--sun:#ffb347;--paper:#fffaf4;
+ --s1:.5rem;--s2:.75rem;--s3:1rem;--s4:1.5rem;--s5:2.25rem;--s6:3.5rem}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.55 Rubik,system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.75rem;letter-spacing:.01em;line-height:1.45;padding:.55rem 1rem;text-align:center;background:var(--ink);color:#fbe7ea}
+/* hero: the lid of a donut box */
+.lid{position:relative;background:repeating-linear-gradient(90deg,var(--box) 0 34px,var(--box2) 34px 38px);padding:var(--s6) var(--s3) var(--s5);text-align:center;overflow:hidden}
+.lid::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;background:linear-gradient(180deg,transparent,rgba(58,29,34,.14))}
+.stamp{display:inline-block;background:var(--paper);border:3px solid var(--ink);border-radius:18px;padding:var(--s4) var(--s4) var(--s3);box-shadow:6px 6px 0 var(--ink);max-width:30rem}
+.stamp small{display:block;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.7rem;color:var(--teal)}
+h1{font-family:Shrikhand,cursive;font-weight:400;font-size:clamp(3rem,15vw,5.6rem);line-height:.95;letter-spacing:-.01em;margin:.35rem 0 .2rem;color:#c2405a}
+.stamp p{font-size:1.05rem;line-height:1.4}
+.since{display:flex;justify-content:center;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s4)}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--glaze);border:2px solid var(--ink);border-radius:999px;padding:.45rem .9rem;font-weight:500;font-size:.9rem}
+.chip i{width:.6rem;height:.6rem;border-radius:50%;background:var(--sun);box-shadow:0 0 0 3px rgba(255,179,71,.35)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.3rem;border-radius:14px;font-weight:700;text-decoration:none;border:2px solid var(--ink);
+ transition:transform .35s cubic-bezier(.2,.9,.25,1),box-shadow .35s cubic-bezier(.2,.9,.25,1);will-change:transform;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.btn.p{background:var(--teal);color:#fff;box-shadow:4px 4px 0 var(--ink)}
+.btn.s{background:var(--paper);box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px) scale(.97);box-shadow:1px 1px 0 var(--ink);transition-duration:.1s}
+.ctas{display:flex;gap:var(--s2);justify-content:center;flex-wrap:wrap;margin-top:var(--s4)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+main{max-width:58rem;margin:0 auto;padding:0 var(--s3)}
+h2{font-family:Shrikhand,cursive;font-weight:400;font-size:clamp(1.9rem,7vw,2.6rem);line-height:1.05;letter-spacing:-.005em;color:#c2405a}
+.kick{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+section{padding:var(--s6) 0 0}
+/* signature: fill your dozen */
+.boxwrap{display:grid;gap:var(--s4);margin-top:var(--s4)}
+@media(min-width:760px){.boxwrap{grid-template-columns:1.1fr .9fr;align-items:start}}
+.box{background:var(--box);border:3px solid var(--ink);border-radius:14px;padding:var(--s3);box-shadow:inset 0 0 0 6px var(--box2)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem}
+.slot{aspect-ratio:1;border-radius:12px;background:#fbe2e5;border:2px dashed rgba(58,29,34,.3);display:grid;place-items:center;position:relative}
+.slot svg{width:86%;height:86%;transform:scale(.4);opacity:0;transition:transform .45s cubic-bezier(.3,1.35,.5,1),opacity .2s}
+.slot.on svg{transform:scale(1);opacity:1}
+.picker{display:grid;gap:.6rem}
+.pick{display:flex;align-items:center;gap:.8rem;min-height:56px;width:100%;text-align:left;font:inherit;background:#fff;border:2px solid var(--ink);border-radius:14px;padding:.5rem .8rem;cursor:pointer;
+ transition:transform .35s cubic-bezier(.2,.9,.25,1),background .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;color:var(--ink)}
+.pick:active{transform:scale(.97);background:var(--glaze);transition-duration:.1s}
+.pick svg{flex:0 0 40px;height:40px}
+.pick b{display:block;font-weight:700;line-height:1.2}
+.pick span{font-size:.82rem;opacity:.75}
+.count{margin-top:var(--s2);display:flex;justify-content:space-between;align-items:center;gap:.6rem;font-weight:500}
+.reset{font:inherit;background:none;border:0;text-decoration:underline;min-height:44px;cursor:pointer;color:var(--ink)}
+.note{font-size:.8rem;opacity:.75;margin-top:var(--s2)}
+/* early bird clock */
+.early{display:grid;gap:var(--s4);background:var(--ink);color:var(--glaze);border-radius:24px;padding:var(--s5) var(--s4);margin-top:var(--s4);position:relative;overflow:hidden}
+@media(min-width:760px){.early{grid-template-columns:auto 1fr;align-items:center}}
+.early h2{color:var(--sun)}
+.clock{width:180px;height:180px;margin:0 auto}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;margin-top:var(--s3)}
+.d{text-align:center;border-radius:10px;padding:.5rem 0;font-size:.78rem;background:rgba(255,255,255,.08)}
+.d b{display:block;font-size:.95rem}
+.d.open{background:var(--sun);color:var(--ink)}
+blockquote{margin:0;background:#fff;border:2px solid var(--ink);border-radius:18px;padding:var(--s4);position:relative;font-size:1.05rem;line-height:1.5}
+blockquote cite{display:block;font-style:normal;font-size:.8rem;margin-top:.6rem;opacity:.7}
+.quotes{display:grid;gap:var(--s3);margin-top:var(--s4)}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.visit{display:grid;gap:var(--s3);margin-top:var(--s4)}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:var(--s4)}
+.card h3{font-size:1.15rem;letter-spacing:-.005em;margin-bottom:.4rem}
+footer{text-align:center;font-size:.85rem;padding:var(--s6) var(--s3) var(--s5);opacity:.85}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .7s cubic-bezier(.2,.9,.25,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}.slot svg{transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Gary's Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="lid">
+ <div class="stamp">
+  <small>Egan Ave · Madison, South Dakota</small>
+  <h1>Gary's Bakery</h1>
+  <p>Donuts made from scratch, ready before the town is awake.</p>
+ </div>
+ <div class="since"><span class="chip"><i></i>Opens 5:30 am, Tue to Sat</span><span class="chip">Come early for first pick</span></div>
+ <div class="ctas"><a class="btn p" href="tel:+16052564445">Call (605) 256-4445</a><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Gary%27s%20Bakery%20115%20N%20Egan%20Ave%20Madison%20SD%2057042">Directions</a></div>
+</header>
+<main>
+<section class="rv">
+ <p class="kick">Fill your box</p>
+ <h2>Plan your dozen</h2>
+ <p style="max-width:34rem;margin-top:.5rem">Tap the donuts customers rave about to sketch out a box before you call or stop in. Nothing is ordered here; it is just a handy list.</p>
+ <div class="boxwrap">
+  <div class="box"><div class="grid" id="grid"></div>
+   <div class="count"><span id="cnt">0 of 12 picked</span><button class="reset" id="reset" type="button">Empty the box</button></div></div>
+  <div class="picker" id="picker"></div>
+ </div>
+ <p class="note">The lineup changes day to day. Names come from customer reviews; the short descriptions are a sample to confirm with Gary's.</p>
+</section>
+<section class="rv">
+ <div class="early">
+  <svg class="clock" viewBox="0 0 200 200" aria-label="Clock showing 5:30">
+   <circle cx="100" cy="100" r="92" fill="#fff6ea" stroke="#ffb347" stroke-width="8"/>
+   <g stroke="#3a1d22" stroke-width="3">
+    <line x1="100" y1="16" x2="100" y2="30"/><line x1="184" y1="100" x2="170" y2="100"/><line x1="100" y1="184" x2="100" y2="170"/><line x1="16" y1="100" x2="30" y2="100"/></g>
+   <line x1="100" y1="100" x2="88" y2="146" stroke="#3a1d22" stroke-width="7" stroke-linecap="round"/>
+   <line x1="100" y1="100" x2="100" y2="168" stroke="#c2405a" stroke-width="4" stroke-linecap="round"/>
+   <circle cx="100" cy="100" r="7" fill="#3a1d22"/>
+  </svg>
+  <div>
+   <p class="kick" style="color:#9fe0dc">The early bird gets the long john</p>
+   <h2>Open 5:30 am to noon</h2>
+   <p style="margin-top:.5rem">A longtime regular put it simply: "be sure to get there early for your prime choice of the doughnuts."</p>
+   <div class="days" aria-label="Weekly hours">
+    <div class="d">Mon<b>Closed</b></div><div class="d open">Tue<b>5:30</b></div><div class="d open">Wed<b>5:30</b></div><div class="d open">Thu<b>5:30</b></div><div class="d open">Fri<b>5:30</b></div><div class="d open">Sat<b>5:30</b></div><div class="d">Sun<b>Closed</b></div>
+   </div>
+   <p class="note" style="color:#fbe7ea">Hours as listed on Google. Call to confirm holidays.</p>
+  </div>
+ </div>
+</section>
+<section class="rv">
+ <p class="kick">Heard around Madison</p>
+ <h2>What regulars say</h2>
+ <div class="quotes">
+  <blockquote>"Undoubtedly the best donuts in town!"<cite>Google review, Nov 2025</cite></blockquote>
+  <blockquote>"Gary's donuts are delicious, made from scratch and are quite the delight."<cite>Google review, Sep 2025</cite></blockquote>
+  <blockquote>"Their glazed twist is absolutely delicious, and their Bavarian cream filled long johns are to die for."<cite>Google review, Oct 2019</cite></blockquote>
+ </div>
+</section>
+<section class="rv">
+ <p class="kick">Find the bakery</p>
+ <h2>On Egan Avenue</h2>
+ <div class="visit">
+  <div class="card"><h3>115 N Egan Ave</h3><p>Madison, SD 57042</p><p style="margin-top:.8rem"><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Gary%27s%20Bakery%20115%20N%20Egan%20Ave%20Madison%20SD%2057042">Open in Maps</a></p></div>
+  <div class="card"><h3>Bringing a box to work?</h3><p>Call ahead to ask about larger orders for the office or a meeting.</p><p style="margin-top:.8rem"><a class="btn p" href="tel:+16052564445">Call the bakery</a></p><p class="note">Sample: ordering details to confirm with Gary's.</p></div>
+ </div>
+</section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{const D=[
+ {n:"Glazed twist",d:"Sample: a classic twisted raised donut, glazed",c:"#f3c77d",t:"#fff3d9"},
+ {n:"Bavarian cream long john",d:"Sample: long john filled with Bavarian cream",c:"#e9b26a",t:"#5b3424",lj:1},
+ {n:"Custard filled long john",d:"Sample: long john with a custard filling",c:"#e9b26a",t:"#f7e3a3",lj:1},
+ {n:"Jelly filled",d:"Sample: round filled donut with jelly",c:"#eab06b",t:"#f4f0ea",j:1}];
+const svg=(x)=>x.lj?`<svg viewBox="0 0 60 60" aria-hidden="true"><rect x="6" y="20" width="48" height="20" rx="10" fill="${x.c}"/><rect x="8" y="20" width="44" height="11" rx="7" fill="${x.t}"/></svg>`
+ :x.j?`<svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="22" fill="${x.c}"/><circle cx="30" cy="30" r="22" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-dasharray="2 5"/><circle cx="44" cy="22" r="4" fill="#b8243f"/></svg>`
+ :`<svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 34c6-14 14-4 18-14s14 0 18 6" fill="none" stroke="${x.c}" stroke-width="12" stroke-linecap="round"/><path d="M12 34c6-14 14-4 18-14s14 0 18 6" fill="none" stroke="${x.t}" stroke-width="5" stroke-linecap="round" opacity=".8"/></svg>`;
+const g=document.getElementById('grid'),p=document.getElementById('picker'),cnt=document.getElementById('cnt');let box=[];
+for(let i=0;i<12;i++){const s=document.createElement('div');s.className='slot';g.appendChild(s)}
+const draw=()=>{[...g.children].forEach((s,i)=>{const x=box[i];if(x!==undefined){s.innerHTML=svg(D[x]);requestAnimationFrame(()=>s.classList.add('on'))}else{s.classList.remove('on');s.innerHTML=''}});cnt.textContent=box.length+' of 12 picked'};
+D.forEach((x,i)=>{const b=document.createElement('button');b.type='button';b.className='pick';b.innerHTML=svg(x)+`<div><b>${x.n}</b><span>${x.d}</span></div>`;b.onclick=()=>{if(box.length<12){box.push(i);draw()}};p.appendChild(b)});
+document.getElementById('reset').onclick=()=>{box=[];draw()};
+const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));})();
+</script>
+</body>
+</html>

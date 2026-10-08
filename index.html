@@ -6,12 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Patch &amp; Flow Studio · Small business. Big presence.</title>
+    <title>Patch &amp; Flow Studio · Local roots. New possibilities.</title>
     <meta
       name="description"
-      content="Thoughtful, custom websites for the businesses that make a neighbourhood. One flat fee, no monthly fees, and a free sample before you commit."
+      content="Original websites for independent businesses. A little local character, a whole new world of possibility. One flat fee. Free sample first."
     />
-    <meta name="theme-color" content="#f5eee6" />
+    <meta name="theme-color" content="#e8dcd2" />
     <meta
       name="google-site-verification"
       content="S-gi2-34Yi63LQ5dnQLOypTzXGBUD8sxA1NZLgaiq7A"
@@ -19,11 +19,11 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Patch & Flow Studio · Small business. Big presence."
+      content="Patch &amp; Flow · Local roots. New possibilities."
     />
     <meta
       property="og:description"
-      content="Custom websites with a little local character. One flat fee. Yours to keep. See a free sample first."
+      content="Custom websites for local businesses. One flat fee. Yours to keep. See a free sample first."
     />
     <meta
       property="og:image"
@@ -36,13 +36,7 @@
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%232e332d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%23f5eee6'%3E%26amp;%3C/text%3E%3C/svg%3E"
-    />
-    <link
-      rel="preload"
-      href="assets/flow/landscape.webp"
-      as="image"
-      fetchpriority="high"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2330332d'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='32' fill='%23e8dcd2'%3E%26amp;%3C/text%3E%3C/svg%3E"
     />
     <link
       rel="preload"
@@ -51,8 +45,15 @@
       type="font/woff2"
       crossorigin
     />
+    <link
+      rel="preload"
+      href="v4/work/tailor/cormorant-garamond-latin-300-italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="assets/flow/homepage.css" />
-    <script src="assets/flow/homepage.js" defer></script>
+    <script type="module" src="assets/flow/homepage.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -66,427 +67,399 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="world" id="world" aria-hidden="true">
+      <div class="world-fallback"></div>
+      <canvas id="world-canvas"></canvas>
+      <div class="world-grain"></div>
+    </div>
+    <div class="page-curtain" aria-hidden="true">
+      <span>Made to <i>move you.</i></span>
+    </div>
     <header class="site-header" id="site-header">
       <a class="wordmark" href="#top" aria-label="Patch and Flow Studio home"
-        >patch <i>&amp;</i> flow<span class="wordmark-studio">STUDIO</span></a
+        >patch<i>&amp;</i>flow<span>STUDIO</span></a
       >
-      <div class="header-actions">
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#work">Work</a><a href="#studio">Studio</a
-          ><a href="#contact">Say hello</a>
-        </nav>
-        <button
-          class="menu-toggle"
-          id="menu-toggle"
-          aria-label="Open menu"
-          aria-controls="site-menu"
-          aria-expanded="false"
-        >
-          <span></span><span></span>
-        </button>
-      </div>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#studio">Studio</a><a href="#work">Work</a
+        ><a href="#contact">Say hello <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span><span></span>
+      </button>
     </header>
-
-    <dialog class="site-menu" id="site-menu" aria-labelledby="menu-title">
+    <dialog id="site-menu" class="site-menu" aria-labelledby="menu-title">
       <div class="menu-top">
-        <span class="wordmark">patch <i>&amp;</i> flow</span
-        ><button class="menu-close" id="menu-close" aria-label="Close menu">
+        <span class="wordmark">patch<i>&amp;</i>flow</span
+        ><button id="menu-close" aria-label="Close menu">
           Close <span aria-hidden="true">×</span>
         </button>
       </div>
-      <div class="menu-content">
+      <div class="menu-layout">
+        <div class="menu-note">
+          <span class="menu-flower" aria-hidden="true">✳</span>
+          <p>
+            Independent minds.<br />Local hearts.<br />Unexpected possibilities.
+          </p>
+        </div>
         <nav
           class="menu-links"
-          aria-label="Expanded navigation"
+          aria-label="Explore Patch and Flow"
           id="menu-title"
         >
-          <a href="#work" data-preview="v4/work/bakery/thumb.jpg"
-            ><small>01</small><span>Our work</span></a
-          >
-          <a href="#studio" data-preview="v4/work/barber/thumb.jpg"
-            ><small>02</small><span>The studio</span></a
-          >
-          <a href="#process" data-preview="v4/work/tailor/thumb.jpg"
-            ><small>03</small><span>The process</span></a
-          >
-          <a href="#contact" data-preview="v4/work/auto/thumb.jpg"
-            ><small>04</small><span>Say hello<i>↗</i></span></a
+          <a href="#top"><small>01</small><span>Our world</span></a>
+          <a href="#work"><small>02</small><span>The work</span></a>
+          <a href="#studio"><small>03</small><span>The studio</span></a>
+          <a href="#contact"
+            ><small>04</small><span>Say hello <i>↗</i></span></a
           >
         </nav>
-        <div class="menu-aside">
-          <img
-            id="menu-preview"
-            src="v4/work/bakery/thumb.jpg"
-            alt=""
-            width="1600"
-            height="1000"
-          />
-          <p>Small businesses.<br />A world of possibilities.</p>
-        </div>
       </div>
       <div class="menu-bottom">
         <a href="mailto:patchflowstudio@gmail.com">patchflowstudio@gmail.com</a
-        ><span>Independent by design.</span>
+        ><a href="#process">A simple way to start ↗</a>
       </div>
     </dialog>
-
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-scene" id="hero-scene" aria-hidden="true">
-          <img
-            class="hero-landscape"
-            src="assets/flow/landscape.webp"
-            alt=""
-            width="1672"
-            height="941"
-            fetchpriority="high"
-          />
-          <div class="hero-tint"></div>
-        </div>
+        <div class="hero-halo" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow hero-enter" style="--delay: 100ms">
-            An independent web studio for local businesses
+          <p class="eyebrow hero-enter">
+            Independent web design. A little closer to home.
           </p>
           <h1 id="hero-title">
-            <span class="hero-line hero-line-serif"
-              ><span>Small business.</span></span
-            ><span class="hero-line"><span>Big presence.</span></span>
+            <span class="title-line"><i>Local roots.</i></span
+            ><span class="title-line">New possibilities.</span>
           </h1>
-          <p class="hero-description hero-enter" style="--delay: 380ms">
-            Good people. Great little websites.<br />Made with care. Made to be
-            yours.
+          <p class="hero-description hero-enter">
+            Original websites for the businesses<br />that make a neighbourhood.
           </p>
-          <a
-            class="pill pill-light hero-enter magnetic"
-            style="--delay: 460ms"
-            href="#work"
-            ><span>Take a look around</span
-            ><span class="pill-arrow" aria-hidden="true">↘</span></a
+          <a class="pill hero-enter magnetic" href="#work"
+            ><span>Step into our work</span
+            ><span aria-hidden="true">↘</span></a
           >
         </div>
         <div class="hero-bottom">
-          <a class="scroll-link" href="#studio"
-            ><span class="scroll-line" aria-hidden="true"></span>Scroll to
-            discover</a
-          ><span class="hero-note"
-            >A little local character.<br />A whole new point of view.</span
-          ><button class="mood-button" id="mood-button" aria-pressed="false">
-            <span class="mood-icon" aria-hidden="true">✳</span
-            ><span id="mood-label">Change the mood</span>
+          <a href="#studio" class="scroll-cue"
+            ><span aria-hidden="true">↓</span> A little further, a little
+            different.</a
+          >
+          <button id="mood-button" class="mood-button" aria-pressed="false">
+            <span aria-hidden="true">✳</span
+            ><span id="mood-label">A change of light</span>
           </button>
         </div>
       </section>
 
       <section
-        class="studio section-pad"
+        class="studio chapter"
         id="studio"
         aria-labelledby="studio-title"
       >
-        <div class="section-meta">
-          <span class="eyebrow">(01 — The studio)</span
-          ><span class="eyebrow">Small on purpose. Personal by nature.</span>
+        <div class="section-label">
+          <span>(01 — A small introduction)</span
+          ><span>Personal by nature.</span>
         </div>
-        <div class="studio-grid">
-          <h2 class="statement reveal" id="studio-title">
-            You make the<br />neighbourhood.<br /><em
-              >We make your<br />corner of the web.</em
-            >
-          </h2>
+        <h2 class="studio-statement reveal" id="studio-title">
+          Good people.<br /><i>Great little businesses.</i><br />A website to
+          match.
+        </h2>
+        <div class="studio-bottom">
+          <span class="studio-symbol reveal" aria-hidden="true">✳</span>
           <div class="studio-copy reveal">
-            <span class="studio-asterisk" aria-hidden="true">✳</span>
             <p class="lead">
-              The first coffee. The familiar face. The shop that knows your
-              name.
+              The corner shop. The familiar chair.<br />The place that knows
+              your name.
             </p>
             <p>
-              Your business has a character all its own. Your website should,
-              too. We build thoughtful, fast websites for owner-run shops,
-              studios and trades — with everything a customer needs to choose
-              you.
+              You bring something special to your neighbourhood. We bring it to
+              the web: considered design, useful details, and a character all
+              your own.
             </p>
             <a class="text-link" href="#contact"
-              >Let's make something that feels like you
+              >Something that feels like you
               <span aria-hidden="true">↗</span></a
             >
-            <div class="studio-promises">
-              <span>One flat fee.</span><span>No monthly fees.</span
+          </div>
+          <div class="studio-offer reveal">
+            <p class="eyebrow">Small studio. Full attention.</p>
+            <p>
+              You speak to the person making your website. No handovers, no
+              retainers. Just good work, made together.
+            </p>
+            <div class="mini-promises">
+              <span>Custom built.</span><span>One flat fee.</span
               ><span>Yours to keep.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="work section-pad" id="work" aria-labelledby="work-title">
-        <div class="section-meta">
-          <span class="eyebrow">(02 — Selected work)</span
-          ><span class="eyebrow">Imagined here. Ready for the real world.</span>
-        </div>
-        <div class="work-heading">
-          <h2 class="section-title reveal" id="work-title">
-            <em>A little different.</em><br />A lot like you.
+      <section class="work chapter" id="work" aria-labelledby="work-title">
+        <div class="work-intro">
+          <p class="eyebrow reveal">(02 — The possibility department)</p>
+          <h2 class="work-title reveal" id="work-title">
+            <i>Selected</i> possibilities.
           </h2>
-          <p class="work-intro reveal">
-            Four studio concepts. Four personalities.<br />Explore the live
-            sites to find your kind of possibility.
+          <p class="work-description reveal">
+            Four studio concepts. Four little worlds.<br />Find your kind of
+            different.
+          </p>
+          <div
+            class="work-filters"
+            role="group"
+            aria-label="Filter studio concepts"
+          >
+            <button
+              class="filter-button is-active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All <sup>04</sup>
+            </button>
+            <button
+              class="filter-button"
+              data-filter="food"
+              aria-pressed="false"
+            >
+              Food <sup>01</sup>
+            </button>
+            <button
+              class="filter-button"
+              data-filter="craft"
+              aria-pressed="false"
+            >
+              Craft <sup>02</sup>
+            </button>
+            <button
+              class="filter-button"
+              data-filter="trade"
+              aria-pressed="false"
+            >
+              Trades <sup>01</sup>
+            </button>
+          </div>
+          <p class="sr-only" id="filter-status" role="status">
+            Showing all 4 studio concepts.
           </p>
         </div>
-        <div
-          class="work-filters"
-          role="group"
-          aria-label="Filter studio concepts"
-        >
-          <button
-            class="filter-button is-active"
-            data-filter="all"
-            aria-pressed="true"
-          >
-            All work <sup>04</sup></button
-          ><button
-            class="filter-button"
-            data-filter="food"
-            aria-pressed="false"
-          >
-            Food &amp; drink</button
-          ><button
-            class="filter-button"
-            data-filter="craft"
-            aria-pressed="false"
-          >
-            Craft &amp; care</button
-          ><button
-            class="filter-button"
-            data-filter="trade"
-            aria-pressed="false"
-          >
-            Local trades
-          </button>
-        </div>
-        <p class="sr-only" id="filter-status" role="status" aria-live="polite">
-          Showing all 4 studio concepts.
-        </p>
         <div class="work-grid" id="work-grid">
-          <article class="work-card reveal" data-category="food">
+          <article class="work-card" data-category="food">
             <a
               class="project-link"
               href="v4/work/bakery/"
               aria-label="Explore Hearth and Crumb Bakery, a studio concept"
-              ><div class="project-media media-bakery">
+            >
+              <div class="project-media">
                 <img
                   src="v4/work/bakery/thumb.jpg"
-                  alt="Hearth and Crumb bakery website concept with a warm, handcrafted visual identity"
+                  alt="A warm, handcrafted bakery website for Hearth and Crumb"
                   width="1600"
                   height="1000"
                   loading="lazy"
-                /><span class="project-number">01 / 04</span
-                ><span class="project-open" aria-hidden="true"
-                  >Explore <span>↗</span></span
+                /><span class="project-view" aria-hidden="true"
+                  >Have a look ↗</span
                 >
               </div>
               <div class="project-caption">
                 <div>
                   <h3>Hearth &amp; Crumb</h3>
-                  <p>For the early risers &amp; the slow mornings.</p>
+                  <p>Fresh bread. Fresh perspective.</p>
                 </div>
-                <span class="project-category">Bakery<br />Studio concept</span>
-              </div></a
-            >
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="project-meta">
+                <span>Bakery · Web design</span><span>Studio concept / 01</span>
+              </div>
+            </a>
           </article>
-          <article class="work-card reveal" data-category="craft">
+          <article class="work-card" data-category="craft">
             <a
               class="project-link"
               href="v4/work/barber/"
               aria-label="Explore Ledger and Blade Barbers, a studio concept"
-              ><div class="project-media media-barber">
+            >
+              <div class="project-media">
                 <img
                   src="v4/work/barber/thumb.jpg"
-                  alt="Ledger and Blade barber website concept with deep green and editorial typography"
+                  alt="An editorial barbershop website for Ledger and Blade"
                   width="1600"
                   height="1000"
                   loading="lazy"
-                /><span class="project-number">02 / 04</span
-                ><span class="project-open" aria-hidden="true"
-                  >Explore <span>↗</span></span
+                /><span class="project-view" aria-hidden="true"
+                  >Have a look ↗</span
                 >
               </div>
               <div class="project-caption">
                 <div>
                   <h3>Ledger &amp; Blade</h3>
-                  <p>A familiar chair. A fresh perspective.</p>
+                  <p>A familiar chair. A sharper look.</p>
                 </div>
-                <span class="project-category"
-                  >Barbershop<br />Studio concept</span
-                >
-              </div></a
-            >
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="project-meta">
+                <span>Barbershop · Web design</span
+                ><span>Studio concept / 02</span>
+              </div>
+            </a>
           </article>
-          <article class="work-card reveal" data-category="craft">
+          <article class="work-card" data-category="craft">
             <a
               class="project-link"
               href="v4/work/tailor/"
               aria-label="Explore Atelier Morrow, a studio concept"
-              ><div class="project-media media-tailor">
+            >
+              <div class="project-media">
                 <img
                   src="v4/work/tailor/thumb.jpg"
-                  alt="Atelier Morrow tailoring website concept with refined typography and fabric imagery"
+                  alt="A refined tailoring website for Atelier Morrow"
                   width="1600"
                   height="1000"
                   loading="lazy"
-                /><span class="project-number">03 / 04</span
-                ><span class="project-open" aria-hidden="true"
-                  >Explore <span>↗</span></span
+                /><span class="project-view" aria-hidden="true"
+                  >Have a look ↗</span
                 >
               </div>
               <div class="project-caption">
                 <div>
                   <h3>Atelier Morrow</h3>
-                  <p>Something made to fit. Nothing off the rack.</p>
+                  <p>Made to fit. Made to feel.</p>
                 </div>
-                <span class="project-category"
-                  >Tailoring<br />Studio concept</span
-                >
-              </div></a
-            >
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="project-meta">
+                <span>Tailoring · Web design</span
+                ><span>Studio concept / 03</span>
+              </div>
+            </a>
           </article>
-          <article class="work-card reveal" data-category="trade">
+          <article class="work-card" data-category="trade">
             <a
               class="project-link"
               href="v4/work/auto/"
               aria-label="Explore Northgate Auto Care, a studio concept"
-              ><div class="project-media media-auto">
+            >
+              <div class="project-media">
                 <img
                   src="v4/work/auto/thumb.jpg"
-                  alt="Northgate Auto Care website concept with bold typography and workshop photography"
+                  alt="A confident workshop website for Northgate Auto Care"
                   width="1600"
                   height="1000"
                   loading="lazy"
-                /><span class="project-number">04 / 04</span
-                ><span class="project-open" aria-hidden="true"
-                  >Explore <span>↗</span></span
+                /><span class="project-view" aria-hidden="true"
+                  >Have a look ↗</span
                 >
               </div>
               <div class="project-caption">
                 <div>
                   <h3>Northgate Auto Care</h3>
-                  <p>Built on trust. Ready for the road ahead.</p>
+                  <p>Built on trust. Ready to go.</p>
                 </div>
-                <span class="project-category"
-                  >Auto repair<br />Studio concept</span
-                >
-              </div></a
-            >
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="project-meta">
+                <span>Auto care · Web design</span
+                ><span>Studio concept / 04</span>
+              </div>
+            </a>
           </article>
+        </div>
+        <div class="work-outro reveal">
+          <p>Your business could be<br /><i>our next little world.</i></p>
+          <a class="pill" href="#contact"
+            >See a free sample <span aria-hidden="true">↗</span></a
+          >
         </div>
       </section>
 
-      <div class="word-ribbon" aria-hidden="true">
-        <div class="word-ribbon-track">
-          <span>A little craft</span><i>✳</i><span>A lot of character</span
-          ><i>✳</i><span>Made to flow</span><i>✳</i><span>A little craft</span
-          ><i>✳</i><span>A lot of character</span><i>✳</i
-          ><span>Made to flow</span><i>✳</i>
-        </div>
-      </div>
-
       <section
-        class="services section-pad"
+        class="services chapter"
         id="services"
         aria-labelledby="services-title"
       >
-        <div class="section-meta">
-          <span class="eyebrow">(03 — What we do)</span
-          ><span class="eyebrow"
-            >All the essentials. Your kind of character.</span
-          >
+        <div class="section-label">
+          <span>(03 — Character meets clarity)</span
+          ><span>Beautiful. Useful. Yours.</span>
         </div>
-        <div class="services-grid">
+        <div class="services-layout">
           <div class="services-heading">
             <h2 class="section-title reveal" id="services-title">
-              Thoughtfully made.<br /><em>Simply useful.</em>
+              A good feeling.<br /><i>A clear purpose.</i>
             </h2>
-            <p class="reveal">
-              An easy-to-use website that answers the important questions: what
-              you do, where you are, and how to get in touch.
+            <p class="lead reveal">
+              A website should look the part.<br />And do its part.
             </p>
-            <a class="text-link reveal" href="#contact"
-              >See a free sample first <span aria-hidden="true">↗</span></a
-            >
           </div>
           <div class="service-list">
             <details class="service-item reveal" open>
               <summary>
-                <span class="service-index">01</span>
-                <h3>Custom websites</h3>
-                <span class="details-icon" aria-hidden="true"></span>
+                <span>01</span>
+                <h3>Made around you</h3>
+                <i aria-hidden="true">+</i>
               </summary>
-              <div class="service-answer">
-                <p>
-                  One fast, considered page. Your services, hours and prices,
-                  with clear contact, booking and directions links. Designed
-                  around your business.
-                </p>
-              </div>
+              <p>
+                Your services, hours, prices and personality, brought together
+                in one fast, thoughtful page. Clear contact, booking and
+                directions links.
+              </p>
             </details>
             <details class="service-item reveal">
               <summary>
-                <span class="service-index">02</span>
-                <h3>A fresh start</h3>
-                <span class="details-icon" aria-hidden="true"></span>
+                <span>02</span>
+                <h3>A fresh perspective</h3>
+                <i aria-hidden="true">+</i>
               </summary>
-              <div class="service-answer">
-                <p>
-                  Have a website that's showing its age? We rethink the layout,
-                  tidy up the content, and make it feel right on every screen.
-                </p>
-              </div>
+              <p>
+                Outgrown your old site? We rethink the layout, simplify the
+                content, and make it feel right on every screen.
+              </p>
             </details>
             <details class="service-item reveal">
               <summary>
-                <span class="service-index">03</span>
-                <h3>Words &amp; details</h3>
-                <span class="details-icon" aria-hidden="true"></span>
+                <span>03</span>
+                <h3>The words &amp; details</h3>
+                <i aria-hidden="true">+</i>
               </summary>
-              <div class="service-answer">
-                <p>
-                  Clear, useful copy. Click-to-call, maps and menu links that
-                  work. Basic search setup so your business is easier to find
-                  and understand.
-                </p>
-              </div>
+              <p>
+                Clear copy, click-to-call, maps, menu links and basic search
+                setup. Useful details that make choosing you a little easier.
+              </p>
             </details>
             <details class="service-item reveal">
               <summary>
-                <span class="service-index">04</span>
-                <h3>The finishing touches</h3>
-                <span class="details-icon" aria-hidden="true"></span>
+                <span>04</span>
+                <h3>Ready for the world</h3>
+                <i aria-hidden="true">+</i>
               </summary>
-              <div class="service-answer">
-                <p>
-                  Domain connection and launch help, two rounds of revisions,
-                  and every file handed over. You'll always know where you
-                  stand.
-                </p>
-              </div>
+              <p>
+                Domain connection and launch help, two rounds of revisions, and
+                every file handed over. You always know where you stand.
+              </p>
             </details>
           </div>
         </div>
       </section>
 
       <section
-        class="comparison-section section-pad"
+        class="comparison-section chapter"
         id="compare"
         aria-labelledby="compare-title"
       >
-        <div class="section-meta">
-          <span class="eyebrow">(04 — A change of perspective)</span
-          ><span class="eyebrow">An illustrative studio concept</span>
-        </div>
         <div class="comparison-heading">
-          <h2 class="section-title reveal" id="compare-title">
-            Same business.<br /><em>Different feeling.</em>
-          </h2>
+          <div>
+            <p class="eyebrow">(04 — A change of perspective)</p>
+            <h2 class="section-title reveal" id="compare-title">
+              Same business.<br /><i>Different feeling.</i>
+            </h2>
+          </div>
           <p class="reveal">
-            The details were there all along.<br />Sometimes they just need room
-            to breathe.
+            The important details were there.<br />We just gave them room to
+            breathe.
           </p>
         </div>
         <figure class="comparison reveal">
@@ -495,20 +468,19 @@
               <span class="comparison-tag">Before</span>
               <div class="old-site">
                 <h3>RIVERA PLUMBING &amp; HEATING CO.</h3>
-                <p class="old-welcome">~ Welcome to our Web Site!!! ~</p>
+                <p>~ Welcome to our Web Site!!! ~</p>
                 <div class="old-banner">
-                  ★ SPRING SPECIAL ★ ASK US ★ NOW HIRING ★
+                  ★ SPECIAL OFFERS ★ ASK US ★ NOW HIRING ★
                 </div>
                 <p class="old-nav">
                   Home | Services | Coupons | Gallery | Guestbook | Contact
                 </p>
                 <div class="old-columns">
                   <p>
-                    We are a family owned and operated business offering a full
-                    line of residential and commercial plumbing, heating, drain
-                    and water heater services. Please browse our site. Licensed
-                    &amp; insured.<br /><br />Hours: Mon–Fri 7am–6pm, Sat
-                    8am–2pm. Phone number on our Contact page.
+                    A family owned business offering residential and commercial
+                    plumbing, heating, drain and water heater services. Please
+                    browse our site.<br /><br />Licensed &amp; insured.<br />Mon–Fri
+                    7am–6pm, Sat 8am–2pm.<br />Phone number on the Contact page.
                   </p>
                   <p>
                     NEWS:<br />Our new website is under construction!<br /><br />Last
@@ -520,11 +492,13 @@
             <div class="comparison-after" aria-hidden="true">
               <span class="comparison-tag">After</span>
               <div class="new-site">
-                <p class="eyebrow">Plumbing &amp; heating · Since 1987</p>
-                <h3>Good neighbours.<br /><em>Great plumbing.</em></h3>
-                <div class="new-site-bottom">
+                <p class="eyebrow">
+                  Rivera Plumbing &amp; Heating · Since 1987
+                </p>
+                <h3>Good neighbours.<br /><i>Great plumbing.</i></h3>
+                <div>
                   <span
-                    >Rivera Plumbing &amp; Heating<br />Mon–Fri 7am–6pm · Sat
+                    >Licensed &amp; insured.<br />Mon–Fri 7am–6pm · Sat
                     8am–2pm</span
                   ><span class="new-call">Call now ↗</span>
                 </div>
@@ -534,223 +508,208 @@
               <span>↔</span>
             </div>
             <input
-              class="comparison-range"
               id="comparison-range"
               type="range"
               min="0"
               max="100"
-              value="50"
               step="1"
+              value="50"
               aria-label="Compare the original and redesigned website"
               aria-valuetext="50% redesigned website revealed"
             />
           </div>
           <figcaption>
-            <span>Drag to see the difference. Arrow keys work, too.</span
-            ><span class="eyebrow">Same information. One gets the call.</span>
+            <span>Drag to discover. Arrow keys work, too.</span
+            ><span>Illustrative studio concept.</span>
           </figcaption>
         </figure>
-        <div class="five-second reveal">
-          <span class="eyebrow">The five-second test</span>
+        <div class="five-second">
+          <p class="eyebrow">The five-second test</p>
           <p>
-            Can a new customer tell what you do, where you are, and how to reach
-            you?<br /><strong>That's where we start.</strong>
+            What do you do? Where are you? How can I reach you?<br /><i
+              >Good design makes the answers feel obvious.</i
+            >
           </p>
         </div>
       </section>
 
       <section
-        class="process section-pad"
+        class="process chapter"
         id="process"
         aria-labelledby="process-title"
       >
-        <div class="section-meta">
-          <span class="eyebrow">(05 — How it comes together)</span
-          ><span class="eyebrow">A conversation, not a complication.</span>
+        <div class="section-label">
+          <span>(05 — Nothing complicated)</span
+          ><span>A conversation starts it all.</span>
         </div>
         <h2 class="section-title reveal" id="process-title">
-          <em>Good things start</em><br />with a hello.
+          <i>A small hello.</i><br />A lovely beginning.
         </h2>
         <ol class="process-steps">
           <li class="reveal">
             <span class="step-number">01</span>
-            <h3>You tell us.</h3>
-            <p>
-              A quick email about your business, where customers find you, and
-              what you'd like your website to do.
-            </p>
+            <div>
+              <h3>Tell us a little.</h3>
+              <p>
+                Your business, your customers, and what you need. A quick email
+                is a perfectly good place to start.
+              </p>
+            </div>
           </li>
-          <li class="reveal" style="--reveal-delay: 100ms">
+          <li class="reveal">
             <span class="step-number">02</span>
-            <h3>We show you.</h3>
-            <p>
-              A free, private sample built around your business. Something real
-              to look at before you commit.
-            </p>
+            <div>
+              <h3>See the possibility.</h3>
+              <p>
+                We make a free, private sample around your business. Something
+                real to see before you commit.
+              </p>
+            </div>
           </li>
-          <li class="reveal" style="--reveal-delay: 200ms">
+          <li class="reveal">
             <span class="step-number">03</span>
-            <h3>We make it yours.</h3>
-            <p>
-              Two rounds of refinements, your domain connected, and every file
-              handed over. Most one-page sites are ready within a week of
-              getting your details.
-            </p>
+            <div>
+              <h3>Make it your own.</h3>
+              <p>
+                Two rounds of refinements, your domain connected, and the files
+                handed over. Most one-page sites are ready within a week of
+                getting your details.
+              </p>
+            </div>
           </li>
         </ol>
-        <div class="pricing-panel reveal" id="pricing">
+        <div class="pricing" id="pricing">
           <div>
             <p class="eyebrow">No surprises. No subscriptions.</p>
-            <h3>One website.<br /><em>One flat fee.</em></h3>
+            <h3 class="reveal">One fee.<br /><i>All yours.</i></h3>
           </div>
-          <div class="pricing-copy">
-            <p>
-              We agree on a clear price before work starts. Half up front once
-              you've seen your sample and want to go ahead; half when you're
-              happy.
+          <div class="pricing-copy reveal">
+            <p class="lead">
+              A clear price, agreed before we start.<br />Half up front. Half
+              when you're happy.
             </p>
-            <p class="pricing-small">
-              Custom design, mobile-first build, your content, basic search
-              setup, domain connection help, two rounds of revisions, and full
-              file ownership. Domain and hosting are separate; we'll help you
-              find free or low-cost options.
+            <p>
+              Go ahead only after you've seen your free sample. Custom design,
+              mobile build, copy, basic search setup, domain connection help and
+              two rounds of revisions are included.
+            </p>
+            <p class="small">
+              Domain and hosting are separate. We'll help you find free or
+              low-cost options. Every file is yours once paid, with no monthly
+              fees from us.
             </p>
             <a class="pill pill-dark magnetic" href="#contact"
-              ><span>Let's talk about your website</span
-              ><span class="pill-arrow" aria-hidden="true">↗</span></a
+              >Let's talk about your website
+              <span aria-hidden="true">↗</span></a
             >
           </div>
         </div>
-        <div class="owner-promises">
-          <span>You talk to the person building it.</span
-          ><span>No retainers or lock-in.</span
-          ><span>Full ownership. Always.</span>
-        </div>
       </section>
 
-      <section
-        class="faq-section section-pad"
-        id="faq"
-        aria-labelledby="faq-title"
-      >
-        <div class="section-meta">
-          <span class="eyebrow">(06 — A few good questions)</span>
-        </div>
-        <div class="faq-grid">
+      <section class="faq-section chapter" id="faq" aria-labelledby="faq-title">
+        <div>
+          <p class="eyebrow">(06 — Before you ask)</p>
           <h2 class="section-title reveal" id="faq-title">
-            Glad you<br /><em>asked.</em>
+            A few<br /><i>good questions.</i>
           </h2>
-          <div class="faq-list">
-            <details class="faq-item reveal">
-              <summary>
-                How does payment work?<span
-                  class="details-icon"
-                  aria-hidden="true"
-                ></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  Half up front once you've seen the sample and want to go
-                  ahead, half when you're happy. PayPal or Zelle.
-                </p>
-              </div>
-            </details>
-            <details class="faq-item reveal">
-              <summary>
-                Do I need photos or text?<span
-                  class="details-icon"
-                  aria-hidden="true"
-                ></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  Send what you have. We write the copy and can work with photos
-                  from your existing listings.
-                </p>
-              </div>
-            </details>
-            <details class="faq-item reveal">
-              <summary>
-                What about hosting and my domain?<span
-                  class="details-icon"
-                  aria-hidden="true"
-                ></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  The domain is yours and registered in your name. We help
-                  connect it and set up hosting, often free for a one-page site.
-                  Domain and hosting costs are separate from the website fee.
-                </p>
-              </div>
-            </details>
-            <details class="faq-item reveal">
-              <summary>
-                Can I ask for changes?<span
-                  class="details-icon"
-                  aria-hidden="true"
-                ></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  Yes, two rounds of revisions are included. Small updates later
-                  can be quoted separately.
-                </p>
-              </div>
-            </details>
-            <details class="faq-item reveal">
-              <summary>
-                Do I really own it?<span
-                  class="details-icon"
-                  aria-hidden="true"
-                ></span>
-              </summary>
-              <div class="faq-answer">
-                <p>
-                  Yes. Once paid, every file is yours, with no monthly charges
-                  from us and no lock-in.
-                </p>
-              </div>
-            </details>
-          </div>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              How does payment work?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Half up front once you've seen the sample and want to go ahead,
+              half when you're happy. PayPal or Zelle.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Do I need photos or text?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Send what you have. We write the copy and can work with photos
+              from your existing listings.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              What about hosting and my domain?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              The domain is yours and registered in your name. We help connect
+              it and set up hosting, often free for a one-page site. Domain and
+              hosting costs are separate from the website fee.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Can I ask for changes?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Of course. Two rounds of revisions are included. Small updates
+              later can be quoted separately.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Do I really own it?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Yes. Once paid, every file is yours. No monthly charges from us,
+              no retainers, and no lock-in.
+            </p>
+          </details>
         </div>
       </section>
 
       <section
-        class="contact section-pad"
+        class="contact chapter"
         id="contact"
         aria-labelledby="contact-title"
       >
-        <div class="section-meta">
-          <span class="eyebrow">(07 — Your next chapter)</span
-          ><span class="eyebrow">A free sample. A fresh perspective.</span>
+        <div class="contact-halo" aria-hidden="true"></div>
+        <div class="section-label">
+          <span>(07 — Your next little world)</span
+          ><span>No pressure. Just possibilities.</span>
         </div>
         <div class="contact-heading">
-          <h2 class="contact-title reveal" id="contact-title">
-            <em>Let's make</em><br />your kind of<br /><span>different.</span
-            ><span class="contact-spark" aria-hidden="true">✳</span>
+          <h2 id="contact-title" class="reveal">
+            It starts with<br /><i>a little hello.</i>
           </h2>
-          <p class="contact-intro reveal">
-            Tell us a little about your business.<br />We'll reply with a free
-            sample and a clear plan.<br />No pressure. Just possibilities.
+          <p class="reveal">
+            Tell us about the business<br />you put your heart into.<br />We'd
+            love to help it shine.
           </p>
         </div>
-        <div class="contact-grid">
+        <div class="contact-layout">
+          <div class="contact-aside reveal">
+            <a
+              class="contact-email"
+              href="mailto:patchflowstudio@gmail.com?subject=Free%20sample%20for%20my%20business"
+              >patchflowstudio<br />@gmail.com
+              <span aria-hidden="true">↗</span></a
+            >
+            <p>
+              For the shops, studios and trades<br />that make a neighbourhood.
+            </p>
+            <span class="contact-star" aria-hidden="true">✳</span>
+          </div>
           <form
-            class="project-brief reveal"
             id="project-brief"
+            class="project-brief reveal"
             aria-label="Project brief"
           >
             <div class="form-field">
               <label for="business-name"
-                >Your business name <span>(required)</span></label
+                >Your business <span>(required)</span></label
               ><input
                 id="business-name"
                 name="business"
-                autocomplete="organization"
                 placeholder="The name above your door"
-                required
+                autocomplete="organization"
                 maxlength="150"
+                required
               />
             </div>
             <div class="form-field">
@@ -763,14 +722,13 @@
               />
             </div>
             <div class="form-field">
-              <label for="business-link">Current website or listing</label
+              <label for="business-link">Website or listing</label
               ><input
                 id="business-link"
                 name="link"
-                type="text"
+                placeholder="A link, if you have one"
                 inputmode="url"
                 autocomplete="url"
-                placeholder="A link, if you have one"
                 maxlength="1000"
               />
             </div>
@@ -781,69 +739,52 @@
                 id="business-email"
                 name="email"
                 type="email"
+                placeholder="Somewhere to say hello back"
                 autocomplete="email"
-                placeholder="Somewhere we can say hello back"
-                required
                 maxlength="254"
+                required
               />
             </div>
             <div class="form-send">
-              <button class="pill pill-dark" type="submit">
-                <span>Let's start with a hello</span
-                ><span class="pill-arrow" aria-hidden="true">↗</span>
+              <button type="submit" class="pill pill-dark">
+                Show me the possibility <span aria-hidden="true">↗</span>
               </button>
-              <p class="form-hint" id="brief-status" role="status">
+              <p id="brief-status" class="form-hint" role="status">
                 Opens your email app with your brief ready to send.
               </p>
+              <a
+                id="email-fallback"
+                class="email-fallback"
+                href="mailto:patchflowstudio@gmail.com"
+                hidden
+                >Open your prepared email again ↗</a
+              >
             </div>
-            <a
-              class="email-fallback"
-              id="email-fallback"
-              href="mailto:patchflowstudio@gmail.com"
-              hidden
-              >Open your prepared email again</a
-            >
           </form>
-          <div class="contact-aside reveal">
-            <p class="eyebrow">More of an email person?</p>
-            <a
-              class="contact-email"
-              href="mailto:patchflowstudio@gmail.com?subject=Free%20sample%20for%20my%20business"
-              >patchflowstudio<br />@gmail.com
-              <span aria-hidden="true">↗</span></a
-            >
-            <p>
-              For the shops, studios and trades<br />that make a neighbourhood
-              their own.
-            </p>
-            <span class="aside-signature"
-              >A little patch.<br />A little flow.</span
-            >
-          </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
       <a class="wordmark" href="#top"
-        >patch <i>&amp;</i> flow<span class="wordmark-studio">STUDIO</span></a
+        >patch<i>&amp;</i>flow<span>STUDIO</span></a
       >
-      <p>Independent by design.<br />Custom websites for local businesses.</p>
+      <p>A little patch. A little flow.<br />Something all your own.</p>
       <nav aria-label="Footer navigation">
         <a href="#work">Work</a><a href="#pricing">Pricing</a
         ><a href="#faq">FAQ</a><a href="#contact">Contact</a>
       </nav>
-      <span class="footer-copyright"
-        >© <span id="year">2026</span> Patch &amp; Flow Studio</span
-      >
+      <small>© <span id="year">2026</span> Patch &amp; Flow Studio</small>
     </footer>
+    <a class="chapter-indicator" id="chapter-indicator" href="#work"
+      >Explore the possibilities <span aria-hidden="true">↘</span></a
+    >
     <button
       class="motion-control"
       id="motion-control"
       aria-pressed="true"
       aria-label="Pause decorative motion"
     >
-      <span class="motion-bars" aria-hidden="true"
-        ><i></i><i></i><i></i><i></i></span
+      <span class="motion-dot" aria-hidden="true"></span
       ><span id="motion-label">Motion on</span>
     </button>
     <div

@@ -39,22 +39,74 @@ Observed in the shipped animation source:
 These source observations suggest how the animation system is organized;
 they are not measurements of the complete live runtime.
 
-## Original interpretation
+## Second pass: motion and spatial presentation
 
-The alternate page uses a new ribbon-and-storefront landscape, a blue/peach/
-green palette, Patch & Flow copy, and the existing four studio concepts.
+The first interpretation used an image with parallax. The revised page replaces
+that treatment with a real-time WebGL world and independently deforming geometry.
+
+The second browser study covered the home entrance and scene, project gallery,
+scroll deformation, a RobCo case study, expanded menu, contact scene, draggable
+World gallery, and the mobile homepage. The separate 2025 microsite and every
+individual case study were not exhaustively inspected.
+
+The existing REA application analysis was reused, with a focused semantic trace
+of the exact buildWater function. Trace evidence:
+ev_a55c66c72d4546a98bfb1684a9f9398e6b4d71d7f657dd4ac4962b4581f27756.
+It found one exact function with partial coverage. Dynamic this.\* relationships
+and the complete runtime dependency graph remain unresolved.
+
+The original theme.js SHA-256 is
+6c3681584747634663e6bd980da7c0245b3e034e5f50bbc484da16e3a3c57217.
+
+| Question                               | Evidence and conclusion                                                                                                                                                                         | Coverage                                                                                  |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| What moves on the home page?           | Browser observation corroborates a real scene with moving water and camera. Static code shows a reflector, time-driven noise, pointer fluid input, instanced grass, particles and camera paths. | Answered at the mechanism level; exact live shader parameters are not measured.           |
+| Why does selected work feel different? | Browser scrolling visibly bends the previews. REA-backed code shows subdivided image and caption planes, depth folding, fog and eased scrolling.                                                | Answered; the complete dynamic render graph remains unknown.                              |
+| How are views connected?               | Home/contact use different viewpoints in a coherent environment. Source shows camera paths and noisy render-target mixing; menu uses sliding panels and staggered text.                         | Observed views, inferred implementation; transition timings are not runtime measurements. |
+| How does World differ?                 | Browser dragging rotates a spatial gallery with trails. Source identifies two-axis inertia and velocity-dependent afterimages.                                                                  | Answered as a separate design pattern; no social content is reused.                       |
+
+Useful original bundle locations are line 2, zero-based columns:
+buildWater 274036–280269; updateCameraPosition 293991–295124;
+buildProjects 325717–328009; positionProjects 328009–330754;
+updateScrollPos 337229–337356; menu sequence 180489–181810.
+
+## Original implementation
+
+The alternate page uses an original kinetic ribbon sculpture, folded paper forms,
+a reflective rippling floor, a blue/peach/green palette, new Patch & Flow copy,
+and the existing four studio concepts.
 No reference-site code, images, models, fonts, or audio are shipped.
 
-The motion is implemented with browser-native CSS transitions, keyframes,
-IntersectionObserver, and a small requestAnimationFrame loop. It includes
-pointer-responsive scene drift, staggered title entrances, a full-screen
-dialog menu, restrained magnetic buttons, project reveals, a typographic
-ribbon, and an optional daylight/evening mood.
+The scene uses a locally vendored, version-pinned Three.js 0.186.1 and its MIT
+licensed Reflector utility. The renderer, procedural environment, ribbon
+geometry, wave shader, gallery shaders and camera choreography are authored for
+Patch & Flow. No reference-site source was used as implementation code.
 
-There is no audio gate. System reduced-motion settings are respected, and
-visitors can pause decorative motion. Normal scrolling and content remain
-available without JavaScript. The menu uses a native modal dialog for focus
-containment and Escape-key dismissal.
+- Two ribbon meshes continuously deform, twist and recompute their normals.
+- Folded forms and floating folios move independently in perspective.
+- A mirrored camera renders actual scene reflections; the custom floor shader
+  distorts those reflections over time and around the pointer.
+- Camera position, lighting and sculpture placement change between the hero,
+  gallery and contact chapters.
+- Project previews render on subdivided WebGL surfaces. Scroll velocity bends
+  them, and their upper edges fold away in depth. Hover changes the texture
+  framing. Actual DOM links, captions and image descriptions remain available.
+- Category changes stage the existing previews out, rearrange matching work,
+  then bring the new arrangement in.
+- The menu has a directional wipe and staggered links; project navigation has
+  an exit curtain. Ordinary scrolling remains native.
+
+This is an original interpretation of the observed mechanisms. It does not
+recreate Unseen's GLB room, grass, butterfly simulation, fluid solver, postprocess
+pipeline, or spherical World gallery.
+
+There is no audio gate. System reduced-motion settings and a persisted page
+control pause time-based animation and disable the scroll-deformation shader.
+The renderer stops behind opaque chapters and while the tab is hidden. Pixel
+ratio and reflection resolution are bounded. A static artwork and normal image
+links remain when WebGL fails. Content and anchor navigation remain available
+without JavaScript. The menu uses a native dialog for focus containment and
+Escape-key dismissal.
 
 Existing business functionality is retained: concept-site links, service
 information, the keyboard-operable before/after comparison, pricing terms,
@@ -89,7 +141,8 @@ Final generation prompt:
 ## Preview
 
 Serve the repository root with any static HTTP server and open its root page.
-There is no build step or new runtime dependency. The existing concept routes
+There is no build step or remote runtime CDN dependency. Three.js is vendored in
+assets/flow/vendor with its license and provenance. The existing concept routes
 under v4/work/ remain unchanged.
 
 ## Validation
@@ -104,16 +157,22 @@ No document-level horizontal overflow was present at those sizes.
 - Comparison arrow keys and End update both the visual split and its accessible
   value description.
 - FAQ disclosure, daylight/evening switching, and the motion pause control work.
+- Two paused scene captures were pixel-identical. Live scene captures changed
+  continuously; short hero and scrolling-gallery recordings were saved for review.
+- Opening the bakery concept and returning with browser Back restored the
+  homepage without leaving the navigation curtain visible.
 - An empty brief focuses the required business field without opening email.
+  An invalid email address was also rejected by native form validation.
   Sending an email was not tested; the page prepares a draft for the visitor's
   email app, with a visible retry link.
-- No browser console warnings or errors appeared during the interaction checks.
-- All 42 HTML asset/link references, IDs, anchor targets, label associations,
-  and CSS font paths passed a local file audit. JavaScript syntax and Git
-  whitespace checks passed.
+- WebGL scene and all four WebGL image surfaces initialized in the preview.
+- No browser console errors appeared. The preview's graphics driver emitted
+  a shader precision warning; rendering continued successfully.
+- Local assets, anchor targets, label associations and font paths passed a file
+  audit. Both authored JavaScript modules passed syntax and whitespace checks.
 
-The hero is an original raster artwork with layered parallax, rather than a
-recreated WebGL environment. The WebP weighs 134,970 bytes. No new build or
-runtime packages are required. Reduced-motion behavior is implemented in both
-CSS and JavaScript; the browser tests covered the page's pause control rather
-than changing the operating system's accessibility settings.
+The earlier raster landscape is now a WebGL fallback only. It weighs 134,970
+bytes. Reduced-motion behavior is implemented in CSS, the controller and the
+renderer; browser checks exercised the page control rather than changing the
+operating system's settings. Email delivery and a complete cross-browser or
+low-end device performance audit were not performed.

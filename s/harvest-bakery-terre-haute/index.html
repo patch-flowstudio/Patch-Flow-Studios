@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvest Bakery | Fridays only, Terre Haute</title>
+<meta name="description" content="Harvest Bakery bakes for one day a week: Fridays, 9 AM to 3 PM, at 905 S 25th St, Terre Haute, Indiana. Pre-order by phone for Friday pickup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--wheat:#e9d9b6;--crust:#8a5a2b;--loaf:#c8873e;--olive:#4d5530;--ink:#2a2418;--paper:#faf5ea;--s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font:400 17px/1.6 'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{color:inherit}
+.pf-concept{font:13px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px;background:var(--olive);color:#f1ead6}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.top{padding:var(--s4) 0 var(--s3)}
+.mark{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--olive)}
+.mark svg{flex:none}
+h1{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(46px,12vw,104px);line-height:.95;letter-spacing:-.025em;margin:var(--s3) 0 var(--s2);color:var(--ink)}
+h1 em{font-style:normal;color:var(--crust)}
+.lede{max-width:34ch;font-size:clamp(18px,2.4vw,21px);line-height:1.5;color:#4a3f2c}
+/* signature: the week strip, only Friday lit */
+.week{margin:var(--s4) 0 var(--s2);display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.d{min-height:110px;border-radius:14px;border:1px solid #d9c9a5;background:repeating-linear-gradient(135deg,#f3ead6 0 6px,#efe4cc 6px 12px);display:flex;flex-direction:column;justify-content:space-between;padding:10px 8px;color:#a8977a;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;min-width:0}
+.d b{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(16px,3.6vw,26px);letter-spacing:0;text-transform:none}
+.d.fri{background:var(--crust);border-color:var(--crust);color:#fff4e2;box-shadow:0 18px 40px -18px rgba(138,90,43,.8);transform:translateY(-8px)}
+.d.fri small{font-size:11px;letter-spacing:.02em;text-transform:none;line-height:1.3}
+.d span{overflow-wrap:anywhere}
+@media(max-width:480px){.week{gap:4px}.d{padding:8px 4px;border-radius:10px;min-height:118px}.d.fri small{font-size:10px}}
+.weeknote{font-size:15px;color:#6b5d44}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:var(--s4) 0 var(--s5)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;transition:transform 100ms ease-out,background-color .2s;touch-action:manipulation}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.line{border:1.5px solid var(--ink)}
+.btn:hover{background:var(--crust);color:#fff;border-color:var(--crust)}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible{outline:3px solid var(--loaf);outline-offset:3px}
+section{padding:var(--s5) 0;border-top:1px solid #e3d6b9}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);margin-bottom:var(--s1)}
+h2{font-family:'Young Serif',serif;font-weight:400;font-size:clamp(30px,5.4vw,48px);line-height:1.08;letter-spacing:-.015em;margin-bottom:var(--s3)}
+/* pre-order ticket */
+.ticket{display:grid;grid-template-columns:1fr;gap:0;background:#fff;border-radius:20px;box-shadow:0 1px 0 #e3d6b9,0 20px 50px -30px rgba(42,36,24,.5);overflow:hidden}
+@media(min-width:720px){.ticket{grid-template-columns:1.2fr .8fr}}
+.ticket ol{list-style:none;counter-reset:s;padding:var(--s3)}
+.ticket li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px dashed #e3d6b9}
+.ticket li:last-child{border:0}
+.ticket li:before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--wheat);display:grid;place-items:center;font-family:'Young Serif',serif;font-size:20px;color:var(--crust)}
+.ticket li b{display:block;font-weight:600}
+.ticket aside{background:var(--olive);color:#f1ead6;padding:var(--s3);display:flex;flex-direction:column;justify-content:center;gap:12px;position:relative}
+.ticket aside:before{content:"";position:absolute;left:-1px;top:0;bottom:0;width:2px;background:repeating-linear-gradient(#fff 0 8px,transparent 8px 16px)}
+@media(max-width:719px){.ticket aside:before{display:none}}
+.ticket aside .big{font-family:'Young Serif',serif;font-size:34px;line-height:1.1}
+.ticket aside .btn{background:#f1ead6;color:var(--olive);align-self:flex-start}
+/* bread board */
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.item{background:#fff;border:1px solid #e3d6b9;border-radius:16px;padding:18px 18px 16px;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.item:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(42,36,24,.5)}
+.item svg{display:block;margin-bottom:12px}
+.item h3{font-family:'Young Serif',serif;font-weight:400;font-size:21px;line-height:1.2;margin-bottom:4px}
+.item p{font-size:14.5px;color:#6b5d44;line-height:1.5}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;color:#8a7350;vertical-align:middle;margin-left:4px}
+/* quotes */
+.quotes{display:grid;gap:18px}
+@media(min-width:760px){.quotes{grid-template-columns:1fr 1fr}}
+blockquote{font-family:'Young Serif',serif;font-size:21px;line-height:1.45;padding-left:20px;border-left:3px solid var(--loaf)}
+blockquote cite{display:block;margin-top:10px;font:500 13px/1.4 'Public Sans',sans-serif;color:#7a6a4c;font-style:normal;letter-spacing:.02em}
+.visit{display:grid;gap:24px}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.visit dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 22px;font-size:16px}
+.visit dt{font-weight:600;color:var(--olive)}
+.visit dd a{font-weight:600}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:28px 16px 36px;background:var(--ink);color:#d9cdb2}
+.pf-foot a{font-weight:700;color:#fff}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}.d.fri{transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Harvest Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="wrap">
+<header class="top">
+<div class="mark"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 27V9" stroke="#4d5530" stroke-width="1.6"/><g fill="#c8873e"><ellipse cx="11.5" cy="10" rx="2.4" ry="4" transform="rotate(-25 11.5 10)"/><ellipse cx="18.5" cy="10" rx="2.4" ry="4" transform="rotate(25 18.5 10)"/><ellipse cx="11.5" cy="16" rx="2.4" ry="4" transform="rotate(-25 11.5 16)"/><ellipse cx="18.5" cy="16" rx="2.4" ry="4" transform="rotate(25 18.5 16)"/><ellipse cx="15" cy="5" rx="2.2" ry="3.6"/></g></svg>Harvest Bakery · S 25th St, Terre Haute</div>
+<h1>Worth waiting<br>all week <em>for.</em></h1>
+<p class="lede">Sourdough, bagels, English muffins and cinnamon rolls, baked for one day a week. Come in Friday, or call ahead and we'll set your order aside.</p>
+<div class="week" role="img" aria-label="Open Friday only, 9 AM to 3 PM. Closed Saturday through Thursday.">
+<div class="d"><span>Sat</span><b>·</b></div><div class="d"><span>Sun</span><b>·</b></div><div class="d"><span>Mon</span><b>·</b></div><div class="d"><span>Tue</span><b>·</b></div><div class="d"><span>Wed</span><b>·</b></div><div class="d"><span>Thu</span><b>·</b></div>
+<div class="d fri"><span>Fri</span><b>Open</b><small>9 AM to 3 PM</small></div>
+</div>
+<p class="weeknote">Six days of baking prep, one day at the counter.</p>
+<div class="cta"><a class="btn solid" href="tel:+18122393425">Call to pre-order</a><a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=905%20S%2025th%20St%2C%20Terre%20Haute%2C%20IN%2047803">Directions</a></div>
+</header>
+</div>
+
+<section><div class="wrap">
+<p class="eyebrow">Friday pickup</p>
+<h2>Pre-order, then just pick it up.</h2>
+<div class="ticket">
+<ol>
+<li><span><b>Call the bakery</b>Tell us what you'd like and how many. Customers pre-order for Friday pickup.</span></li>
+<li><span><b>We bake it Friday</b>Fresh that morning, set aside under your name.</span></li>
+<li><span><b>Pick up 9 AM to 3 PM</b>905 S 25th St. The smell finds you from the sidewalk.</span></li>
+</ol>
+<aside><span>Order line</span><span class="big">(812) 239-3425</span><span style="font-size:14px;opacity:.85">Order cutoff time <span class="smp" style="color:#f1ead6">sample</span> to confirm with the bakery.</span><a class="btn" href="tel:+18122393425">Call now</a></aside>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<p class="eyebrow">On the Friday table</p>
+<h2>What customers come back for</h2>
+<div class="board">
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><path d="M4 28c0-14 10-24 23-24s23 10 23 24z" fill="#c8873e"/><path d="M16 12l6 8M25 9l6 9M34 11l6 8" stroke="#faf5ea" stroke-width="2" stroke-linecap="round"/></svg><h3>Sourdough bread</h3><p>A customer favorite, alongside the English muffins.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><circle cx="27" cy="17" r="14" fill="#c8873e"/><circle cx="27" cy="17" r="5" fill="#faf5ea"/><g fill="#4d5530"><circle cx="20" cy="9" r="1.6"/><circle cx="34" cy="11" r="1.6"/><circle cx="33" cy="25" r="1.6"/></g></svg><h3>Cheddar jalapeño bagels</h3><p>A family favorite, along with the regular bagels.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><ellipse cx="27" cy="21" rx="20" ry="9" fill="#e9d9b6"/><ellipse cx="27" cy="17" rx="20" ry="9" fill="#c8873e"/><ellipse cx="27" cy="15" rx="14" ry="5" fill="#e9d9b6" opacity=".7"/></svg><h3>English muffins</h3><p>Named in reviews right next to the sourdough.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><circle cx="27" cy="17" r="14" fill="#c8873e"/><path d="M27 17m-9 0a9 9 0 1 0 18 0a6 6 0 1 0 -12 0a3 3 0 1 0 6 0" fill="none" stroke="#faf5ea" stroke-width="2"/></svg><h3>Cinnamon rolls</h3><p>Plus coffee cake, a current favorite for one regular.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><rect x="8" y="8" width="38" height="20" rx="8" fill="#c8873e"/><path d="M14 14h26M14 20h20" stroke="#e9d9b6" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Cheddar bacon rolls</h3><p>Along with the bagels and cow bread.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><path d="M10 30l17-26 17 26z" fill="#e9d9b6"/><circle cx="27" cy="12" r="8" fill="#c8873e"/></svg><h3>Gelato</h3><p>A recent addition to the counter.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><path d="M6 24h42l-4 6H10z" fill="#8a5a2b"/><path d="M8 24c2-10 36-10 38 0" fill="#e9d9b6"/></svg><h3>Quiche</h3><p>"The quiche is amazing," in one customer's words.</p></div>
+<div class="item"><svg width="54" height="34" viewBox="0 0 54 34" aria-hidden="true"><rect x="14" y="16" width="26" height="14" rx="2" fill="#c8873e"/><rect x="19" y="6" width="16" height="10" rx="2" fill="#e9d9b6"/></svg><h3>Celebration cakes</h3><p>Wedding cakes have been made here. Details and lead time <span class="smp">sample</span></p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<p class="eyebrow">Overheard at the counter</p>
+<h2>Two women, baking away</h2>
+<div class="quotes">
+<blockquote>"There are 2 lovely women in here baking away. The smell will make you fall in love when you walk in the door."<cite>Google review, November 2025</cite></blockquote>
+<blockquote>"They have wonderful items but only open on Friday's. You can pre-order for Friday pick up."<cite>Google review, March 2025</cite></blockquote>
+</div>
+</div></section>
+
+<section><div class="wrap visit">
+<div><p class="eyebrow">Visit</p><h2>Fridays on S 25th St</h2></div>
+<dl>
+<dt>Address</dt><dd>905 S 25th St, Terre Haute, IN 47803<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=905%20S%2025th%20St%2C%20Terre%20Haute%2C%20IN%2047803">Get directions</a></dd>
+<dt>Phone</dt><dd><a href="tel:+18122393425">(812) 239-3425</a></dd>
+<dt>Open</dt><dd>Friday, 9 AM to 3 PM</dd>
+<dt>Closed</dt><dd>Saturday through Thursday</dd>
+</dl>
+</div></section>
+
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<script>(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;var els=document.querySelectorAll('section h2, .ticket, .board, .quotes, .visit dl');els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();</script>
+</body>
+</html>

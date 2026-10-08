@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cafe Bobalina | Boba, Coffee and Treats in St Robert, MO</title>
+<meta name="description" content="Cafe Bobalina on Missouri Ave in St Robert. Boba milk tea, fruit tea, matcha, blended coffee, macarons and cake. Open daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--lilac:#ece4ff;--violet:#6b4fd8;--peach:#ffd9c7;--ink:#2a2244;--mint:#cfeee0;--bg:#fbf8ff}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.02rem/1.6 "DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.75rem;line-height:1.45;padding:.55rem 1rem;text-align:center;background:var(--ink);color:#efeaff}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.7;z-index:0}
+.hero{position:relative;overflow:hidden;padding:2.4rem 1.2rem 1rem}
+.hero .blob.a{width:280px;height:280px;background:var(--peach);top:-60px;right:-80px}
+.hero .blob.b{width:240px;height:240px;background:#d9ccff;bottom:-40px;left:-90px}
+.hero-in{position:relative;z-index:1;max-width:62rem;margin:0 auto;display:grid;gap:1.6rem;align-items:center}
+@media(min-width:860px){.hero-in{grid-template-columns:1fr 1fr}}
+.pill{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);border-radius:999px;padding:.35rem .8rem;font-size:.8rem;font-weight:500}
+.pill i{width:8px;height:8px;border-radius:50%;background:#2fbf71}
+h1{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(3rem,14vw,5.2rem);line-height:.92;letter-spacing:-.03em;margin:.7rem 0 .6rem;color:var(--violet)}
+h1 span{display:block;color:var(--ink);font-size:.42em;letter-spacing:-.01em;font-weight:600;margin-top:.3rem}
+.lede{font-size:1.1rem;max-width:28rem}
+.go{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem}
+.b{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 1.3rem;border-radius:16px;font-weight:700;text-decoration:none;
+ transition:transform .35s cubic-bezier(.2,.9,.25,1),box-shadow .3s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.b.v{background:var(--violet);color:#fff;box-shadow:0 10px 24px -10px rgba(107,79,216,.8)}
+.b.g{background:rgba(255,255,255,.8);border:1px solid rgba(42,34,68,.12)}
+.b:active{transform:scale(.97);transition-duration:.1s}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+/* signature: mix your cup */
+.mixer{background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(20px) saturate(170%);backdrop-filter:blur(20px) saturate(170%);border:1px solid rgba(255,255,255,.9);border-radius:28px;padding:1.2rem;box-shadow:0 30px 60px -30px rgba(42,34,68,.45)}
+.mixer-in{display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:center}
+.cup{width:120px;height:auto}
+#tea,#milk{transition:fill .5s ease}
+.pearl{transition:transform .55s cubic-bezier(.3,1.4,.5,1),opacity .3s}
+.cup[data-p="0"] .pearl{transform:translateY(30px);opacity:0}
+.opts h3{font-family:Fredoka,sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin:.2rem 0 .4rem;color:#6d6590;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{font:500 .88rem "DM Sans",sans-serif;min-height:44px;padding:0 .9rem;border-radius:999px;border:1px solid rgba(42,34,68,.15);background:#fff;color:var(--ink);cursor:pointer;
+ transition:transform .3s cubic-bezier(.2,.9,.25,1),background .2s,color .2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip:active{transform:scale(.95);transition-duration:.08s}
+.mixnote{font-size:.78rem;opacity:.7;margin-top:.8rem}
+main{max-width:62rem;margin:0 auto;padding:0 1.2rem}
+section{padding-top:3.6rem}
+h2{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(2rem,8vw,2.9rem);line-height:1;letter-spacing:-.025em}
+.kick{font-weight:700;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
+/* menu shelves as horizontal scroller */
+.shelf{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem .2rem 1.2rem;margin:0 -1.2rem;padding-left:1.2rem;padding-right:1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.shelf::-webkit-scrollbar{display:none}
+.tile{flex:0 0 min(70vw,250px);scroll-snap-align:start;border-radius:24px;padding:1.2rem;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+.tile h3{font-family:Fredoka,sans-serif;font-weight:600;font-size:1.3rem;line-height:1.1;letter-spacing:-.01em}
+.tile p{font-size:.92rem}
+.tile small{font-size:.74rem;opacity:.7}
+.t1{background:var(--lilac)}.t2{background:var(--mint)}.t3{background:var(--peach)}.t4{background:#fff1b8}.t5{background:#ffd6e6}.t6{background:#dbeafe}
+.hint{font-size:.8rem;opacity:.65}
+.how{display:grid;gap:1rem;margin-top:1.2rem}
+@media(min-width:760px){.how{grid-template-columns:repeat(3,1fr)}}
+.how div{background:#fff;border-radius:20px;padding:1.2rem;border:1px solid rgba(42,34,68,.08)}
+.how b{font-family:Fredoka,sans-serif;font-size:2rem;color:var(--violet);line-height:1}
+.voices{display:grid;gap:1rem;margin-top:1.2rem}
+@media(min-width:760px){.voices{grid-template-columns:1.3fr 1fr}}
+.voices blockquote{border-radius:24px;padding:1.4rem;font-size:1.05rem;line-height:1.5}
+.voices blockquote:first-child{background:var(--ink);color:#fff;font-family:Fredoka,sans-serif;font-weight:500;font-size:1.3rem;line-height:1.35}
+.voices blockquote+blockquote{background:var(--lilac)}
+cite{display:block;font:500 .78rem "DM Sans";font-style:normal;margin-top:.7rem;opacity:.75}
+.visit{display:grid;gap:1rem;margin-top:1.2rem}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border-radius:24px;padding:1.4rem;border:1px solid rgba(42,34,68,.08)}
+table{width:100%;border-collapse:collapse;margin-top:.4rem}
+td{padding:.4rem 0;border-bottom:1px solid rgba(42,34,68,.08)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.note{font-size:.8rem;opacity:.7;margin-top:.6rem}
+footer{text-align:center;font-size:.85rem;padding:4rem 1rem 2.6rem;opacity:.85}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.9,.25,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+@media(prefers-reduced-transparency:reduce){.mixer,.pill{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Cafe Bobalina's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+ <span class="blob a"></span><span class="blob b"></span>
+ <div class="hero-in">
+  <div>
+   <span class="pill"><i></i>Open 7 days on Missouri Ave</span>
+   <h1>Cafe Bobalina<span>boba, coffee &amp; little treats</span></h1>
+   <p class="lede">St Robert's cozy stop for boba milk tea, fruit tea, matcha and blended coffee, with macarons and cake on the side.</p>
+   <div class="go"><a class="b v" href="tel:+15733933537">Call (573) 393-3537</a><a class="b g" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Bobalina%20690%20Missouri%20Ave%20St%20Robert%20MO%2065584">Directions</a></div>
+  </div>
+  <div class="mixer">
+   <div class="mixer-in">
+    <svg class="cup" id="cup" data-p="1" viewBox="0 0 120 190" role="img" aria-label="Illustrated boba cup that changes with your picks">
+     <rect x="56" y="0" width="9" height="60" rx="4" fill="#6b4fd8"/>
+     <path d="M14 40h92l-10 140a8 8 0 0 1-8 7H32a8 8 0 0 1-8-7z" fill="#fff" stroke="#2a2244" stroke-width="3"/>
+     <clipPath id="c"><path d="M17 56h86l-9 122a6 6 0 0 1-6 6H32a6 6 0 0 1-6-6z"/></clipPath>
+     <g clip-path="url(#c)"><rect id="tea" x="0" y="56" width="120" height="140" fill="#c9a27a"/><rect id="milk" x="0" y="56" width="120" height="34" fill="#f2e6d8" opacity=".65"/>
+      <g class="pearl" fill="#2a1c14"><circle cx="38" cy="172" r="7"/><circle cx="54" cy="176" r="7"/><circle cx="70" cy="173" r="7"/><circle cx="86" cy="170" r="6"/><circle cx="46" cy="160" r="7"/><circle cx="62" cy="161" r="7"/><circle cx="78" cy="158" r="6"/></g></g>
+     <rect x="10" y="34" width="100" height="10" rx="5" fill="#2a2244"/>
+    </svg>
+    <div class="opts">
+     <h3>Drink</h3>
+     <div class="chips" data-g="tea">
+      <button class="chip" type="button" aria-pressed="true" data-c="#c9a27a">Milk tea</button>
+      <button class="chip" type="button" aria-pressed="false" data-c="#b9e3a1">Honeydew</button>
+      <button class="chip" type="button" aria-pressed="false" data-c="#8fc48a">Matcha</button>
+      <button class="chip" type="button" aria-pressed="false" data-c="#f4a6a0">Fruit tea</button>
+     </div>
+     <h3 style="margin-top:.7rem">Pearls</h3>
+     <div class="chips" data-g="p">
+      <button class="chip" type="button" aria-pressed="true" data-v="1">Brown sugar boba</button>
+      <button class="chip" type="button" aria-pressed="false" data-v="0">No boba</button>
+     </div>
+    </div>
+   </div>
+   <p class="mixnote">Just for fun. Drinks are customizable in the shop; ask the team about today's flavors.</p>
+  </div>
+ </div>
+</header>
+<main>
+<section class="rv">
+ <p class="kick">On the menu</p>
+ <h2>Favorites so far</h2>
+ <div class="shelf" tabindex="0" aria-label="Menu favorites, scroll sideways">
+  <div class="tile t1"><h3>Brown sugar boba</h3><p>"The brown sugar boba didn't overwhelm the flavor of the drink at all."</p><small>Review, Dec 2025</small></div>
+  <div class="tile t2"><h3>Honeydew boba</h3><p>"It's been a while since I've had good honeydew boba."</p><small>Review, Dec 2025</small></div>
+  <div class="tile t3"><h3>Matcha</h3><p>"The drinks were on point, especially the matcha."</p><small>Review, Jan 2026</small></div>
+  <div class="tile t4"><h3>Biscoff blended</h3><p>"The Biscoff blended was AMAZING!!"</p><small>Review, Dec 2025</small></div>
+  <div class="tile t5"><h3>Macarons &amp; red velvet</h3><p>"We love the bakery treats; I.e. macaroons and red velvet cake!"</p><small>Review, Jan 2026</small></div>
+  <div class="tile t6"><h3>Fruit tea &amp; cake</h3><p>"Delicious cake and fruit tea!"</p><small>Review, Feb 2026</small></div>
+ </div>
+ <p class="hint">Swipe for more. Full menu and prices to be added by the cafe.</p>
+</section>
+<section class="rv">
+ <p class="kick">First visit?</p>
+ <h2>How ordering works</h2>
+ <div class="how">
+  <div><b>1</b><p>Order at the self-service machine or at the counter. Customers say the machine is easy to use.</p></div>
+  <div><b>2</b><p>Make it yours: pick the drink, then customize it the way you like.</p></div>
+  <div><b>3</b><p>Stay a while. There is plenty of comfortable seating for friends and family.</p></div>
+ </div>
+ <p class="note">Sample: steps written from customer reviews, to confirm with Cafe Bobalina. On busy days some toppings like brown sugar boba can take extra time.</p>
+</section>
+<section class="rv">
+ <h2>What St Robert is saying</h2>
+ <div class="voices">
+  <blockquote>"It's so nice to finally have a yummy non chain coffee shop in the neighborhood."<cite>Google review, Dec 2025</cite></blockquote>
+  <blockquote>"Owner is always super friendly and making sure that her cafe customers are happy."<cite>Google review, Jan 2026</cite></blockquote>
+ </div>
+</section>
+<section class="rv">
+ <div class="visit">
+  <div class="card"><h3 style="font-family:Fredoka">Hours</h3>
+   <table><tr><td>Monday to Friday</td><td>9 am to 7 pm</td></tr><tr><td>Saturday</td><td>10 am to 7 pm</td></tr><tr><td>Sunday</td><td>10 am to 5 pm</td></tr></table>
+   <p class="note">As listed on Google. Call to confirm.</p></div>
+  <div class="card"><h3 style="font-family:Fredoka">Find us</h3><p style="margin-top:.4rem">690 Missouri Ave<br>St Robert, MO 65584</p>
+   <div class="go"><a class="b v" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Bobalina%20690%20Missouri%20Ave%20St%20Robert%20MO%2065584">Directions</a><a class="b g" href="tel:+15733933537">Call</a></div></div>
+ </div>
+</section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{const cup=document.getElementById('cup'),tea=document.getElementById('tea');
+document.querySelectorAll('.chips').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;g.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));
+ if(g.dataset.g==='tea')tea.setAttribute('fill',b.dataset.c);else cup.dataset.p=b.dataset.v}));
+const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));})();
+</script>
+</body>
+</html>

@@ -70,6 +70,27 @@ buildWater 274036–280269; updateCameraPosition 293991–295124;
 buildProjects 325717–328009; positionProjects 328009–330754;
 updateScrollPos 337229–337356; menu sequence 180489–181810.
 
+## Refinement: coherence, pointer response and soft surfaces
+
+The follow-up reused the same REA application evidence and corroborated the
+home pointer response and project scrolling in the browser. The supplied
+8.6-second gallery recording additionally established the soft, continuous
+wobble the user wanted. No identical analysis was rerun.
+
+The original shared media shader (columns 300428–302100) bends each vertex
+according to world Y, adds slow depth variation, and fades the receded part by
+depth. It does not read the gallery's scroll-velocity uniform. The scroll handler
+eases the rendered position toward its target. The hover code (339355–339774)
+zooms the texture inside the existing surface boundary. Hero pointer response
+combines camera yaw/pitch with water and headline fluid effects; the headline
+setup is at 282563–286144. These are static implementation findings, not live
+measurements of shader values or timings.
+
+Our equivalent uses an original cylindrical roll with depth fading, bounded
+surface waves, and a small, damped pointer displacement. The hero uses a finite
+history of expanding ripple wakes and a CSS text-color wash, rather than the
+reference's fluid solver or headline texture distortion.
+
 ## Original implementation
 
 The alternate page uses an original kinetic ribbon sculpture, folded paper forms,
@@ -82,17 +103,22 @@ licensed Reflector utility. The renderer, procedural environment, ribbon
 geometry, wave shader, gallery shaders and camera choreography are authored for
 Patch & Flow. No reference-site source was used as implementation code.
 
-- Two ribbon meshes continuously deform, twist and recompute their normals.
-- Folded forms and floating folios move independently in perspective.
+- One closed ribbon deforms within bounded dimensions, with a periodic seam.
+  Two distant folds stay outside its full depth range. The second ribbon,
+  intersecting plinths, ring, and floating folios have been removed.
 - A mirrored camera renders actual scene reflections; the custom floor shader
-  distorts those reflections over time and around the pointer.
-- Camera position, lighting and sculpture placement change between the hero,
-  gallery and contact chapters.
-- Project previews render on subdivided WebGL surfaces. Scroll velocity bends
-  them, and their upper edges fold away in depth. Hover changes the texture
-  framing. Actual DOM links, captions and image descriptions remain available.
-- Category changes stage the existing previews out, rearrange matching work,
-  then bring the new arrangement in.
+  distorts reflections over time and retains a short wake after pointer movement.
+- Pointer movement orbits the camera, gently lifts nearby ribbon geometry, and
+  moves a restrained terracotta wash across the headline. Motion is damped using
+  elapsed time rather than a fixed per-frame interpolation factor.
+- The gallery uses a quiet reflective background. Project previews render on
+  32 × 40 subdivided surfaces and progressively roll into depth. Curvature stays
+  when scrolling stops; depth fading hides the distant tail. A continuous soft
+  wobble and a bounded local pointer response add elasticity. Hover zooms the
+  texture by 2.5%, without introducing a separate whole-card wobble.
+- Real DOM captions follow the curve's tangent; links and image descriptions
+  remain accessible. The native scroll gains a small bounded visual lag within
+  the gallery. Category selectors and floating hover labels have been removed.
 - The menu has a directional wipe and staggered links; project navigation has
   an exit curtain. Ordinary scrolling remains native.
 
@@ -152,13 +178,24 @@ No document-level horizontal overflow was present at those sizes.
 
 - Menu opens, Escape dismisses it, and focus returns to the menu button.
   Choosing a section closes the menu and moves focus to that section.
-- Filters show 1 food concept, 2 craft concepts, 1 trade concept, or all 4.
-  The live status text and pressed states update with the selection.
+- All four concepts remain visible without a category selector.
+- The ribbon update function was sampled at 482 time/pointer-presence states.
+  Its seam stayed closed (maximum error below 1e-14), and its minimum sampled
+  clearance above the floor was 0.396 scene units at desktop scale. Its full
+  depth range stayed more than 2.27 units in front of the conservative backdrop
+  boundary. The mobile sculpture is scaled to fit, rather than cropped across
+  the whole screen.
+- Pointer input produced ripple wakes, camera movement and the headline wash
+  in the browser. The gallery recording includes idle surface wobble followed
+  by progressive scrolling.
 - Comparison arrow keys and End update both the visual split and its accessible
   value description.
 - FAQ disclosure, daylight/evening switching, and the motion pause control work.
 - Two paused scene captures were pixel-identical. Live scene captures changed
   continuously; short hero and scrolling-gallery recordings were saved for review.
+- The refined gallery's paused captures were also pixel-identical, its render
+  count stayed fixed, and its captions and scroll lag reset. Re-enabling motion
+  no longer replays the entrance curtain.
 - Opening the bakery concept and returning with browser Back restored the
   homepage without leaving the navigation curtain visible.
 - An empty brief focuses the required business field without opening email.

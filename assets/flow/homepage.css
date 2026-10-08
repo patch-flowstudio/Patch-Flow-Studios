@@ -196,6 +196,13 @@ main,
 .js.is-navigating .page-curtain {
   animation: curtain-in 0.45s var(--ease) both;
 }
+.js.has-entered:not(.is-navigating) .page-curtain {
+  display: none;
+}
+.js.has-entered .title-line,
+.js.has-entered .hero-enter {
+  animation: none;
+}
 .site-header {
   position: fixed;
   z-index: 60;
@@ -314,6 +321,17 @@ main,
   font-size: clamp(4.3rem, 7.6vw, 8.8rem);
   letter-spacing: -0.075em;
   line-height: 1.02;
+}
+.webgl-ready[data-motion="on"] .hero h1 i,
+.webgl-ready[data-motion="on"] .hero .title-line:last-child {
+  background: radial-gradient(
+    circle 150px at var(--light-x, -500px) var(--light-y, -500px),
+    #8a5137,
+    var(--ink)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .title-line {
   display: block;
@@ -529,41 +547,12 @@ html:not(.webgl-ready) .work {
 }
 .work-title i {
   display: inline-block;
-  margin-right: .12em;
+  margin-right: 0.12em;
   padding-bottom: 0.08em;
 }
 .work-description {
   font-size: 1rem;
   line-height: 1.4;
-}
-.work-filters {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3px;
-  border-radius: 100px;
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.75);
-  margin-top: 28px;
-}
-.filter-button {
-  padding: 8px 14px;
-  font-size: 0.75rem;
-  border-radius: 30px;
-  background: transparent;
-  transition:
-    background 0.4s,
-    color 0.4s;
-}
-.filter-button sup {
-  font-size: 0.55rem;
-}
-.filter-button:hover {
-  background: #dae1d3;
-}
-.filter-button.is-active {
-  background: var(--ink);
-  color: white;
 }
 .work-grid {
   display: grid;
@@ -571,21 +560,9 @@ html:not(.webgl-ready) .work {
   gap: 65px 40px;
   margin: 75px auto 0;
   max-width: 1140px;
-  perspective: 1200px;
 }
 .work-card {
   min-width: 0;
-  transition:
-    opacity 0.35s,
-    transform 0.7s var(--ease);
-  transform-origin: center center;
-}
-.work-card.is-leaving {
-  opacity: 0;
-  transform: translateY(-30px) rotateX(12deg) scale(0.96);
-}
-.work-card.is-arriving {
-  animation: card-arrive 0.8s var(--ease) both;
 }
 .project-link {
   display: block;
@@ -595,12 +572,13 @@ html:not(.webgl-ready) .work {
   position: relative;
   aspect-ratio: 1.62;
   isolation: isolate;
+  overflow: hidden;
 }
 .project-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.9s var(--ease);
+  transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .webgl-media img {
   opacity: 0;
@@ -608,37 +586,16 @@ html:not(.webgl-ready) .work {
 .project-link:hover .project-media:not(.webgl-media) img {
   transform: scale(1.025);
 }
-.project-view {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -40%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 22px;
-  background: rgba(245, 242, 234, 0.95);
-  border-radius: 50px;
-  font-size: 0.75rem;
-  opacity: 0;
-  transition:
-    opacity 0.4s,
-    transform 0.5s var(--ease);
-  white-space: nowrap;
-  pointer-events: none;
-}
-.project-link:hover .project-view,
-.project-link:focus-visible .project-view {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
 .project-caption {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
   padding: 18px 0 17px;
+}
+.project-caption,
+.project-meta {
+  transform-origin: center;
 }
 .project-caption h3 {
   font-size: 1.35rem;
@@ -1334,7 +1291,7 @@ html:not(.webgl-ready) .contact {
 }
 .js .reveal {
   opacity: 0;
-  transform: translateY(35px);
+  transform: translateY(22px);
   transition:
     opacity 1.1s var(--ease),
     transform 1.3s var(--ease);
@@ -1423,16 +1380,6 @@ html:not(.webgl-ready) .contact {
 @keyframes menu-link {
   from {
     transform: translateX(90px);
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-@keyframes card-arrive {
-  from {
-    transform: translateY(60px) rotateX(-10deg) scale(0.96);
     opacity: 0;
   }
   to {
@@ -1648,13 +1595,6 @@ html:not(.webgl-ready) .contact {
   .work-description {
     font-size: 0.9375rem;
   }
-  .work-filters {
-    margin-top: 25px;
-  }
-  .filter-button {
-    font-size: 0.6875rem;
-    padding: 8px 12px;
-  }
   .work-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1680,9 +1620,6 @@ html:not(.webgl-ready) .contact {
     font-size: 0.5625rem;
     gap: 8px;
     padding-top: 10px;
-  }
-  .project-view {
-    display: none;
   }
   .work-outro {
     margin-top: 50px;

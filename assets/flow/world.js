@@ -9,6 +9,9 @@ export function createWorld({ canvas, enabled = true }) {
   const work = document.getElementById("work");
   const contact = document.getElementById("contact");
   const media = [...document.querySelectorAll(".project-media")];
+  const workGrid = document.getElementById("work-grid");
+  const headline = document.getElementById("hero-title");
+  const titleInk = [...headline.querySelectorAll("i, .title-line:last-child")];
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: false,
@@ -34,25 +37,37 @@ export function createWorld({ canvas, enabled = true }) {
   scene.add(rig);
   const pointer = new THREE.Vector2();
   const currentPointer = new THREE.Vector2();
+  const pointerPixels = new THREE.Vector2(-1000, -1000);
+  const currentPixels = pointerPixels.clone();
+  const ribbonFocus = new THREE.Vector3(0, -20, 0);
   const raycaster = new THREE.Raycaster();
   const ripplePoint = new THREE.Vector3();
   const groundPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+  const ribbonPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), -0.96);
   let width = document.documentElement.clientWidth,
     height = innerHeight,
     raf = 0,
     time = 0,
     previousTime = 0;
-  let lastScroll = scrollY,
-    velocity = 0,
-    mood = 0,
+  let mood = 0,
     targetMood = 0,
     renderCount = 0;
   let disposed = false,
     contextLost = false,
     dirty = true;
-  let pointerStrength = 0;
+  let pointerEnergy = 0,
+    pointerActive = false,
+    pointerPresence = 0,
+    wakeIndex = 0,
+    lastWake = -1,
+    wakeCount = 0;
+  let visualScroll = scrollY,
+    workBlend = 0;
+  const wakes = Array.from(
+    { length: 12 },
+    () => new THREE.Vector4(0, 0, -100, 0),
+  );
   const materials = [];
-  const ribbonGeometries = [];
   const disposables = [];
   const peach = new THREE.Color("#e8dcd2");
   const galleryColor = new THREE.Color("#e9ece6");
@@ -67,11 +82,7 @@ export function createWorld({ canvas, enabled = true }) {
     roughness: 0.48,
     metalness: 0.12,
   });
-  const terracotta = new THREE.MeshStandardMaterial({
-    color: "#c77852",
-    roughness: 0.72,
-  });
-  materials.push(paper, blue, terracotta);
+  materials.push(paper, blue);
 
   // A small procedural studio environment supplies highlights without an HDR download.
   const envScene = new THREE.Scene();
@@ -134,62 +145,35 @@ export function createWorld({ canvas, enabled = true }) {
     rig.add(object);
     return object;
   }
-  // Off-centre paper forms and floating folios, rather than a copied architectural room.
-  mesh(new THREE.CylinderGeometry(2.8, 2.8, 0.28, 80), paper, -5, -0.02, -2);
-  mesh(
-    new THREE.CylinderGeometry(1.75, 1.75, 0.6, 80),
-    terracotta,
-    5,
-    0.12,
-    -3.1,
-  );
+  // Three deliberate volumes: a continuous foreground loop and two distant folds.
+  // Backdrop bounds stay behind z=-5; the ribbon stays in z=[-3.1, 2.1].
   const finGroup = new THREE.Group();
-  finGroup.position.set(5, 1.6, -3.1);
-  for (let i = 0; i < 11; i++) {
-    const fin = new THREE.Mesh(new THREE.BoxGeometry(0.13, 3.5, 1.6), blue);
-    fin.position.set((i - 5) * 0.25, Math.sin(i * 0.35) * 0.14, 0);
-    fin.rotation.y = (i - 5) * 0.12;
+  finGroup.position.set(5.7, 1.35, -6.4);
+  for (let i = 0; i < 7; i++) {
+    const fin = new THREE.Mesh(new THREE.BoxGeometry(0.12, 2.6, 0.85), blue);
+    fin.position.set((i - 3) * 0.27, Math.sin(i * 0.5) * 0.08, 0);
+    fin.rotation.y = (i - 3) * 0.07;
     fin.castShadow = true;
     fin.receiveShadow = true;
     finGroup.add(fin);
   }
   rig.add(finGroup);
-  const paperGeometry = new THREE.PlaneGeometry(2.8, 4.7, 20, 28);
+  const paperGeometry = new THREE.PlaneGeometry(2.1, 3.2, 20, 28);
   const paperPositions = paperGeometry.attributes.position;
   for (let i = 0; i < paperPositions.count; i++) {
     const x = paperPositions.getX(i),
       y = paperPositions.getY(i);
-    paperPositions.setZ(i, Math.sin(x * 1.3) * 0.65 + Math.cos(y * 0.7) * 0.3);
+    paperPositions.setZ(i, Math.sin(x * 1.3) * 0.35 + Math.cos(y * 0.7) * 0.12);
   }
   paperGeometry.computeVertexNormals();
   const foldedMaterial = paper.clone();
   foldedMaterial.side = THREE.DoubleSide;
   materials.push(foldedMaterial);
-  const paperFold = mesh(paperGeometry, foldedMaterial, -6.5, 1.9, -3);
-  paperFold.rotation.set(0.12, -0.5, -0.18);
-  const ring = mesh(
-    new THREE.TorusGeometry(0.8, 0.095, 16, 70),
-    blue,
-    -4.5,
-    1.3,
-    -2,
-  );
-  ring.rotation.set(0.45, 0.5, 0);
-  const floating = [];
-  for (let i = 0; i < 9; i++) {
-    const object = mesh(
-      new THREE.BoxGeometry(0.34, 0.5, 0.025),
-      i % 2 ? paper : blue,
-      Math.sin(i * 2.4) * 7,
-      2 + Math.cos(i * 1.4) * 1.6,
-      -3 - Math.abs(Math.cos(i)) * 3,
-    );
-    object.rotation.set(i * 0.3, i * 0.8, i * 0.2);
-    floating.push({ object, base: object.position.clone(), phase: i * 1.7 });
-  }
+  const paperFold = mesh(paperGeometry, foldedMaterial, -5.8, 1.65, -6.5);
+  paperFold.rotation.set(0.06, -0.25, -0.08);
 
-  function makeRibbon(color, phase, scale) {
-    const count = 192,
+  function makeRibbon() {
+    const count = 224,
       cross = 8;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array((count + 1) * (cross + 1) * 3);
@@ -213,11 +197,11 @@ export function createWorld({ canvas, enabled = true }) {
     geometry.setAttribute("uv", new THREE.BufferAttribute(uvs, 2));
     geometry.setIndex(indices);
     const material = new THREE.MeshPhysicalMaterial({
-      color,
+      color: "#c87f57",
       side: THREE.DoubleSide,
-      metalness: 0.28,
-      roughness: 0.27,
-      clearcoat: 0.5,
+      metalness: 0.1,
+      roughness: 0.42,
+      clearcoat: 0.2,
       clearcoatRoughness: 0.32,
       sheen: 0.7,
       sheenColor: new THREE.Color("#ffc99c"),
@@ -226,35 +210,36 @@ export function createWorld({ canvas, enabled = true }) {
     });
     const object = mesh(geometry, material, 0, 0, 0);
     object.frustumCulled = false;
-    const ribbon = { geometry, positions, count, cross, phase, scale, object };
-    ribbonGeometries.push(ribbon);
+    const ribbon = { geometry, positions, count, cross, object };
     materials.push(material);
     return ribbon;
   }
-  const mainRibbon = makeRibbon("#c66d45", 0, 1);
-  const echoRibbon = makeRibbon("#e8bc99", 2.7, 0.75);
-  echoRibbon.object.position.set(1.2, 0.5, -3);
-  echoRibbon.object.rotation.y = 0.45;
+  const mainRibbon = makeRibbon();
 
   function deformRibbon(ribbon, t) {
-    const { positions, count, cross, phase, scale } = ribbon;
-    const p = t * 0.42 + phase;
+    const { positions, count, cross } = ribbon;
+    const phase = t * 0.28;
     for (let i = 0; i <= count; i++) {
       const u = (i / count) * Math.PI * 2;
-      const x = Math.sin(u) * 5.8 * scale;
+      const x = Math.sin(u) * 5.25;
+      const z = Math.cos(u) * 2.05 - 0.5;
+      const proximity = Math.exp(
+        -((x - ribbonFocus.x) ** 2 + (z - ribbonFocus.z) ** 2) / 3.8,
+      );
       const y =
-        (1.18 + Math.sin(u * 2 + p) * 0.75 + Math.cos(u - p * 0.65) * 0.4) *
-        scale;
-      const z = (Math.cos(u) * 2.4 + Math.sin(u * 2 - p) * 0.45) * scale;
-      const twist = u * 1.5 + Math.sin(u * 2 + p) * 0.8 + p * 0.3;
-      const breadth = (0.58 + 0.15 * Math.sin(u * 3 + p)) * scale;
+        0.96 +
+        Math.sin(u * 2 - phase) * 0.17 +
+        Math.sin(u + phase) * 0.08 +
+        proximity * 0.2 * pointerPresence;
+      // A periodic cross-section closes cleanly, with bounded motion and no path crossings.
+      const twist = u + Math.sin(u * 2 - phase) * 0.16 + 0.25;
+      const breadth = 0.4 + Math.sin(u * 2 + phase) * 0.035;
       for (let j = 0; j <= cross; j++) {
         const v = (j / cross - 0.5) * 2;
         const n = (i * (cross + 1) + j) * 3;
-        positions[n] = x + Math.cos(u) * Math.sin(twist) * v * breadth * 0.4;
-        positions[n + 1] =
-          y + Math.cos(twist) * v * breadth + Math.sin(v * Math.PI) * 0.045;
-        positions[n + 2] = z + Math.sin(twist) * v * breadth;
+        positions[n] = x + Math.sin(u) * Math.sin(twist) * v * breadth;
+        positions[n + 1] = y + Math.cos(twist) * v * breadth;
+        positions[n + 2] = z + Math.cos(u) * Math.sin(twist) * v * breadth;
       }
     }
     ribbon.geometry.attributes.position.needsUpdate = true;
@@ -267,24 +252,25 @@ export function createWorld({ canvas, enabled = true }) {
       tDiffuse: { value: null },
       textureMatrix: { value: null },
       uTime: { value: 0 },
-      uRipple: { value: new THREE.Vector2() },
-      uStrength: { value: 0 },
+      uWakes: { value: wakes },
     },
     vertexShader:
       "uniform mat4 textureMatrix; varying vec4 vMirror; varying vec3 vPosition; void main(){ vPosition=position; vMirror=textureMatrix*vec4(position,1.); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }",
     fragmentShader: [
-      "uniform vec3 color; uniform sampler2D tDiffuse; uniform float uTime; uniform vec2 uRipple; uniform float uStrength;",
+      "uniform vec3 color; uniform sampler2D tDiffuse; uniform float uTime; uniform vec4 uWakes[12];",
       "varying vec4 vMirror; varying vec3 vPosition;",
       "void main(){",
       "vec2 uv=vMirror.xy/vMirror.w; vec2 p=vPosition.xy;",
-      "float d=distance(p,uRipple);",
-      "float ring=sin(d*5.5-uTime*3.5)*exp(-d*.48)*uStrength;",
       "float w1=sin(p.x*2.1+p.y*1.2+uTime*.75);",
       "float w2=sin(p.y*3.6-p.x*.7-uTime*1.1);",
-      "vec2 bend=vec2(w1*.0026,w2*.0022)+vec2(ring)*.008;",
+      "vec2 bend=vec2(w1*.0014,w2*.0012); float light=0.;",
+      "for(int i=0;i<12;i++){ vec2 delta=p-uWakes[i].xy; float age=max(0.,uTime-uWakes[i].z);",
+      "if(age>4.) continue; float d=length(delta); float front=d-age*2.8;",
+      "float ring=sin(front*8.)*exp(-front*front*1.6)*exp(-age*.85)*uWakes[i].w;",
+      "bend+=delta/max(d,.1)*ring*.019; light+=ring*.12; }",
       "vec3 reflection=texture2D(tDiffuse,uv+bend).rgb;",
       "float silk=pow(.5+.5*sin(p.x*2.+p.y*3.4+uTime),14.);",
-      "vec3 base=mix(color,reflection,.43)+silk*.028;",
+      "vec3 base=mix(color,reflection,.48)+silk*.016+clamp(light,-.14,.14);",
       "gl_FragColor=vec4(base,1.);",
       "#include <tonemapping_fragment>",
       "#include <colorspace_fragment>",
@@ -292,8 +278,8 @@ export function createWorld({ canvas, enabled = true }) {
     ].join("\n"),
   };
   const water = new Reflector(new THREE.PlaneGeometry(70, 70), {
-    textureWidth: 512,
-    textureHeight: 512,
+    textureWidth: 768,
+    textureHeight: 768,
     multisample: 0,
     clipBias: 0.005,
     shader: waterShader,
@@ -307,30 +293,39 @@ export function createWorld({ canvas, enabled = true }) {
     new THREE.PlaneGeometry(50, 50),
     new THREE.ShadowMaterial({ opacity: 0.13 }),
     0,
-    -0.2,
+    -0.215,
     0,
   );
   shadow.rotation.x = -Math.PI / 2;
   shadow.castShadow = false;
+  scene.add(shadow);
 
   const previewVertex = [
-    "uniform float uVelocity; uniform float uTime; uniform float uHover; uniform float uMotion; uniform vec2 uPointer; uniform vec2 uViewport;",
-    "varying vec2 vUv;",
+    "uniform float uTime; uniform float uMotion; uniform vec2 uViewport; uniform vec2 uPointer; uniform vec2 uFlow; uniform float uEnergy;",
+    "varying vec2 vUv; varying float vDepth;",
     "void main(){ vUv=uv; vec4 p=modelMatrix*vec4(position,1.);",
-    "float wave=sin(uv.x*3.14159265);",
-    "p.y+=wave*uVelocity*29.; p.z+=sin(uv.y*3.14159265)*abs(uVelocity)*70.;",
-    "p.z+=sin(uv.x*6.+uTime)*sin(uv.y*3.14159265)*uHover*14.;",
-    "float fold=max(0.,p.y-uViewport.y*.12)*uMotion;",
-    "p.z-=fold*fold/(uViewport.y*.6); p.y-=pow(fold/uViewport.y,2.)*uViewport.y*.35;",
+    "float fabric=sin(uv.x*3.14159265)*sin(uv.y*3.14159265);",
+    "p.z+=sin(uv.x*4.2+uv.y*2.5-uTime*1.2)*fabric*12.*uMotion;",
+    "p.y+=sin(uv.x*3.2+uTime*.9)*fabric*2.2*uMotion;",
+    "float start=uViewport.y*.13; float radius=uViewport.y*.44;",
+    "float arc=clamp((p.y-start)/radius,0.,2.6)*uMotion;",
+    "if(p.y>start){ p.y=mix(p.y,start+sin(arc)*radius,uMotion);",
+    "p.z-=(1.-cos(arc))*radius*1.6;",
+    "p.z+=sin(arc)*sin(arc*3.-uTime*.8+uv.x*2.6)*radius*.038*uMotion; }",
+    "vec4 clip=projectionMatrix*viewMatrix*p; vec2 screen=(clip.xy/clip.w*.5+.5)*uViewport;",
+    "float influence=exp(-dot(screen-uPointer,screen-uPointer)/22000.)*uMotion;",
+    "p.xy+=uFlow*influence*7.; p.z+=influence*uEnergy*10.;",
+    "vDepth=-p.z;",
     "gl_Position=projectionMatrix*viewMatrix*p; }",
   ].join("\n");
   const previewFragment = [
-    "uniform sampler2D uImage; uniform vec2 uImageSize; uniform vec2 uPlaneSize; uniform float uHover; uniform float uAlpha;",
-    "varying vec2 vUv;",
+    "uniform sampler2D uImage; uniform vec2 uImageSize; uniform vec2 uPlaneSize; uniform vec2 uViewport; uniform float uHover;",
+    "varying vec2 vUv; varying float vDepth;",
     "void main(){ vec2 uv=vUv; float i=uImageSize.x/uImageSize.y; float p=uPlaneSize.x/uPlaneSize.y;",
     "vec2 crop=i>p?vec2(p/i,1.):vec2(1.,i/p);",
-    "uv=(uv-.5)*crop/(1.+uHover*.055)+.5;",
-    "vec4 c=texture2D(uImage,uv); gl_FragColor=vec4(c.rgb,uAlpha);",
+    "uv=(uv-.5)*crop/(1.+uHover*.025)+.5;",
+    "float alpha=1.-smoothstep(uViewport.y*.32,uViewport.y*1.05,vDepth);",
+    "vec4 c=texture2D(uImage,uv); gl_FragColor=vec4(c.rgb,alpha);",
     "#include <colorspace_fragment>",
     "}",
   ].join("\n");
@@ -340,13 +335,13 @@ export function createWorld({ canvas, enabled = true }) {
       uImage: { value: null },
       uImageSize: { value: new THREE.Vector2(1600, 1000) },
       uPlaneSize: { value: new THREE.Vector2(1, 1) },
-      uVelocity: { value: 0 },
       uMotion: { value: enabled ? 1 : 0 },
       uTime: { value: 0 },
       uHover: { value: 0 },
-      uPointer: { value: new THREE.Vector2() },
+      uPointer: { value: new THREE.Vector2(-1000, -1000) },
+      uFlow: { value: new THREE.Vector2() },
+      uEnergy: { value: 0 },
       uViewport: { value: new THREE.Vector2(width, height) },
-      uAlpha: { value: 1 },
     };
     const material = new THREE.ShaderMaterial({
       uniforms,
@@ -356,12 +351,23 @@ export function createWorld({ canvas, enabled = true }) {
       depthTest: false,
     });
     const object = new THREE.Mesh(
-      new THREE.PlaneGeometry(1, 1, 24, 24),
+      new THREE.PlaneGeometry(1, 1, 32, 40),
       material,
     );
     object.frustumCulled = false;
     gallery.add(object);
-    const item = { element, image, object, uniforms, hover: 0, ready: false };
+    const details = [...element.parentElement.children].filter(
+      (e) => e !== element,
+    );
+    const item = {
+      element,
+      image,
+      details,
+      object,
+      uniforms,
+      hover: 0,
+      ready: false,
+    };
     new THREE.TextureLoader().load(
       image.getAttribute("src"),
       (texture) => {
@@ -432,21 +438,20 @@ export function createWorld({ canvas, enabled = true }) {
   function draw(now) {
     raf = 0;
     if (disposed || contextLost || document.hidden) return;
-    const dt = Math.min((now - (previousTime || now)) / 1000, 0.05);
+    const dt = Math.min((now - (previousTime || now - 16.67)) / 1000, 0.05);
     previousTime = now;
+    const ease = (rate) => (enabled ? 1 - Math.exp(-rate * dt) : 1);
     if (enabled) time += dt;
-    const y = scrollY,
-      delta = y - lastScroll;
-    lastScroll = y;
-    velocity = THREE.MathUtils.lerp(
-      velocity,
-      enabled
-        ? THREE.MathUtils.clamp((delta / (dt * 1000 || 16)) * 0.35, -1.6, 1.6)
-        : 0,
-      0.15,
+    const y = scrollY;
+    currentPointer.lerp(enabled ? pointer : new THREE.Vector2(), ease(5.5));
+    currentPixels.lerp(pointerPixels, ease(9));
+    pointerPresence = THREE.MathUtils.lerp(
+      pointerPresence,
+      pointerActive && enabled ? 1 : 0,
+      ease(5),
     );
-    currentPointer.lerp(enabled ? pointer : new THREE.Vector2(), 0.045);
-    mood = THREE.MathUtils.lerp(mood, targetMood, 0.035);
+    pointerEnergy *= Math.exp(-dt * 2.5);
+    mood = THREE.MathUtils.lerp(mood, targetMood, ease(3));
     const workRect = work.getBoundingClientRect();
     const contactRect = contact.getBoundingClientRect();
     const heroRatio = THREE.MathUtils.clamp(y / hero.offsetHeight, 0, 1);
@@ -455,25 +460,34 @@ export function createWorld({ canvas, enabled = true }) {
     const visible = y < hero.offsetHeight || inWork || inContact;
     const mode = inWork ? "work" : inContact ? "contact" : "home";
     host.dataset.scene = mode;
+    workBlend = THREE.MathUtils.lerp(workBlend, inWork ? 1 : 0, ease(3));
+    visualScroll =
+      enabled && inWork ? THREE.MathUtils.lerp(visualScroll, y, ease(9)) : y;
+    const lag = enabled ? THREE.MathUtils.clamp(y - visualScroll, -42, 42) : 0;
+    workGrid.style.transform = lag
+      ? "translate3d(0," + lag.toFixed(2) + "px,0)"
+      : "";
     if (visible || dirty) {
-      const wash = inWork ? 1 : 0;
+      const wash = workBlend;
       const mobile = width < 700;
-      const phase = inContact ? Math.PI * 0.3 : heroRatio * 0.25;
-      const distance = mobile ? 16.5 : 12.5;
-      targetPosition.set(
-        Math.sin(phase) * distance * 0.5 + currentPointer.x * 0.65,
-        (inWork ? 5.5 : 4) +
-          Math.sin(time * 0.17) * 0.075 +
-          currentPointer.y * 0.35,
-        Math.cos(phase) * distance + (inWork ? 2 : 0),
+      rig.scale.setScalar(
+        Math.min(1, (width / height) * (mobile ? 1.13 : 0.85)),
       );
-      targetLook.set(inContact ? 1.3 : 0, inWork ? 1.0 : 1.65, 0);
-      camera.position.lerp(targetPosition, enabled ? 0.045 : 1);
-      look.lerp(targetLook, enabled ? 0.045 : 1);
+      const phase =
+        (inContact ? 0.24 : heroRatio * 0.1) + currentPointer.x * 0.12;
+      const distance = mobile ? 17 : 13;
+      targetPosition.set(
+        Math.sin(phase) * distance,
+        4.5 +
+          workBlend * 0.8 +
+          Math.sin(time * 0.17) * 0.025 +
+          currentPointer.y * 0.45,
+        Math.cos(phase) * distance + workBlend * 2,
+      );
+      targetLook.set(inContact ? 0.6 : 0, mobile ? 2.3 : 2.15, -0.8);
+      camera.position.lerp(targetPosition, ease(6));
+      look.lerp(targetLook, ease(6));
       camera.lookAt(look);
-      camera.rotation.z += enabled
-        ? velocity * 0.005 + Math.sin(time * 0.11) * 0.002
-        : 0;
       scene.background
         .copy(peach)
         .lerp(galleryColor, wash * 0.92)
@@ -483,44 +497,58 @@ export function createWorld({ canvas, enabled = true }) {
         .set(inWork ? "#dbe2df" : "#c4d6da")
         .lerp(eveningColor, mood * 0.5);
       sun.intensity = 4.2 - mood * 1.4;
+      raycaster.setFromCamera(currentPointer, camera);
+      if (raycaster.ray.intersectPlane(ribbonPlane, ripplePoint)) {
+        ribbonFocus.copy(rig.worldToLocal(ripplePoint.clone()));
+      }
       deformRibbon(mainRibbon, time);
-      deformRibbon(echoRibbon, time * 0.85);
       rig.rotation.y = THREE.MathUtils.lerp(
         rig.rotation.y,
-        Math.sin(time * 0.12) * 0.055 + (inWork ? 0.7 : 0),
-        enabled ? 0.035 : 1,
+        Math.sin(time * 0.12) * 0.025 + currentPointer.x * 0.025,
+        ease(3),
       );
-      rig.position.x = THREE.MathUtils.lerp(
-        rig.position.x,
-        inWork ? -3.5 : 0,
-        enabled ? 0.035 : 1,
-      );
-      rig.position.y = THREE.MathUtils.lerp(
-        rig.position.y,
-        inWork ? -1.3 : -0.25,
-        enabled ? 0.035 : 1,
-      );
-      paperFold.rotation.y = -0.5 + Math.sin(time * 0.2) * 0.07;
-      finGroup.rotation.y = Math.sin(time * 0.2) * 0.055;
-      ring.rotation.z = time * 0.18;
-      floating.forEach(({ object, base, phase }) => {
-        object.position.y = base.y + Math.sin(time * 0.6 + phase) * 0.22;
-        object.rotation.y = time * 0.18 + phase;
-        object.rotation.z = Math.sin(time * 0.45 + phase) * 0.2;
-      });
+      // The work chapter uses the quiet reflective floor; its previews are the objects.
+      rig.visible = !inWork;
+      rig.position.y = -0.1;
+      paperFold.rotation.y = -0.25 + Math.sin(time * 0.15) * 0.025;
       raycaster.setFromCamera(currentPointer, camera);
       if (raycaster.ray.intersectPlane(groundPlane, ripplePoint)) {
-        water.material.uniforms.uRipple.value.set(
-          ripplePoint.x,
-          -ripplePoint.z,
-        );
+        if (
+          enabled &&
+          pointerEnergy > 0.03 &&
+          time - lastWake > 0.065 &&
+          Math.abs(ripplePoint.x) < 22 &&
+          Math.abs(ripplePoint.z) < 22
+        ) {
+          wakes[wakeIndex].set(
+            ripplePoint.x,
+            -ripplePoint.z,
+            time,
+            Math.min(0.85, pointerEnergy),
+          );
+          wakeIndex = (wakeIndex + 1) % wakes.length;
+          lastWake = time;
+          host.dataset.wakes = String(++wakeCount);
+        }
       }
-      pointerStrength = THREE.MathUtils.lerp(
-        pointerStrength,
-        enabled ? Math.min(1, pointer.length() * 0.9) : 0,
-        0.04,
-      );
-      water.material.uniforms.uStrength.value = pointerStrength;
+      if (enabled && pointerActive) {
+        titleInk.forEach((ink) => {
+          const bounds = ink.getBoundingClientRect();
+          ink.style.setProperty(
+            "--light-x",
+            (currentPixels.x - bounds.left).toFixed(1) + "px",
+          );
+          ink.style.setProperty(
+            "--light-y",
+            (currentPixels.y - bounds.top).toFixed(1) + "px",
+          );
+        });
+      } else {
+        titleInk.forEach((ink) => {
+          ink.style.removeProperty("--light-x");
+          ink.style.removeProperty("--light-y");
+        });
+      }
       water.material.uniforms.uTime.value = time;
       renderer.clear();
       renderer.render(scene, camera);
@@ -531,8 +559,8 @@ export function createWorld({ canvas, enabled = true }) {
           const shown =
             item.ready &&
             !article.hidden &&
-            rect.bottom > -150 &&
-            rect.top < height + 150;
+            rect.bottom > -height * 0.9 &&
+            rect.top < height + 100;
           item.object.visible = shown;
           if (!shown) return;
           item.object.position.set(
@@ -542,17 +570,53 @@ export function createWorld({ canvas, enabled = true }) {
           );
           item.object.scale.set(rect.width, rect.height, 1);
           item.uniforms.uPlaneSize.value.set(rect.width, rect.height);
-          item.uniforms.uVelocity.value = velocity;
           item.uniforms.uMotion.value = enabled ? 1 : 0;
           item.uniforms.uTime.value = time;
+          item.uniforms.uPointer.value.set(
+            currentPixels.x,
+            height - currentPixels.y,
+          );
+          item.uniforms.uFlow.value.set(
+            THREE.MathUtils.clamp((pointer.x - currentPointer.x) * 6, -1, 1),
+            THREE.MathUtils.clamp((pointer.y - currentPointer.y) * 6, -1, 1),
+          );
+          item.uniforms.uEnergy.value = enabled ? pointerEnergy : 0;
           item.uniforms.uHover.value = THREE.MathUtils.lerp(
             item.uniforms.uHover.value,
             enabled ? item.hover : 0,
-            0.1,
+            ease(4),
           );
-          item.uniforms.uAlpha.value = Number(
-            getComputedStyle(article).opacity,
-          );
+          // Captions follow the tangent of the same scroll curve, staying as real text.
+          item.details.forEach((detail) => {
+            const cy = rect.top + detail.offsetTop + detail.offsetHeight / 2;
+            const originalY = height / 2 - cy;
+            const start = height * 0.13,
+              radius = height * 0.44;
+            const arc = enabled
+              ? THREE.MathUtils.clamp((originalY - start) / radius, 0, 2.6)
+              : 0;
+            const curvedY = arc ? start + Math.sin(arc) * radius : originalY;
+            const depth = (1 - Math.cos(arc)) * radius * 1.6;
+            const scale =
+              galleryCamera.position.z / (galleryCamera.position.z + depth);
+            const dx = (rect.left + rect.width / 2 - width / 2) * (scale - 1);
+            const dy = height / 2 - curvedY * scale - cy;
+            detail.style.transform = arc
+              ? "translate(" +
+                dx.toFixed(2) +
+                "px," +
+                dy.toFixed(2) +
+                "px) scale(" +
+                scale.toFixed(4) +
+                "," +
+                (scale * Math.max(0.05, Math.cos(arc))).toFixed(4) +
+                ")"
+              : "";
+            detail.style.opacity = String(
+              1 -
+                THREE.MathUtils.smoothstep(depth, height * 0.32, height * 1.05),
+            );
+          });
         });
         renderer.clearDepth();
         renderer.render(gallery, galleryCamera);
@@ -569,10 +633,20 @@ export function createWorld({ canvas, enabled = true }) {
   }
   function onPointer(event) {
     if (!enabled || event.pointerType === "touch") return;
-    pointer.set(
-      (event.clientX / width) * 2 - 1,
-      -((event.clientY / height) * 2 - 1),
+    const x = (event.clientX / width) * 2 - 1,
+      y = -((event.clientY / height) * 2 - 1);
+    pointerEnergy = Math.min(
+      1,
+      pointerEnergy + Math.hypot(x - pointer.x, y - pointer.y) * 3,
     );
+    pointer.set(x, y);
+    pointerPixels.set(event.clientX, event.clientY);
+    pointerActive = true;
+    wake();
+  }
+  function onPointerLeave() {
+    pointerActive = false;
+    pointer.set(0, 0);
     wake();
   }
   function onVisibility() {
@@ -585,6 +659,7 @@ export function createWorld({ canvas, enabled = true }) {
   window.addEventListener("resize", resize, { passive: true });
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("pointermove", onPointer, { passive: true });
+  document.addEventListener("pointerleave", onPointerLeave);
   document.addEventListener("visibilitychange", onVisibility);
   canvas.addEventListener("webglcontextlost", (event) => {
     event.preventDefault();
@@ -593,6 +668,13 @@ export function createWorld({ canvas, enabled = true }) {
     raf = 0;
     root.classList.remove("webgl-ready");
     media.forEach((e) => e.classList.remove("webgl-media"));
+    workGrid.style.transform = "";
+    previews.forEach((p) =>
+      p.details.forEach((d) => {
+        d.style.transform = "";
+        d.style.opacity = "";
+      }),
+    );
     host.dataset.renderer = "fallback";
   });
   canvas.addEventListener("webglcontextrestored", () => {
@@ -611,6 +693,15 @@ export function createWorld({ canvas, enabled = true }) {
   return {
     setMotion(value) {
       enabled = value;
+      if (!enabled) {
+        workGrid.style.transform = "";
+        previews.forEach((p) =>
+          p.details.forEach((d) => {
+            d.style.transform = "";
+            d.style.opacity = "";
+          }),
+        );
+      }
       previousTime = 0;
       dirty = true;
       wake();
@@ -631,6 +722,7 @@ export function createWorld({ canvas, enabled = true }) {
       window.removeEventListener("resize", resize);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pointermove", onPointer);
+      document.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibility);
       scene.traverse((o) => {
         o.geometry?.dispose();

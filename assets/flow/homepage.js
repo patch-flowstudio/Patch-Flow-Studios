@@ -1,5 +1,11 @@
 const root = document.documentElement;
 root.classList.add("js");
+if (
+  location.hash ||
+  performance.getEntriesByType("navigation")[0]?.type === "back_forward"
+) {
+  root.classList.add("has-entered");
+}
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
 const motionButton = document.getElementById("motion-control");
@@ -19,6 +25,11 @@ let motion = !reduced.matches && storedMotion !== "off";
 let world = null;
 let frame = 0;
 let evening = false;
+document
+  .querySelector(".title-line:last-child")
+  ?.addEventListener("animationend", () => root.classList.add("has-entered"), {
+    once: true,
+  });
 
 function setMotion(value, save = false) {
   motion = value && !reduced.matches;
@@ -35,6 +46,7 @@ function setMotion(value, save = false) {
     : motionButton.getAttribute("aria-label");
   world?.setMotion(motion);
   if (!motion) {
+    root.classList.add("has-entered");
     reveals.forEach((el) => el.classList.add("is-visible"));
     document.querySelectorAll(".magnetic").forEach((el) => {
       el.style.transform = "";
@@ -193,60 +205,6 @@ menu.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-const filters = [...document.querySelectorAll(".filter-button")];
-const cards = [...document.querySelectorAll(".work-card")];
-let filterTimer = 0,
-  arrivalTimer = 0;
-filters.forEach((button) =>
-  button.addEventListener("click", () => {
-    clearTimeout(filterTimer);
-    clearTimeout(arrivalTimer);
-    const selected = button.dataset.filter;
-    filters.forEach((filter) => {
-      filter.classList.toggle("is-active", filter === button);
-      filter.setAttribute("aria-pressed", String(filter === button));
-    });
-    cards.forEach((card) => {
-      card.classList.remove("is-arriving");
-      if (!card.hidden) card.classList.add("is-leaving");
-    });
-    filterTimer = setTimeout(
-      () => {
-        let count = 0;
-        cards.forEach((card, index) => {
-          const shown =
-            selected === "all" || card.dataset.category === selected;
-          card.hidden = !shown;
-          card.classList.remove("is-leaving");
-          if (shown) {
-            count++;
-            card.style.animationDelay = motion ? index * 50 + "ms" : "0ms";
-            card.classList.add("is-arriving");
-          }
-        });
-        document.getElementById("filter-status").textContent =
-          "Showing " +
-          count +
-          " studio concept" +
-          (count === 1 ? "" : "s") +
-          (selected === "all"
-            ? "."
-            : " in " + button.childNodes[0].textContent.trim() + ".");
-        world?.refresh();
-        queueScroll();
-        arrivalTimer = setTimeout(
-          () => {
-            cards.forEach((card) => card.classList.remove("is-arriving"));
-            world?.refresh();
-          },
-          motion ? 1000 : 0,
-        );
-      },
-      motion ? 230 : 0,
-    );
-  }),
-);
-
 const range = document.getElementById("comparison-range");
 range.addEventListener("input", () => {
   document
@@ -273,9 +231,10 @@ document.querySelectorAll(".project-link").forEach((link) => {
     setTimeout(() => location.assign(link.href), 450);
   });
 });
-window.addEventListener("pageshow", () =>
-  root.classList.remove("is-navigating"),
-);
+window.addEventListener("pageshow", (event) => {
+  root.classList.remove("is-navigating");
+  if (event.persisted) root.classList.add("has-entered");
+});
 
 const form = document.getElementById("project-brief");
 form.addEventListener("submit", (event) => {

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baked &amp; Brewed | Coffee and bakery on Imperial Main</title>
+<meta name="description" content="Baked &amp; Brewed, a coffee shop and bakery at 1010 Imperial Main in Imperial, Missouri. Kolaches, scones, homemade pies, cinnamon buns and espresso drinks.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--esp:#2b1a12;--crema:#c98a4b;--pump:#e0752d;--oat:#f4ead9;--milk:#fffaf2;--sky1:#ffd9a8;--sky2:#ffeedd;--line:rgba(43,26,18,.13)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.02rem/1.6 Outfit,system-ui,sans-serif;color:var(--esp);background:var(--oat);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.74rem;line-height:1.45;padding:.6rem 1rem;text-align:center;background:var(--esp);color:#f2e3cf}
+.serif{font-family:"Young Serif",Georgia,serif}
+/* hero: steam over a cup, split type */
+.hero{max-width:62rem;margin:0 auto;padding:2.6rem 1.25rem 1rem;display:grid;gap:1.2rem}
+@media(min-width:760px){.hero{grid-template-columns:1.2fr 1fr;align-items:end;padding-top:4rem}}
+.where{font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pump)}
+h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(3rem,15vw,6.2rem);line-height:.92;letter-spacing:-.02em;margin:.6rem 0 1rem}
+h1 .amp{display:inline-block;color:var(--pump);font-style:italic;transform:translateY(.04em)}
+.lede{font-size:1.12rem;max-width:28rem;font-weight:300}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 1.35rem;border-radius:999px;font-weight:600;text-decoration:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .45s cubic-bezier(.2,1.3,.4,1)}
+.btn:active{transform:scale(.96);transition-duration:.1s}
+.btn.d{background:var(--esp);color:var(--milk)}
+.btn.c{background:var(--milk);box-shadow:inset 0 0 0 1.5px var(--esp)}
+:focus-visible{outline:3px solid var(--pump);outline-offset:3px}
+.cup{width:100%;max-width:280px;justify-self:center}
+.steam path{animation:rise 3.6s ease-in-out infinite;opacity:.0}
+.steam path:nth-child(2){animation-delay:1.2s}.steam path:nth-child(3){animation-delay:2.4s}
+@keyframes rise{0%{opacity:0;transform:translateY(10px)}40%{opacity:.7}100%{opacity:0;transform:translateY(-24px)}}
+section{max-width:62rem;margin:0 auto;padding:4rem 1.25rem 0}
+h2{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(2.1rem,8.5vw,3.3rem);line-height:1.02;letter-spacing:-.015em}
+.sub{margin-top:.5rem;max-width:32rem;font-weight:300}
+/* signature: sunrise morning planner */
+.sun{margin-top:1.5rem;border-radius:30px;overflow:hidden;background:linear-gradient(180deg,var(--sky1),var(--sky2) 70%,var(--milk));box-shadow:0 30px 60px -40px rgba(43,26,18,.6);padding:1.4rem 1.2rem 1.4rem}
+.days{display:flex;gap:.3rem;overflow-x:auto;scrollbar-width:none;padding-bottom:.2rem}
+.days::-webkit-scrollbar{display:none}
+.days button{flex:1 0 2.9rem;min-height:48px;border:0;border-radius:14px;background:rgba(255,255,255,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font:600 .9rem Outfit,sans-serif;color:var(--esp);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .4s cubic-bezier(.2,1.3,.4,1),background .25s}
+.days button:active{transform:scale(.94)}
+.days button[aria-pressed="true"]{background:var(--esp);color:var(--milk)}
+.sky{position:relative;height:190px;margin-top:.8rem}
+.sky svg{position:absolute;inset:0;width:100%;height:100%}
+#orb{transition:transform 1s cubic-bezier(.25,1.3,.45,1)}
+.track{display:flex;justify-content:space-between;font-size:.75rem;font-weight:600;opacity:.7;margin-top:-.2rem}
+.readout{display:grid;gap:.8rem;margin-top:1rem}
+@media(min-width:620px){.readout{grid-template-columns:1fr 1fr}}
+.pill{background:rgba(255,255,255,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:18px;padding:1rem 1.1rem}
+.pill small{display:block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.pill b{font-family:"Young Serif",serif;font-weight:400;font-size:1.6rem;line-height:1.15}
+.pill.k{background:var(--esp);color:var(--milk)}
+.note{font-size:.8rem;opacity:.65;margin-top:.7rem}
+/* bake list */
+.shelf{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1.4rem}
+@media(min-width:760px){.shelf{grid-template-columns:repeat(4,1fr)}}
+.item{background:var(--milk);border-radius:22px;padding:1rem;text-align:center;box-shadow:0 1px 0 var(--line)}
+.item svg{width:84px;height:64px}
+.item h3{font-family:"Young Serif",serif;font-weight:400;font-size:1.15rem;line-height:1.2;margin-top:.3rem}
+.item p{font-size:.8rem;opacity:.65}
+.drinks{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.2rem}
+.drinks span{border:1.5px solid var(--esp);border-radius:999px;padding:.35rem .85rem;font-size:.9rem}
+/* story */
+.story{display:grid;gap:1.4rem;background:var(--esp);color:var(--milk);border-radius:30px;padding:2.2rem 1.4rem}
+@media(min-width:760px){.story{grid-template-columns:1fr 1fr;padding:3rem;align-items:center}}
+.story h2{color:var(--sky1)}
+.path{display:flex;align-items:center;gap:.6rem;margin-top:1rem;font-weight:600}
+.path i{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--crema) 0 6px,transparent 6px 12px)}
+.story q{display:block;font-family:"Young Serif",serif;font-size:1.15rem;line-height:1.45}
+.story cite{display:block;font-style:normal;font-size:.75rem;opacity:.7;margin-top:.5rem}
+.visit{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.vc{background:var(--milk);border-radius:24px;padding:1.5rem;box-shadow:0 1px 0 var(--line)}
+.vc h3{font-family:"Young Serif",serif;font-weight:400;font-size:1.5rem}
+footer{text-align:center;font-size:.85rem;padding:4rem 1rem 2.5rem;opacity:.8}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .8s cubic-bezier(.2,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}.steam path{opacity:.5}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Baked &amp; Brewed's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+ <div>
+  <p class="where">1010 Imperial Main · Imperial, MO</p>
+  <h1>Baked <span class="amp">&amp;</span> Brewed</h1>
+  <p class="lede">Nicole's coffee shop and bakery on Imperial Main. Kolaches, scones, homemade pies and espresso drinks that taste like coffee.</p>
+  <div class="cta"><a class="btn d" href="tel:+16362126229">Call (636) 212-6229</a><a class="btn c" href="https://www.google.com/maps/search/?api=1&amp;query=Baked%20%26%20Brewed%201010%20Imperial%20Main%20Imperial%20MO%2063052">Directions</a></div>
+ </div>
+ <svg class="cup" viewBox="0 0 280 240" aria-hidden="true">
+  <g class="steam" fill="none" stroke="#c98a4b" stroke-width="5" stroke-linecap="round"><path d="M110 70c-14-16 14-24 0-44"/><path d="M140 66c-14-16 14-24 0-44"/><path d="M170 70c-14-16 14-24 0-44"/></g>
+  <ellipse cx="140" cy="220" rx="110" ry="14" fill="rgba(43,26,18,.12)"/>
+  <path d="M60 90h160l-14 110a20 20 0 0 1-20 18H94a20 20 0 0 1-20-18z" fill="#fffaf2" stroke="#2b1a12" stroke-width="4"/>
+  <path d="M220 110c34 0 34 52 0 52" fill="none" stroke="#2b1a12" stroke-width="10"/>
+  <ellipse cx="140" cy="90" rx="80" ry="12" fill="#6b3d22" stroke="#2b1a12" stroke-width="4"/>
+  <path d="M120 88c10-8 30-8 40 0" stroke="#e8c49a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M76 140h128" stroke="#e0752d" stroke-width="10"/>
+ </svg>
+</header>
+
+<section class="rv">
+ <h2>Plan your morning run</h2>
+ <p class="sub">"You have to get there early if you want to snag a kolache." Pick a day to see when the doors open.</p>
+ <div class="sun">
+  <div class="days" role="group" aria-label="Pick a day">
+   <button type="button" data-d="0">Mon</button><button type="button" data-d="1">Tue</button><button type="button" data-d="2">Wed</button><button type="button" data-d="3">Thu</button><button type="button" data-d="4">Fri</button><button type="button" data-d="5">Sat</button><button type="button" data-d="6">Sun</button>
+  </div>
+  <div class="sky">
+   <svg viewBox="0 0 360 190" aria-hidden="true">
+    <path d="M10 180Q180 -20 350 180" fill="none" stroke="rgba(43,26,18,.25)" stroke-width="2" stroke-dasharray="4 7"/>
+    <rect x="0" y="178" width="360" height="12" fill="#2b1a12" opacity=".85"/>
+   </svg>
+   <svg viewBox="0 0 360 190" aria-hidden="true" style="overflow:visible"><g id="orb"><circle cx="0" cy="0" r="18" fill="#e0752d"/><circle cx="0" cy="0" r="28" fill="#e0752d" opacity=".2"/></g></svg>
+  </div>
+  <div class="track"><span>6 am</span><span>Noon</span><span>3 pm</span></div>
+  <div class="readout" aria-live="polite">
+   <div class="pill k"><small id="dl">Doors open</small><b id="op"></b></div>
+   <div class="pill"><small>Doors close</small><b>3 pm</b></div>
+  </div>
+  <p class="note">Hours as listed on Google. Kolaches go fast, so early is best; call to ask what's in the case.</p>
+ </div>
+</section>
+
+<section class="rv">
+ <h2>From the bakery case</h2>
+ <div class="shelf">
+  <div class="item"><svg viewBox="0 0 84 64" aria-hidden="true"><ellipse cx="42" cy="38" rx="32" ry="18" fill="#e8b46a"/><circle cx="42" cy="36" r="11" fill="#b2322f"/></svg><h3>Kolaches</h3><p>Come early</p></div>
+  <div class="item"><svg viewBox="0 0 84 64" aria-hidden="true"><path d="M14 50L42 10l28 40z" fill="#e8c48e"/><circle cx="36" cy="36" r="3" fill="#7a4a2a"/><circle cx="48" cy="40" r="3" fill="#7a4a2a"/></svg><h3>Scones</h3><p>A regular's tip</p></div>
+  <div class="item"><svg viewBox="0 0 84 64" aria-hidden="true"><path d="M10 34h64l-6 20H16z" fill="#c98a4b"/><ellipse cx="42" cy="34" rx="32" ry="8" fill="#e0752d"/><path d="M14 32c6-4 10 4 16 0s10 4 16 0 10 4 16 0 8 4 10 0" stroke="#f4ead9" stroke-width="3" fill="none"/></svg><h3>Homemade pies</h3><p>Ask what's baked</p></div>
+  <div class="item"><svg viewBox="0 0 84 64" aria-hidden="true"><circle cx="42" cy="34" r="24" fill="#d9a066"/><path d="M42 34m-4 0a4 4 0 1 0 8 0a10 10 0 1 0-20 0a16 16 0 1 0 32 0" fill="none" stroke="#8a5530" stroke-width="3"/></svg><h3>Cinnamon buns</h3><p>Morning pick</p></div>
+ </div>
+ <p class="sub" style="margin-top:1.6rem">On the coffee side, drinks customers mention:</p>
+ <div class="drinks"><span>Shaken espresso</span><span>Iced coffee</span><span>White hot chocolate mocha</span><span>Pumpkin cheesecake latte (fall)</span><span>Pumpkin bread (fall)</span></div>
+ <p class="note">Seasonal items come from a fall 2025 review; ask about the current lineup.</p>
+</section>
+
+<section class="rv">
+ <div class="story">
+  <div>
+   <h2>From the market stand to Imperial Main</h2>
+   <div class="path"><span>Arnold farmers market</span><i></i><span>1010 Imperial Main</span></div>
+  </div>
+  <div>
+   <q>We first met the owner at the Arnold farmers market years ago and we were very excited to hear she was opening her own coffee shop.</q>
+   <cite>Google review, Oct 2025</cite>
+   <q style="margin-top:1.2rem">It is not too sweet my coffee taste like coffee and not a milkshake.</q>
+   <cite>Google review, Oct 2025</cite>
+  </div>
+ </div>
+</section>
+
+<section class="rv">
+ <div class="visit">
+  <div class="vc"><h3>Find us</h3><p>1010 Imperial Main<br>Imperial, MO 63052</p><div class="cta"><a class="btn d" href="https://www.google.com/maps/search/?api=1&amp;query=Baked%20%26%20Brewed%201010%20Imperial%20Main%20Imperial%20MO%2063052">Open in Maps</a></div></div>
+  <div class="vc"><h3>Whole pie or a dozen?</h3><p>Call ahead to ask about holding kolaches or ordering a homemade pie.</p><p class="note">Sample: pre-order details to confirm with Nicole.</p><div class="cta"><a class="btn c" href="tel:+16362126229">Call the shop</a></div></div>
+ </div>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{
+// Mon, Wed-Sat 6 am; Tue, Sun 7:30 am; all close 3 pm
+const O=[6,7.5,6,6,6,6,7.5],N=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const orb=document.getElementById('orb'),op=document.getElementById('op'),dl=document.getElementById('dl'),bs=document.querySelectorAll('.days button');
+function pos(h){const t=(h-6)/9,x=10+340*t,y=(1-t)*(1-t)*180+2*(1-t)*t*(-20)+t*t*180;return[x,y]}
+function pick(d){const h=O[d],[x,y]=pos(h);orb.style.transform='translate('+x+'px,'+y+'px)';op.textContent=h===6?'6 am':'7:30 am';dl.textContent=N[d]+', doors open';bs.forEach(b=>b.setAttribute('aria-pressed',+b.dataset.d===d))}
+bs.forEach(b=>b.addEventListener('click',()=>pick(+b.dataset.d)));
+const td=(new Date().getDay()+6)%7;pick(td);
+const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));
+})();
+</script>
+</body>
+</html>

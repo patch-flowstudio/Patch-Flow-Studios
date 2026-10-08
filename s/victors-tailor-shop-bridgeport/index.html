@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Victor's Tailor Shop · Bridgeport, CT</title>
+<meta name="description" content="Victor's Tailor Shop on John Street in downtown Bridgeport, CT: hems, fittings, zippers and repairs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#17213a; --navy-2:#222f4f; --tape:#f2c94c; --tape-d:#c99a1d; --chalk:#f7f4ec; --pin:#c23b3b; --ink:#141824; --soft:#5d6273; --thread:#8aa0c8;
+  --line:rgba(20,24,36,.12); --spring:cubic-bezier(.2,1,.3,1.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--chalk);color:var(--ink);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.banner{background:#0d1324;color:#d6dbe8;font-size:12.5px;line-height:1.45;padding:10px 18px;text-align:center}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* HERO on pinstripe wool */
+.hero{background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 18px),
+  radial-gradient(900px 500px at 80% 0%,#2b3a60,transparent 70%),var(--navy);
+  color:#fff;padding:52px 0 0;position:relative;overflow:hidden}
+.kick{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tape)}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:clamp(46px,12vw,88px);line-height:1;letter-spacing:-.02em;margin:14px 0 14px}
+h1 i{color:var(--tape)}
+.lede{font-size:18px;color:#dfe4ef;max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font-weight:600;font-size:15.5px;text-decoration:none;
+  transition:transform .4s var(--spring),background .2s ease,box-shadow .25s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn:active{transform:scale(.97);transition:transform 100ms ease-out}
+.b-tape{background:var(--tape);color:var(--navy);box-shadow:0 8px 22px -10px rgba(242,201,76,.8)}
+.b-tape:hover{background:#f6d468}
+.b-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.b-navy{background:var(--navy);color:#fff}
+.b-line{border:1px solid var(--line);background:#fff;color:var(--navy)}
+
+/* the tape measure banner across the hero bottom */
+.tape{margin-top:46px;height:58px;background:var(--tape);position:relative;transform:rotate(-2deg);margin-left:-20px;margin-right:-20px;box-shadow:0 10px 24px -10px rgba(0,0,0,.5);
+  background-image:repeating-linear-gradient(90deg,var(--navy) 0 1.5px,transparent 1.5px 12px),repeating-linear-gradient(90deg,var(--navy) 0 2px,transparent 2px 60px);
+  background-size:100% 14px,100% 26px;background-repeat:repeat-x;background-position:0 0,0 0}
+.tape span{position:absolute;bottom:8px;font-weight:800;font-size:13px;color:var(--navy)}
+.tape-in{animation:slide 1.2s var(--spring) both}
+@keyframes slide{from{transform:translateX(-30px) rotate(-2deg);opacity:0}to{transform:rotate(-2deg);opacity:1}}
+
+/* MEASURED TWICE timeline */
+.sec{padding:84px 0}
+.h2{font-family:"Newsreader",serif;font-weight:400;font-size:clamp(32px,8vw,50px);line-height:1.05;letter-spacing:-.015em;color:var(--navy)}
+.h2 i{color:var(--tape-d)}
+.sub{color:var(--soft);margin-top:10px;max-width:50ch}
+.timeline{position:relative;margin-top:40px;padding-left:64px}
+.timeline::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:26px;border-radius:4px;background:var(--tape);
+  background-image:repeating-linear-gradient(0deg,var(--navy) 0 1.5px,transparent 1.5px 10px);background-size:10px 100%;background-repeat:repeat-y;box-shadow:inset -1px 0 0 rgba(0,0,0,.15)}
+.step{position:relative;padding:0 0 38px}
+.step:last-child{padding-bottom:0}
+.mark{position:absolute;left:-64px;top:0;width:62px;text-align:center}
+.mark b{display:inline-block;background:var(--navy);color:var(--tape);font-weight:800;font-size:13px;border-radius:999px;padding:5px 9px;letter-spacing:.06em}
+.step h3{font-family:"Newsreader",serif;font-weight:600;font-size:24px;color:var(--navy);line-height:1.2}
+.step p{color:#3b4050;margin-top:6px;max-width:52ch}
+.step .q{font-family:"Newsreader",serif;font-style:italic;font-size:18px;color:var(--navy-2);margin-top:12px;padding-left:14px;border-left:3px solid var(--tape)}
+.step .src{font-size:12.5px;color:var(--soft);margin-top:6px}
+
+/* WORK BENCH: services as pinned swatches */
+.bench{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+.sw{position:relative;border-radius:14px;padding:22px 16px 18px;min-height:150px;color:#fff;overflow:hidden;cursor:default;
+  transition:transform .45s var(--spring),box-shadow .3s ease;box-shadow:0 14px 26px -20px rgba(0,0,0,.6)}
+.sw:hover{transform:translateY(-4px) rotate(-.5deg)}
+.sw:active{transform:scale(.97)}
+.sw::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(255,255,255,.45);border-radius:9px;pointer-events:none}
+.sw .pin{position:absolute;top:10px;right:14px;width:12px;height:12px;border-radius:50%;background:var(--pin);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.sw h4{font-weight:800;font-size:17px;line-height:1.2;position:relative}
+.sw p{font-size:13.5px;margin-top:8px;opacity:.92;position:relative}
+.s1{background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 10px),#2a3a63}
+.s2{background:repeating-linear-gradient(45deg,rgba(0,0,0,.08) 0 4px,transparent 4px 8px),#7b5a3c}
+.s3{background:repeating-linear-gradient(0deg,rgba(255,255,255,.08) 0 1px,transparent 1px 7px),#3f5a4c}
+.s4{background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 9px),#6a2f3d}
+.bench-note{font-size:13px;color:var(--soft);margin-top:16px}
+
+/* MARIA card */
+.maria{display:grid;gap:28px;align-items:center}
+.card{background:var(--navy);color:#e7eaf2;border-radius:22px;padding:34px 26px;position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;border:16px solid rgba(242,201,76,.16)}
+.card .big{font-family:"Newsreader",serif;font-size:clamp(28px,7vw,40px);line-height:1.15;color:#fff}
+.card .big i{color:var(--tape)}
+.card cite{display:block;font-style:normal;font-size:12.5px;margin-top:14px;color:#aab3c8;letter-spacing:.04em}
+.quotes{display:grid;gap:14px}
+.qq{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;transition:transform .45s var(--spring)}
+.qq:hover{transform:translateX(4px)}
+.qq p{font-family:"Newsreader",serif;font-size:17px;line-height:1.45}
+.qq span{display:block;font-size:12.5px;color:var(--soft);margin-top:8px;font-weight:600}
+
+/* HOURS ticket + find */
+.find{display:grid;gap:22px}
+.ticket{background:#fff;border-radius:18px;border:1px solid var(--line);position:relative;padding:26px 24px}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--chalk);transform:translateY(-50%);border:1px solid var(--line)}
+.ticket::before{left:-14px}.ticket::after{right:-14px}
+.ticket h3{font-family:"Newsreader",serif;font-weight:600;font-size:26px;color:var(--navy)}
+.state{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;margin:10px 0 14px;padding:6px 12px;border-radius:999px;background:#eef0f5}
+.state i{width:9px;height:9px;border-radius:50%;background:#9aa0ad}
+.state.on{background:#e6f3ea;color:#25603a}.state.on i{background:#2f8a4f;box-shadow:0 0 0 4px rgba(47,138,79,.18)}
+.ticket ul{list-style:none}
+.ticket li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted var(--line);font-size:15.5px}
+.ticket li:last-child{border:0}
+.ticket li.today{font-weight:800;color:var(--navy)}
+.fine{font-size:12.5px;color:var(--soft);margin-top:10px}
+.addr{background:var(--tape);border-radius:18px;padding:26px 24px;color:var(--navy)}
+.addr h3{font-family:"Newsreader",serif;font-weight:600;font-size:26px}
+.addr p{margin-top:8px;font-size:17px}
+.addr .cta{margin-top:18px}
+
+footer{text-align:center;padding:48px 20px 110px;font-size:13.5px;color:var(--soft)}
+footer a{color:var(--navy);font-weight:600}
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:480px;margin:0 auto;display:flex;gap:10px;padding:8px;border-radius:16px;
+  background:rgba(23,33,58,.82);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 14px 30px -14px rgba(0,0,0,.5);z-index:9}
+.dock .btn{flex:1;padding:0 10px}
+
+@media (min-width:820px){
+  .swatches{grid-template-columns:repeat(4,1fr)}
+  .maria{grid-template-columns:1fr 1fr}
+  .find{grid-template-columns:1.1fr .9fr}
+  .timeline{padding-left:90px}.mark{left:-90px;width:88px}.timeline::before{left:30px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Victor's Tailor Shop's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kick">71 John St · Downtown Bridgeport</div>
+    <h1>Victor's <i>Tailor</i> Shop</h1>
+    <p class="lede">Hems, fittings, zippers and repairs from Maria, at a small tailor shop nestled in downtown Bridgeport.</p>
+    <div class="cta">
+      <a class="btn b-tape" href="tel:+12033332922">Call (203) 333-2922</a>
+      <a class="btn b-ghost" href="#how">How a fitting works</a>
+    </div>
+  </div>
+  <div class="tape tape-in" aria-hidden="true"><span style="left:8%">10</span><span style="left:30%">20</span><span style="left:52%">30</span><span style="left:74%">40</span><span style="left:94%">50</span></div>
+  <div style="height:36px"></div>
+</header>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <h2 class="h2">Measured <i>twice</i></h2>
+    <p class="sub">What guests describe when they bring something in, step by step.</p>
+    <div class="timeline">
+      <div class="step">
+        <div class="mark"><b>01</b></div>
+        <h3>Bring it in</h3>
+        <p>Drop by during shop hours with the piece you want altered or repaired.</p>
+      </div>
+      <div class="step">
+        <div class="mark"><b>02</b></div>
+        <h3>Measured on you, then off you</h3>
+        <p>Guests describe careful measuring for hems: the inseam taken while wearing the pants, then checked again on the pants themselves.</p>
+        <p class="q">"The lady was very exacting in measuring my pants while wearing them."</p>
+        <p class="src">Google review, April 2022</p>
+      </div>
+      <div class="step">
+        <div class="mark"><b>03</b></div>
+        <h3>The work</h3>
+        <p>Hems for suit pants and coats, taking things in, split seams, zippers and loose threads.</p>
+        <p class="q">"Amazing work on handful of suit hems for coats and pants."</p>
+        <p class="src">Google review, September 2025</p>
+      </div>
+      <div class="step">
+        <div class="mark"><b>04</b></div>
+        <h3>Pick it up</h3>
+        <p>Guests mention quick turnarounds. Ask Maria when your piece will be ready when you drop it off.</p>
+        <p class="q">"Reasonably priced, fast service."</p>
+        <p class="src">Google review, January 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bench" id="services">
+  <div class="wrap">
+    <h2 class="h2">On the work bench</h2>
+    <p class="sub">Jobs guests have brought to Victor's, as described in their reviews.</p>
+    <div class="swatches">
+      <div class="sw s1"><span class="pin"></span><h4>Suit hems</h4><p>Pants and coats, including suit sets.</p></div>
+      <div class="sw s2"><span class="pin"></span><h4>Fitting &amp; hemming</h4><p>Work and dress pants, double hems, taking in.</p></div>
+      <div class="sw s3"><span class="pin"></span><h4>Zippers</h4><p>Like a son's favorite sweatshirt, fixed.</p></div>
+      <div class="sw s4"><span class="pin"></span><h4>Repairs</h4><p>Split seams and loose threads.</p></div>
+    </div>
+    <p class="bench-note">Sample: the real site would list every service the shop offers, confirmed by Maria. Call for anything not shown.</p>
+  </div>
+</section>
+
+<section class="sec" id="maria">
+  <div class="wrap maria">
+    <div class="card">
+      <div class="big">"Maria is <i>amazing</i> at what she does."</div>
+      <cite>Google review · February 2025</cite>
+    </div>
+    <div class="quotes">
+      <div class="qq"><p>"She's always welcoming and eager to help you with any project."</p><span>Google review · June 2024</span></div>
+      <div class="qq"><p>"I like that she can take care of me quickly, especially if all I need is something as simple as replacing loose threads."</p><span>Google review · October 2022</span></div>
+      <div class="qq"><p>"The little shop had been nestled in downtown for ages and does excellent, quick work."</p><span>Google review · April 2019</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" id="visit">
+  <div class="wrap find">
+    <div class="ticket">
+      <h3>Shop hours</h3>
+      <div class="state" id="st"><i></i><span id="sttxt">Mon to Fri 10 to 5, Sat 10 to 3</span></div>
+      <ul id="hrs">
+        <li data-d="1"><span>Monday</span><span>10 AM - 5 PM</span></li>
+        <li data-d="2"><span>Tuesday</span><span>10 AM - 5 PM</span></li>
+        <li data-d="3"><span>Wednesday</span><span>10 AM - 5 PM</span></li>
+        <li data-d="4"><span>Thursday</span><span>10 AM - 5 PM</span></li>
+        <li data-d="5"><span>Friday</span><span>10 AM - 5 PM</span></li>
+        <li data-d="6"><span>Saturday</span><span>10 AM - 3 PM</span></li>
+        <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <p class="fine">Hours as listed on Google. Call to confirm, especially around holidays.</p>
+    </div>
+    <div class="addr">
+      <h3>Find the shop</h3>
+      <p>71 John St<br>Bridgeport, CT 06604</p>
+      <p style="font-size:15px;margin-top:10px">(203) 333-2922</p>
+      <div class="cta">
+        <a class="btn b-navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Victor%27s+Tailor+Shop+71+John+St+Bridgeport+CT+06604" target="_blank" rel="noopener">Directions</a>
+        <a class="btn b-line" href="tel:+12033332922">Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/" target="_blank" rel="noopener">Studio concept. Sample design by Patch &amp; Flow Studio</a></footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="btn b-tape" href="tel:+12033332922">Call</a>
+  <a class="btn b-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Victor%27s+Tailor+Shop+71+John+St+Bridgeport+CT+06604" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){try{
+  var n=new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"})),d=n.getDay(),m=n.getHours()*60+n.getMinutes();
+  var li=document.querySelector('#hrs li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  var o=d>=1&&d<=5?[600,1020]:(d===6?[600,900]:null),on=o&&m>=o[0]&&m<o[1];
+  document.getElementById('st').classList.toggle('on',!!on);
+  document.getElementById('sttxt').textContent=on?('Open now until '+(d===6?'3 PM':'5 PM')):(o&&m<o[0]?'Opens today at 10 AM':'Closed right now');
+}catch(e){}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hearth &amp; Crumb Bakery · Studio concept by Patch &amp; Flow Studio</title>
+    <meta name="description" content="A fictional neighborhood bakery concept by Patch & Flow Studio: naturally leavened loaves, laminated pastry and good coffee." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Caveat:wght@500;700&display=swap"
+    />
+    <script>
+      /* Motion hides content only once JS is running; if the motion script never boots, everything is shown again. */
+      document.documentElement.classList.add("x-js");
+      setTimeout(function () { if (!window.__xMotion) document.documentElement.classList.remove("x-js"); }, 2500);
+    </script>
+    <style>
+      :root {
+        --x-cream: #fbf6ec;
+        --x-flour: #fffdf8;
+        --x-paper: #f3e9d6;
+        --x-crust: #3b2416;
+        --x-crust-2: #5c3d29;
+        --x-wheat: #d9a849;
+        --x-wheat-ink: #8a5f12;
+        --x-terra: #b04e37;
+        --x-board: #2a2420;
+        --x-chalk: #f4efe6;
+        --x-line: #e2d3b8;
+        --x-serif: "DM Serif Display", Georgia, serif;
+        --x-sans: "Nunito Sans", system-ui, -apple-system, sans-serif;
+        --x-hand: "Caveat", "Comic Sans MS", cursive;
+        --x-pad: clamp(16px, 5vw, 48px);
+        --x-max: 1120px;
+        --x-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: calc(var(--x-notice-h) + 12px); }
+      :root { --x-notice-h: 44px; }
+      body { overflow-x: clip; }
+      body {
+        margin: 0;
+        background: var(--x-cream);
+        color: var(--x-crust);
+        font: 400 17px/1.65 var(--x-sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      a { color: inherit; }
+      :focus-visible { outline: 3px solid var(--x-terra); outline-offset: 3px; border-radius: 4px; }
+      .x-skip { position: absolute; left: -9999px; display: inline-flex; align-items: center; min-height: 44px; }
+      .x-skip:focus { left: 16px; top: 8px; z-index: 50; background: var(--x-flour); padding: 10px 14px; }
+
+      /* notice bar */
+      .x-notice {
+        background: var(--x-crust);
+        color: var(--x-cream);
+        text-align: center;
+        font-size: 14px;
+        padding: 0 var(--x-pad);
+      }
+      .x-notice a {
+        display: inline-flex; align-items: center; min-height: 44px;
+        text-decoration: underline; text-decoration-color: var(--x-wheat);
+        text-underline-offset: 3px;
+      }
+      .x-notice a:hover { color: #fff; }
+
+      /* header */
+      .x-head {
+        max-width: var(--x-max); margin: 0 auto;
+        padding: 14px var(--x-pad);
+        display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      }
+      .x-logo {
+        display: inline-flex; align-items: center; gap: 10px;
+        font: 400 24px/1 var(--x-serif); text-decoration: none; min-height: 44px;
+      }
+      .x-logo svg { width: 30px; height: 30px; color: var(--x-wheat-ink); }
+      .x-nav { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+      .x-nav a {
+        display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px;
+        font-weight: 600; font-size: 15px; text-decoration: none; border-radius: 999px;
+      }
+      .x-nav a:hover { background: var(--x-paper); }
+
+      /* buttons */
+      .x-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        min-height: 48px; padding: 0 22px; border-radius: 999px;
+        font: 700 16px/1 var(--x-sans); text-decoration: none;
+        border: 2px solid var(--x-crust); background: var(--x-crust); color: var(--x-cream);
+        transition: transform .2s var(--x-ease), background .2s, color .2s;
+      }
+      .x-btn:hover { transform: translateY(-2px); background: var(--x-crust-2); }
+      .x-btn--ghost { background: transparent; color: var(--x-crust); }
+      .x-btn--ghost:hover { background: var(--x-crust); color: var(--x-cream); }
+      .x-btn--light { background: var(--x-cream); color: var(--x-crust); border-color: var(--x-cream); }
+      .x-btn--light:hover { background: #fff; }
+      .x-btn--line { background: transparent; color: var(--x-cream); border-color: var(--x-cream); }
+      .x-btn--line:hover { background: var(--x-cream); color: var(--x-crust); }
+      .x-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+      /* hero */
+      .x-hero {
+        max-width: var(--x-max); margin: 0 auto; padding: 0 var(--x-pad);
+      }
+      .x-hero__card {
+        position: relative; overflow: hidden; border-radius: 28px;
+        min-height: clamp(460px, 72vh, 640px);
+        display: flex; align-items: flex-end;
+        background: var(--x-crust);
+      }
+      .x-hero__card { isolation: isolate; clip-path: inset(0 round 28px); }
+      .x-hero__media { position: absolute; inset: -10% 0; overflow: hidden; }
+      .x-hero__card img {
+        position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      }
+      .x-w { display: inline-block; }
+      .x-hero__card::after {
+        content: ""; position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(43,26,15,.05) 20%, rgba(43,26,15,.55) 55%, rgba(35,21,12,.92) 100%);
+      }
+      .x-hero__copy {
+        position: relative; z-index: 1; color: var(--x-cream);
+        padding: clamp(24px, 5vw, 56px); max-width: 720px;
+      }
+      .x-hero__eyebrow {
+        font: 700 30px/1 var(--x-hand); color: var(--x-wheat); margin: 0 0 8px;
+      }
+      .x-hero h1 {
+        font: 400 clamp(42px, 8vw, 84px)/1.02 var(--x-serif); margin: 0 0 16px; letter-spacing: -.01em;
+      }
+      .x-hero h1 em { color: var(--x-wheat); }
+      .x-hero__sub { font-size: clamp(17px, 2.2vw, 20px); margin: 0 0 28px; max-width: 34em; }
+
+      /* sections */
+      .x-section { max-width: var(--x-max); margin: 0 auto; padding: clamp(56px, 9vw, 104px) var(--x-pad) 0; scroll-margin-top: 12px; }
+      .x-kicker { font: 700 26px/1 var(--x-hand); color: var(--x-terra); margin: 0 0 6px; }
+      .x-h2 { font: 400 clamp(34px, 5.5vw, 54px)/1.08 var(--x-serif); margin: 0 0 18px; }
+      .x-lead { font-size: 18px; max-width: 38em; margin: 0 0 28px; color: var(--x-crust-2); }
+
+      /* wheat divider */
+      .x-divider {
+        max-width: var(--x-max); margin: clamp(48px, 8vw, 88px) auto 0; padding: 0 var(--x-pad);
+        display: flex; align-items: center; gap: 16px; color: var(--x-wheat-ink);
+      }
+      .x-divider__line { flex: 1 1 0; min-width: 0; height: 12px; overflow: visible; }
+      .x-divider__line path { fill: none; stroke: #c9a46a; stroke-width: 1.5; stroke-linecap: round; }
+      .x-divider__sprig { width: 64px; height: 32px; flex: none; }
+
+      /* menu board */
+      .x-board {
+        position: relative; background: var(--x-board); color: var(--x-chalk);
+        border-radius: 18px; padding: clamp(28px, 5vw, 56px);
+        border: 12px solid #7a5537;
+        box-shadow: inset 0 0 80px rgba(0,0,0,.45), 0 18px 40px -20px rgba(59,36,22,.55);
+        background-image:
+          radial-gradient(ellipse at 20% 10%, rgba(255,255,255,.06), transparent 50%),
+          radial-gradient(ellipse at 80% 90%, rgba(255,255,255,.05), transparent 55%);
+      }
+      .x-board__title {
+        font: 700 clamp(40px, 6vw, 56px)/1 var(--x-hand); text-align: center; margin: 0 0 4px; color: var(--x-chalk);
+      }
+      .x-board__sub { text-align: center; margin: 0 0 28px; font: 500 22px/1.2 var(--x-hand); color: #e9c97f; }
+      .x-board__cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 8px 56px; }
+      .x-board h3 {
+        font: 400 22px/1.2 var(--x-serif); color: #e9c97f; margin: 0 0 10px;
+        border-bottom: 1px dashed rgba(244,239,230,.35); padding-bottom: 8px;
+      }
+      .x-board ul { list-style: none; padding: 0; margin: 0 0 24px; }
+      .x-board li { display: flex; align-items: baseline; gap: 10px; padding: 8px 0; font: 600 25px/1.2 var(--x-hand); }
+      .x-board li .x-leader { flex: 1; border-bottom: 2px dotted rgba(244,239,230,.4); transform: translateY(-5px); min-width: 20px; }
+      .x-board li .x-price { font: 600 17px/1 var(--x-sans); letter-spacing: .02em; }
+      .x-board__note {
+        margin: 8px auto 0; text-align: center; max-width: 30em;
+        font: 700 24px/1.3 var(--x-hand); color: #f2b6a3;
+      }
+      .x-board__note a { color: var(--x-chalk); display: inline-flex; align-items: center; min-height: 44px; }
+
+      /* story */
+      .x-story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(24px, 5vw, 72px); align-items: start; }
+      .x-story__quote {
+        font: italic 400 clamp(26px, 3.4vw, 36px)/1.25 var(--x-serif); margin: 0; color: var(--x-crust);
+        border-left: 4px solid var(--x-wheat); padding-left: 20px;
+      }
+      .x-story p { margin: 0 0 18px; }
+      .x-story p:first-of-type::first-letter {
+        font: 400 64px/0.8 var(--x-serif); float: left; padding: 6px 10px 0 0; color: var(--x-terra);
+      }
+      .x-facts { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 24px 0 0; }
+      .x-facts li { background: var(--x-paper); border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 15px; }
+
+      /* pre-order */
+      .x-steps { list-style: none; padding: 0; margin: 0 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 18px; counter-reset: s; }
+      .x-steps li {
+        background: var(--x-flour); border: 1px solid var(--x-line); border-radius: 20px; padding: 28px 24px 24px;
+        position: relative;
+      }
+      .x-steps li::before {
+        counter-increment: s; content: counter(s);
+        display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+        background: var(--x-wheat); color: var(--x-crust); font: 400 24px/1 var(--x-serif); margin-bottom: 16px;
+      }
+      .x-steps h3 { font: 400 26px/1.15 var(--x-serif); margin: 0 0 6px; }
+      .x-steps p { margin: 0; color: var(--x-crust-2); }
+      .x-call { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+      .x-call p { margin: 0; color: var(--x-crust-2); }
+
+      /* cakes */
+      .x-cakes {
+        background: var(--x-terra); color: #fff8f2; border-radius: 28px;
+        padding: clamp(28px, 6vw, 64px);
+        display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; align-items: center;
+        position: relative; overflow: hidden;
+      }
+      .x-cakes .x-kicker { color: #ffd9a0; }
+      .x-cakes .x-h2 { color: #fff8f2; }
+      .x-cakes p { margin: 0 0 22px; max-width: 32em; }
+      .x-cakes__tag {
+        background: var(--x-cream); color: var(--x-crust); border-radius: 22px; padding: 24px; text-align: center;
+        transform: rotate(-2deg);
+      }
+      .x-cakes__tag small { display: block; font: 700 24px/1 var(--x-hand); color: var(--x-terra); }
+      .x-cakes__tag strong { display: block; font: 400 64px/1.05 var(--x-serif); }
+      .x-cakes__tag span { display: block; font-weight: 600; border-top: 1px dashed var(--x-line); margin-top: 10px; padding-top: 10px; }
+
+      /* visit */
+      .x-visit { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px; }
+      .x-panel { background: var(--x-flour); border: 1px solid var(--x-line); border-radius: 22px; padding: clamp(22px, 4vw, 36px); }
+      .x-panel h3 { font: 400 28px/1.15 var(--x-serif); margin: 0 0 14px; }
+      .x-hours { width: 100%; border-collapse: collapse; font-size: 17px; }
+      .x-hours th, .x-hours td { text-align: left; padding: 12px 0; border-bottom: 1px dashed var(--x-line); }
+      .x-hours td { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+      .x-hours tr:last-child th, .x-hours tr:last-child td { border-bottom: 0; }
+      .x-hours .x-closed { color: var(--x-terra); }
+      .x-address { font: 400 clamp(30px, 4vw, 40px)/1.1 var(--x-serif); margin: 0 0 8px; }
+      .x-panel p { margin: 0 0 20px; color: var(--x-crust-2); }
+
+      /* footer */
+      .x-foot {
+        margin-top: clamp(64px, 10vw, 112px); background: var(--x-crust); color: var(--x-cream);
+        padding: 40px var(--x-pad);
+      }
+      .x-foot__in { max-width: var(--x-max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; font-size: 15px; }
+      .x-foot__in p { margin: 0; }
+      .x-foot a { display: inline-flex; align-items: center; min-height: 44px; text-decoration-color: var(--x-wheat); text-underline-offset: 3px; }
+      .x-foot .x-logo { font-size: 22px; }
+      .x-foot .x-logo svg { color: var(--x-wheat); }
+
+      /* ---------- interaction states (apply with or without motion) ---------- */
+      .x-section { scroll-margin-top: 0; }
+      .x-panel { position: relative; }
+      .x-btn { position: relative; isolation: isolate; line-height: 1.2; padding-block: 10px; text-align: center; }
+      .x-btn::before {
+        content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+        box-shadow: 0 14px 24px -14px rgba(35, 21, 12, .7); opacity: 0;
+      }
+      .x-btn::after { content: "→"; content: "→" / ""; display: inline-block; font-weight: 700; }
+      .x-btn:hover::before, .x-btn:focus-visible::before { opacity: 1; }
+      .x-btn:focus-visible { background: var(--x-crust-2); }
+      .x-btn--ghost:focus-visible { background: var(--x-crust); color: var(--x-cream); }
+      .x-btn--light:focus-visible { background: #fff; }
+      .x-btn--line:focus-visible { background: var(--x-cream); color: var(--x-crust); }
+      /* dark surfaces get a cream focus ring so it never vanishes into terra or crust */
+      .x-notice :focus-visible, .x-hero :focus-visible, .x-board :focus-visible,
+      .x-cakes :focus-visible, .x-foot :focus-visible { outline-color: var(--x-cream); }
+
+      .x-nav a { position: relative; }
+      .x-nav a::after {
+        content: ""; position: absolute; left: 10px; right: 10px; bottom: 9px; height: 2px; border-radius: 2px;
+        background: var(--x-terra); transform: scaleX(0); transform-origin: left center;
+      }
+      .x-nav a:hover::after, .x-nav a:focus-visible::after { transform: scaleX(1); }
+      .x-nav a:focus-visible { background: var(--x-paper); }
+      .x-foot p a, .x-board__note a { position: relative; }
+      .x-foot p a::after, .x-board__note a::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 7px; height: 2px; border-radius: 2px;
+        background: var(--x-wheat); transform: scaleX(0); transform-origin: left center;
+      }
+      .x-foot p a:hover::after, .x-foot p a:focus-visible::after,
+      .x-board__note a:hover::after, .x-board__note a:focus-visible::after { transform: scaleX(1); }
+      .x-notice a:focus-visible { color: #fff; }
+      .x-board li:hover .x-price { color: #e9c97f; }
+      .x-steps li::after, .x-panel::after {
+        content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+        box-shadow: 0 22px 36px -24px rgba(59, 36, 22, .45); opacity: 0;
+      }
+      .x-steps li:hover::after, .x-panel:hover::after, .x-panel:focus-within::after { opacity: 1; }
+
+      /* ---------- motion: only with JS running and no reduced-motion preference ---------- */
+      @media (prefers-reduced-motion: no-preference) {
+        /* buttons, links, cards */
+        .x-btn { transition: transform .3s var(--x-ease), background-color .2s, color .2s; }
+        .x-btn::before { transition: opacity .3s var(--x-ease); }
+        .x-btn::after { transition: transform .3s var(--x-ease); }
+        .x-btn:hover, .x-btn:focus-visible { transform: translateY(-2px); }
+        .x-btn:hover::after, .x-btn:focus-visible::after { transform: translateX(4px); }
+        .x-btn:active { transform: translateY(0) scale(.98); }
+        .x-nav a::after, .x-foot p a::after, .x-board__note a::after { transition: transform .35s var(--x-ease); }
+        .x-nav a:not(:hover):not(:focus-visible)::after { transform-origin: right center; }
+        .x-logo svg { transition: transform .45s var(--x-ease); }
+        .x-logo:hover svg, .x-logo:focus-visible svg { transform: rotate(-10deg) translateY(-1px); }
+        .x-steps li::after, .x-panel::after { transition: opacity .35s var(--x-ease); }
+        .x-steps li::before { transition: transform .35s var(--x-ease); }
+        .x-steps li, .x-panel, .x-facts li { transition: transform .35s var(--x-ease); }
+        .x-steps li:hover, .x-panel:hover, .x-panel:focus-within { transform: translateY(-4px); }
+        .x-steps li:hover::before { transform: scale(1.08) rotate(-6deg); }
+        .x-facts li:hover { transform: translateY(-2px); }
+        .x-cakes__tag { transition: transform .5s var(--x-ease); }
+        .x-cakes:hover .x-cakes__tag, .x-cakes:focus-within .x-cakes__tag { transform: rotate(-3.5deg) translateY(-4px); }
+        .x-board li { transition: transform .3s var(--x-ease); }
+        .x-board li:hover { transform: translateX(4px); }
+
+        /* hero: slow Ken Burns on the photo; JS adds the parallax to the wrapper */
+        .x-hero__media { will-change: transform; }
+        .x-hero__card img { animation: x-kenburns 26s ease-in-out infinite alternate; will-change: transform; }
+
+        /* single reveal */
+        .x-js .x-reveal {
+          opacity: 0; translate: 0 24px;
+          transition: opacity .9s var(--x-ease) var(--d, 0ms), translate .9s var(--x-ease) var(--d, 0ms), transform .5s var(--x-ease);
+        }
+        .x-js .x-reveal.is-in { opacity: 1; translate: none; }
+
+        /* staggered reveal: direct children rise in sequence (JS sets --i) */
+        .x-js .x-stagger > * {
+          --d: calc(var(--i, 0) * 110ms);
+          opacity: 0; translate: 0 22px;
+          transition: opacity .8s var(--x-ease) var(--d), translate .8s var(--x-ease) var(--d), transform .35s var(--x-ease);
+        }
+        .x-js .x-stagger.is-in > * { opacity: 1; translate: none; }
+
+        /* hero copy and split headline */
+        .x-js .x-hero__copy > .x-hero__eyebrow { --d: 120ms; }
+        .x-js .x-hero__copy > h1 { opacity: 1; translate: none; }
+        .x-js .x-hero__copy > .x-hero__sub { --d: 820ms; }
+        .x-js .x-hero__copy > .x-btns { --d: 980ms; }
+        .x-js .x-split .x-w {
+          opacity: 0; translate: 0 .45em;
+          transition: opacity 1s var(--x-ease), translate 1s var(--x-ease);
+          transition-delay: calc(260ms + var(--w, 0) * 95ms);
+        }
+        .x-js .x-hero__copy.is-in .x-split .x-w { opacity: 1; translate: none; }
+
+        /* menu board: the card settles, then each line prints */
+        .x-js .x-print {
+          opacity: 0; translate: 0 32px; rotate: -.8deg; scale: .97;
+          transition: opacity .8s var(--x-ease), translate 1.1s var(--x-ease), rotate 1.1s var(--x-ease), scale 1.1s var(--x-ease);
+        }
+        .x-js .x-print.is-in { opacity: 1; translate: none; rotate: none; scale: none; }
+        .x-js .x-print .x-pr {
+          --d: calc(520ms + var(--i, 0) * 85ms);
+          opacity: 0; translate: -10px 0;
+          transition: opacity .5s var(--x-ease) var(--d), translate .6s var(--x-ease) var(--d), transform .3s var(--x-ease);
+        }
+        .x-js .x-print li .x-leader { scale: 0 1; transform-origin: left center; transition: scale .5s var(--x-ease) calc(var(--d) + 140ms); }
+        .x-js .x-print li .x-price { opacity: 0; transition: opacity .4s var(--x-ease) calc(var(--d) + 320ms); }
+        .x-js .x-print.is-in .x-pr { opacity: 1; translate: none; }
+        .x-js .x-print.is-in li .x-leader { scale: 1 1; }
+        .x-js .x-print.is-in li .x-price { opacity: 1; }
+
+        /* wheat divider draws itself in */
+        .x-js .x-divider__line path, .x-js .x-divider__sprig { stroke-dasharray: 100; stroke-dashoffset: 100; }
+        .x-js .x-divider__sprig { transition: stroke-dashoffset 1.3s var(--x-ease) .1s; }
+        .x-js .x-divider__line path { transition: stroke-dashoffset 1.6s var(--x-ease) .45s; }
+        .x-js .x-divider.is-in .x-divider__line path, .x-js .x-divider.is-in .x-divider__sprig { stroke-dashoffset: 0; }
+      }
+      @keyframes x-kenburns {
+        from { transform: scale(1.1) translate3d(-1.2%, .8%, 0); }
+        to { transform: scale(1.02) translate3d(1%, -.8%, 0); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .x-btn { transition: none; }
+        .x-btn:hover { transform: none; }
+        .x-hero__media { transform: none !important; }
+        .x-hero__card img { animation: none; }
+      }
+
+      @media (max-width: 760px) {
+        .x-story, .x-cakes { grid-template-columns: 1fr; }
+        .x-cakes__tag { transform: none; }
+        .x-head { justify-content: center; }
+        .x-nav { justify-content: center; }
+        .x-board { border-width: 8px; }
+        .x-board li { font-size: 23px; }
+      }
+      @media (max-width: 420px) {
+        .x-btns .x-btn { flex: 1 1 100%; }
+        .x-nav a { padding: 0 8px; font-size: 14px; }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="x-wheat" viewBox="0 0 64 32">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path pathLength="100" d="M4 26c14-3 32-8 56-20" />
+          <path pathLength="100" d="M18 22c-2-5 0-9 5-11 1 5-1 9-5 11zM18 22c4-3 9-3 12 1-4 3-9 2-12-1z" />
+          <path pathLength="100" d="M30 18c-2-5 0-9 5-11 1 5-1 9-5 11zM30 18c4-3 9-3 12 1-4 3-9 2-12-1z" />
+          <path pathLength="100" d="M42 13c-2-5 0-9 5-11 1 5-1 9-5 11zM42 13c4-3 9-3 12 1-4 3-9 2-12-1z" />
+          <path pathLength="100" d="M54 8c2-3 5-4 8-4" />
+        </g>
+      </symbol>
+      <symbol id="x-loaf" viewBox="0 0 32 32">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 20c0-7 5.5-12 12-12s12 5 12 12c0 2.5-2 4-4.5 4h-15C6 24 4 22.5 4 20z" />
+          <path d="M11 13l3 4M16 11l3 4M21 13l3 4" />
+        </g>
+      </symbol>
+    </svg>
+
+    <div class="page" id="top">
+      <a class="x-skip" href="#main">Skip to content</a>
+      <div class="x-notice">
+        <a href="index.html" target="_blank" rel="noopener">Studio concept by Patch &amp; Flow Studio · fictional business</a>
+      </div>
+
+      <header class="x-head">
+        <a class="x-logo" href="#top"><svg aria-hidden="true"><use href="#x-loaf" /></svg>Hearth &amp; Crumb</a>
+        <nav class="x-nav" aria-label="Sections">
+          <a href="#menu">Today</a>
+          <a href="#story">Story</a>
+          <a href="#order">Pre-order</a>
+          <a href="#cakes">Cakes</a>
+          <a href="#visit">Visit</a>
+        </nav>
+      </header>
+
+      <main class="main" id="main">
+        <section class="x-hero" aria-labelledby="x-hero-title">
+          <div class="x-hero__card">
+            <div class="x-hero__media"><img src="sc_bakery.jpg" alt="Inside the bakery: shelves of crusty loaves and a counter of golden croissants" /></div>
+            <div class="x-hero__copy x-stagger">
+              <p class="x-hero__eyebrow">Fresh from 6 am</p>
+              <h1 id="x-hero-title" class="x-split" aria-label="Bread worth getting up for."><span class="x-w" aria-hidden="true">Bread</span> <span class="x-w" aria-hidden="true">worth</span> <span class="x-w" aria-hidden="true">getting</span> <span class="x-w" aria-hidden="true"><em>up</em></span> <span class="x-w" aria-hidden="true">for.</span></h1>
+              <p class="x-hero__sub">Naturally leavened loaves, laminated pastry and good coffee, baked every morning from 6.</p>
+              <div class="x-btns">
+                <a class="x-btn x-btn--light" href="#menu">See today's bake</a>
+                <a class="x-btn x-btn--line" href="#order">Order for pickup</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-section" id="menu" aria-labelledby="x-menu-title">
+          <div class="x-stagger">
+            <p class="x-kicker">On the board</p>
+            <h2 class="x-h2" id="x-menu-title">Today's bake</h2>
+          </div>
+          <div class="x-board x-print">
+            <p class="x-board__title" aria-hidden="true">Hearth &amp; Crumb</p>
+            <p class="x-board__sub">baked this morning</p>
+            <div class="x-board__cols">
+              <div>
+                <h3>Loaves</h3>
+                <ul>
+                  <li><span>Country sourdough</span><span class="x-leader"></span><span class="x-price">$9</span></li>
+                  <li><span>Seeded rye</span><span class="x-leader"></span><span class="x-price">$10</span></li>
+                </ul>
+                <h3>Pastry</h3>
+                <ul>
+                  <li><span>Butter croissant</span><span class="x-leader"></span><span class="x-price">$4.25</span></li>
+                  <li><span>Pain au chocolat</span><span class="x-leader"></span><span class="x-price">$4.75</span></li>
+                  <li><span>Cardamom bun</span><span class="x-leader"></span><span class="x-price">$4.50</span></li>
+                  <li><span>Seasonal fruit galette</span><span class="x-leader"></span><span class="x-price">$6</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Coffee</h3>
+                <ul>
+                  <li><span>Drip coffee</span><span class="x-leader"></span><span class="x-price">$3</span></li>
+                  <li><span>Cortado</span><span class="x-leader"></span><span class="x-price">$4.25</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="x-board__note">Sells out most days by 1 pm. <a href="#order">Pre-order to be safe.</a></p>
+          </div>
+        </section>
+
+        <div class="x-divider" aria-hidden="true">
+          <svg class="x-divider__line" viewBox="0 0 600 12" preserveAspectRatio="none" focusable="false"><path pathLength="100" d="M600 6 q-10 -4 -20 -0.4 q-10 4.5 -20 -0.1 q-10 -4.1 -20 0.3 q-10 3.4 -20 0.2 q-10 -3.3 -20 -0.1 q-10 3.1 -20 -0.4 q-10 -3.6 -20 0.9 q-10 3.1 -20 -0.7 q-10 -4.1 -20 0.8 q-10 4.1 -20 -0.6 q-10 -5.4 -20 -0.4 q-10 5 -20 0.2 q-10 -3.6 -20 -0.2 q-10 4.3 -20 0.9 q-10 -3.7 -20 -0.3 q-10 4.3 -20 -0.3 q-10 -4.4 -20 -0.3 q-10 3.4 -20 0.1 q-10 -4.4 -20 0.3 q-10 3.9 -20 0.2 q-10 -4.3 -20 -0.3 q-10 5 -20 0.4 q-10 -3.7 -20 -0.1 q-10 4.5 -20 0.4 q-10 -5.1 -20 -0.8 q-10 5.1 -20 -0.2 q-10 -3.6 -20 0.8 q-10 3.4 -20 -0.3 q-10 -3.2 -20 0.2 q-10 4.7 -20 -0.1" /></svg>
+          <svg class="x-divider__sprig" focusable="false"><use href="#x-wheat" /></svg>
+          <svg class="x-divider__line" viewBox="0 0 600 12" preserveAspectRatio="none" focusable="false"><path pathLength="100" d="M0 6 q10 -5.1 20 -0.2 q10 4.7 20 0.3 q10 -4.5 20 -0.2 q10 5.2 20 0.6 q10 -4.3 20 -0.3 q10 3.3 20 0 q10 -4.3 20 0.4 q10 4.4 20 -0.9 q10 -3.7 20 0.5 q10 3.1 20 -0.2 q10 -3.8 20 -0.5 q10 3.7 20 0.8 q10 -3.8 20 -0.6 q10 4.3 20 0.7 q10 -3.6 20 -0.5 q10 4.6 20 0.6 q10 -4.9 20 -0.1 q10 3.5 20 -0.5 q10 -3.6 20 0.6 q10 4.7 20 -0.9 q10 -3.5 20 0.1 q10 3.8 20 0.3 q10 -4.5 20 -0.3 q10 3.3 20 0.2 q10 -3.8 20 0.2 q10 5.2 20 0.1 q10 -4.3 20 -0.1 q10 4.3 20 -0.6 q10 -4.6 20 0.8 q10 5 20 0.1" /></svg>
+        </div>
+
+        <section class="x-section" id="story" aria-labelledby="x-story-title" style="padding-top: clamp(40px, 6vw, 64px)">
+          <div class="x-story">
+            <div class="x-stagger">
+              <p class="x-kicker">Our story</p>
+              <h2 class="x-h2" id="x-story-title">From a market stall to Mill Street.</h2>
+              <p class="x-story__quote">“Time does most of the work. We just stay out of its way.”</p>
+            </div>
+            <div class="x-stagger">
+              <p>Hearth &amp; Crumb began as a folding table at the Saturday farmers' market: four kinds of loaf, a cash tin, and a queue that grew a little longer every week. When the stall started selling out before the coffee cart had even opened, we went looking for an oven of our own.</p>
+              <p>Not much has changed since. Our dough ferments slowly, often overnight, for flavor and a crust that crackles. We bake with flour milled from grain grown nearby, and every loaf, croissant and bun is still shaped by hand on the same wooden bench each morning.</p>
+              <ul class="x-facts">
+                <li>Long fermentation</li>
+                <li>Local flour</li>
+                <li>Shaped by hand</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div class="x-divider" aria-hidden="true">
+          <svg class="x-divider__line" viewBox="0 0 600 12" preserveAspectRatio="none" focusable="false"><path pathLength="100" d="M600 6 q-10 -4 -20 -0.4 q-10 4.5 -20 -0.1 q-10 -4.1 -20 0.3 q-10 3.4 -20 0.2 q-10 -3.3 -20 -0.1 q-10 3.1 -20 -0.4 q-10 -3.6 -20 0.9 q-10 3.1 -20 -0.7 q-10 -4.1 -20 0.8 q-10 4.1 -20 -0.6 q-10 -5.4 -20 -0.4 q-10 5 -20 0.2 q-10 -3.6 -20 -0.2 q-10 4.3 -20 0.9 q-10 -3.7 -20 -0.3 q-10 4.3 -20 -0.3 q-10 -4.4 -20 -0.3 q-10 3.4 -20 0.1 q-10 -4.4 -20 0.3 q-10 3.9 -20 0.2 q-10 -4.3 -20 -0.3 q-10 5 -20 0.4 q-10 -3.7 -20 -0.1 q-10 4.5 -20 0.4 q-10 -5.1 -20 -0.8 q-10 5.1 -20 -0.2 q-10 -3.6 -20 0.8 q-10 3.4 -20 -0.3 q-10 -3.2 -20 0.2 q-10 4.7 -20 -0.1" /></svg>
+          <svg class="x-divider__sprig" focusable="false"><use href="#x-wheat" /></svg>
+          <svg class="x-divider__line" viewBox="0 0 600 12" preserveAspectRatio="none" focusable="false"><path pathLength="100" d="M0 6 q10 -5.1 20 -0.2 q10 4.7 20 0.3 q10 -4.5 20 -0.2 q10 5.2 20 0.6 q10 -4.3 20 -0.3 q10 3.3 20 0 q10 -4.3 20 0.4 q10 4.4 20 -0.9 q10 -3.7 20 0.5 q10 3.1 20 -0.2 q10 -3.8 20 -0.5 q10 3.7 20 0.8 q10 -3.8 20 -0.6 q10 4.3 20 0.7 q10 -3.6 20 -0.5 q10 4.6 20 0.6 q10 -4.9 20 -0.1 q10 3.5 20 -0.5 q10 -3.6 20 0.6 q10 4.7 20 -0.9 q10 -3.5 20 0.1 q10 3.8 20 0.3 q10 -4.5 20 -0.3 q10 3.3 20 0.2 q10 -3.8 20 0.2 q10 5.2 20 0.1 q10 -4.3 20 -0.1 q10 4.3 20 -0.6 q10 -4.6 20 0.8 q10 5 20 0.1" /></svg>
+        </div>
+
+        <section class="x-section" id="order" aria-labelledby="x-order-title" style="padding-top: clamp(40px, 6vw, 64px)">
+          <div class="x-stagger">
+            <p class="x-kicker">Pre-order</p>
+            <h2 class="x-h2" id="x-order-title">Save your loaf in three easy steps.</h2>
+          </div>
+          <ol class="x-steps x-stagger">
+            <li><h3>Choose by 8 pm</h3><p>Tell us what you'd like the evening before.</p></li>
+            <li><h3>Pick up after 7 am</h3><p>Your order waits for you at the counter, fresh out of the oven.</p></li>
+            <li><h3>Pay at the counter</h3><p>No deposit, no online checkout. Just collect and pay.</p></li>
+          </ol>
+          <div class="x-call x-reveal">
+            <a class="x-btn" href="#order" aria-label="Call to pre-order: (555) 014-2290">Call to pre-order · (555) 014-2290</a>
+          </div>
+        </section>
+
+        <section class="x-section" id="cakes" aria-labelledby="x-cakes-title">
+          <div class="x-cakes x-reveal">
+            <div class="x-stagger">
+              <p class="x-kicker">Celebration cakes</p>
+              <h2 class="x-h2" id="x-cakes-title">A cake for the big days.</h2>
+              <p>Birthdays, anniversaries, a Tuesday that deserves it. Our celebration cakes are layered, finished and written on by hand, with flavors that follow the season.</p>
+              <a class="x-btn x-btn--light" href="#order">Ask about a cake</a>
+            </div>
+            <div class="x-cakes__tag x-reveal" style="--d: 420ms">
+              <small>from</small>
+              <strong>$45</strong>
+              <span>72 hours' notice</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-section" id="visit" aria-labelledby="x-visit-title">
+          <div class="x-stagger">
+            <p class="x-kicker">Come by</p>
+            <h2 class="x-h2" id="x-visit-title">Visit the bakery.</h2>
+          </div>
+          <div class="x-visit x-stagger">
+            <div class="x-panel">
+              <h3>Hours</h3>
+              <table class="x-hours">
+                <tbody>
+                  <tr><th scope="row">Tue–Fri</th><td>6:00–2:00</td></tr>
+                  <tr><th scope="row">Sat–Sun</th><td>7:00–2:00</td></tr>
+                  <tr><th scope="row">Mon</th><td class="x-closed">Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="x-panel">
+              <h3>Find us</h3>
+              <p class="x-address">18 Mill Street</p>
+              <p>Follow the smell of the morning bake.</p>
+              <a class="x-btn x-btn--ghost" href="#visit">Open map</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-foot__in">
+          <a class="x-logo" href="#top"><svg aria-hidden="true"><use href="#x-loaf" /></svg>Hearth &amp; Crumb</a>
+          <p>© Hearth &amp; Crumb (fictional) · Designed and built by <a href="index.html" target="_blank" rel="noopener">Patch &amp; Flow Studio</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var d = document;
+        var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
+        window.__xMotion = true;
+
+        /* sequence indexes for staggered groups, the split headline and the printed menu */
+        each(d.querySelectorAll(".x-stagger"), function (g) {
+          each(g.children, function (c, i) { c.style.setProperty("--i", i); });
+        });
+        each(d.querySelectorAll(".x-split .x-w"), function (w, i) { w.style.setProperty("--w", i); });
+        each(d.querySelectorAll(".x-print"), function (b) {
+          each(b.querySelectorAll(".x-board__title, .x-board__sub, h3, li, .x-board__note"), function (el, i) {
+            el.classList.add("x-pr");
+            el.style.setProperty("--i", i);
+          });
+        });
+
+        /* reveal on scroll; anything already scrolled past reveals at once */
+        var targets = d.querySelectorAll(".x-reveal, .x-stagger, .x-print, .x-divider");
+        var show = function (el) { el.classList.add("is-in"); };
+        if (!("IntersectionObserver" in window)) {
+          each(targets, show);
+        } else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting || e.boundingClientRect.top < 0) { show(e.target); io.unobserve(e.target); }
+            });
+          }, { rootMargin: "0px 0px -10% 0px", threshold: 0 });
+          each(targets, function (el) { io.observe(el); });
+        }
+
+        /* hero parallax: rAF-throttled, transform only, clamped inside the card's overflow */
+        var card = d.querySelector(".x-hero__card");
+        var media = d.querySelector(".x-hero__media");
+        var mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (!card || !media) return;
+        var ticking = false;
+        var update = function () {
+          ticking = false;
+          if (mq.matches) { media.style.transform = ""; return; }
+          var r = card.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > window.innerHeight) return;
+          var max = r.height * 0.08;
+          var y = Math.max(-max, Math.min(max, -r.top * 0.18));
+          media.style.transform = "translate3d(0," + y.toFixed(1) + "px,0)";
+        };
+        var request = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } };
+        window.addEventListener("scroll", request, { passive: true });
+        window.addEventListener("resize", request);
+        if (mq.addEventListener) mq.addEventListener("change", request);
+        request();
+      })();
+    </script>
+  </body>
+</html>

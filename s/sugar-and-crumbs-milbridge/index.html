@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sugar &amp; Crumbs Bakery | Milbridge, Maine</title>
+<meta name="description" content="Sugar & Crumbs Bakery on Kennedy Hwy in Milbridge, Maine. Donuts, scones, cannoli, cookies, pies, breakfast sandwiches and coffee, weekday mornings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff8ec;--berry:#2f3a78;--berry2:#4b57a3;--jam:#c2416b;--butter:#f6d78b;--crust:#b9824a;--ink:#1f2140;--mute:#686a86;--spring:cubic-bezier(.28,1.2,.42,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.65 Figtree,system-ui,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.concept{font-size:.74rem;line-height:1.45;text-align:center;padding:.55rem 1rem;background:var(--ink);color:#e8e6f5}
+.w{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+/* hero: morning clock */
+.hero{padding:2.4rem 0 2.6rem;background:radial-gradient(120% 70% at 50% 0%,#fde6b8 0%,var(--cream) 70%)}
+.hero .w{display:grid;gap:1.8rem;align-items:center}
+@media(min-width:800px){.hero .w{grid-template-columns:1.1fr .9fr}}
+.eyebrow{font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--jam)}
+h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(2.6rem,11.5vw,5.2rem);line-height:.98;letter-spacing:-.02em;color:var(--berry);margin:.6rem 0 .9rem}
+.lede{font-size:1.1rem;max-width:29rem}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{min-height:48px;display:inline-flex;align-items:center;padding:0 1.35rem;border-radius:14px;font-weight:700;text-decoration:none;touch-action:manipulation;transition:transform .45s var(--spring),box-shadow .25s}
+.btn:active{transform:scale(.97);transition:transform 90ms ease-out}
+.b1{background:var(--berry);color:#fff;box-shadow:0 8px 20px -10px rgba(47,58,120,.7)}
+.b2{background:#fff;border:1.5px solid #d9d3c4}
+.clock{justify-self:center;width:min(17rem,78vw);aspect-ratio:1;position:relative}
+.clock svg{width:100%;height:100%}
+.clock .hand{transform-origin:100px 100px;transition:transform 1.4s var(--spring)}
+.clock-cap{text-align:center;font-size:.86rem;color:var(--mute);margin-top:.4rem}
+.status{display:inline-flex;align-items:center;gap:.45rem;margin-top:1rem;padding:.4rem .8rem;border-radius:999px;background:#fff;font-size:.86rem;font-weight:500;border:1px solid #eadfc8}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:#aaa}
+.dot.on{background:#2f9e5b;box-shadow:0 0 0 4px rgba(47,158,91,.18)}
+/* morning case */
+section{padding:3rem 0}
+h2{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(1.8rem,7vw,2.8rem);line-height:1.05;color:var(--berry);margin:.4rem 0 .7rem}
+.case{margin-top:1.6rem;border-radius:26px;background:linear-gradient(180deg,#e9eefc,#fff 30%);border:1px solid #dfe3f3;padding:1rem;position:relative;box-shadow:inset 0 1px 0 #fff,0 20px 40px -30px rgba(31,33,64,.5)}
+.case:before{content:"";position:absolute;inset:0;border-radius:26px;background:linear-gradient(115deg,rgba(255,255,255,.55) 0 18%,transparent 18% 100%);pointer-events:none}
+.shelf{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;padding-bottom:1rem;border-bottom:6px solid #e6d3b4;margin-bottom:1rem}
+.shelf:last-child{margin-bottom:0}
+@media(min-width:800px){.shelf{grid-template-columns:repeat(4,1fr)}}
+.shelf-name{grid-column:1/-1;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.item{background:#fff;border-radius:18px;padding:.9rem .8rem;text-align:center;border:1px solid #efe8da;transition:transform .5s var(--spring)}
+.item:active{transform:scale(.97);transition:transform 90ms ease-out}
+@media(hover:hover){.item:hover{transform:translateY(-4px)}}
+.item svg{width:3.4rem;height:3.4rem;display:block;margin:0 auto .45rem}
+.item b{display:block;font-weight:700;font-size:.95rem;line-height:1.25}
+.item span{display:block;font-size:.76rem;color:var(--mute);margin-top:.2rem}
+.small{font-size:.82rem;color:var(--mute);margin-top:.9rem}
+/* words */
+.words{background:var(--berry);color:#fff}
+.quote{font-family:"Young Serif",serif;font-size:clamp(1.3rem,5vw,1.9rem);line-height:1.3;max-width:42rem}
+.quote+cite{display:block;font-style:normal;color:var(--butter);font-size:.84rem;margin-top:.7rem;font-weight:500}
+.q2{margin-top:2rem}
+/* also */
+.also{display:grid;gap:.8rem;margin-top:1.3rem}
+@media(min-width:800px){.also{grid-template-columns:repeat(3,1fr)}}
+.tile{border-radius:20px;padding:1.2rem;background:#fff;border:1px solid #eadfc8}
+.tile h3{font-family:"Young Serif",serif;font-weight:400;font-size:1.25rem;color:var(--berry)}
+.tile p{font-size:.93rem;color:var(--mute);margin-top:.3rem}
+.visit{display:grid;gap:1rem;margin-top:1rem}
+@media(min-width:800px){.visit{grid-template-columns:1fr 1fr}}
+.hrs{list-style:none;background:#fff;border-radius:20px;border:1px solid #eadfc8;padding:.6rem 1.1rem}
+.hrs li{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid #f1eadc;font-variant-numeric:tabular-nums}
+.hrs li:last-child{border:0}
+footer{text-align:center;font-size:.8rem;color:var(--mute);padding:2rem 1rem 6.5rem}
+.dock{position:fixed;left:50%;transform:translateX(-50%);bottom:max(.8rem,env(safe-area-inset-bottom));display:flex;gap:.35rem;padding:.35rem;border-radius:18px;background:rgba(255,248,236,.75);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(47,58,120,.15);box-shadow:0 12px 30px -10px rgba(31,33,64,.35);z-index:20}
+.dock a{min-height:44px;display:inline-flex;align-items:center;padding:0 1.15rem;border-radius:13px;font-weight:700;font-size:.9rem;text-decoration:none;transition:transform .4s var(--spring)}
+.dock a:first-child{background:var(--berry);color:#fff}
+.dock a:active{transform:scale(.95);transition:transform 90ms ease-out}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .9s var(--spring)}
+.rv.in-view{opacity:1;transform:none}
+@media(prefers-reduced-transparency:reduce){.dock{background:var(--cream);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Sugar &amp; Crumbs Bakery's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+  <div class="w">
+    <div>
+      <span class="eyebrow">Milbridge, Maine &middot; Kennedy Hwy</span>
+      <h1>Sugar &amp; Crumbs Bakery</h1>
+      <p class="lede">Fresh donuts, scones, cannoli and big cookies, hot breakfast sandwiches and plenty of coffee. Doors open at 6 on weekday mornings.</p>
+      <div class="status"><span class="dot" id="dot"></span><span id="stat">Weekdays from 6 AM</span></div>
+      <div class="row"><a class="btn b1" href="tel:+12075980792">Call the bakery</a><a class="btn b2" href="https://www.google.com/maps/search/?api=1&amp;query=Sugar+%26+Crumbs+Bakery%2C+195+Kennedy+Hwy%2C+Milbridge%2C+ME+04658">Directions</a></div>
+    </div>
+    <div>
+      <div class="clock" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="94" fill="#fff" stroke="#e7d9bd" stroke-width="2"/>
+          <path d="M100 100 L100 194 A94 94 0 0 1 100 6 Z" fill="#fde6b8"/>
+          <circle cx="100" cy="100" r="78" fill="none" stroke="#f3e7cf" stroke-width="1"/>
+          <g font-family="Young Serif,serif" font-size="13" fill="#2f3a78" text-anchor="middle">
+            <text x="100" y="24">12</text><text x="180" y="105">3</text><text x="100" y="186">6</text><text x="20" y="105">9</text>
+          </g>
+          <text x="62" y="140" font-family="Figtree,sans-serif" font-size="9" fill="#686a86" text-anchor="middle" letter-spacing="1.2">6 AM TO NOON</text>
+          <g class="hand" id="hand"><rect x="97" y="38" width="6" height="66" rx="3" fill="#c2416b"/></g>
+          <circle cx="100" cy="100" r="9" fill="#2f3a78"/><circle cx="100" cy="100" r="3" fill="#f6d78b"/>
+        </svg>
+      </div>
+      <p class="clock-cap">The bakery morning, six to noon</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="rv">
+    <div class="w">
+      <span class="eyebrow">In the case</span>
+      <h2>What people drive in for</h2>
+      <p>Every item here is one a customer called out by name. The full lineup changes daily, so call ahead if you have your heart set on something.</p>
+      <div class="case">
+        <div class="shelf">
+          <span class="shelf-name">Top shelf &middot; donuts &amp; pastry</span>
+          <div class="item"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="#f3d6a6"/><circle cx="32" cy="32" r="21" fill="#fbfaf6"/><g fill="#efe2c9"><circle cx="24" cy="22" r="2"/><circle cx="40" cy="24" r="2"/><circle cx="44" cy="38" r="2"/><circle cx="22" cy="42" r="2"/><circle cx="34" cy="46" r="2"/></g><circle cx="32" cy="32" r="7" fill="#fff8ec"/></svg><b>Coconut donut</b><span>"Best coconut donut I've ever had!"</span></div>
+          <div class="item"><svg viewBox="0 0 64 64"><path d="M14 40 q18 -26 36 0 z" fill="#e9c58c"/><path d="M14 40 h36 v6 h-36z" fill="#d3a467"/><g fill="#4b57a3"><circle cx="26" cy="32" r="2.2"/><circle cx="34" cy="28" r="2.2"/><circle cx="40" cy="35" r="2.2"/></g></svg><b>Scones</b><span>A customer favorite</span></div>
+          <div class="item"><svg viewBox="0 0 64 64"><rect x="12" y="26" width="40" height="14" rx="7" fill="#d7a668" transform="rotate(-12 32 33)"/><ellipse cx="14" cy="37" rx="4" ry="6" fill="#fffaf1" transform="rotate(-12 32 33)"/><ellipse cx="50" cy="29" rx="4" ry="6" fill="#fffaf1"/><g fill="#4b57a3"><circle cx="52" cy="27" r="1.6"/><circle cx="49" cy="31" r="1.6"/></g></svg><b>Cannoli</b><span>Standard and blueberry</span></div>
+          <div class="item"><svg viewBox="0 0 64 64"><circle cx="22" cy="36" r="11" fill="#5a3522"/><circle cx="22" cy="36" r="6" fill="#d8a45b"/><circle cx="42" cy="36" r="11" fill="#5a3522"/><circle cx="42" cy="36" r="6" fill="#d8a45b"/></svg><b>Buckeyes</b><span>Peanut butter balls</span></div>
+        </div>
+        <div class="shelf">
+          <span class="shelf-name">Middle shelf &middot; cookies, pies &amp; bars</span>
+          <div class="item"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="#8a5631"/><g fill="#f6efe2"><circle cx="24" cy="26" r="1.6"/><circle cx="38" cy="22" r="1.6"/><circle cx="42" cy="38" r="1.6"/><circle cx="28" cy="42" r="1.6"/><circle cx="33" cy="32" r="1.6"/></g></svg><b>Molasses cookies</b><span>"Definitely try the molasses if available"</span></div>
+          <div class="item"><svg viewBox="0 0 64 64"><path d="M10 36 h44 l-5 12 h-34z" fill="#c98f52"/><ellipse cx="32" cy="36" rx="22" ry="7" fill="#e8b878"/><g stroke="#c98f52" stroke-width="2"><path d="M18 34 l28 4"/><path d="M18 38 l28 -4"/></g></svg><b>Pies</b><span>Ask what's baked today</span></div>
+          <div class="item"><svg viewBox="0 0 64 64"><rect x="12" y="20" width="40" height="26" rx="4" fill="#4a2a1b"/><path d="M12 26 h40" stroke="#6b3e27" stroke-width="2"/><path d="M32 20 v26" stroke="#2f1a10" stroke-width="1.5"/></svg><b>Brownies</b><span>Mentioned by name</span></div>
+          <div class="item"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="#e1b878"/><g fill="#3b2418"><circle cx="24" cy="26" r="2.6"/><circle cx="40" cy="25" r="2.6"/><circle cx="36" cy="40" r="2.6"/><circle cx="24" cy="39" r="2.6"/></g></svg><b>Big cookies</b><span>"Big and loaded with flavor"</span></div>
+        </div>
+        <div class="shelf">
+          <span class="shelf-name">From the griddle</span>
+          <div class="item" style="grid-column:1/-1"><svg viewBox="0 0 64 64"><ellipse cx="32" cy="24" rx="20" ry="9" fill="#d9a35c"/><path d="M13 30 h38" stroke="#f2c94c" stroke-width="5"/><path d="M13 35 h38" stroke="#b5463a" stroke-width="4"/><path d="M14 39 h36" stroke="#f6d78b" stroke-width="4"/><ellipse cx="32" cy="44" rx="20" ry="7" fill="#d9a35c"/></svg><b>Bacon, egg and cheese bagel</b><span>Hot, fresh breakfast sandwiches, with a large coffee selection to go with them</span></div>
+        </div>
+      </div>
+      <p class="small">Item drawings are illustrations, not photos. Daily selection varies.</p>
+    </div>
+  </section>
+
+  <section class="words rv">
+    <div class="w">
+      <p class="quote">"She has a huge variety of items every day."</p><cite>Google review, August 2025</cite>
+      <p class="quote q2">"The owner is extremely friendly and welcoming. Definitely recommend stopping by for breakfast or a sweet treat!"</p><cite>Google review, October 2025</cite>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="w">
+      <span class="eyebrow">More than the case</span>
+      <h2>Breakfast, coffee and catering</h2>
+      <div class="also">
+        <div class="tile"><h3>Breakfast</h3><p>Breakfast sandwiches and morning options, made fresh.</p></div>
+        <div class="tile"><h3>Coffee</h3><p>A large coffee selection, hot and ready to go.</p></div>
+        <div class="tile"><h3>Catering</h3><p>Trays and orders for gatherings. Call to talk through what you need. (Sample details: confirm with the bakery.)</p></div>
+      </div>
+      <div class="visit">
+        <ul class="hrs"><li><span>Monday to Friday</span><b>6 AM - noon</b></li><li><span>Saturday &amp; Sunday</span><b>Closed</b></li><li><span style="color:var(--mute);font-size:.86rem">Some listings show 1 PM closing. Call to confirm.</span></li></ul>
+        <div class="tile"><h3>195 Kennedy Hwy</h3><p>Milbridge, ME 04658</p><div class="row" style="margin-top:.9rem"><a class="btn b1" href="tel:+12075980792">(207) 598-0792</a><a class="btn b2" href="https://www.google.com/maps/search/?api=1&amp;query=Sugar+%26+Crumbs+Bakery%2C+195+Kennedy+Hwy%2C+Milbridge%2C+ME+04658">Map</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="dock" aria-label="Quick actions"><a href="tel:+12075980792">Call</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Sugar+%26+Crumbs+Bakery%2C+195+Kennedy+Hwy%2C+Milbridge%2C+ME+04658">Directions</a></nav>
+<script>
+(function(){
+var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));var h=now.getHours()+now.getMinutes()/60,d=now.getDay();
+var open=d>=1&&d<=5&&h>=6&&h<12;var dot=document.getElementById('dot'),st=document.getElementById('stat');
+if(open){dot.classList.add('on');st.textContent='Open now until noon (call to confirm)'}else{st.textContent='Opens weekdays at 6 AM'}
+var hand=document.getElementById('hand');var deg=((h%12)/12)*360;setTimeout(function(){hand.style.transform='rotate('+deg+'deg)'},300);
+var r=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){r.forEach(function(e){e.classList.add('in-view')});return}
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});r.forEach(function(e){o.observe(e)})})();
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beanie's Coffee and Cakes | Family-run café in Central City, Iowa</title>
+<meta name="description" content="Beanie's Coffee and Cakes, a family-run café at 414 E Main St, Central City, IA. Homemade pastries, paninis, breakfast sandwiches and Beanie Boosts. Rated 4.9 on Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800&family=Caveat:wght@600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#fbf3e6;--cocoa:#4a2c1d;--latte:#c89b72;--pink:#f3a6b8;--mint:#bfe3cf;--board:#2f3b35}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--cream);color:var(--cocoa);line-height:1.55;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:980px;margin:0 auto;padding:0 18px}
+/* scalloped awning */
+.awning{height:46px;background:repeating-linear-gradient(90deg,var(--pink) 0 30px,#fff 30px 60px);position:relative}
+.awning:after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;
+ background:radial-gradient(circle at 15px 0,var(--pink) 14px,transparent 15px) 0 0/60px 14px repeat-x,
+ radial-gradient(circle at 45px 0,#fff 14px,transparent 15px) 0 0/60px 14px repeat-x}
+header.hero{padding:42px 0 26px;text-align:center}
+.est{display:inline-block;font-family:Caveat,cursive;font-size:1.35rem;color:#b5566e;transform:rotate(-3deg)}
+h1{font-family:Fraunces,serif;font-weight:800;font-size:clamp(2.3rem,11vw,4.4rem);line-height:.98;letter-spacing:-.02em;margin:6px 0 10px}
+h1 span{display:block;color:var(--latte);font-weight:500;font-style:italic;font-size:.62em;margin-top:6px}
+.tag{max-width:30ch;margin:0 auto 18px;font-size:1.05rem}
+.illo{width:min(300px,86%);margin:8px auto 22px}
+.ctas{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;border-radius:16px;font-weight:700;font-size:1.12rem;text-decoration:none;border:3px solid var(--cocoa);padding:10px 16px}
+.btn.call{background:var(--cocoa);color:#fff;box-shadow:0 5px 0 #2a170e}
+.btn.dir{background:#fff}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.stars{margin:18px auto 0;font-weight:700;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.stars b{color:#e2a018;letter-spacing:2px}
+section{padding:40px 0}
+h2{font-family:Fraunces,serif;font-size:1.9rem;line-height:1.1;margin-bottom:14px}
+/* chalkboard */
+.board{background:var(--board);color:#f4f1e8;border:12px solid #8a5a36;border-radius:10px;padding:24px 20px;box-shadow:inset 0 0 40px rgba(0,0,0,.45),0 8px 0 #5e3b22;
+ background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:6px 6px}
+.board h2{font-family:Caveat,cursive;font-size:2.4rem;color:#fff;text-align:center}
+.board ul{list-style:none;display:grid;gap:14px;margin-top:6px}
+.board li{font-family:Caveat,cursive;font-size:1.5rem;line-height:1.2;border-bottom:2px dashed rgba(255,255,255,.25);padding-bottom:10px}
+.board li small{display:block;font-family:Nunito,sans-serif;font-size:.9rem;opacity:.85;margin-top:3px}
+.board .note{font-family:Nunito,sans-serif;font-size:.95rem;text-align:center;margin-top:16px;opacity:.9}
+.chalk-pink{color:#ffc2d0}.chalk-mint{color:#c7f0d8}.chalk-yellow{color:#ffe59a}
+/* cake box hours */
+.box{background:#fff;border:3px solid var(--cocoa);border-radius:14px;overflow:hidden;position:relative}
+.box .ribbon{height:22px;background:repeating-linear-gradient(45deg,var(--pink) 0 10px,#fff 10px 20px);border-bottom:3px solid var(--cocoa)}
+.box .in{padding:20px 18px}
+.hours{width:100%;border-collapse:collapse;font-size:1.05rem}
+.hours td{padding:9px 0;border-bottom:1px dashed #d9c3ab}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.closed td{color:#9a7b66}
+.addr{margin-top:14px;font-weight:700}
+.story{display:grid;gap:18px}
+.card{background:#fff;border-radius:18px;padding:20px;border:2px solid #ecd9c3}
+.card.pink{background:#ffe6ec;border-color:#f7c3cf}
+.card.mint{background:#e6f5ec;border-color:#c3e6d1}
+blockquote{font-family:Fraunces,serif;font-size:1.35rem;line-height:1.3;font-style:italic}
+blockquote cite{display:block;font-family:Nunito,sans-serif;font-style:normal;font-size:.9rem;margin-top:10px;opacity:.8}
+.fb{display:inline-block;margin-top:12px;font-weight:700}
+footer{padding:30px 0 40px;text-align:center}
+footer .biz{font-family:Fraunces,serif;font-size:1.2rem;font-weight:800}
+.credit{display:block;margin-top:26px;font-size:.72rem;opacity:.55;text-decoration:none}
+.steam path{animation:rise 3s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.6s}.steam path:nth-child(3){animation-delay:1.2s}
+@keyframes rise{0%{opacity:0;transform:translateY(6px)}50%{opacity:.9}100%{opacity:0;transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.steam path{animation:none;opacity:.7}}
+@media (min-width:760px){
+ .ctas{flex-direction:row;max-width:560px}.ctas .btn{flex:1}
+ .two{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+ .story{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="awning" aria-hidden="true"></div>
+<header class="hero">
+ <div class="wrap">
+  <p class="est">family-run · since 2023</p>
+  <h1>Beanie's<span>Coffee &amp; Cakes</span></h1>
+  <p class="tag">Homemade pastries, paninis and breakfast sandwiches on Main Street in Central City.</p>
+  <svg class="illo" viewBox="0 0 300 170" role="img" aria-label="Illustration of a coffee cup and a frosted cupcake">
+   <g class="steam" fill="none" stroke="#c89b72" stroke-width="4" stroke-linecap="round">
+    <path d="M70 40c-8-10 8-16 0-28"/><path d="M90 42c-8-10 8-16 0-28"/><path d="M110 40c-8-10 8-16 0-28"/>
+   </g>
+   <path d="M40 60h110l-10 92a12 12 0 0 1-12 10H62a12 12 0 0 1-12-10z" fill="#fff" stroke="#4a2c1d" stroke-width="4"/>
+   <rect x="46" y="84" width="98" height="26" fill="#f3a6b8"/>
+   <path d="M150 78c26 0 26 40 0 40" fill="none" stroke="#4a2c1d" stroke-width="6"/>
+   <ellipse cx="95" cy="60" rx="55" ry="8" fill="#6b3f26" stroke="#4a2c1d" stroke-width="4"/>
+   <path d="M190 112h80l-10 50h-60z" fill="#c89b72" stroke="#4a2c1d" stroke-width="4"/>
+   <path d="M196 120l4 40M212 120l2 40M230 120v40M248 120l-2 40M264 120l-4 40" stroke="#4a2c1d" stroke-width="2" opacity=".4"/>
+   <path d="M184 114c-6-22 14-30 22-24 0-20 28-24 32-8 10-14 36-6 30 14 14 4 10 20-2 20H190c-8 0-10-2-6-2z" fill="#f3a6b8" stroke="#4a2c1d" stroke-width="4"/>
+   <circle cx="230" cy="68" r="8" fill="#d93a4f" stroke="#4a2c1d" stroke-width="3"/>
+   <g fill="#fff"><rect x="204" y="98" width="8" height="3" rx="1.5"/><rect x="236" y="92" width="8" height="3" rx="1.5" transform="rotate(30 240 93)"/><rect x="252" y="104" width="8" height="3" rx="1.5"/></g>
+  </svg>
+  <div class="ctas">
+   <a class="btn call" href="tel:+13194383020">☎ Call (319) 438-3020</a>
+   <a class="btn dir" href="https://www.google.com/maps/search/?api=1&query=414+E+Main+St%2C+Central+City%2C+IA+52214" target="_blank" rel="noopener">📍 Directions</a>
+  </div>
+  <p class="stars"><b>★★★★★</b> 4.9 on Google · 54 reviews</p>
+ </div>
+</header>
+
+<section>
+ <div class="wrap two">
+  <div class="board">
+   <h2>On the board</h2>
+   <ul>
+    <li class="chalk-pink">Homemade pastries &amp; cakes<small>Homemade, the way the family makes them.</small></li>
+    <li class="chalk-yellow">Paninis<small>Reviewers love the chipotle chicken avocado panini on an everything bagel.</small></li>
+    <li class="chalk-mint">Breakfast sandwiches<small>For the morning crowd.</small></li>
+    <li>Coffee &amp; Beanie Boosts<small>The house energy drinks reviewers keep mentioning.</small></li>
+    <li class="chalk-pink">Seasonal specials<small>Holiday treats like carrot-cake and Peeps cupcakes at Easter, and Mother's Day bundles.</small></li>
+   </ul>
+   <p class="note">Menu updated April 2026. Call for current prices and today's specials.</p>
+  </div>
+  <div class="box" id="hours">
+   <div class="ribbon" aria-hidden="true"></div>
+   <div class="in">
+    <h2>Hours</h2>
+    <table class="hours">
+     <tr class="closed"><td>Monday</td><td>Closed</td></tr>
+     <tr><td>Tuesday</td><td>7 AM – 2 PM</td></tr>
+     <tr><td>Wednesday</td><td>7 AM – 2 PM</td></tr>
+     <tr><td>Thursday</td><td>7 AM – 2 PM</td></tr>
+     <tr><td>Friday</td><td>7 AM – 2 PM</td></tr>
+     <tr><td>Saturday</td><td>8 AM – 2 PM</td></tr>
+     <tr><td>Sunday</td><td>8 AM – 1 PM</td></tr>
+    </table>
+    <p class="addr">414 E Main St<br>Central City, IA 52214</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <h2>Our story</h2>
+  <div class="story">
+   <div class="card pink">
+    <p>Beanie's is a family-run café that opened on Main Street in 2023. The menu is built around homemade pastries, cakes, paninis and breakfast sandwiches, with seasonal treats for the holidays.</p>
+    <p style="margin-top:10px">We love being part of Central City, from our April 2026 menu refresh to joining the Central City Go passport day.</p>
+   </div>
+   <div class="card mint">
+    <blockquote>“Beats those big city franchise coffee shops.”<cite>Google review · 4.9 stars from 54 reviews</cite></blockquote>
+    <a class="fb" href="https://www.facebook.com/beaniescnc" target="_blank" rel="noopener">See today's specials on Facebook →</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <p class="biz">Beanie's Coffee and Cakes</p>
+  <p>414 E Main St, Central City, IA 52214 · <a href="tel:+13194383020">(319) 438-3020</a></p>
+  <a class="credit" href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a>
+ </div>
+</footer>
+</body>
+</html>

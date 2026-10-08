@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gary's Shoe Repair and Cleaners · Sunland-Tujunga</title>
+<meta name="description" content="Shoe repair, alterations and dry cleaning on Foothill Blvd in Sunland-Tujunga. A mom and pop shop with two benches.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6efe3;--leather:#7a4a2a;--tan:#c99a6b;--thread:#2f6f6a;--ink:#2b2119;--muted:#6f5f50}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{background:var(--cream);color:var(--ink);font:400 1.02rem/1.6 Karla,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.pf-concept{background:var(--ink);color:#e8dccb;font:13px/1.45 system-ui,sans-serif;text-align:center;padding:8px 14px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.1rem}
+.mast{padding:2.6rem 0 1.4rem;text-align:center}
+.mast .est{font:700 .72rem/1 Karla,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--thread)}
+.mast h1{font:800 clamp(2rem,8vw,4.2rem)/.95 Fraunces,serif;letter-spacing:-.03em;margin:.7rem 0 .5rem;font-variation-settings:"opsz" 144}
+.mast h1 span{display:block;font-weight:400;font-style:italic;font-size:.48em;letter-spacing:-.01em;color:var(--leather);margin-top:.3rem}
+.mast p{max-width:40ch;margin:0 auto;color:var(--muted);font-size:1.08rem}
+/* the two benches */
+.benches{display:grid;grid-template-columns:1fr 1fr;margin:2rem 0 0;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(43,33,25,.45)}
+.bench{padding:2rem 1.6rem 2.2rem;position:relative;min-height:100%}
+.bench.shoe{background:var(--leather);color:#f7e9d7}
+.bench.sew{background:#e7dccb;color:var(--ink)}
+.bench h2{font:600 clamp(1.4rem,4vw,2rem)/1.05 Fraunces,serif;letter-spacing:-.015em;margin:.9rem 0 .6rem}
+.bench .who{font:700 .7rem/1 Karla,sans-serif;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+.bench ul{list-style:none;margin-top:1rem}
+.bench li{padding:.55rem 0;border-top:1px dashed currentColor;border-color:rgba(127,100,70,.45);display:flex;gap:.6rem;align-items:baseline}
+.bench.shoe li{border-color:rgba(247,233,215,.3)}
+.bench li:before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.6;transform:translateY(-2px)}
+.icon{width:68px;height:68px}
+.seam{position:absolute;top:0;bottom:0;left:0;width:0;border-left:3px dashed var(--tan);opacity:.9}
+.bench.sew .seam{display:none}
+.bench.sew{border-left:3px dashed var(--tan)}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+/* call bar */
+.call{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.btn{min-height:48px;display:inline-flex;align-items:center;padding:0 1.4rem;border-radius:12px;font:700 1rem/1 Karla,sans-serif;text-decoration:none;transition:transform 100ms ease-out,box-shadow .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn.dark{background:var(--ink);color:var(--cream)}
+.btn.line{box-shadow:inset 0 0 0 2px var(--ink)}
+.btn:hover{box-shadow:0 8px 20px -8px rgba(43,33,25,.5)}
+.btn.line:hover{box-shadow:inset 0 0 0 2px var(--ink),0 8px 20px -8px rgba(43,33,25,.4)}
+.btn:focus-visible{outline:3px solid var(--thread);outline-offset:3px}
+/* the hard job story */
+.story{margin:4rem 0 0;display:grid;grid-template-columns:1.1fr .9fr;gap:2.4rem;align-items:center}
+.story h2{font:600 clamp(1.6rem,5vw,2.6rem)/1.05 Fraunces,serif;letter-spacing:-.02em}
+.story p{color:var(--muted);margin-top:1rem}
+.quote{background:#fff9f0;border-radius:16px;padding:1.6rem;border:1px solid #e3d5bf;position:relative}
+.quote:before{content:"\201C";position:absolute;top:-.35em;left:.3em;font:800 5rem/1 Fraunces,serif;color:var(--tan)}
+.quote blockquote{font:400 1.08rem/1.55 Fraunces,serif;font-variation-settings:"opsz" 14}
+.quote cite{display:block;margin-top:.9rem;font:700 .75rem/1 Karla,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:var(--thread)}
+.case{width:100%;max-width:340px;justify-self:center}
+/* tickets */
+.tickets{margin:4rem 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.tk{background:#fff;border-radius:10px;padding:1.2rem 1.2rem 1.1rem;position:relative;border:1px solid #eadfcd}
+.tk:after{content:"";position:absolute;right:-1px;top:50%;width:14px;height:14px;margin-top:-7px;background:var(--cream);border-radius:50%;border:1px solid #eadfcd;border-right-color:var(--cream)}
+.tk small{font:700 .68rem/1 Karla,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--leather)}
+.tk p{margin-top:.6rem;font-size:.97rem}
+.tk cite{display:block;margin-top:.7rem;font-style:normal;font-size:.78rem;color:var(--muted)}
+/* visit */
+.visit{margin:4rem 0 3rem;background:var(--ink);color:#f1e6d6;border-radius:20px;padding:2.2rem 1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.visit h2{font:600 clamp(1.5rem,4.5vw,2.2rem)/1.05 Fraunces,serif}
+.visit table{width:100%;border-collapse:collapse;font-size:.98rem}
+.visit td{padding:.45rem 0;border-bottom:1px solid rgba(241,230,214,.15)}
+.visit td+td{text-align:right;font-weight:700}
+.visit .btn.dark{background:var(--tan);color:var(--ink)}
+.visit .btn.line{box-shadow:inset 0 0 0 2px #f1e6d6;color:#f1e6d6}
+.visit .call{justify-content:flex-start}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:10px 14px 34px;color:var(--muted)}
+.pf-foot a{font-weight:700;color:var(--ink)}
+@media (max-width:720px){.benches,.story,.visit{grid-template-columns:1fr}.bench.sew{border-left:0;border-top:3px dashed var(--tan)}.tickets{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:active{transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Gary's Shoe Repair and Cleaners' official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<main class="wrap">
+ <header class="mast">
+  <p class="est">Foothill Blvd · Sunland-Tujunga</p>
+  <h1>Gary's Shoe Repair<span>and Cleaners</span></h1>
+  <p>One counter, two benches. Shoes and leather on one side, sewing and alterations on the other, run by a husband and wife.</p>
+  <div class="call">
+   <a class="btn dark" href="tel:+18183539503">Call (818) 353-9503</a>
+   <a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=7732%20Foothill%20Blvd%2C%20Los%20Angeles%2C%20CA%2091042">Directions</a>
+  </div>
+ </header>
+
+ <section class="benches" aria-label="The two benches">
+  <div class="bench shoe">
+   <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 40c10 0 14-14 22-14 6 0 8 6 16 8 6 1 14 2 14 8v4H6z" fill="none" stroke="#f7e9d7" stroke-width="2.5" stroke-linejoin="round"/><path d="M6 46h52" stroke="#c99a6b" stroke-width="4"/><path d="M40 46v6h8v-6" fill="#c99a6b"/></svg>
+   <p class="who">His bench</p>
+   <h2>Shoe and leather repair</h2>
+   <ul>
+    <li>Heels replaced so you can't tell</li>
+    <li>Tears in sneakers stitched back</li>
+    <li>Soles, straps and worn edges</li>
+    <li>Leather goods and cases</li>
+   </ul>
+  </div>
+  <div class="bench sew">
+   <svg class="icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 44h48M14 44V22h30a8 8 0 0 1 8 8v14" fill="none" stroke="#2b2119" stroke-width="2.5"/><path d="M44 30v8" stroke="#2f6f6a" stroke-width="3"/><circle cx="44" cy="40" r="2" fill="#2f6f6a"/><path d="M8 50h48" stroke="#c99a6b" stroke-width="3" stroke-dasharray="4 4"/></svg>
+   <p class="who">Anoush's bench</p>
+   <h2>Alterations and sewing</h2>
+   <ul>
+    <li>Hems, fittings and custom tailoring</li>
+    <li>Coat linings replaced</li>
+    <li>Patches and sashes sewn on</li>
+    <li>Dry cleaning at the same counter</li>
+   </ul>
+  </div>
+ </section>
+
+ <section class="story">
+  <div>
+   <h2>The job other shops sent over</h2>
+   <p>An old guitar case full of holes, turned away by several seamstresses. Gary's has an open-ended sewing machine that reaches inside a case, so the job came here.</p>
+   <div class="quote" style="margin-top:1.4rem">
+    <blockquote>Anush did an amazing job getting my guitar case ready for the next twenty years of taking it to gigs!</blockquote>
+    <cite>Google review · Feb 2026</cite>
+   </div>
+  </div>
+  <svg class="case" viewBox="0 0 300 200" role="img" aria-label="Illustration of a guitar case with new stitching">
+   <path d="M40 100c0-38 30-62 70-56 20 3 30 14 50 14s34-16 66-10c36 7 44 34 44 52s-8 45-44 52c-32 6-46-10-66-10s-30 11-50 14c-40 6-70-18-70-56z" fill="#3b2a1e"/>
+   <path d="M52 100c0-30 24-50 58-45 18 3 28 13 50 13s30-15 60-9c30 6 36 26 36 41s-6 36-36 41c-30 6-38-9-60-9s-32 10-50 13c-34 5-58-15-58-45z" fill="none" stroke="#c99a6b" stroke-width="3" stroke-dasharray="7 6"/>
+   <rect x="250" y="88" width="24" height="24" rx="5" fill="#c99a6b"/>
+   <path d="M120 70l8 10M150 128l10-6M200 66l-4 12" stroke="#f6efe3" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+ </section>
+
+ <section class="tickets" aria-label="Claim tickets from customers">
+  <div class="tk"><small>Ticket · leather re-heel</small><p>"Did an absolutely wonderful job on a leather re-heel. Can't even tell they were replaced."</p><cite>Google review · Mar 2026</cite></div>
+  <div class="tk"><small>Ticket · mom and pop</small><p>"Anoush does the alterations and her husband does the shoe repair. They are both highly skilled and always do a great job."</p><cite>Google review · Feb 2026</cite></div>
+  <div class="tk"><small>Ticket · sneaker tear</small><p>"My shoe is as good as new and the price is really affordable and reasonable. Highly-recommended place. 10/10"</p><cite>Google review · Jan 2025</cite></div>
+ </section>
+
+ <section class="visit">
+  <div>
+   <h2>Bring it by the counter</h2>
+   <p style="margin-top:.8rem;opacity:.85">7732 Foothill Blvd, Los Angeles, CA 91042</p>
+   <div class="call">
+    <a class="btn dark" href="tel:+18183539503">Call the shop</a>
+    <a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=7732%20Foothill%20Blvd%2C%20Los%20Angeles%2C%20CA%2091042">Directions</a>
+   </div>
+   <p style="margin-top:1rem;font-size:.9rem;opacity:.75">Turnaround times by job <span class="smp">sample</span>, to confirm with the shop</p>
+  </div>
+  <table aria-label="Hours">
+   <tr><td>Monday</td><td>9am – 6pm</td></tr><tr><td>Tuesday</td><td>9am – 6pm</td></tr><tr><td>Wednesday</td><td>9am – 6pm</td></tr><tr><td>Thursday</td><td>9am – 6pm</td></tr><tr><td>Friday</td><td>9am – 6pm</td></tr><tr><td>Saturday</td><td>9am – 6pm</td></tr><tr><td>Sunday</td><td>Closed</td></tr>
+  </table>
+ </section>
+</main>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+</body>
+</html>

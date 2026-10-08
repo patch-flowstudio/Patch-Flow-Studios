@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Big Island Bakehouse · Kea'au · Fri to Sun, 10 to 2</title>
+<meta name="description" content="Small bakery using local ingredients in Kea'au, Hawai'i. Croissants, ube croughnuts, lemon meringue cruffins. Open Friday, Saturday and Sunday 10am to 2pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ube:#5b3a87;--ube2:#7d5bb0;--lilikoi:#f4c542;--lava:#1b1716;--cream:#fbf4e8;--leaf:#2f6b4f;--muted:#6f6660}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{background:var(--cream);color:var(--lava);font:400 1rem/1.6 Figtree,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.pf-concept{background:var(--lava);color:#d9cfc7;font:13px/1.45 system-ui,sans-serif;text-align:center;padding:8px 14px}
+.hero{background:var(--ube);color:var(--cream);padding:3.4rem 1.2rem 0;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:repeating-linear-gradient(180deg,#e9c58e 0 4px,#d9a866 4px 7px,#f3dcae 7px 10px);border-top:3px solid #b9813f}
+.in{max-width:1060px;margin:0 auto}
+.hero .place{font:800 .74rem/1 Figtree,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--lilikoi)}
+.hero h1{font:400 clamp(2.5rem,9vw,5.2rem)/.95 Gloock,serif;letter-spacing:-.02em;margin:.9rem 0 1rem;max-width:12ch}
+.hero p.lede{max-width:38ch;color:#e6dcf3;font-size:1.08rem}
+/* the 3-day window */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:2.4rem 0 0;padding-bottom:4.6rem}
+.day{border-radius:14px;padding:.9rem .4rem;text-align:center;font:800 .78rem/1.2 Figtree,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.07);color:#b9a6d6}
+.day span{display:block;font-weight:600;font-size:.7rem;letter-spacing:.02em;text-transform:none;margin-top:.35rem;opacity:.8}
+.day.open{background:var(--lilikoi);color:var(--lava);transform:translateY(-10px);box-shadow:0 18px 30px -16px rgba(0,0,0,.5)}
+.day.open b{display:block;font:400 1.7rem/1 Gloock,serif;letter-spacing:0;margin:.3rem 0 .1rem}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.8rem}
+.btn{min-height:50px;display:inline-flex;align-items:center;padding:0 1.4rem;border-radius:999px;font:800 .98rem/1 Figtree,sans-serif;text-decoration:none;transition:transform 100ms ease-out,box-shadow .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn.y{background:var(--lilikoi);color:var(--lava)}.btn.y:hover{box-shadow:0 10px 24px -10px rgba(244,197,66,.8)}
+.btn.w{box-shadow:inset 0 0 0 1.5px rgba(251,244,232,.7)}.btn.w:hover{background:rgba(255,255,255,.08)}
+.btn:focus-visible{outline:3px solid var(--lilikoi);outline-offset:3px}
+/* case */
+.case{padding:5rem 1.2rem 3rem}
+h2{font:400 clamp(1.9rem,6vw,3rem)/1 Gloock,serif;letter-spacing:-.015em}
+.sub{color:var(--muted);margin:.7rem 0 2.2rem;max-width:46ch}
+.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.item{background:#fff;border-radius:20px;padding:1.4rem;position:relative;overflow:hidden;box-shadow:0 1px 0 #eadfce,0 16px 30px -24px rgba(27,23,22,.45);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.item:hover{transform:translateY(-3px)}
+.item svg{width:64px;height:48px;margin-bottom:.8rem}
+.item h3{font:400 1.35rem/1.15 Gloock,serif}
+.item p{color:var(--muted);font-size:.93rem;margin-top:.35rem}
+.item q{display:block;margin-top:.8rem;font-size:.88rem;font-style:italic;color:var(--ube)}
+.item.feature{grid-column:span 2;background:var(--ube2);color:#fff}
+.item.feature p{color:#efe6fb}.item.feature q{color:var(--lilikoi)}
+.badge{position:absolute;top:1rem;right:1rem;font:800 .62rem/1 Figtree,sans-serif;letter-spacing:.16em;text-transform:uppercase;background:var(--leaf);color:#fff;padding:.4rem .55rem;border-radius:999px}
+/* hold it */
+.hold{margin:2rem 1.2rem 0;max-width:1060px;margin-left:auto;margin-right:auto;background:var(--lava);color:var(--cream);border-radius:26px;padding:2.4rem 1.8rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+.hold h2{color:var(--lilikoi)}
+.hold p{color:#d9cfc7;margin-top:.8rem}
+.hold ol{list-style:none;counter-reset:h}
+.hold li{counter-increment:h;display:flex;gap:.8rem;align-items:baseline;padding:.6rem 0;border-bottom:1px solid rgba(251,244,232,.12)}
+.hold li:before{content:counter(h);font:400 1.4rem/1 Gloock,serif;color:var(--lilikoi);min-width:1.2rem}
+/* route */
+.route{padding:5rem 1.2rem}
+.route .in{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.route svg{width:100%;height:auto}
+.route blockquote{font:400 1.2rem/1.45 Gloock,serif;margin-top:1.4rem}
+.route cite{display:block;margin-top:.4rem;font:800 .7rem/1 Figtree,sans-serif;letter-spacing:.16em;text-transform:uppercase;font-style:normal;color:var(--muted)}
+.route .btn.y{background:var(--ube);color:#fff}
+.route .btn.w{box-shadow:inset 0 0 0 1.5px var(--ube);color:var(--ube)}
+.smp{display:inline-block;font:700 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+.pf-foot{background:var(--lava);color:#a99f98;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:22px 14px 30px}
+.pf-foot a{font-weight:700;color:var(--cream)}
+@media (max-width:760px){.shelf{grid-template-columns:1fr 1fr}.item.feature{grid-column:span 2}.hold,.route .in{grid-template-columns:1fr}.week{gap:4px}.day{padding:.7rem .1rem;font-size:.66rem}.day span{display:none}.day.open b{font-size:1.2rem}}
+@media (max-width:460px){.shelf{grid-template-columns:1fr}.item.feature{grid-column:auto}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.btn:active{transform:none}.item:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not The Big Island Bakehouse's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+ <div class="in">
+  <p class="place">16-566 Kea'au-Pahoa Rd · Kea'au</p>
+  <h1>Three mornings a week.</h1>
+  <p class="lede">A small bakery using local ingredients. Flaky croissants, ube croughnuts and lemon meringue cruffins, baked for Friday, Saturday and Sunday only.</p>
+  <div class="cta">
+   <a class="btn y" href="tel:+18083458507">Call to set aside an order</a>
+   <a class="btn w" href="https://www.google.com/maps/dir/?api=1&amp;destination=16-566%20Keaau-Pahoa%20Rd%2C%20Keaau%2C%20HI%2096749">Directions</a>
+  </div>
+  <div class="week" aria-label="Open Friday to Sunday, 10am to 2pm">
+   <div class="day">Mon<span>closed</span></div><div class="day">Tue<span>closed</span></div><div class="day">Wed<span>closed</span></div><div class="day">Thu<span>closed</span></div>
+   <div class="day open">Fri<b>10–2</b></div><div class="day open">Sat<b>10–2</b></div><div class="day open">Sun<b>10–2</b></div>
+  </div>
+ </div>
+</header>
+
+<section class="case">
+ <div class="in">
+  <h2>In the case this weekend</h2>
+  <p class="sub">Favorites customers write about. What's out changes, and the best ones go early, so call ahead if you have your heart set.</p>
+  <div class="shelf">
+   <article class="item feature"><span class="badge">Most loved</span>
+    <svg viewBox="0 0 64 48" aria-hidden="true"><ellipse cx="32" cy="26" rx="28" ry="16" fill="#f4c542"/><ellipse cx="32" cy="26" rx="10" ry="6" fill="#5b3a87"/><path d="M8 22c8-6 40-6 48 0" stroke="#fff" stroke-width="2" fill="none" opacity=".6"/></svg>
+    <h3>Ube croughnut</h3><p>Crispy outside, ube cream filling inside.</p><q>"It looks so sweet but it's not, it the perfect amount of sweetness."</q></article>
+   <article class="item"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M10 34c4-18 40-18 44 0z" fill="#e2b06a"/><path d="M18 18c6-10 22-10 28 0" fill="#fff6d6" stroke="#f4c542" stroke-width="3"/></svg>
+    <h3>Lemon meringue cruffin</h3><p>Lemon and meringue in a flaky cruffin.</p></article>
+   <article class="item"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M6 32c10-20 42-20 52 0-14 6-38 6-52 0z" fill="#d9a866"/><path d="M14 30c8-10 28-10 36 0" stroke="#2f6b4f" stroke-width="3" fill="none"/></svg>
+    <h3>Pesto goat cheese croissant</h3><p>The savory one people come back for.</p></article>
+   <article class="item"><svg viewBox="0 0 64 48" aria-hidden="true"><circle cx="32" cy="26" r="18" fill="#e2b06a"/><path d="M32 26m-10 0a10 10 0 1 0 20 0a6 6 0 1 0-12 0" fill="none" stroke="#fff" stroke-width="2"/><circle cx="24" cy="20" r="2" fill="#5b3a87"/><circle cx="38" cy="32" r="2" fill="#5b3a87"/></svg>
+    <h3>Pain au raisin</h3><p>Flat and round, raisins, orange marmalade, white icing.</p></article>
+   <article class="item"><span class="badge">Seasonal</span><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M32 26m-18 0a18 14 0 1 0 36 0a18 14 0 1 0-36 0" fill="#e2b06a"/><path d="M32 26m-8 0a8 6 0 1 0 16 0a4 3 0 1 0-8 0" fill="none" stroke="#f4c542" stroke-width="3"/></svg>
+    <h3>Lilikoi cinnamon rolls</h3><p>When lilikoi is in season.</p></article>
+   <article class="item"><svg viewBox="0 0 64 48" aria-hidden="true"><rect x="22" y="12" width="20" height="28" rx="4" fill="#6b4a33"/><path d="M42 18h6a5 5 0 0 1 0 10h-6" stroke="#6b4a33" stroke-width="3" fill="none"/><path d="M28 6c0 3 4 3 4 6M34 6c0 3 4 3 4 6" stroke="#9a8e86" stroke-width="2" fill="none"/></svg>
+    <h3>Kona coffee</h3><p>100% Kona, hot and ready with your pastry.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="hold">
+ <div>
+  <h2>Want it saved?</h2>
+  <p>Customers mention you can call ahead and have an order set aside, which helps on a busy weekend when there is a line.</p>
+  <div class="cta"><a class="btn y" href="tel:+18083458507">(808) 345-8507</a><a class="btn w" href="mailto:thebigislandbakehouse@gmail.com">Email</a></div>
+ </div>
+ <ol>
+  <li>Call ahead</li>
+  <li>Say what you'd like and pickup time</li>
+  <li>Pick up Fri, Sat or Sun, 10 to 2</li>
+ </ol>
+</section>
+
+<section class="route">
+ <div class="in">
+  <div>
+   <h2>On the way to the volcano</h2>
+   <p class="sub" style="margin-bottom:0">Between Hilo and Pahoa on the Kea'au-Pahoa Road, an easy stop on the drive up.</p>
+   <blockquote>"Best hidden gem in Hilo. Fresh baked and good variety of different kinds of pastries!"</blockquote>
+   <cite>Google review · Oct 2025</cite>
+   <div class="cta"><a class="btn y" href="https://www.google.com/maps/dir/?api=1&amp;destination=16-566%20Keaau-Pahoa%20Rd%2C%20Keaau%2C%20HI%2096749">Directions</a><a class="btn w" href="tel:+18083458507">Call</a></div>
+  </div>
+  <svg viewBox="0 0 400 260" role="img" aria-label="Simple map: Hilo, Kea'au and the road toward the volcano">
+   <rect width="400" height="260" rx="24" fill="#efe4d2"/>
+   <path d="M40 60 C 120 80, 160 120, 200 140 S 300 200, 360 220" fill="none" stroke="#1b1716" stroke-width="6" stroke-linecap="round"/>
+   <path d="M200 140 C 230 110, 280 80, 360 60" fill="none" stroke="#1b1716" stroke-width="3" stroke-dasharray="6 6"/>
+   <circle cx="40" cy="60" r="8" fill="#1b1716"/><text x="56" y="56" font-family="Figtree" font-weight="800" font-size="14" fill="#1b1716">Hilo</text>
+   <circle cx="200" cy="140" r="14" fill="#5b3a87"/><circle cx="200" cy="140" r="5" fill="#f4c542"/>
+   <text x="150" y="176" font-family="Figtree" font-weight="800" font-size="14" fill="#5b3a87">Bakehouse</text>
+   <path d="M330 220l18-34 18 34z" fill="#c4512f"/><text x="250" y="244" font-family="Figtree" font-size="12" fill="#6f6660">toward the volcano</text>
+   <text x="290" y="54" font-family="Figtree" font-size="12" fill="#6f6660">to Pahoa</text>
+  </svg>
+ </div>
+</section>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+</body>
+</html>

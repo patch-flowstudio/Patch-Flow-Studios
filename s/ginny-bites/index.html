@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ginny Bites | Bakery on 1st Ave, Anoka MN</title>
+<meta name="description" content="Ginny Bites, a bakery on 1st Ave in Anoka, Minnesota. Key lime pie, cream cheese crinkle cookies, cinnamon rolls, Southern-inspired soups and sandwiches, and custom cakes for celebrations.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,100&family=Caveat:wght@500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--lime:#9cc84b;--limed:#4d6b1a;--lemon:#ffe27a;--coral:#f0765c;--cream:#fffaf0;--ink:#23281c;--card:#fffdf6;--rule:#b9d8f0;--line:rgba(35,40,28,.12)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.6 Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.concept{font-size:.74rem;line-height:1.45;padding:.6rem 1rem;text-align:center;background:var(--limed);color:#f4f8e8}
+.hand{font-family:Caveat,cursive}
+.hero{position:relative;padding:3rem 1.25rem 2.5rem;max-width:62rem;margin:0 auto}
+.slice{display:block;width:140px;margin:0 -.5rem .4rem auto;transform:rotate(-8deg)}
+@media(min-width:760px){.slice{position:absolute;width:260px;right:10px;top:30px;margin:0}}
+.hello{font-family:Caveat,cursive;font-size:1.7rem;color:var(--coral);line-height:1}
+h1{font-family:Fraunces,serif;font-variation-settings:"SOFT" 100;font-weight:800;font-size:clamp(3rem,14vw,6rem);line-height:.9;letter-spacing:-.03em;margin:.4rem 0 1rem;max-width:9ch;position:relative}
+.lede{font-size:1.1rem;max-width:28rem;position:relative}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;position:relative}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 1.3rem;border-radius:14px;font-weight:800;text-decoration:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .45s cubic-bezier(.2,1.3,.4,1)}
+.btn:active{transform:scale(.96);transition-duration:.1s}
+.btn.p{background:var(--ink);color:var(--lemon)}
+.btn.s{background:#fff;border:2px solid var(--ink)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+section{max-width:62rem;margin:0 auto;padding:4rem 1.25rem 0}
+h2{font-family:Fraunces,serif;font-weight:700;font-size:clamp(2.1rem,8vw,3.2rem);line-height:1;letter-spacing:-.02em}
+.sub{margin-top:.5rem;max-width:32rem}
+/* signature: recipe box */
+.box{margin-top:1.6rem;position:relative}
+.tabs{display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;padding:0 .4rem;position:relative;z-index:2}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:0;font:700 1.3rem/1 Caveat,cursive;padding:.7rem 1rem .9rem;border-radius:12px 12px 0 0;background:var(--tc);color:var(--ink);cursor:pointer;transform:translateY(8px);transition:transform .45s cubic-bezier(.2,1.4,.4,1);min-height:48px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.tab[aria-selected="true"]{transform:translateY(0)}
+.tab:active{scale:.96}
+.t1{--tc:var(--lemon)}.t2{--tc:#ffd2c4}.t3{--tc:#d6ecb0}.t4{--tc:#cfe6f7}
+.crate{position:relative;background:linear-gradient(#c78b52,#a86c38);border-radius:6px 6px 18px 18px;padding:0 .7rem .9rem;box-shadow:0 20px 40px -24px rgba(60,30,0,.6)}
+.crate::after{content:"";position:absolute;left:0;right:0;bottom:0;height:84px;background:linear-gradient(#b67a43,#94592a);border-radius:6px 6px 18px 18px;z-index:3;pointer-events:none;box-shadow:inset 0 2px 0 rgba(255,255,255,.2)}
+.crate::before{content:"Ginny's recipe box";position:absolute;left:50%;bottom:26px;translate:-50% 0;z-index:4;font:700 1.4rem Caveat,cursive;color:#fff3df;white-space:nowrap}
+.card{position:relative;z-index:2;background:var(--card);border-radius:8px;padding:1.2rem 1.2rem 6rem;background-image:linear-gradient(transparent 46px,#f3a29a 46px,#f3a29a 48px,transparent 48px),repeating-linear-gradient(transparent 0 27px,var(--rule) 27px 28px);background-position:0 0,0 48px;background-size:100% 100%,100% 100%;background-repeat:no-repeat,repeat-y;min-height:330px;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+.card h3{font-family:Caveat,cursive;font-size:2rem;line-height:1.1;font-weight:700;height:46px;display:flex;align-items:flex-end;padding-bottom:4px}
+.card ul{list-style:none;padding:0;margin-top:.5rem}
+.card li{font-family:Caveat,cursive;font-size:1.45rem;line-height:28px}
+.card li::before{content:"~ ";color:var(--coral)}
+.card .src{font-size:.75rem;opacity:.6;line-height:28px}
+.card.swap{animation:pull .5s cubic-bezier(.2,1.2,.4,1)}
+@keyframes pull{from{transform:translateY(40px)}}
+/* week */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;margin-top:1.4rem}
+.day{border-radius:14px;padding:.7rem 0;text-align:center;background:#fff;border:2px solid var(--ink)}
+.day b{display:block;font-family:Fraunces,serif;font-size:1.05rem}
+.day span{font-size:.68rem;font-weight:800}
+.day.off{background:transparent;border-style:dashed;opacity:.55}
+.hrs{font-family:Fraunces,serif;font-size:clamp(1.8rem,7vw,2.6rem);margin-top:1rem;font-weight:700}
+.note{font-size:.8rem;opacity:.65;margin-top:.4rem}
+/* celebration */
+.cele{background:var(--ink);color:#fbf6e8;border-radius:26px;padding:2.4rem 1.5rem;display:grid;gap:1.4rem;align-items:center}
+@media(min-width:760px){.cele{grid-template-columns:1.3fr 1fr;padding:3rem}}
+.cele h2{color:var(--lemon)}
+.cele q{display:block;font-family:Fraunces,serif;font-style:italic;font-size:1.15rem;line-height:1.45;margin-top:1rem}
+.cele cite{display:block;font-style:normal;font-size:.75rem;opacity:.7;margin-top:.4rem}
+.cake{width:100%;max-width:260px;margin:0 auto}
+.quotes{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.qc{background:#fff;border-radius:18px;padding:1.3rem;box-shadow:0 1px 0 var(--line),0 12px 24px -20px rgba(0,0,0,.4)}
+.qc cite{display:block;font-style:normal;font-size:.75rem;opacity:.6;margin-top:.5rem}
+.visit{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.visit{grid-template-columns:1fr 1fr}}
+.vc{background:#fff;border-radius:20px;padding:1.5rem;border:2px solid var(--ink)}
+.vc h3{font-family:Fraunces,serif;font-size:1.5rem}
+footer{text-align:center;font-size:.85rem;padding:4rem 1rem 2.5rem;opacity:.8}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .8s cubic-bezier(.2,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Ginny Bites's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header class="hero">
+ <svg class="slice" viewBox="0 0 200 160" aria-hidden="true"><path d="M10 120L190 60v50L10 150z" fill="#e7c48e"/><path d="M10 120L190 60v26L10 138z" fill="#d6ec8f"/><path d="M10 120L190 60" stroke="#b98d4f" stroke-width="6"/><path d="M14 112c30-12 60-22 90-30s60-18 84-26" stroke="#fff" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="160" cy="44" r="14" fill="#9cc84b" stroke="#4d6b1a" stroke-width="3"/><path d="M160 32v24M148 44h24" stroke="#4d6b1a" stroke-width="2"/></svg>
+ <p class="hello">from Ginny's kitchen on 1st Ave</p>
+ <h1>Ginny Bites</h1>
+ <p class="lede">A little Anoka bakery with a Southern accent: key lime pie, cream cheese crinkle cookies, big cinnamon rolls, and soups and sandwiches for lunch.</p>
+ <div class="cta"><a class="btn p" href="tel:+16124441943">Call (612) 444-1943</a><a class="btn s" href="https://order.online/business/ginny-bites-13404783">Order online</a><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Ginny%20Bites%201922%201st%20Ave%20Anoka%20MN%2055303">Directions</a></div>
+</header>
+
+<section class="rv">
+ <h2>Pull a card</h2>
+ <p class="sub">Favorites customers keep writing about, filed the way a baker would. Case changes, so call to check what's out today.</p>
+ <div class="box">
+  <div class="tabs" role="tablist" aria-label="Recipe box sections">
+   <button class="tab t1" role="tab" aria-selected="true" data-k="pies">Pies</button>
+   <button class="tab t2" role="tab" aria-selected="false" data-k="cookies">Cookies &amp; rolls</button>
+   <button class="tab t3" role="tab" aria-selected="false" data-k="lunch">Lunch</button>
+   <button class="tab t4" role="tab" aria-selected="false" data-k="cups">Cups &amp; coffee</button>
+  </div>
+  <div class="crate"><article class="card" id="card" role="tabpanel" aria-live="polite"></article></div>
+ </div>
+</section>
+
+<section class="rv">
+ <h2>When to stop by</h2>
+ <div class="week" aria-label="Open Monday, Tuesday, Thursday, Friday and Saturday. Closed Wednesday and Sunday.">
+  <div class="day"><b>M</b><span>9-5</span></div><div class="day"><b>T</b><span>9-5</span></div><div class="day off"><b>W</b><span>closed</span></div><div class="day"><b>T</b><span>9-5</span></div><div class="day"><b>F</b><span>9-5</span></div><div class="day"><b>S</b><span>9-5</span></div><div class="day off"><b>S</b><span>closed</span></div>
+ </div>
+ <p class="hrs">9 am to 5 pm, five days a week</p>
+ <p class="note">Closed Wednesdays and Sundays. Hours as listed on Google; call to confirm holidays.</p>
+</section>
+
+<section class="rv">
+ <div class="cele">
+  <div>
+   <h2>Cakes for the big day</h2>
+   <p style="margin-top:.8rem">Ginny makes wedding cakes and custom cupcakes for celebrations, themed to the party.</p>
+   <q>For our New Orleans–themed celebration dinner with 150 guests, she crafted five different varieties of cupcakes that captured the spirit of New Orleans perfectly.</q>
+   <cite>Google review, Sep 2025</cite>
+   <div class="cta"><a class="btn s" style="color:var(--ink)" href="tel:+16124441943">Call about a custom order</a></div>
+  </div>
+  <svg class="cake" viewBox="0 0 240 240" aria-hidden="true"><ellipse cx="120" cy="214" rx="96" ry="12" fill="rgba(255,255,255,.12)"/><rect x="40" y="140" width="160" height="70" rx="10" fill="#fffaf0"/><rect x="62" y="86" width="116" height="58" rx="10" fill="#ffe27a"/><rect x="84" y="44" width="72" height="46" rx="10" fill="#fffaf0"/><path d="M40 160c20 12 40-12 60 0s40-12 60 0 30-6 40 0" stroke="#9cc84b" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M62 104c19 10 39-10 58 0s39-10 58 0" stroke="#f0765c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="120" cy="34" r="10" fill="#f0765c"/></svg>
+ </div>
+</section>
+
+<section class="rv">
+ <h2>Overheard at the counter</h2>
+ <div class="quotes">
+  <div class="qc"><q>Little hole in the wall bakery that does its community proud.</q><cite>Google review, Mar 2025</cite></div>
+  <div class="qc"><q>I needed to stop at Schmidtt Music and was lured in by the wonderful smell of baked goods.</q><cite>Google review, Nov 2025</cite></div>
+  <div class="qc"><q>I also love that Ginny is friendly, down-to-earth, and approachable.</q><cite>Google review, Nov 2025</cite></div>
+ </div>
+</section>
+
+<section class="rv">
+ <div class="visit">
+  <div class="vc"><h3>1922 1st Ave</h3><p>Anoka, MN 55303</p><div class="cta"><a class="btn p" href="https://www.google.com/maps/search/?api=1&amp;query=Ginny%20Bites%201922%201st%20Ave%20Anoka%20MN%2055303">Get directions</a></div></div>
+  <div class="vc"><h3>Ordering ahead</h3><p>Order online for pickup, or call for whole pies and party trays.</p><p class="note">Sample: pie and tray ordering details to confirm with Ginny.</p><div class="cta"><a class="btn s" href="https://order.online/business/ginny-bites-13404783">Online ordering</a></div></div>
+ </div>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(()=>{
+const C={
+ pies:{t:"Pies",i:["Key lime pie","Lemon meringue","Kentucky pecan pie","Raspberry cheesecake dessert"],s:"\u201cMy father will tell you her key lime pies are the best he\u2019s ever had.\u201d Google review, Nov 2025"},
+ cookies:{t:"Cookies & rolls",i:["Cream cheese crinkle cookies","Cinnamon rolls (huge)","Individual chocolate cakes","Peach muffins"],s:"\u201cThe cinnamon rolls were huge and tasty.\u201d Google review, Mar 2025"},
+ lunch:{t:"Lunch",i:["Chicken salad croissant","Muffuletta","Southern-inspired soups","Sandwiches","Dirty Chips"],s:"\u201cHaven't had an authentic Muffuletta in years and was quite surprised to see it on the menu!\u201d Google review, Jan 2025"},
+ cups:{t:"Cups & coffee",i:["Strawberry lemonade cheesecake cup","French press coffee","Chilly Wop drink"],s:"\u201cThe Place serves their coffee French pressed which impressed me.\u201d Google review, Mar 2025"}};
+const card=document.getElementById('card'),tabs=document.querySelectorAll('.tab');
+function show(k){const c=C[k];card.classList.remove('swap');void card.offsetWidth;card.classList.add('swap');
+card.innerHTML='<h3>'+c.t+'</h3><ul>'+c.i.map(x=>'<li>'+x+'</li>').join('')+'</ul><p class="src">'+c.s+'</p>';
+tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.k===k))}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.k)));show('pies');
+const els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});els.forEach(e=>io.observe(e));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real Time Breads | Sourdough Bakery in Lufkin, TX</title>
+<meta name="description" content="Sourdough breads, pastries, cookies and espresso at 115 E Shepherd Ave, Lufkin, Texas.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--flour:#f6f1e7;--crust:#8a5428;--dark:#2b1b10;--wheat:#d9b26f;--ear:#b6773d;--line:#e2d6c1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;color:var(--dark);background:var(--flour);overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3,p{overflow-wrap:anywhere}
+.pf-concept{font:13px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px;background:var(--dark);color:#f0dfc2}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.top{max-width:1100px;margin:0 auto;padding:16px 22px;display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}
+.hero{max-width:1100px;margin:0 auto;padding:40px 22px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(60px,14vw,140px);line-height:.85;letter-spacing:-.03em}
+h1 i{color:var(--crust)}
+.lede{font-size:19px;max-width:34ch;margin-top:20px}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{min-height:50px;display:inline-flex;align-items:center;padding:0 24px;border-radius:6px;background:var(--dark);color:var(--flour);text-decoration:none;font-weight:600;transition:transform 100ms ease-out,background .2s}
+.btn.o{background:transparent;color:var(--dark);box-shadow:inset 0 0 0 1.5px var(--dark)}
+.btn:active,.score:active{transform:scale(.97)}
+.btn:focus-visible,.score:focus-visible{outline:3px solid var(--ear);outline-offset:3px}
+.loaf{position:relative}
+.loaf svg{width:100%;height:auto;filter:drop-shadow(0 30px 30px rgba(43,27,16,.25))}
+.cut{stroke-dasharray:260;stroke-dashoffset:260;animation:score 1.6s .3s cubic-bezier(.2,.9,.25,1) forwards}
+@keyframes score{to{stroke-dashoffset:0}}
+.ticker{background:var(--dark);color:var(--wheat);overflow:hidden;white-space:nowrap;padding:14px 0}
+.ticker div{display:inline-block;animation:tick 32s linear infinite;padding-left:100%}
+@keyframes tick{to{transform:translateX(-100%)}}
+.ticker span{margin:0 28px}
+main{max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:80px 0 0}
+h2{font-family:"Instrument Serif";font-weight:400;font-size:clamp(40px,8vw,72px);line-height:.95;letter-spacing:-.02em}
+.sub{max-width:56ch;color:#6b5848;margin-top:12px}
+.board{display:grid;grid-template-columns:repeat(3,1fr);margin-top:30px;border-top:1px solid var(--dark)}
+@media(max-width:820px){.board{grid-template-columns:1fr}}
+.col{padding:22px 20px 22px 0;border-bottom:1px solid var(--line)}
+@media(min-width:821px){.col+.col{padding-left:20px;border-left:1px solid var(--line)}}
+.col h3{font-family:"Instrument Serif";font-weight:400;font-size:32px;line-height:1}
+.col ul{list-style:none;margin-top:14px}
+.col li{padding:9px 0;border-bottom:1px dotted var(--line);display:flex;justify-content:space-between;gap:12px}
+.col li em{font-style:normal;color:#8e7a66;font-size:14px}
+.smp{display:inline-block;font:600 10px/1 system-ui;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+.cater{margin-top:80px;display:grid;grid-template-columns:.9fr 1.1fr;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 1px 0 var(--line)}
+@media(max-width:820px){.cater{grid-template-columns:1fr}}
+.cater .pic{background:var(--wheat);min-height:220px;position:relative}
+.cater .pic svg{position:absolute;inset:0;width:100%;height:100%}
+.cater .txt{padding:30px}
+.cater blockquote{font-family:"Instrument Serif";font-size:24px;line-height:1.3;margin-top:14px}
+.cater cite{display:block;margin-top:10px;font-style:normal}
+.week{margin-top:80px}
+.week table{width:100%;border-collapse:collapse;margin-top:20px;font-family:"IBM Plex Mono",monospace;font-size:15px}
+.week td{padding:12px 0;border-bottom:1px solid var(--line)}
+.week td+td{text-align:right}
+.week tr.x td{color:#a8957f}
+.words{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px}
+@media(max-width:720px){.words{grid-template-columns:1fr}}
+.words blockquote{font-size:18px;border-left:2px solid var(--ear);padding-left:16px}
+.words cite{display:block;margin-top:8px;font-style:normal;color:#8e7a66}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:36px 16px;color:#7b6756}
+.pf-foot a{font-weight:600}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.cut{stroke-dashoffset:0}.ticker div{padding-left:22px;white-space:normal}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not Real Time Breads' official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<div class="top"><span class="mono">115 E Shepherd Ave · Lufkin, TX</span><span class="mono">Tue to Sat</span></div>
+<header class="hero">
+<div>
+<h1>Real Time <i>Breads</i></h1>
+<p class="lede">Sourdough loaves, pastries, cookies and espresso in an East Texas bistro that customers call charming.</p>
+<div class="acts"><a class="btn" href="tel:+19368995634">Call (936) 899-5634</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=115%20E%20Shepherd%20Ave%2C%20Lufkin%2C%20TX%2075901">Directions</a></div>
+</div>
+<div class="loaf" aria-hidden="true">
+<svg viewBox="0 0 400 300"><ellipse cx="200" cy="270" rx="170" ry="16" fill="#e2d6c1"/><path d="M40 200 C40 90 120 50 200 50 C280 50 360 90 360 200 C360 250 300 268 200 268 C100 268 40 250 40 200 Z" fill="#b6773d"/><path d="M60 196 C62 110 128 70 200 70 C272 70 338 110 340 196" fill="none" stroke="#8a5428" stroke-width="3" opacity=".5"/><g fill="#f6f1e7" opacity=".55"><circle cx="120" cy="130" r="3"/><circle cx="280" cy="140" r="2.5"/><circle cx="160" cy="210" r="2"/><circle cx="250" cy="220" r="3"/><circle cx="300" cy="190" r="2"/></g><path class="cut" d="M100 170 C150 110 250 110 300 170" fill="none" stroke="#f3dfb7" stroke-width="10" stroke-linecap="round"/><path class="cut" d="M104 176 C150 124 250 124 296 176" fill="none" stroke="#7a4520" stroke-width="3" stroke-linecap="round"/></svg>
+</div>
+</header>
+<div class="ticker mono" aria-hidden="true"><div><span>Sourdough loaves</span><span>Sourdough chocolate chip cookies</span><span>Blueberry cream cheese croissant</span><span>Cinnamon rolls</span><span>Carrot cake</span><span>Espresso &amp; cappuccino</span><span>Sliced to order</span></div></div>
+<main>
+<section aria-labelledby="b-h">
+<h2 id="b-h">On the board</h2>
+<p class="sub">Favorites customers mention. The case changes through the day, so call ahead if you're after one thing in particular.</p>
+<div class="board">
+<div class="col"><p class="mono">Bread</p><h3>Loaves</h3><ul><li>Sourdough loaf <em>they'll slice it</em></li><li>Daily loaves <span class="smp">sample</span></li></ul></div>
+<div class="col"><p class="mono">Sweet</p><h3>Pastries</h3><ul><li>Blueberry cream cheese croissant</li><li>Cinnamon roll</li><li>Sourdough chocolate chip cookies</li><li>Carrot cake &amp; brownies</li></ul></div>
+<div class="col"><p class="mono">Bar</p><h3>Coffee</h3><ul><li>Fresh-ground espresso</li><li>Cappuccino</li><li>Sit-down coffee &amp; pastry</li></ul></div>
+</div>
+</section>
+<div class="cater">
+<div class="pic" aria-hidden="true"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#d9b26f"/><g fill="#f6f1e7"><rect x="40" y="60" width="60" height="40" rx="8"/><rect x="120" y="60" width="60" height="40" rx="8"/><rect x="200" y="60" width="60" height="40" rx="8"/><rect x="40" y="120" width="60" height="40" rx="8"/><rect x="120" y="120" width="60" height="40" rx="8"/><rect x="200" y="120" width="60" height="40" rx="8"/></g><g fill="#8a5428" opacity=".7"><circle cx="70" cy="80" r="10"/><circle cx="150" cy="80" r="10"/><circle cx="230" cy="80" r="10"/><circle cx="70" cy="140" r="10"/><circle cx="150" cy="140" r="10"/><circle cx="230" cy="140" r="10"/></g></svg></div>
+<div class="txt"><p class="mono">Parties &amp; catering</p><h2 style="font-size:44px">Feeding a crowd</h2>
+<blockquote>"Got a catering order for a birthday party, they cut everything up into smaller portions so it would be easier to serve and it worked GREAT!"</blockquote><cite>Google review, June 2025</cite>
+<div class="acts"><a class="btn" href="tel:+19368995634">Call about an order</a></div></div>
+</div>
+<section class="week" aria-labelledby="w-h">
+<h2 id="w-h">Bake week</h2>
+<table>
+<tr class="x"><td>Monday</td><td>Closed</td></tr>
+<tr><td>Tuesday</td><td>8 AM to 3 PM</td></tr>
+<tr><td>Wednesday</td><td>8 AM to 3 PM</td></tr>
+<tr><td>Thursday</td><td>8 AM to 3 PM</td></tr>
+<tr><td>Friday</td><td>8 AM to 4 PM</td></tr>
+<tr><td>Saturday</td><td>8 AM to 4 PM</td></tr>
+<tr class="x"><td>Sunday</td><td>Closed</td></tr>
+</table>
+<div class="words">
+<blockquote>"This is a wonderful place for a quiet sit down with a good cup of coffee and a pastry, a girls date with trendy pastries, or a quick place eat with a luxury bite!"<cite>Google review, September 2025</cite></blockquote>
+<blockquote>"Incredible pastries, delicious fresh bread that lasts, totally adorable Aussie store clerk and very friendly and engaging team"<cite>Google review, January 2025</cite></blockquote>
+</div>
+</section>
+</main>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+</body>
+</html>

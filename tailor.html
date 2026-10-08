@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier Morrow · Tailoring &amp; Alterations (studio concept)</title>
+    <meta name="description" content="Atelier Morrow, a fictional tailor and alterations atelier. Alterations, repairs and made-to-measure suits, cut and finished by hand. Studio concept by Patch &amp; Flow Studio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-paper: #f6f3ee;
+        --x-stone: #ebe6de;
+        --x-stone-2: #ded7cb;
+        --x-ink: #262523;
+        --x-ink-2: #5a564f;
+        --x-navy: #1d2840;
+        --x-navy-2: #2a3758;
+        --x-chalk: #e9e2d2;
+        --x-line: #cfc7b8;
+        --x-serif: "Cormorant Garamond", "Times New Roman", serif;
+        --x-sans: "Jost", system-ui, sans-serif;
+        --x-ease: cubic-bezier(0.22, 0.61, 0.21, 1);
+        --x-pad: clamp(16px, 5vw, 64px);
+        --x-max: 1200px;
+      }
+      body.x-site {
+        background: var(--x-paper);
+        color: var(--x-ink);
+        font-family: var(--x-sans);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.65;
+        letter-spacing: 0.01em;
+      }
+      .x-site ::selection { background: var(--x-navy); color: var(--x-chalk); }
+      .x-wrap { max-width: var(--x-max); margin: 0 auto; padding-inline: var(--x-pad); }
+      .x-skip {
+        position: absolute; left: 16px; top: -60px; z-index: 50;
+        background: var(--x-navy); color: var(--x-chalk); padding: 12px 18px; text-decoration: none;
+      }
+      .x-skip:focus { top: 12px; }
+      .x-site a:focus-visible, .x-site button:focus-visible {
+        outline: 1px solid var(--x-navy); outline-offset: 4px;
+      }
+
+      /* small caps label */
+      .x-caps {
+        font-family: var(--x-sans); font-weight: 400; font-size: 12px;
+        letter-spacing: 0.28em; text-transform: uppercase; color: var(--x-ink-2); margin: 0;
+      }
+
+      /* notice bar */
+      .x-notice {
+        background: var(--x-navy); color: var(--x-chalk);
+        font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; text-align: center;
+      }
+      .x-notice a {
+        display: flex; align-items: center; justify-content: center; min-height: 44px;
+        padding: 6px var(--x-pad); color: inherit; text-decoration: none;
+      }
+      .x-notice span { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 0.5s var(--x-ease); padding-bottom: 2px; }
+      .x-notice a:hover span, .x-notice a:focus-visible span { background-size: 100% 1px; }
+
+      /* header */
+      .x-head {
+        position: sticky; top: 0; z-index: 20;
+        background: color-mix(in srgb, var(--x-paper) 92%, transparent);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid transparent; transition: border-color 0.4s;
+      }
+      .x-head.is-stuck { border-bottom-color: var(--x-line); }
+      .x-head .x-wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+      .x-mark {
+        font-family: var(--x-serif); font-weight: 400; font-size: 22px; letter-spacing: 0.32em;
+        text-transform: uppercase; color: var(--x-ink); text-decoration: none;
+        display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap;
+      }
+      .x-mark small { font-size: 0.6em; letter-spacing: 0.3em; color: var(--x-ink-2); margin-left: 0.6em; }
+      .x-menu { display: flex; gap: clamp(12px, 2.4vw, 32px); list-style: none; margin: 0; padding: 0; }
+      .x-menu a {
+        display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px;
+        font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--x-ink); text-decoration: none;
+      }
+
+      /* underline draw */
+      .x-ul { position: relative; }
+      .x-ul::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 10px; height: 1px; background: currentColor;
+        transform: scaleX(0); transform-origin: right; transition: transform 0.5s var(--x-ease);
+      }
+      .x-ul:hover::after, .x-ul:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+
+      /* buttons */
+      .x-btns { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+      .x-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+        min-height: 52px; padding: 0 28px; border: 1px solid var(--x-navy);
+        font-family: var(--x-sans); font-weight: 400; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+        text-decoration: none; color: var(--x-navy); background: transparent;
+        transition: transform 0.4s var(--x-ease), background-color 0.4s, color 0.4s, box-shadow 0.4s;
+      }
+      .x-btn:hover, .x-btn:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 24px -14px rgba(29, 40, 64, 0.5); }
+      .x-btn--solid { background: var(--x-navy); color: var(--x-chalk); }
+      .x-btn--solid:hover { background: var(--x-navy-2); }
+      .x-btn--chalk { border-color: var(--x-chalk); background: var(--x-chalk); color: var(--x-navy); }
+      .x-btn--ghost-chalk { border-color: var(--x-chalk); color: var(--x-chalk); }
+      .x-btn .x-arrow { display: inline-block; transition: transform 0.4s var(--x-ease); }
+      .x-btn:hover .x-arrow { transform: translateX(4px); }
+
+      /* hero */
+      .x-hero { padding-top: clamp(40px, 8vw, 104px); }
+      .x-hero__grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px 64px; align-items: end; }
+      .x-hero h1 {
+        font-family: var(--x-serif); font-weight: 300; color: var(--x-ink);
+        font-size: clamp(44px, 7.4vw, 104px); line-height: 0.98; letter-spacing: -0.01em; margin: 20px 0 0;
+      }
+      .x-hero h1 .x-line { display: block; overflow: hidden; padding-bottom: 0.08em; }
+      .x-hero h1 .x-line > span { display: inline-block; }
+      .x-hero h1 em { font-style: italic; color: var(--x-navy); }
+      .x-hero__side { padding-bottom: 12px; }
+      .x-hero__sub { font-size: 18px; line-height: 1.6; color: var(--x-ink-2); margin: 0 0 32px; max-width: 34ch; }
+      .x-hero__media { position: relative; margin: clamp(40px, 6vw, 72px) 0 0; overflow: hidden; aspect-ratio: 1584 / 672; background: var(--x-stone); }
+      .x-hero__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .x-curtain { position: absolute; inset: 0; background: var(--x-paper); transform-origin: top; transform: scaleY(0); pointer-events: none; }
+      .x-hero__cap {
+        display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+        padding-top: 14px; border-top: 0; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--x-ink-2);
+      }
+
+      /* stitch divider */
+      .x-stitch { display: block; width: 100%; height: 12px; margin: clamp(64px, 10vw, 128px) 0; color: var(--x-ink-2); }
+      .x-stitch line { stroke: currentColor; stroke-width: 1; }
+
+      /* sections */
+      .x-sec { position: relative; }
+      .x-sec__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px 64px; margin-bottom: clamp(40px, 6vw, 72px); align-items: end; }
+      .x-sec h2 {
+        font-family: var(--x-serif); font-weight: 300; font-size: clamp(36px, 5vw, 64px); line-height: 1.05; margin: 16px 0 0; color: var(--x-ink);
+      }
+      .x-sec h2 em { font-style: italic; color: var(--x-navy); }
+      .x-lede { margin: 0; font-size: 17px; color: var(--x-ink-2); max-width: 46ch; }
+      .x-num { font-family: var(--x-serif); font-style: italic; font-size: 18px; color: var(--x-navy); letter-spacing: 0.06em; margin-right: 12px; }
+
+      /* prices with measuring tape */
+      .x-tape-sec { padding-left: 64px; }
+      .x-tape {
+        position: absolute; left: 0; top: 0; bottom: 0; width: 40px; overflow: hidden;
+        border-right: 1px solid var(--x-line);
+      }
+      .x-tape__strip {
+        position: absolute; left: 0; right: 0; top: -400px; height: calc(100% + 800px);
+        background-color: #efe3bf;
+        background-image:
+          repeating-linear-gradient(to bottom, var(--x-ink) 0 1px, transparent 1px 40px),
+          repeating-linear-gradient(to bottom, var(--x-ink) 0 1px, transparent 1px 20px),
+          repeating-linear-gradient(to bottom, rgba(38, 37, 35, 0.55) 0 1px, transparent 1px 4px);
+        background-size: 18px 100%, 11px 100%, 6px 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0, 0 0, 0 0;
+        will-change: transform;
+      }
+      .x-tape__nums { position: absolute; left: 20px; top: 0; display: flex; flex-direction: column; }
+      .x-tape__nums span { height: 40px; font-size: 12px; line-height: 1; color: var(--x-ink); transform: translateY(2px); font-family: var(--x-sans); font-weight: 500; }
+
+      .x-prices { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; }
+      .x-prices li {
+        display: flex; align-items: baseline; gap: 12px; padding: 22px 0;
+        border-bottom: 1px dotted var(--x-line); transition: transform 0.45s var(--x-ease);
+      }
+      .x-prices li:hover { transform: translateX(6px); }
+      .x-prices .x-item { font-family: var(--x-serif); font-size: 24px; font-weight: 400; line-height: 1.2; }
+      .x-prices .x-lead { flex: 1; min-width: 12px; border-bottom: 1px dotted var(--x-ink-2); transform: translateY(-6px); opacity: 0.5; }
+      .x-prices .x-price { white-space: nowrap; font-size: 15px; letter-spacing: 0.04em; color: var(--x-ink); }
+      .x-prices .x-price small { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--x-ink-2); margin-right: 6px; }
+      .x-prices .x-wide { grid-column: 1 / -1; background: var(--x-stone); border-bottom: 0; padding: 26px 24px; margin-top: 24px; }
+      .x-note { margin: 24px 0 0; font-size: 13px; color: var(--x-ink-2); }
+
+      /* made to measure */
+      .x-mtm { background: var(--x-stone); padding-block: clamp(72px, 10vw, 128px); }
+      .x-steps { position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+      .x-thread { position: absolute; left: 0; right: 0; top: 23px; height: 2px; width: 100%; overflow: visible; color: var(--x-navy); pointer-events: none; }
+      .x-thread line { stroke: currentColor; stroke-width: 1; }
+      .x-step { position: relative; }
+      .x-step__knot {
+        width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--x-navy); background: var(--x-paper);
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--x-serif); font-style: italic; font-size: 20px; color: var(--x-navy); position: relative; z-index: 1;
+      }
+      .x-step h3 { font-family: var(--x-serif); font-weight: 400; font-size: 26px; line-height: 1.15; margin: 24px 0 8px; }
+      .x-step p { margin: 0; color: var(--x-ink-2); font-size: 15px; }
+      .x-mtm__foot {
+        margin-top: clamp(48px, 7vw, 80px); padding-top: 32px; border-top: 1px solid var(--x-stone-2);
+        display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;
+      }
+      .x-mtm__price { font-family: var(--x-serif); font-weight: 300; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.15; margin: 0; }
+      .x-mtm__price em { font-style: italic; color: var(--x-navy); }
+
+      /* turnaround */
+      .x-turn { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--x-ink); }
+      .x-turn > div { padding: 32px 32px 8px 0; transition: transform 0.45s var(--x-ease); }
+      .x-turn > div + div { padding-left: 32px; border-left: 1px solid var(--x-line); }
+      .x-turn__fig { font-family: var(--x-serif); font-weight: 300; font-size: clamp(64px, 9vw, 120px); line-height: 1; margin: 16px 0 12px; color: var(--x-ink); }
+      .x-turn__fig small { font-size: 0.28em; letter-spacing: 0.2em; text-transform: uppercase; font-family: var(--x-sans); font-weight: 400; margin-left: 10px; color: var(--x-ink-2); }
+      .x-turn p { margin: 0; color: var(--x-ink-2); }
+      .x-tag { display: inline-block; border: 1px solid var(--x-navy); color: var(--x-navy); padding: 3px 10px; font-size: 12px; letter-spacing: 0.16em; margin-left: 8px; }
+
+      /* booking */
+      .x-book { background: var(--x-navy); color: var(--x-chalk); padding-block: clamp(80px, 11vw, 144px); position: relative; overflow: hidden; }
+      .x-book .x-caps { color: #c9c3b4; }
+      .x-book h2 { color: var(--x-chalk); max-width: 14ch; }
+      .x-book h2 em { color: #fff; }
+      .x-book .x-lede { color: #d4cebf; margin: 24px 0 40px; }
+      .x-chalkline { position: absolute; left: 0; right: 0; bottom: 48px; height: 12px; width: 100%; color: var(--x-chalk); opacity: 0.6; }
+      .x-chalkline line { stroke: currentColor; stroke-width: 1; }
+
+      /* visit */
+      .x-visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px 96px; }
+      .x-hours { margin: 0; }
+      .x-hours div { display: flex; justify-content: space-between; gap: 16px; padding: 18px 0; border-bottom: 1px dotted var(--x-line); }
+      .x-hours dt { font-family: var(--x-serif); font-size: 22px; }
+      .x-hours dd { margin: 0; letter-spacing: 0.06em; align-self: center; }
+      .x-hours .is-closed dd { color: var(--x-ink-2); font-style: italic; }
+      .x-address { font-family: var(--x-serif); font-weight: 300; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.05; margin: 16px 0 16px; font-style: normal; }
+      .x-tel { display: inline-flex; align-items: center; min-height: 44px; color: var(--x-navy); text-decoration: none; font-size: 18px; letter-spacing: 0.06em; }
+
+      /* footer */
+      .x-foot { margin-top: clamp(80px, 12vw, 160px); border-top: 1px solid var(--x-line); padding-block: 32px 40px; }
+      .x-foot .x-wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; align-items: center; }
+      .x-foot p { margin: 0; font-size: 13px; color: var(--x-ink-2); letter-spacing: 0.04em; }
+      .x-foot a { color: var(--x-ink); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+
+      /* ---------- motion (only when JS runs and motion is allowed) ---------- */
+      .x-motion .x-hero h1 .x-line > span { transform: translateY(105%); opacity: 0; transition: transform 1.2s var(--x-ease), opacity 1.2s var(--x-ease); }
+      .x-motion .x-hero .x-fade { opacity: 0; transform: translateY(14px); transition: opacity 1s var(--x-ease), transform 1s var(--x-ease); }
+      .x-motion .x-hero__media img { transform: scale(1.14); transition: transform 3.6s var(--x-ease); }
+      .x-motion .x-curtain { transform: scaleY(1); transition: transform 1.5s var(--x-ease) 0.35s; }
+      .x-motion.is-loaded .x-hero h1 .x-line > span { transform: none; opacity: 1; }
+      .x-motion.is-loaded .x-hero h1 .x-line:nth-child(2) > span { transition-delay: 0.14s; }
+      .x-motion.is-loaded .x-hero h1 .x-line:nth-child(3) > span { transition-delay: 0.28s; }
+      .x-motion.is-loaded .x-hero .x-fade { opacity: 1; transform: none; transition-delay: 0.6s; }
+      .x-motion.is-loaded .x-hero .x-fade + .x-fade { transition-delay: 0.75s; }
+      .x-motion.is-loaded .x-hero__media img { transform: scale(1.02); }
+      .x-motion.is-loaded .x-curtain { transform: scaleY(0); }
+
+      .x-motion .x-sew line.x-sew__mask { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.8s var(--x-ease); }
+      .x-motion .x-sew.is-in line.x-sew__mask { stroke-dashoffset: 0; }
+
+      .x-motion .x-rv { opacity: 0; transform: translateY(24px); transition: opacity 1s var(--x-ease), transform 1s var(--x-ease); }
+      .x-motion .is-in .x-rv, .x-motion .x-rv.is-in { opacity: 1; transform: none; }
+      .x-motion .x-prices li:nth-child(2) { transition-delay: 0.06s; }
+
+      .x-motion .x-steps .x-step { opacity: 0; transform: translateY(24px); transition: opacity 0.9s var(--x-ease), transform 0.9s var(--x-ease); }
+      .x-motion .x-steps-wrap.is-in .x-step { opacity: 1; transform: none; }
+      .x-motion .x-steps-wrap.is-in .x-step:nth-of-type(2) { transition-delay: 0.45s; }
+      .x-motion .x-steps-wrap.is-in .x-step:nth-of-type(3) { transition-delay: 0.9s; }
+      .x-motion .x-steps-wrap.is-in .x-step:nth-of-type(4) { transition-delay: 1.35s; }
+      .x-steps-wrap { position: relative; }
+      .x-motion .x-thread line.x-sew__mask { transition-duration: 2.2s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .x-site *, .x-site *::before, .x-site *::after { transition: none !important; animation: none !important; }
+        .x-prices li:hover, .x-btn:hover { transform: none; }
+      }
+
+      /* ---------- responsive ---------- */
+      @media (max-width: 900px) {
+        .x-hero__grid, .x-sec__head, .x-visit { grid-template-columns: minmax(0, 1fr); }
+        .x-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
+        .x-thread { display: none; }
+        .x-prices { grid-template-columns: minmax(0, 1fr); }
+      }
+      @media (max-width: 720px) {
+        .x-menu li:not(:last-child) { display: none; }
+        .x-mark small { display: none; }
+      }
+      @media (max-width: 560px) {
+        .x-mark { font-size: 17px; letter-spacing: 0.24em; }
+        .x-notice { font-size: 12px; letter-spacing: 0.06em; }
+        .x-tape-sec { padding-left: 48px; }
+        .x-tape { width: 34px; }
+        .x-tape__nums { left: 14px; }
+        .x-prices .x-item { font-size: 21px; }
+        .x-prices .x-wide { padding: 22px 16px; flex-wrap: wrap; }
+        .x-prices .x-wide .x-lead { display: none; }
+        .x-steps { grid-template-columns: minmax(0, 1fr); }
+        .x-turn { grid-template-columns: minmax(0, 1fr); }
+        .x-turn > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--x-line); }
+        .x-btn { width: 100%; }
+        .x-hero__media { aspect-ratio: 4 / 3; }
+      }
+    </style>
+  </head>
+  <body class="x-site">
+    <a class="x-skip" href="#main">Skip to content</a>
+    <div class="x-notice">
+      <a href="index.html" target="_blank" rel="noopener"
+        ><span>Studio concept by Patch &amp; Flow Studio · fictional business</span></a
+      >
+    </div>
+
+    <header class="x-head" id="top">
+      <div class="x-wrap">
+        <a class="x-mark" href="#top" aria-label="Atelier Morrow, back to top">Morrow<small>Atelier</small></a>
+        <nav aria-label="Main">
+          <ul class="x-menu">
+            <li><a class="x-ul" href="#prices">Alterations</a></li>
+            <li><a class="x-ul" href="#measure">Made to measure</a></li>
+            <li><a class="x-ul" href="#visit">Visit</a></li>
+            <li><a class="x-ul" href="#fitting">Book</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="x-hero" aria-labelledby="hero-title">
+        <div class="x-wrap">
+          <div class="x-hero__grid">
+            <div>
+              <p class="x-caps x-fade">Tailoring &amp; alterations · 7 Linden Arcade</p>
+              <h1 id="hero-title">
+                <span class="x-line"><span>Clothes that fit</span></span>
+                <span class="x-line"><span>the way they</span></span>
+                <span class="x-line"><span><em>should.</em></span></span>
+              </h1>
+            </div>
+            <div class="x-hero__side">
+              <p class="x-hero__sub x-fade">Alterations, repairs and made-to-measure suits, cut and finished by hand.</p>
+              <div class="x-btns x-fade">
+                <a class="x-btn x-btn--solid" href="#fitting">Book a fitting <span class="x-arrow" aria-hidden="true">→</span></a>
+                <a class="x-btn" href="#prices">Alteration prices</a>
+              </div>
+            </div>
+          </div>
+          <figure class="x-hero__media" style="margin-bottom: 0">
+            <img src="sc_tailor.jpg" alt="The atelier: a cutting table, bolts of cloth and a jacket on a dress form" />
+            <span class="x-curtain" aria-hidden="true"></span>
+          </figure>
+          <p class="x-hero__cap x-fade"><span>The cutting room</span><span>Cut and finished by hand</span></p>
+        </div>
+      </section>
+
+      <div class="x-wrap">
+        <svg class="x-stitch x-sew" viewBox="0 0 1000 12" preserveAspectRatio="none" aria-hidden="true">
+          <defs><mask id="m1" maskUnits="userSpaceOnUse"><line class="x-sew__mask" x1="0" y1="6" x2="1000" y2="6" stroke="#fff" stroke-width="12" pathLength="1" /></mask></defs>
+          <line x1="0" y1="6" x2="1000" y2="6" stroke-dasharray="7 6" mask="url(#m1)" vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+
+      <section class="x-sec x-wrap" id="prices" aria-labelledby="prices-title">
+        <div class="x-tape-sec">
+          <div class="x-tape" aria-hidden="true">
+            <div class="x-tape__strip">
+              <div class="x-tape__nums" id="tape-nums"></div>
+            </div>
+          </div>
+          <div class="x-sec__head x-rv">
+            <div>
+              <p class="x-caps"><span class="x-num">i.</span>Alterations</p>
+              <h2 id="prices-title">Small changes, <em>exact</em> fit.</h2>
+            </div>
+            <p class="x-lede">Every garment is pinned on you, then altered by hand in the atelier.</p>
+          </div>
+          <ul class="x-prices">
+            <li class="x-rv"><span class="x-item">Trouser hem</span><span class="x-lead" aria-hidden="true"></span><span class="x-price"><small>from</small>$18</span></li>
+            <li class="x-rv"><span class="x-item">Taper trousers</span><span class="x-lead" aria-hidden="true"></span><span class="x-price"><small>from</small>$28</span></li>
+            <li class="x-rv"><span class="x-item">Take in jacket</span><span class="x-lead" aria-hidden="true"></span><span class="x-price"><small>from</small>$45</span></li>
+            <li class="x-rv"><span class="x-item">Shorten sleeves</span><span class="x-lead" aria-hidden="true"></span><span class="x-price"><small>from</small>$30</span></li>
+            <li class="x-rv"><span class="x-item">Dress hem</span><span class="x-lead" aria-hidden="true"></span><span class="x-price"><small>from</small>$35</span></li>
+            <li class="x-rv"><span class="x-item">Zip replacement</span><span class="x-lead" aria-hidden="true"></span><span class="x-price"><small>from</small>$22</span></li>
+            <li class="x-rv x-wide"><span class="x-item">Wedding &amp; formalwear</span><span class="x-lead" aria-hidden="true"></span><span class="x-price">By quote</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="x-wrap">
+        <svg class="x-stitch x-sew" viewBox="0 0 1000 12" preserveAspectRatio="none" aria-hidden="true">
+          <defs><mask id="m2" maskUnits="userSpaceOnUse"><line class="x-sew__mask" x1="0" y1="6" x2="1000" y2="6" stroke="#fff" stroke-width="12" pathLength="1" /></mask></defs>
+          <line x1="0" y1="6" x2="1000" y2="6" stroke-dasharray="7 6" mask="url(#m2)" vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+
+      <section class="x-sec x-mtm" id="measure" aria-labelledby="measure-title">
+        <div class="x-wrap">
+          <div class="x-sec__head x-rv">
+            <div>
+              <p class="x-caps"><span class="x-num">ii.</span>Made to measure</p>
+              <h2 id="measure-title">A suit in <em>four</em> fittings.</h2>
+            </div>
+            <p class="x-lede">From the first conversation to the final press, one tailor sees your suit through.</p>
+          </div>
+          <div class="x-steps-wrap x-sew">
+          <svg class="x-thread" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true">
+            <defs><mask id="m3" maskUnits="userSpaceOnUse"><line class="x-sew__mask" x1="0" y1="1" x2="1000" y2="1" stroke="#fff" stroke-width="4" pathLength="1" /></mask></defs>
+            <line x1="0" y1="1" x2="1000" y2="1" stroke-dasharray="5 4" mask="url(#m3)" vector-effect="non-scaling-stroke" />
+          </svg>
+          <ol class="x-steps">
+            <li class="x-step">
+              <span class="x-step__knot" aria-hidden="true">1</span>
+              <h3>Consultation &amp; cloth selection</h3>
+              <p>Style, occasion and cloth, chosen together.</p>
+            </li>
+            <li class="x-step">
+              <span class="x-step__knot" aria-hidden="true">2</span>
+              <h3>Measurements</h3>
+              <p>Taken by hand, with notes on posture and stance.</p>
+            </li>
+            <li class="x-step">
+              <span class="x-step__knot" aria-hidden="true">3</span>
+              <h3>Baste fitting</h3>
+              <p>A loosely stitched suit, refined on you.</p>
+            </li>
+            <li class="x-step">
+              <span class="x-step__knot" aria-hidden="true">4</span>
+              <h3>Final fitting</h3>
+              <p>Last adjustments, then it is yours.</p>
+            </li>
+          </ol>
+          </div>
+          <div class="x-mtm__foot x-rv">
+            <p class="x-mtm__price">Suits from <em>$1,150</em>, ready in 6–8 weeks.</p>
+            <a class="x-btn x-btn--solid" href="#fitting">Book a consultation <span class="x-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="x-sec x-wrap" id="turnaround" aria-labelledby="turn-title" style="padding-top: clamp(72px, 10vw, 128px)">
+        <div class="x-sec__head x-rv">
+          <div>
+            <p class="x-caps"><span class="x-num">iii.</span>Turnaround</p>
+            <h2 id="turn-title">Ready in a week, <em>or sooner.</em></h2>
+          </div>
+        </div>
+        <div class="x-turn x-rv">
+          <div>
+            <p class="x-caps">Standard</p>
+            <p class="x-turn__fig">7<small>days</small></p>
+            <p>Most alterations, collected within the week.</p>
+          </div>
+          <div>
+            <p class="x-caps">Rush <span class="x-tag">+$15</span></p>
+            <p class="x-turn__fig">48<small>hours</small></p>
+            <p>For the wedding, the interview, the flight.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="x-wrap">
+        <svg class="x-stitch x-sew" viewBox="0 0 1000 12" preserveAspectRatio="none" aria-hidden="true">
+          <defs><mask id="m4" maskUnits="userSpaceOnUse"><line class="x-sew__mask" x1="0" y1="6" x2="1000" y2="6" stroke="#fff" stroke-width="12" pathLength="1" /></mask></defs>
+          <line x1="0" y1="6" x2="1000" y2="6" stroke-dasharray="7 6" mask="url(#m4)" vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+
+      <section class="x-sec x-book" id="fitting" aria-labelledby="fitting-title">
+        <div class="x-wrap x-rv">
+          <p class="x-caps"><span class="x-num" style="color: #e9e2d2">iv.</span>Book a fitting</p>
+          <h2 id="fitting-title">Come in and be <em>measured.</em></h2>
+          <p class="x-lede">Fittings take about thirty minutes. Bring the shoes you will wear.</p>
+          <div class="x-btns">
+            <a class="x-btn x-btn--chalk" href="#fitting">Request an appointment <span class="x-arrow" aria-hidden="true">→</span></a>
+            <a class="x-btn x-btn--ghost-chalk" href="tel:+15550145608">Call (555) 014-5608</a>
+          </div>
+        </div>
+        <svg class="x-chalkline x-sew" viewBox="0 0 1000 12" preserveAspectRatio="none" aria-hidden="true">
+          <defs><mask id="m5" maskUnits="userSpaceOnUse"><line class="x-sew__mask" x1="0" y1="6" x2="1000" y2="6" stroke="#fff" stroke-width="12" pathLength="1" /></mask></defs>
+          <line x1="0" y1="6" x2="1000" y2="6" stroke-dasharray="2 5" mask="url(#m5)" vector-effect="non-scaling-stroke" />
+        </svg>
+      </section>
+
+      <section class="x-sec x-wrap" id="visit" aria-labelledby="visit-title" style="padding-top: clamp(80px, 11vw, 144px)">
+        <div class="x-visit">
+          <div class="x-rv">
+            <p class="x-caps"><span class="x-num">v.</span>Visit</p>
+            <h2 id="visit-title" class="x-address">7 Linden Arcade</h2>
+            <a class="x-tel x-ul" href="tel:+15550145608">(555) 014-5608</a>
+          </div>
+          <dl class="x-hours x-rv">
+            <div><dt>Monday – Friday</dt><dd>10 – 6</dd></div>
+            <div><dt>Saturday</dt><dd>10 – 3</dd></div>
+            <div class="is-closed"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="x-foot">
+      <div class="x-wrap">
+        <p>© Atelier Morrow (fictional)</p>
+        <p>Designed and built by <a class="x-ul" href="index.html" target="_blank" rel="noopener">Patch &amp; Flow Studio</a></p>
+      </div>
+    </footer>
+
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // tape numbers (static markup content, built once)
+        var nums = document.getElementById("tape-nums");
+        if (nums) {
+          var html = "";
+          for (var i = 0; i < 60; i++) html += "<span>" + i + "</span>";
+          nums.innerHTML = html;
+        }
+
+        // sticky header hairline
+        var head = document.querySelector(".x-head");
+        var onScrollHead = function () { head.classList.toggle("is-stuck", window.scrollY > 8); };
+        window.addEventListener("scroll", onScrollHead, { passive: true });
+        onScrollHead();
+
+        if (reduce || !("IntersectionObserver" in window)) return;
+
+        root.classList.add("x-motion");
+        var start = function () { requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add("is-loaded"); }); }); };
+        var img = document.querySelector(".x-hero__media img");
+        if (img && !img.complete) { img.addEventListener("load", start); img.addEventListener("error", start); setTimeout(start, 1200); } else start();
+
+        // reveal + sew on scroll
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+          });
+        }, { rootMargin: "0px 0px -12% 0px", threshold: 0.15 });
+        [].forEach.call(document.querySelectorAll(".x-sew, .x-rv"), function (el) { io.observe(el); });
+
+        // measuring tape slides with scroll while its section is on screen
+        var sec = document.getElementById("prices");
+        var strip = document.querySelector(".x-tape__strip");
+        var active = false, ticking = false;
+        var move = function () {
+          ticking = false;
+          var r = sec.getBoundingClientRect();
+          var p = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+          p = Math.max(0, Math.min(1, p));
+          strip.style.transform = "translate3d(0," + (p * 400 - 200).toFixed(1) + "px,0)";
+        };
+        new IntersectionObserver(function (en) { active = en[0].isIntersecting; if (active) move(); }).observe(sec);
+        window.addEventListener("scroll", function () {
+          if (active && !ticking) { ticking = true; requestAnimationFrame(move); }
+        }, { passive: true });
+        move();
+      })();
+    </script>
+  </body>
+</html>

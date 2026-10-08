@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jireh Barbershop | Barbershop in Metairie, LA</title>
+<meta name="description" content="Jireh Barbershop on David Dr in Metairie, Louisiana. Clean fades and cuts, open 7 days, 9 AM to 8 PM Monday to Saturday. Call (504) 201-6466.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#2a1640;--gold:#d8b25a;--goldL:#f3e3b8;--ivory:#faf7f1;--ink:#1e1430;--mute:#6f6582;--spring:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 1rem/1.55 Sora,system-ui,sans-serif;background:var(--ivory);color:var(--ink);overflow-x:hidden;padding-bottom:84px}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+.concept{background:#000;color:#eadfc6;font-size:.75rem;text-align:center;padding:8px 14px}
+header{background:var(--plum);color:#fff;padding:2.4rem 1.15rem 2.2rem;position:relative;overflow:hidden}
+header:before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(216,178,90,.35);box-shadow:0 0 0 22px rgba(216,178,90,.08),0 0 0 44px rgba(216,178,90,.05)}
+.kick{position:relative;font:600 .72rem/1 Sora;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1{position:relative;font:800 clamp(2.5rem,11.5vw,4.4rem)/1.02 Sora;letter-spacing:-.035em;margin:.6rem 0 .7rem}
+.lead{position:relative;max-width:31rem;color:#d5cbe2}
+.cta{position:relative;display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.2rem;border-radius:14px;font:600 1rem/1 Sora;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease-out,filter .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97);filter:brightness(.92)}
+.btn.g{background:var(--gold);color:var(--plum)}.btn.w{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+section{padding:1.8rem 1.15rem;max-width:46rem;margin:0 auto}
+h2{font:800 1.55rem/1.15 Sora;letter-spacing:-.025em;margin-bottom:.4rem}
+.sub{color:var(--mute);font-size:.93rem;margin-bottom:1rem}
+.seg{display:flex;background:#ece6f3;border-radius:14px;padding:4px;position:relative}
+.seg button{flex:1;min-height:44px;border:0;background:none;font:600 .92rem/1 Sora;color:var(--mute);cursor:pointer;position:relative;z-index:1;transition:color .25s,transform .12s ease-out;border-radius:10px}
+.seg button:active{transform:scale(.97)}
+.seg button[aria-selected="true"]{color:var(--ink)}
+.seg .thumb{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(42,22,64,.12);transition:transform .38s var(--spring)}
+.seg.r .thumb{transform:translateX(100%)}
+.pane{margin-top:.9rem;background:#fff;border-radius:18px;padding:1rem 1.1rem;box-shadow:0 6px 18px rgba(42,22,64,.07);transition:opacity .22s var(--spring)}
+.pane.swap{opacity:0}
+.pane div{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid #f1edf5;font-variant-numeric:tabular-nums}
+.pane div:last-child{border:0}
+.pane .today{font-weight:600}
+.pane .today span:first-child:after{content:" · today";color:#a8822c}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.why div{background:#fff;border-radius:18px;padding:1rem;box-shadow:0 4px 12px rgba(42,22,64,.05)}
+.why b{display:block;font:800 1.05rem/1.2 Sora;letter-spacing:-.015em;color:var(--plum)}
+.why p{font-size:.88rem;color:var(--mute);margin-top:.25rem}
+.sample{display:inline-block;font:600 .625rem/1 Sora;letter-spacing:.08em;text-transform:uppercase;background:var(--goldL);color:#7a5a12;padding:3px 6px;border-radius:5px;vertical-align:middle}
+blockquote{background:#fff;border-radius:18px;padding:1rem;margin:.6rem 0;border-top:3px solid var(--gold)}
+blockquote cite{display:block;font:500 .74rem/1.3 Sora;color:#8a6a1f;margin-top:.5rem;font-style:normal}
+footer{text-align:center;font-size:.75rem;color:var(--mute);padding:1.5rem 1rem 2rem}
+.bar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;gap:.5rem;padding:.5rem;border-radius:20px;background:rgba(42,22,64,.72);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:0 10px 30px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12);z-index:5;max-width:32rem;margin:0 auto}
+.bar .btn{flex:1}
+@media (max-width:360px){.why{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.btn,.seg button,.seg .thumb,.pane{transition:none}.btn:active,.seg button:active{transform:none}}
+@media (prefers-reduced-transparency:reduce){.bar{background:var(--plum);-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Jireh Barbershop's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+  <p class="kick">David Dr · Metairie, Louisiana</p>
+  <h1>Jireh Barbershop</h1>
+  <p class="lead">Detailed cuts, easy scheduling and on-time appointments. Open seven days, with evening hours until 8 PM Monday through Saturday.</p>
+  <div class="cta"><a class="btn g" href="tel:+15042016466">Call (504) 201-6466</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&destination=2816+David+Dr+Ste+108+Metairie+LA+70003">Directions</a></div>
+</header>
+
+<section>
+  <h2>When we're open</h2>
+  <p class="sub">Switch between weekdays and the weekend.</p>
+  <div class="seg" id="seg" role="tablist"><span class="thumb" aria-hidden="true"></span><button role="tab" aria-selected="true" data-p="wk">Mon – Fri</button><button role="tab" aria-selected="false" data-p="we">Weekend</button></div>
+  <div class="pane" id="pane"></div>
+</section>
+
+<section>
+  <h2>Why regulars stay</h2>
+  <div class="why">
+    <div><b>On time</b><p>Customers mention easy scheduling and on-time appointments.</p></div>
+    <div><b>Short waits</b><p>Customers mention they usually don't wait long.</p></div>
+    <div><b>Detailed work</b><p>Barbers like Gary and Nain are named for careful, professional cuts.</p></div>
+    <div><b>Book ahead</b><p>Call to book or ask about walk-ins <span class="sample">sample</span></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>From the chair</h2>
+  <blockquote>This is a great Barber shop. Gave me an excellent cut at a great price. Clean shop, great atmosphere, great people.<cite>Google review · February 2026</cite></blockquote>
+  <blockquote>Great customer service, easy scheduling and on time appointments. Never disappointed with haircut.<cite>Google review · February 2026</cite></blockquote>
+  <blockquote>Excellent work, I have 7 years having my hair done with them they do a great Job.<cite>Google review · February 2026</cite></blockquote>
+</section>
+
+<section>
+  <h2>Find us</h2>
+  <p>2816 David Dr, Suite 108, Metairie, LA 70003</p>
+  <p><a href="tel:+15042016466">(504) 201-6466</a></p>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="bar" aria-label="Quick actions"><a class="btn g" href="tel:+15042016466">Call to book</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&destination=2816+David+Dr+Ste+108+Metairie+LA+70003">Directions</a></nav>
+<script>
+var H={wk:[[1,'Monday','9 AM – 8 PM'],[2,'Tuesday','9 AM – 8 PM'],[3,'Wednesday','9 AM – 8 PM'],[4,'Thursday','9 AM – 8 PM'],[5,'Friday','9 AM – 8 PM']],we:[[6,'Saturday','9 AM – 8 PM'],[0,'Sunday','9 AM – 6 PM']]};
+var pane=document.getElementById('pane'),seg=document.getElementById('seg'),t=new Date().getDay();
+function show(k){pane.innerHTML=H[k].map(function(r){return '<div'+(r[0]===t?' class="today"':'')+'><span>'+r[1]+'</span><span>'+r[2]+'</span></div>'}).join('')}
+seg.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){seg.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-selected','false')});b.setAttribute('aria-selected','true');seg.classList.toggle('r',b.dataset.p==='we');pane.classList.add('swap');setTimeout(function(){show(b.dataset.p);pane.classList.remove('swap')},120)})});
+if(t===0||t===6){seg.querySelectorAll('button')[1].click()}else{show('wk')}
+</script>
+</body>
+</html>

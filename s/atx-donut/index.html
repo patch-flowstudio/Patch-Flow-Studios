@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ATX Donut | Donuts &amp; Kolaches on Wells Branch Pkwy, Austin</title>
+<meta name="description" content="ATX Donut on Wells Branch Pkwy in Austin, Texas. Character donuts, kolaches, maple donuts, donut holes, Vietnamese coffee and Thai tea. Open 6 AM to 1 PM, closed Tuesdays. Call (737) 300-1024.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2453ff;--yellow:#ffd23f;--pink:#ff5d8f;--white:#ffffff;--ink:#141a33;--mute:#5d6380;--bg:#f4f6ff;--spring:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 1rem/1.55 Rubik,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;padding-bottom:84px}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+.concept{background:var(--ink);color:#dfe3f7;font-size:.75rem;text-align:center;padding:8px 14px}
+header{background:var(--blue);color:#fff;padding:2.2rem 1.15rem 2.4rem;position:relative;overflow:hidden}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.14) 2px,transparent 2px);background-size:22px 22px}
+.badge{position:relative;display:inline-block;background:var(--yellow);color:var(--ink);font:800 .75rem/1 Rubik;letter-spacing:.12em;text-transform:uppercase;padding:.45rem .7rem;border-radius:8px;transform:rotate(-3deg)}
+h1{position:relative;font:800 clamp(3rem,15vw,5.4rem)/.95 Rubik;letter-spacing:-.045em;margin:.7rem 0 .6rem}
+.lead{position:relative;max-width:30rem;color:#dbe3ff}
+.cta{position:relative;display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.2rem;border-radius:14px;font:500 1rem/1 Rubik;text-decoration:none;border:0;cursor:pointer;transition:transform .12s ease-out,filter .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97);filter:brightness(.93)}
+.btn.y{background:var(--yellow);color:var(--ink);font-weight:800}.btn.w{background:rgba(255,255,255,.14);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+section{padding:1.8rem 1.15rem;max-width:46rem;margin:0 auto}
+h2{font:800 1.7rem/1.1 Rubik;letter-spacing:-.03em;margin-bottom:.4rem}
+.sub{color:var(--mute);font-size:.94rem;margin-bottom:1rem}
+.box{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;background:#fff;border-radius:22px;padding:.8rem;box-shadow:0 10px 26px rgba(36,83,255,.12)}
+.d{aspect-ratio:1;border:0;border-radius:18px;background:var(--bg);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;font:500 .78rem/1.2 Rubik;color:var(--ink);transition:transform .12s ease-out,box-shadow .3s var(--spring)}
+.d:active{transform:scale(.95)}
+.d svg{width:58%;height:auto;margin-bottom:.25rem;transition:transform .35s var(--spring)}
+.d[aria-pressed="true"]{box-shadow:inset 0 0 0 2.5px var(--blue)}
+.d[aria-pressed="true"] svg{transform:rotate(-8deg) scale(1.06)}
+.info{margin-top:.9rem;background:var(--ink);color:#e7eaff;border-radius:18px;padding:1rem 1.1rem;min-height:4.8rem;transition:opacity .22s var(--spring),transform .32s var(--spring)}
+.info.swap{opacity:0;transform:translateY(6px)}
+.info b{color:var(--yellow)}
+.sample{display:inline-block;font:500 .625rem/1 Rubik;letter-spacing:.08em;text-transform:uppercase;background:#ffe6ee;color:#c2245a;padding:3px 6px;border-radius:5px;vertical-align:middle}
+.party{background:var(--pink);color:#fff;border-radius:22px;padding:1.2rem}
+.party h2{color:#fff}
+.party p{color:#ffe7ef}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;text-align:center}
+.week div{background:#fff;border-radius:14px;padding:.6rem 0;font-size:.7rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.week b{display:block;font:800 .95rem/1.2 Rubik;color:var(--ink)}
+.week .off{opacity:.55}
+.week .today{box-shadow:0 0 0 2px var(--blue)}
+blockquote{background:#fff;border-radius:18px;padding:1rem;margin:.6rem 0}
+blockquote cite{display:block;font-size:.74rem;color:var(--blue);margin-top:.5rem;font-style:normal;font-weight:500}
+footer{text-align:center;font-size:.75rem;color:var(--mute);padding:1.5rem 1rem 2rem}
+.bar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;gap:.5rem;padding:.5rem;border-radius:20px;background:rgba(20,26,51,.72);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:0 10px 30px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12);z-index:5;max-width:32rem;margin:0 auto}
+.bar .btn{flex:1}
+@media (prefers-reduced-motion:reduce){.btn,.d,.d svg,.info{transition:opacity .2s}.btn:active,.d:active{transform:none}.d[aria-pressed="true"] svg,.info.swap{transform:none}}
+@media (prefers-reduced-transparency:reduce){.bar{background:var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not ATX Donut's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+  <div class="dots" aria-hidden="true"></div>
+  <span class="badge">Wells Branch · Austin</span>
+  <h1>ATX Donut</h1>
+  <p class="lead">Colorful character donuts, light and flaky kolaches, maple donuts and mini cinnamon roll donut holes, with Vietnamese coffee and Thai tea to go with them.</p>
+  <div class="cta"><a class="btn y" href="tel:+17373001024">Call (737) 300-1024</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&destination=2113+Wells+Branch+Pkwy+Austin+TX+78728">Directions</a></div>
+</header>
+
+<section>
+  <h2>Build a box</h2>
+  <p class="sub">Tap a spot to see what customers love. Ask in store for today's lineup.</p>
+  <div class="box" id="box">
+    <button class="d" aria-pressed="true" data-k="kol"><svg viewBox="0 0 60 40" aria-hidden="true"><rect x="4" y="8" width="52" height="26" rx="13" fill="#f0c48a"/><rect x="10" y="14" width="40" height="8" rx="4" fill="#c2412d"/></svg>Kolaches</button>
+    <button class="d" aria-pressed="false" data-k="map"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="#e3a35e"/><circle cx="30" cy="30" r="22" fill="#a8652a"/><circle cx="30" cy="30" r="8" fill="#f4f6ff"/></svg>Maple</button>
+    <button class="d" aria-pressed="false" data-k="hol"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="18" cy="22" r="10" fill="#e3a35e"/><circle cx="40" cy="20" r="10" fill="#f3c27f"/><circle cx="30" cy="40" r="10" fill="#e3a35e"/><path d="M26 40a4 4 0 1 0 8 0" stroke="#fff" stroke-width="2" fill="none"/></svg>Donut holes</button>
+    <button class="d" aria-pressed="false" data-k="chr"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="32" r="24" fill="#ffd23f"/><path d="M14 14l8 10M46 14l-8 10" stroke="#141a33" stroke-width="4"/><circle cx="22" cy="32" r="3" fill="#141a33"/><circle cx="38" cy="32" r="3" fill="#141a33"/><circle cx="16" cy="40" r="4" fill="#ff5d8f"/><circle cx="44" cy="40" r="4" fill="#ff5d8f"/></svg>Characters</button>
+    <button class="d" aria-pressed="false" data-k="fri"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 34c0-14 12-24 24-22s22 10 20 22-14 18-26 16S8 46 8 34z" fill="#d9954a"/><path d="M16 30q10-8 28 0M18 38q10-6 24 0" stroke="#f6dca8" stroke-width="3" fill="none"/></svg>Apple fritter</button>
+    <button class="d" aria-pressed="false" data-k="drk"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M18 10h24l-4 44H22z" fill="#e8c9a0"/><path d="M19 22h22l-3 32H22z" fill="#8a5a3a"/><rect x="16" y="8" width="28" height="5" rx="2" fill="#2453ff"/></svg>Coffee &amp; tea</button>
+  </div>
+  <div class="info" id="info" aria-live="polite"></div>
+</section>
+
+<section>
+  <div class="party">
+    <h2>Party donuts</h2>
+    <p>One family ordered Madagascar-themed donuts for a son's birthday and called them the hit of the party. Call ahead to plan yours <span class="sample" style="background:#fff;color:#c2245a">sample</span></p>
+    <div class="cta" style="margin-top:1rem"><a class="btn y" href="tel:+17373001024">Call about an order</a></div>
+  </div>
+</section>
+
+<section>
+  <h2>Hours</h2>
+  <div class="week" id="wk">
+    <div data-d="1"><b>Mon</b>6–1</div><div class="off" data-d="2"><b>Tue</b>Closed</div><div data-d="3"><b>Wed</b>6–1</div><div data-d="4"><b>Thu</b>6–1</div><div data-d="5"><b>Fri</b>6–1</div><div data-d="6"><b>Sat</b>6–1</div><div data-d="0"><b>Sun</b>6–1</div>
+  </div>
+</section>
+
+<section>
+  <h2>Sweet reviews</h2>
+  <blockquote>I love the kolache’s here !!!! … Only amazing kolaches. … the maple donuts are amazing.!!!<cite>Google review · November 2025</cite></blockquote>
+  <blockquote>Was craving donuts and ordered some for delivery. We had never tried ATX Donuts before so I ordered the mixed dozen and an apple fritter. Everything was awesome. We will be back again for sure<cite>Google review · August 2025</cite></blockquote>
+  <blockquote>Love the donut options, Vietnamese coffee, even Thai tea … The staff was friendly and helpful... Definitely will be back to try the maple bacon donut.<cite>Google review · June 2025</cite></blockquote>
+</section>
+
+<section>
+  <h2>Find us</h2>
+  <p>2113 Wells Branch Pkwy, Austin, TX 78728</p>
+  <p><a href="tel:+17373001024">(737) 300-1024</a> · <a href="mailto:atxdonut@gmail.com">atxdonut@gmail.com</a></p>
+</section>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<nav class="bar" aria-label="Quick actions"><a class="btn y" href="tel:+17373001024">Call</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&destination=2113+Wells+Branch+Pkwy+Austin+TX+78728">Directions</a></nav>
+<script>
+var I={kol:"<b>Kolaches.</b> Customers call them light and flaky, just as kolaches should be.",map:"<b>Maple donuts.</b> Singled out as amazing in a recent review, with maple bacon on another customer's list to try.",hol:"<b>Donut holes.</b> Several flavors, including little cinnamon holes and mini cinnamon rolls.",chr:"<b>Character donuts.</b> Kids pick from shapes like Pikachu, Spiderman, unicorns and Baby Shark when they make an appearance.",fri:"<b>Apple fritter.</b> A first-time delivery order paired a mixed dozen with an apple fritter.",drk:"<b>Coffee and tea.</b> Vietnamese coffee and Thai tea, plus cold drinks in the fridge."};
+var info=document.getElementById('info');info.innerHTML=I.kol;
+document.querySelectorAll('.d').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.d').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');info.classList.add('swap');setTimeout(function(){info.innerHTML=I[b.dataset.k];info.classList.remove('swap')},110)})});
+var r=document.querySelector('#wk [data-d="'+new Date().getDay()+'"]');if(r)r.classList.add('today');
+</script>
+</body>
+</html>

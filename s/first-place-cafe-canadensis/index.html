@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>First Place Cafe · Canadensis, PA</title>
+<meta name="description" content="First Place Cafe in Canadensis, PA: freshly prepared breakfast and lunch with daily specials, on Route 390 in the Poconos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#1f3a2e; --pine-2:#2a4b3c; --slate:#22302a; --cream:#f6f0e2; --paper:#fbf7ee;
+  --ribbon:#1d4f91; --ribbon-2:#163d70; --gold:#d9a521; --gold-2:#b9871a; --ink:#1d1b17; --muted:#5d5a52;
+  --chalk:#f3f1e8; --line:rgba(29,27,23,.12);
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:72px;
+  --spring:cubic-bezier(.2,.9,.25,1.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden;padding-bottom:84px}
+a{color:inherit}
+.banner{background:var(--ink);color:#e9e4d6;font-size:12.5px;line-height:1.45;padding:10px 18px;text-align:center}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* HERO: rosette ribbon */
+.hero{position:relative;background:
+  radial-gradient(1200px 400px at 50% -10%,rgba(255,255,255,.65),transparent 70%),
+  repeating-linear-gradient(90deg,rgba(31,58,46,.035) 0 2px,transparent 2px 26px),var(--cream);
+  padding:var(--s7) 0 var(--s8);overflow:hidden}
+.hero-grid{display:grid;gap:var(--s6);align-items:center}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pine-2)}
+h1{font-family:"Libre Caslon Text",Georgia,serif;font-weight:700;font-size:clamp(42px,11vw,76px);line-height:1.02;letter-spacing:-.02em;color:var(--pine);margin:var(--s3) 0 var(--s4)}
+h1 em{font-style:italic;font-weight:400;color:var(--ribbon)}
+.lede{font-size:18px;color:#3b3a34;max-width:30ch}
+.where{margin-top:var(--s3);font-size:14px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s5)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;
+  transition:transform .35s var(--spring),box-shadow .25s ease,background .2s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn:active{transform:scale(.97);transition:transform 100ms ease-out}
+.btn-p{background:var(--pine);color:#fff;box-shadow:0 6px 18px -8px rgba(31,58,46,.6)}
+.btn-p:hover{background:var(--pine-2)}
+.btn-g{background:rgba(255,255,255,.7);border:1px solid var(--line);color:var(--pine);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+
+.rosette-wrap{display:flex;justify-content:center}
+.rosette{width:min(78vw,340px);height:auto;filter:drop-shadow(0 18px 24px rgba(20,30,50,.22));transform-origin:50% 30%;animation:sway 6s ease-in-out infinite}
+.rosette:active{transform:scale(.97)}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+
+/* WEEK RIBBON hours */
+.sec{padding:var(--s8) 0}
+.sec-h{font-family:"Libre Caslon Text",Georgia,serif;font-size:clamp(28px,7vw,40px);line-height:1.12;letter-spacing:-.01em;color:var(--pine)}
+.sec-sub{color:var(--muted);margin-top:var(--s2);max-width:46ch}
+.week{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:var(--s6)}
+.day{position:relative;border-radius:12px 12px 4px 4px;padding:14px 4px 22px;text-align:center;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--ribbon);color:#fff;transition:transform .4s var(--spring)}
+.day::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:12px;background:inherit;clip-path:polygon(0 0,100% 0,100% 100%,50% 30%,0 100%)}
+.day small{display:block;font-weight:500;font-size:11px;letter-spacing:0;text-transform:none;margin-top:6px;opacity:.9}
+.day.off{background:#d9d3c3;color:#6f6a5d}
+.day.now{background:var(--gold);color:var(--ink);transform:translateY(-6px)}
+.day:active{transform:scale(.96)}
+.status{margin-top:var(--s6);display:inline-flex;align-items:center;gap:10px;font-weight:600;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;background:#9a9384}
+.dot.on{background:#2f9a5a;box-shadow:0 0 0 4px rgba(47,154,90,.18)}
+.note{font-size:13px;color:var(--muted);margin-top:var(--s3)}
+
+/* CHALKBOARD */
+.board-sec{background:var(--pine);padding:var(--s8) 0;position:relative}
+.board-sec .sec-h{color:#fff}
+.board-sec .sec-sub{color:#cfdcd3}
+.frame{margin-top:var(--s6);padding:14px;border-radius:14px;background:linear-gradient(135deg,#8a5a32,#6d4424 40%,#93633a);box-shadow:0 30px 50px -24px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.2)}
+.board{border-radius:6px;padding:28px 22px 30px;color:var(--chalk);font-family:"Cabin Sketch",cursive;
+  background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.07),transparent 60%),radial-gradient(ellipse at 80% 90%,rgba(255,255,255,.05),transparent 55%),#26302b;
+  box-shadow:inset 0 0 40px rgba(0,0,0,.45)}
+.board h3{font-size:clamp(30px,8vw,44px);text-align:center;letter-spacing:.02em;font-weight:700}
+.board .under{display:block;margin:6px auto 22px;width:140px;height:10px}
+.slots{list-style:none;display:grid;gap:16px}
+.slot{display:flex;gap:14px;align-items:flex-start;padding-bottom:14px;border-bottom:1px dashed rgba(243,241,232,.25)}
+.slot:last-child{border-bottom:0;padding-bottom:0}
+.slot .tag{flex:none;font-family:"Public Sans",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1.5px solid rgba(217,165,33,.7);border-radius:6px;padding:4px 7px;margin-top:6px}
+.slot b{display:block;font-size:24px;line-height:1.15;font-weight:700}
+.slot span{display:block;font-family:"Public Sans",sans-serif;font-size:13.5px;color:#c9cfc9;margin-top:4px;line-height:1.45}
+.chalk-foot{text-align:center;margin-top:24px;font-size:20px;color:#e8e4d5}
+.board-note{color:#cfdcd3;font-size:13px;margin-top:var(--s4)}
+
+/* PLACE story: two names on a ribbon */
+.story{display:grid;gap:var(--s6);align-items:center}
+.names{position:relative;padding:var(--s6) var(--s5);background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 20px 40px -30px rgba(0,0,0,.35)}
+.names .pl{font-family:"Libre Caslon Text",serif;font-size:clamp(34px,9vw,52px);line-height:1;color:var(--pine)}
+.names .pl i{color:var(--ribbon)}
+.names p{margin-top:var(--s4);color:#3b3a34}
+.names .src{font-size:12.5px;color:var(--muted);margin-top:var(--s3)}
+.medal{position:absolute;top:-22px;right:18px;width:64px;height:64px}
+
+/* QUOTES as ribbon tags */
+.quotes{display:grid;gap:var(--s4);margin-top:var(--s6)}
+.q{position:relative;background:#fff;border:1px solid var(--line);border-left:6px solid var(--ribbon);border-radius:14px;padding:20px 20px 18px;transition:transform .45s var(--spring),box-shadow .3s ease}
+.q:hover{transform:translateY(-3px);box-shadow:0 18px 30px -22px rgba(0,0,0,.4)}
+.q:active{transform:scale(.98)}
+.q blockquote{font-family:"Libre Caslon Text",serif;font-size:17.5px;line-height:1.5}
+.q cite{display:block;margin-top:10px;font-style:normal;font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.04em}
+.q:nth-child(2){border-left-color:var(--gold)}
+.q:nth-child(3){border-left-color:var(--pine)}
+
+/* FIND */
+.find{background:var(--cream);border-radius:24px;padding:var(--s6) var(--s5);display:grid;gap:var(--s5)}
+.find dl{display:grid;gap:var(--s4)}
+.find dt{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pine-2)}
+.find dd{font-size:17px;margin-top:2px}
+.road{width:100%;height:auto;border-radius:16px;background:#e7e0cc}
+
+footer{padding:var(--s7) 0 var(--s6);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--pine);font-weight:600}
+
+/* sticky glass bar */
+.bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;padding:8px;border-radius:999px;
+  background:rgba(251,247,238,.78);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border:1px solid rgba(29,27,23,.1);box-shadow:0 12px 30px -14px rgba(0,0,0,.35);z-index:10;max-width:520px;margin:0 auto}
+.bar .btn{flex:1;min-height:46px;padding:0 12px}
+
+@media (min-width:800px){
+  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .story{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+  .find{grid-template-columns:1fr 1fr;align-items:center;padding:var(--s7)}
+  .slots{grid-template-columns:1fr 1fr;column-gap:36px}
+  .slot:nth-last-child(2){border-bottom:0;padding-bottom:0}
+  .board{padding:40px 44px}
+  .day{font-size:15px;padding:20px 6px 26px}
+}
+@media (max-width:360px){.day{font-size:11px}.day small{font-size:10px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not First Place Cafe's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Canadensis · Route 390 · Poconos</div>
+      <h1>First <em>Place</em> Cafe</h1>
+      <p class="lede">Freshly prepared breakfast and lunch, with daily specials on the board.</p>
+      <p class="where">2475 Route 390, Canadensis, PA 18325</p>
+      <div class="btns">
+        <a class="btn btn-p" href="tel:+15704814800">Call (570) 481-4800</a>
+        <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&amp;destination=First+Place+Cafe+2475+Route+390+Canadensis+PA+18325" target="_blank" rel="noopener">Directions</a>
+      </div>
+    </div>
+    <div class="rosette-wrap" aria-hidden="true">
+      <svg class="rosette" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+        <path d="M112 190 L80 380 L112 352 L140 388 L150 200Z" fill="#163d70"/>
+        <path d="M188 190 L220 380 L188 352 L160 388 L150 200Z" fill="#1d4f91"/>
+        <g transform="translate(150 150)">
+          <g fill="#1d4f91">
+            <circle r="118"/>
+          </g>
+          <g fill="#2b63ad">
+            <path d="M0-118 L14-100 L32-112 L40-92 L62-100 L62-78 L84-80 L78-58 L100-52 L88-34 L106-22 L90-8 L104 8 L86 20 L98 38 L76 44 L82 66 L60 64 L58 86 L38 78 L28 98 L12 82 L0 100 L-12 82 L-28 98 L-38 78 L-58 86 L-60 64 L-82 66 L-76 44 L-98 38 L-86 20 L-104 8 L-90-8 L-106-22 L-88-34 L-100-52 L-78-58 L-84-80 L-62-78 L-62-100 L-40-92 L-32-112 L-14-100Z"/>
+          </g>
+          <circle r="74" fill="#d9a521"/>
+          <circle r="66" fill="none" stroke="#fbf0c9" stroke-width="2" stroke-dasharray="3 5"/>
+          <circle r="60" fill="#f6efd9"/>
+          <text y="-14" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#1f3a2e">FIRST</text>
+          <text y="20" text-anchor="middle" font-family="Libre Caslon Text, serif" font-size="34" font-style="italic" fill="#1d4f91">Place</text>
+          <text y="42" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10" font-weight="700" letter-spacing="2.5" fill="#1f3a2e">CAFE</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="hours">
+  <div class="wrap">
+    <h2 class="sec-h">Five mornings a week, 7 to 2</h2>
+    <p class="sec-sub">Breakfast and lunch Thursday through Monday. Closed Tuesday and Wednesday.</p>
+    <ul class="week" id="week">
+      <li class="day" data-d="1">Mon<small>7-2</small></li>
+      <li class="day off" data-d="2">Tue<small>Closed</small></li>
+      <li class="day off" data-d="3">Wed<small>Closed</small></li>
+      <li class="day" data-d="4">Thu<small>7-2</small></li>
+      <li class="day" data-d="5">Fri<small>7-2</small></li>
+      <li class="day" data-d="6">Sat<small>7-2</small></li>
+      <li class="day" data-d="0">Sun<small>7-2</small></li>
+    </ul>
+    <div class="status"><span class="dot" id="dot"></span><span id="stat">Hours: 7 AM to 2 PM, Thu to Mon</span></div>
+    <p class="note">Hours as listed on Google. Call to confirm, especially around holidays.</p>
+  </div>
+</section>
+
+<section class="board-sec" id="specials">
+  <div class="wrap">
+    <h2 class="sec-h">The specials board</h2>
+    <p class="sec-sub">The menu changes with the board. These are dishes guests and the cafe's own photos have mentioned. Ask what's up today.</p>
+    <div class="frame">
+      <div class="board">
+        <h3>From the board</h3>
+        <svg class="under" viewBox="0 0 140 10" aria-hidden="true"><path d="M2 6 C30 2, 60 9, 90 4 S130 6, 138 3" stroke="#d9a521" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        <ul class="slots">
+          <li class="slot"><span class="tag">Special</span><div><b>Sausage, mushroom &amp; smoked gouda omelet</b><span>Ordered off the specials board, from a June 2025 review.</span></div></li>
+          <li class="slot"><span class="tag">Lunch</span><div><b>Eggplant sandwich with potato salad</b><span>"My favorite," a regular wrote in June 2025.</span></div></li>
+          <li class="slot"><span class="tag">Side</span><div><b>Hand cut fries</b><span>Written up on the cafe's own board photo.</span></div></li>
+          <li class="slot"><span class="tag">Sweet</span><div><b>Apple cake with caramel sauce</b><span>Also from the board photo, alongside a personal cheesecake.</span></div></li>
+        </ul>
+        <p class="chalk-foot">Specials change. Call ahead to ask.</p>
+      </div>
+    </div>
+    <p class="board-note">Sample: on the real site, the cafe could update this board each morning so regulars see the day's specials before they drive over.</p>
+  </div>
+</section>
+
+<section class="sec" id="story">
+  <div class="wrap story">
+    <div class="names">
+      <svg class="medal" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#d9a521"/><circle cx="32" cy="32" r="22" fill="#f6efd9"/><text x="32" y="38" text-anchor="middle" font-family="Libre Caslon Text, serif" font-size="18" font-style="italic" fill="#1d4f91">1st</text></svg>
+      <div class="eyebrow">The name on the door</div>
+      <p class="pl">Jeff &amp; Lisa <i>Place</i></p>
+      <p>First Place Cafe carries its owners' family name. Guests describe a small town, family owned feel, homemade food and a side room with a cabin feel.</p>
+      <p class="src">Owners as introduced on the cafe's Facebook page.</p>
+    </div>
+    <div>
+      <h2 class="sec-h">"Like your grandmom made you breakfast"</h2>
+      <p class="sec-sub">Real potatoes, fresh ingredients and a warm room. Here is how guests put it.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="quotes">
+      <figure class="q"><blockquote>"They use all fresh ingredients and real potatoes (not frozen generic diner potatoes). It will be hard for you to find a better breakfast in the Poconos than here."</blockquote><cite>Google review · July 2025</cite></figure>
+      <figure class="q"><blockquote>"It has a small town family owned feeling, which I believe it is. The food was great. Homemade, fresh, and delicious."</blockquote><cite>Google review · February 2026</cite></figure>
+      <figure class="q"><blockquote>"They have a little room on the side to eat also with a very home/cabin feeling!"</blockquote><cite>Google review · June 2025</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="find" style="padding-top:0">
+  <div class="wrap">
+    <div class="find">
+      <dl>
+        <div><dt>Address</dt><dd>2475 Route 390<br>Canadensis, PA 18325</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+15704814800">(570) 481-4800</a></dd></div>
+        <div><dt>Catering</dt><dd>Catering is offered. Call the cafe to talk it through.</dd></div>
+        <div><dt>Hours</dt><dd>Thu to Mon, 7 AM to 2 PM · Tue &amp; Wed closed</dd></div>
+      </dl>
+      <svg class="road" viewBox="0 0 400 240" aria-label="Route 390 illustration" role="img">
+        <rect width="400" height="240" fill="#e7e0cc"/>
+        <path d="M0 210 Q60 120 140 150 T260 90 T400 40" stroke="#c8bea4" stroke-width="44" fill="none" stroke-linecap="round"/>
+        <path d="M0 210 Q60 120 140 150 T260 90 T400 40" stroke="#fff" stroke-width="3" stroke-dasharray="12 12" fill="none"/>
+        <g fill="#1f3a2e"><path d="M40 70 l14 34 h-28z"/><path d="M70 50 l18 44 h-36z"/><path d="M320 150 l16 40 h-32z"/><path d="M352 130 l14 34 h-28z"/><path d="M300 190 l12 30 h-24z"/></g>
+        <rect x="47" y="104" width="4" height="8" fill="#6d4424"/><rect x="77" y="94" width="4" height="8" fill="#6d4424"/>
+        <g transform="translate(200 108)"><circle r="24" fill="#d9a521"/><circle r="17" fill="#f6efd9"/><path d="M-10 22 L-16 52 L-6 46 L0 56 L2 24Z" fill="#163d70"/><path d="M10 22 L16 52 L6 46 L0 56 L-2 24Z" fill="#1d4f91"/><text y="6" text-anchor="middle" font-family="Libre Caslon Text, serif" font-style="italic" font-size="14" fill="#1d4f91">1st</text></g>
+        <text x="300" y="30" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#5d5a52" letter-spacing="1.5">RT 390</text>
+      </svg>
+      <a class="btn btn-p" href="https://www.google.com/maps/dir/?api=1&amp;destination=First+Place+Cafe+2475+Route+390+Canadensis+PA+18325" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+</section>
+
+<footer><a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/" target="_blank" rel="noopener">Studio concept. Sample design by Patch &amp; Flow Studio</a></footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn-p" href="tel:+15704814800">Call</a>
+  <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&amp;destination=First+Place+Cafe+2475+Route+390+Canadensis+PA+18325" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){
+  try{
+    var now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"}));
+    var d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+    var el=document.querySelector('.day[data-d="'+d+'"]'); if(el) el.classList.add('now');
+    var openDay=[0,1,4,5,6].indexOf(d)>-1, open=openDay&&m>=420&&m<840;
+    document.getElementById('dot').classList.toggle('on',open);
+    document.getElementById('stat').textContent=open?"Open now until 2 PM":(openDay&&m<420?"Opens today at 7 AM":"Closed now · 7 AM to 2 PM, Thu to Mon");
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

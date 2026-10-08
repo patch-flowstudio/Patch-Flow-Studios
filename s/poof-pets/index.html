@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poof Pets | Dog and Cat Grooming in Boise, ID</title>
+<meta name="description" content="Poof Pets on W Fairview Ave in Boise, Idaho: grooming for dogs and cats, open seven days. Call (208) 810-3833.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#b9a7f0;--lav2:#6c55c9;--cloud:#f7f5ff;--peach:#ffc9b0;--mint:#bfeee0;--ink:#1f1838;--spring:cubic-bezier(.2,.9,.25,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:100%/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cloud);color:var(--ink);overflow-x:hidden;padding-bottom:5.5rem}
+a,button{color:inherit;-webkit-tap-highlight-color:transparent}
+.concept{background:var(--ink);color:#ece8ff;font-size:.75rem;text-align:center;padding:.45rem .8rem}
+.concept b{color:var(--peach)}
+header{padding:2.4rem 1.1rem 2.6rem;text-align:center;background:linear-gradient(180deg,#e6defd,var(--cloud));position:relative;overflow:hidden}
+.puff{position:absolute;border-radius:50%;background:#fff;opacity:.9;pointer-events:none;box-shadow:0 .5rem 1.5rem rgba(108,85,201,.12)}
+.p1{width:7rem;height:7rem;left:-2rem;top:1rem}.p2{width:5rem;height:5rem;right:-1rem;top:3rem}.p3{width:4rem;height:4rem;right:22%;bottom:.5rem}
+.inner{position:relative}
+h1{font-family:"Baloo 2",system-ui,sans-serif;font-weight:800;font-size:clamp(3.2rem,15vw,5.6rem);line-height:.95;letter-spacing:-.03em;color:var(--lav2)}
+.sub{font-weight:700;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#5d4fa0}
+.lede{max-width:26rem;margin:.6rem auto 0;color:#3b3357}
+main{max-width:50rem;margin:0 auto;padding:0 1rem 2.5rem}
+section{margin-top:2.5rem}
+h2{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.8rem;line-height:1.1;letter-spacing:-.015em;color:var(--lav2);margin-bottom:.4rem}
+.muted{color:#4d4568}
+/* dog / cat switch */
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;background:rgba(108,85,201,.12);border-radius:1rem;padding:.25rem;margin-top:.9rem;max-width:22rem}
+.seg button{position:relative;z-index:1;border:0;background:none;font:700 .95rem/1 system-ui,sans-serif;min-height:2.9rem;border-radius:.8rem;cursor:pointer;transition:transform .12s ease-out,color .2s}
+.seg button:active{transform:scale(.97)}
+.seg button[aria-selected="true"]{color:#fff}
+.thumb{position:absolute;top:.25rem;bottom:.25rem;left:.25rem;width:calc(50% - .25rem);background:var(--lav2);border-radius:.8rem;box-shadow:0 .3rem .9rem rgba(108,85,201,.35);transition:transform .38s var(--spring)}
+.panel{background:#fff;border-radius:1.3rem;padding:1.1rem;margin-top:.8rem;box-shadow:0 .6rem 1.8rem rgba(31,24,56,.08)}
+.panel[hidden]{display:none}
+.panel ul{list-style:none;display:grid;gap:.55rem;margin-top:.5rem}
+.panel li{background:var(--cloud);border-radius:.8rem;padding:.65rem .8rem}
+.tag{display:inline-block;font:700 .68rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:#ffe6a6;color:#6a4a00;border-radius:.3rem;padding:.1rem .45rem;vertical-align:middle}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));gap:.7rem;margin-top:.9rem}
+.mem{background:#fff;border-radius:1.2rem;padding:1rem;text-align:center;box-shadow:0 .4rem 1.2rem rgba(31,24,56,.06);transition:transform .12s ease-out}
+.mem:active{transform:scale(.97)}
+.av{width:3.2rem;height:3.2rem;border-radius:50%;margin:0 auto .5rem;display:grid;place-items:center;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.3rem;color:var(--ink)}
+.mem b{display:block;letter-spacing:-.005em}
+.mem span{font-size:.82rem;color:#5d5578}
+.hrs{background:#fff;border-radius:1.2rem;padding:1rem 1.1rem;margin-top:.8rem}
+.hrs div{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid #eeeaf9}
+.hrs div:last-child{border:0}
+.q{background:#fff;border-radius:1.2rem 1.2rem 1.2rem .3rem;padding:1rem 1.1rem;margin-top:.8rem}
+.q small{display:block;margin-top:.4rem;font-weight:700;color:var(--lav2);font-size:.8rem}
+.bar{position:fixed;left:.75rem;right:.75rem;bottom:.75rem;z-index:5;display:flex;gap:.5rem;padding:.5rem;border-radius:1.4rem;background:rgba(247,245,255,.7);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.7);box-shadow:0 .6rem 2rem rgba(31,24,56,.18);max-width:30rem;margin:0 auto}
+.btn{flex:1;min-height:2.9rem;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:.95rem;border-radius:1rem;transition:transform .12s ease-out,filter .12s ease-out;touch-action:manipulation}
+.btn:active{transform:scale(.97);filter:brightness(.93)}
+.c{background:var(--lav2);color:#fff}.d{background:#fff}
+footer{text-align:center;font-size:.8rem;padding:1.5rem 1rem;color:#6d6590}
+@media (prefers-reduced-motion:reduce){.thumb{transition:none}.btn:active,.mem:active,.seg button:active{transform:none}}
+@media (prefers-reduced-transparency:reduce){.bar{background:var(--cloud);-webkit-backdrop-filter:none;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Studio concept:</b> an unofficial preview made by Patch &amp; Flow Studio, not Poof Pets' official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<header>
+ <i class="puff p1"></i><i class="puff p2"></i><i class="puff p3"></i>
+ <div class="inner">
+  <div class="sub">Boise, Idaho</div>
+  <h1>Poof Pets</h1>
+  <p class="lede">Grooming for dogs and cats, from mini schnauzers to skittish kitties, by a team that goes above and beyond.</p>
+ </div>
+</header>
+<main>
+<section>
+ <h2>Dogs and cats</h2>
+ <p class="muted">Yes, Poof grooms cats too. Pick one to see what clients bring in.</p>
+ <div class="seg" role="tablist" aria-label="Pet type">
+  <span class="thumb" aria-hidden="true"></span>
+  <button role="tab" aria-selected="true" aria-controls="dogs">Dogs</button>
+  <button role="tab" aria-selected="false" aria-controls="cats">Cats</button>
+ </div>
+ <div class="panel" id="dogs" role="tabpanel">
+  <b>Dog grooming</b>
+  <ul><li>Mini goldendoodles, mini schnauzers, standard poodle mixes</li><li>Seasonal cuts, like a summer cut</li><li>Teddy bear and breed styles <span class="tag">sample</span></li></ul>
+ </div>
+ <div class="panel" id="cats" role="tabpanel" hidden>
+  <b>Cat grooming</b>
+  <ul><li>Gentle handling for skittish, nervous cats</li><li>One client calls their groomer a "Cat Whisperer"</li><li>Bath, brush and trim options <span class="tag">sample</span></li></ul>
+ </div>
+</section>
+<section>
+ <h2>The team</h2>
+ <p class="muted">Groomers clients mention by name. The full team is for Poof to confirm.</p>
+ <div class="team">
+  <div class="mem"><div class="av" style="background:var(--peach)">T</div><b>Trena</b><span>Leads the team</span></div>
+  <div class="mem"><div class="av" style="background:var(--mint)">M</div><b>Mindy</b><span>Cats</span></div>
+  <div class="mem"><div class="av" style="background:#e6defd">L</div><b>Liz</b><span>Doodles</span></div>
+  <div class="mem"><div class="av" style="background:#ffe6a6">H</div><b>Haley</b><span>8+ year clients</span></div>
+  <div class="mem"><div class="av" style="background:#d6ecff">A</div><b>Amanda</b><span>Poodle mixes</span></div>
+ </div>
+</section>
+<section>
+ <h2>Hours</h2>
+ <div class="hrs">
+  <div><span>Tuesday to Saturday</span><b>7:30 AM to 3:30 PM</b></div>
+  <div><span>Sunday and Monday</span><b>9 AM to 3:30 PM</b></div>
+ </div>
+ <p class="muted" style="margin-top:.5rem">10542 W Fairview Ave, Boise, ID 83704</p>
+</section>
+<section>
+ <h2>Pet parents say</h2>
+ <div class="q">"Mindy is my Cat Whisperer! My cat Nomi is extremely skittish, absolutely terrified of people."<small>Google review, February 2025</small></div>
+ <div class="q">"Trena and her team are so loving! My baby had an emergency and they reacted quickly and took the best care of him."<small>Google review, May 2025</small></div>
+ <div class="q">"Been taking our Mini Schnauzer here for about a year. They have been fantastic!"<small>Google review, November 2025</small></div>
+</section>
+</main>
+<nav class="bar" aria-label="Quick actions"><a class="btn c" href="tel:+12088103833">Call (208) 810-3833</a><a class="btn d" href="https://www.google.com/maps/dir/?api=1&amp;destination=10542+W+Fairview+Ave,+Boise,+ID+83704">Directions</a></nav>
+<footer>Studio concept. <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Sample design by Patch &amp; Flow Studio</a></footer>
+<script>
+(function(){var tabs=[].slice.call(document.querySelectorAll('.seg button')),thumb=document.querySelector('.thumb');
+tabs.forEach(function(b,i){b.addEventListener('pointerdown',function(){sel(i)});b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')sel(i)})});
+function sel(i){thumb.style.transform='translateX('+(i*100)+'%)';tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===i);document.getElementById(t.getAttribute('aria-controls')).hidden=j!==i})}})();
+</script>
+</body>
+</html>

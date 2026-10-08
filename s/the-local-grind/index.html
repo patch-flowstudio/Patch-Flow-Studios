@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Local Grind | Coffee Shop in Moulton, AL</title>
+<meta name="description" content="Named lattes, bagels, croissant sandwiches and cake pops at 522 Lawrence St, Moulton, Alabama.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--terra:#c8643b;--clay:#e9b38f;--cream:#f7efe3;--forest:#284034;--bean:#3a2418;--milk:#fffaf2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font:400 17px/1.6 "Bricolage Grotesque",system-ui,sans-serif;color:var(--bean);background:var(--cream);overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3,p{overflow-wrap:anywhere}
+.pf-concept{font:13px/1.45 system-ui,sans-serif;text-align:center;padding:9px 16px;background:var(--forest);color:#f3e5d0}
+nav.top{max-width:1080px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo b{color:var(--terra)}
+.pill{min-height:44px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:var(--bean);color:var(--milk);text-decoration:none;font-weight:600;font-size:15px;transition:transform 100ms ease-out}
+.pill:active,.btn:active,.cup:active{transform:scale(.97)}
+.pill:focus-visible,.btn:focus-visible,.cup:focus-visible{outline:3px solid var(--terra);outline-offset:3px}
+.hero{max-width:1080px;margin:0 auto;padding:28px 20px 60px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}
+@media(max-width:780px){.hero{grid-template-columns:1fr}}
+.hand{font-family:Caveat,cursive;font-size:28px;color:var(--terra);line-height:1}
+h1{font-weight:800;font-size:clamp(50px,12vw,104px);line-height:.9;letter-spacing:-.045em;margin:10px 0 18px}
+.lede{font-size:19px;max-width:34ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{min-height:50px;display:inline-flex;align-items:center;padding:0 24px;border-radius:16px;background:var(--terra);color:#fff;text-decoration:none;font-weight:600;transition:transform 100ms ease-out}
+.btn.o{background:transparent;color:var(--bean);box-shadow:inset 0 0 0 2px var(--bean)}
+.room{background:var(--forest);border-radius:32px 32px 32px 120px;aspect-ratio:1/1;max-height:440px;width:100%;position:relative;overflow:hidden}
+.room svg{position:absolute;inset:0;width:100%;height:100%}
+main{max-width:1080px;margin:0 auto;padding:0 20px}
+h2{font-weight:800;font-size:clamp(34px,7vw,56px);line-height:1;letter-spacing:-.035em}
+.sub{max-width:54ch;margin-top:10px;color:#6c5143}
+.bar{background:var(--milk);border-radius:32px;padding:34px 22px;margin-top:10px}
+.cups{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:26px}
+.cup{border:0;background:#fff;border-radius:24px;padding:18px 14px 16px;text-align:left;cursor:pointer;font:inherit;color:inherit;box-shadow:0 1px 0 #ead9c2,0 10px 24px rgba(58,36,24,.06);transition:transform 100ms ease-out,box-shadow .3s}
+.cup svg{width:64px;height:74px;display:block;margin-bottom:10px}
+.cup .fill{transform-origin:50% 100%;transform:scaleY(.25);transition:transform .7s cubic-bezier(.2,.9,.25,1)}
+.cup[aria-expanded=true] .fill,.cup:hover .fill{transform:scaleY(1)}
+.cup h3{font-weight:800;font-size:19px;line-height:1.1;letter-spacing:-.01em}
+.cup p{font-size:14px;color:#6c5143;margin-top:6px}
+.cup .more{display:none;font-size:14px;margin-top:8px;color:var(--forest)}
+.cup[aria-expanded=true] .more{display:block}
+.smp{display:inline-block;font:700 10px/1 system-ui;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:4px;border:1px dashed currentColor;opacity:.75;vertical-align:middle;margin-left:4px}
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin-top:70px;align-items:start}
+@media(max-width:780px){.case{grid-template-columns:1fr}}
+.shelf{list-style:none;border-top:2px solid var(--bean)}
+.shelf li{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #dcc8b0;font-size:18px}
+.shelf li span{font-family:Caveat;font-size:22px;color:var(--terra)}
+.couch{background:var(--clay);border-radius:28px;padding:26px}
+.couch blockquote{font-size:19px;line-height:1.45;font-weight:600}
+.couch cite{display:block;margin-top:12px;font-style:normal;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.hours{margin-top:70px;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+@media(max-width:640px){.hours{grid-template-columns:repeat(4,1fr)}}
+.h{background:#fff;border-radius:18px;padding:14px 8px;text-align:center;font-size:14px;line-height:1.3}
+.h b{display:block;font-size:16px}
+.h.x{background:transparent;box-shadow:inset 0 0 0 1.5px #d6c1a6;color:#a08670}
+.find{margin:70px 0 0;background:var(--bean);color:var(--milk);border-radius:32px;padding:34px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.find h3{font-weight:800;font-size:28px;line-height:1.1;letter-spacing:-.02em}
+.pf-foot{font:13px/1.5 system-ui,sans-serif;text-align:center;padding:34px 16px;color:#7a5f50}
+.pf-foot a{font-weight:700}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.cup .fill{transform:none}}
+</style>
+</head>
+<body>
+<div class="pf-concept">Studio concept: an unofficial preview made by Patch &amp; Flow Studio, not The Local Grind's official site. Details marked "sample" are placeholders to confirm with the business.</div>
+<nav class="top"><span class="logo">The Local <b>Grind</b></span><a class="pill" href="tel:+12564103535">Call</a></nav>
+<header class="hero">
+<div>
+<p class="hand">pull up a comfy couch</p>
+<h1>Coffee with a living room.</h1>
+<p class="lede">Named lattes, bagels, croissant breakfast sandwiches and cake pops on Lawrence Street in Moulton.</p>
+<div class="btns"><a class="btn" href="tel:+12564103535">(256) 410-3535</a><a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=522%20Lawrence%20St%2C%20Moulton%2C%20AL%2035650">Directions</a></div>
+</div>
+<div class="room" aria-hidden="true">
+<svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMax slice"><rect x="40" y="70" width="110" height="80" rx="6" fill="#e9b38f" opacity=".35"/><rect x="250" y="60" width="90" height="110" rx="45" fill="#f7efe3" opacity=".18"/><path d="M60 300 q0-60 60-60 h160 q60 0 60 60 v40 h-280z" fill="#c8643b"/><rect x="40" y="280" width="40" height="80" rx="18" fill="#a94f2d"/><rect x="320" y="280" width="40" height="80" rx="18" fill="#a94f2d"/><rect x="70" y="330" width="260" height="34" rx="10" fill="#b5552f"/><rect x="150" y="372" width="100" height="10" rx="4" fill="#1d3027"/><g transform="translate(176 190)"><path d="M0 20 h48 l-6 46 h-36z" fill="#fffaf2"/><path d="M48 30 q16 2 10 18 q-4 8 -12 6" fill="none" stroke="#fffaf2" stroke-width="5"/><path d="M14 0 q-6 8 0 14 M30 -4 q-6 8 0 14" stroke="#fffaf2" stroke-width="3" fill="none" opacity=".7"/></g></svg>
+</div>
+</header>
+<main>
+<section class="bar" aria-labelledby="d-h">
+<h2 id="d-h">The drinks with names</h2>
+<p class="sub">Customers keep mentioning these by name. Tap a cup for what they said.</p>
+<div class="cups">
+<button class="cup" aria-expanded="false"><svg viewBox="0 0 64 74" aria-hidden="true"><path d="M8 10h48l-6 60H14z" fill="#f3e4d2"/><g clip-path="url(#c1)"><rect class="fill" x="0" y="10" width="64" height="62" fill="#e8a9a0"/></g><clipPath id="c1"><path d="M8 10h48l-6 60H14z"/></clipPath><rect x="4" y="4" width="56" height="8" rx="3" fill="#3a2418"/></svg><h3>Pretty Little Latte</h3><p>Sweet, hot or frozen</p><span class="more">"She said it had just the right hint of sweetness."</span></button>
+<button class="cup" aria-expanded="false"><svg viewBox="0 0 64 74" aria-hidden="true"><path d="M8 10h48l-6 60H14z" fill="#f3e4d2"/><g clip-path="url(#c2)"><rect class="fill" x="0" y="10" width="64" height="62" fill="#9c6a45"/></g><clipPath id="c2"><path d="M8 10h48l-6 60H14z"/></clipPath><rect x="4" y="4" width="56" height="8" rx="3" fill="#3a2418"/></svg><h3>Rise and Grind</h3><p>Shaken espresso style</p><span class="more">"A much better version of the brown sugar shaken espresso."</span></button>
+<button class="cup" aria-expanded="false"><svg viewBox="0 0 64 74" aria-hidden="true"><path d="M8 10h48l-6 60H14z" fill="#f3e4d2"/><g clip-path="url(#c3)"><rect class="fill" x="0" y="10" width="64" height="62" fill="#c98b56"/></g><clipPath id="c3"><path d="M8 10h48l-6 60H14z"/></clipPath><rect x="4" y="4" width="56" height="8" rx="3" fill="#3a2418"/></svg><h3>Dude Brew</h3><p>For the sweet tooth</p><span class="more">"SUPER SWEET, my daughter and I shared."</span></button>
+<button class="cup" aria-expanded="false"><svg viewBox="0 0 64 74" aria-hidden="true"><path d="M8 10h48l-6 60H14z" fill="#f3e4d2"/><g clip-path="url(#c4)"><rect class="fill" x="0" y="10" width="64" height="62" fill="#5b3a2a"/></g><clipPath id="c4"><path d="M8 10h48l-6 60H14z"/></clipPath><rect x="4" y="4" width="56" height="8" rx="3" fill="#3a2418"/></svg><h3>Peppermint Patty Mocha</h3><p>Seasonal, iced or hot</p><span class="more">"Extra tasty either way!"</span></button>
+<button class="cup" aria-expanded="false"><svg viewBox="0 0 64 74" aria-hidden="true"><path d="M8 10h48l-6 60H14z" fill="#f3e4d2"/><g clip-path="url(#c5)"><rect class="fill" x="0" y="10" width="64" height="62" fill="#f2c94c"/></g><clipPath id="c5"><path d="M8 10h48l-6 60H14z"/></clipPath><rect x="4" y="4" width="56" height="8" rx="3" fill="#3a2418"/></svg><h3>Lemonades</h3><p>Strawberry and more</p><span class="more">Strawberry lemonade: "delicious and not too sweet!"</span></button>
+</div>
+</section>
+<div class="case">
+<div>
+<h2>In the case</h2>
+<ul class="shelf" style="margin-top:20px">
+<li>Croissant sausage, egg &amp; cheese <span>breakfast</span></li>
+<li>Bagels with strawberry cream cheese <span>blueberry too</span></li>
+<li>Birthday cake pops <span>not too sweet</span></li>
+<li>Giant pig in a blanket <span>a road-trip pick</span></li>
+<li>Sandwiches <span class="smp">sample</span></li>
+</ul>
+</div>
+<div class="couch"><blockquote>"The breakfast sandwich was the bomb, excellent coffee to boot; all served with a smile directly to my comfy couch!"</blockquote><cite>Google review, January 2026</cite></div>
+</div>
+<div class="hours" aria-label="Hours">
+<div class="h"><b>Mon</b>6:30a to 5p</div><div class="h"><b>Tue</b>6:30a to 5p</div><div class="h"><b>Wed</b>6:30a to 5p</div><div class="h"><b>Thu</b>6:30a to 5p</div><div class="h"><b>Fri</b>6:30a to 5p</div><div class="h"><b>Sat</b>8a to 5p</div><div class="h x"><b>Sun</b>Closed</div>
+</div>
+<div class="find"><div><h3>522 Lawrence St<br>Moulton, AL 35650</h3><p style="opacity:.8;margin-top:6px">Visitors mention comfy couches plus toys and games for little ones.</p></div><div class="btns" style="margin:0"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=522%20Lawrence%20St%2C%20Moulton%2C%20AL%2035650">Get directions</a></div></div>
+</main>
+<footer class="pf-foot">Studio concept. Sample design by <a href="https://patch-flowstudio.github.io/Patch-Flow-Studios/">Patch &amp; Flow Studio</a></footer>
+<script>document.querySelectorAll('.cup').forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-expanded',c.getAttribute('aria-expanded')!=='true')})})</script>
+</body>
+</html>

@@ -52,7 +52,10 @@
   let posterVisible = false;
   let previewActive = false;
   let menuTimer = 0;
-  let menuClosing = false;
+  let menuPhase = "closed";
+  let menuOpeningFrame = 0;
+  let menuScrollY = 0;
+  let menuDestination = null;
   let menuOpener = null;
   const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
   const follower = { x: 0, y: 0, cx: 0, cy: 0, tx: 0, ty: 0 };
@@ -81,9 +84,10 @@
     layout.width = innerWidth;
     layout.height = innerHeight;
     layout.heroHeight = hero.offsetHeight;
-    layout.footerTop = footer.getBoundingClientRect().top + window.scrollY;
+    const pageScroll = dialog.open ? menuScrollY : window.scrollY;
+    layout.footerTop = footer.getBoundingClientRect().top + pageScroll;
     layout.posterTop =
-      poster.closest(".poster").getBoundingClientRect().top + window.scrollY;
+      poster.closest(".poster").getBoundingClientRect().top + pageScroll;
     layout.nameWidth =
       track.firstElementChild.getBoundingClientRect().width || 1;
     layout.previewWidth = preview.offsetWidth;
@@ -352,6 +356,7 @@
   window.addEventListener(
     "scroll",
     () => {
+      if (dialog.open) return;
       const next = window.scrollY;
       if (Math.abs(next - scroll) > 2) direction = next > scroll ? 1 : -1;
       scroll = next;
@@ -398,32 +403,73 @@
   );
 
   function finishClose() {
+    if (menuPhase === "closed") return;
     clearTimeout(menuTimer);
+    cancelAnimationFrame(menuOpeningFrame);
+    menuOpeningFrame = 0;
+    menuPhase = "closed";
+    dialog.classList.remove("is-open");
     if (dialog.open) dialog.close();
     document.body.classList.remove("menu-is-open");
+    root.style.removeProperty("--menu-scroll-top");
+    // Restore the page before navigating or restoring focus, including on iOS.
+    const previousBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, menuScrollY);
+    root.style.scrollBehavior = previousBehavior;
+    scroll = window.scrollY;
     menuButton.setAttribute("aria-expanded", "false");
-    menuClosing = false;
-    menuOpener?.focus({ preventScroll: true });
+    const destination = menuDestination;
+    menuDestination = null;
+    if (destination) {
+      const target = document.querySelector(destination);
+      target
+        ?.querySelectorAll("[data-reveal]")
+        .forEach((el) => el.classList.add("is-visible"));
+      if (target) {
+        if (location.hash !== destination)
+          history.pushState(null, "", destination);
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+        target.scrollIntoView({
+          behavior: motion ? "smooth" : "auto",
+          block: "start",
+        });
+      }
+    } else menuOpener?.focus({ preventScroll: true });
+    needsPaint = true;
     wake();
   }
-  function closeMenu() {
-    if (!dialog.open || menuClosing) return;
-    menuClosing = true;
+  function closeMenu(destination = null) {
+    if (menuPhase === "closed" || menuPhase === "closing") return;
+    const hasOpened = dialog.classList.contains("is-open");
+    cancelAnimationFrame(menuOpeningFrame);
+    menuOpeningFrame = 0;
+    menuDestination = typeof destination === "string" ? destination : null;
+    menuPhase = "closing";
     dialog.classList.remove("is-open");
-    if (!motion) finishClose();
-    else menuTimer = setTimeout(finishClose, 850);
+    if (!motion || !hasOpened) finishClose();
+    else menuTimer = setTimeout(finishClose, 750);
   }
   menuButton.addEventListener("click", () => {
-    if (dialog.open) {
-      closeMenu();
-      return;
-    }
+    if (menuPhase !== "closed") return;
     menuOpener = document.activeElement;
+    menuScrollY = window.scrollY;
     hidePreview();
-    dialog.showModal();
+    root.style.setProperty("--menu-scroll-top", `${-menuScrollY}px`);
     document.body.classList.add("menu-is-open");
+    menuPhase = "opening";
+    dialog.showModal();
     menuButton.setAttribute("aria-expanded", "true");
-    requestAnimationFrame(() => dialog.classList.add("is-open"));
+    // Commit the starting position once. The fixed close button owns autofocus,
+    // so the browser never scrolls the offscreen animated panel into view.
+    panel.getBoundingClientRect();
+    menuOpeningFrame = requestAnimationFrame(() => {
+      menuOpeningFrame = 0;
+      if (menuPhase !== "opening") return;
+      dialog.classList.add("is-open");
+      menuPhase = "open";
+    });
   });
   dialog.querySelector(".menu-close").addEventListener("click", closeMenu);
   dialog.querySelector(".menu-backdrop").addEventListener("click", closeMenu);
@@ -433,24 +479,20 @@
   });
   panel.addEventListener("transitionend", (event) => {
     if (
-      menuClosing &&
+      menuPhase === "closing" &&
       event.target === panel &&
+      !event.pseudoElement &&
       event.propertyName === "transform"
     )
       finishClose();
   });
+  dialog.addEventListener("close", () => {
+    if (menuPhase !== "closed") finishClose();
+  });
   dialog.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      // Native hash navigation is retained, then focus is placed at its destination.
-      const target = document.querySelector(link.hash);
-      finishClose();
-      target
-        ?.querySelectorAll("[data-reveal]")
-        .forEach((el) => el.classList.add("is-visible"));
-      if (target) {
-        target.tabIndex = -1;
-        target.focus({ preventScroll: true });
-      }
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      closeMenu(link.hash);
     });
   });
   menuButton.hidden = false;

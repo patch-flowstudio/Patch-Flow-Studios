@@ -13,7 +13,7 @@ Verified against [Mads Leão](https://madsleao.com/) on 9 October 2026:
 - Electric blue `#293efd`, lilac `#e4e7fb`, cream `#fcfbf6`, ink `#0e0e0e`.
 - Original Clash Display Medium / Semibold headings and Inter Regular body font.
 - Original hero wording, Lisbon/WPP role, four projects, biography, contact details and about-poster art. Intro and section headings are edited for the landing-page composition; no achievements, clients or metrics are invented.
-- Original project thumbnails downloaded from the rendered page's observed assets and resized as WebP. Four images total 304,072 bytes, versus 4,386,229 source PNG bytes. Original screenshots remain unchanged apart from resize/compression.
+- Original project thumbnails downloaded from the rendered page's observed assets and resized as WebP. Four images total 304,768 bytes, versus 4,386,229 source PNG bytes. Original screenshots remain unchanged apart from resize/compression; Europcar's original alpha transparency is preserved.
 - Inter is converted from the site's original TTF to a Latin/extended-Latin and punctuation WOFF2 subset (29,308 bytes). Original Clash WOFF2 files are unchanged. Assets remain the client's material.
 
 ## Reverse-engineering study
@@ -43,3 +43,14 @@ This sample uses original HTML/CSS/JS to adapt those principles to Mads's identi
 Authored JavaScript syntax and formatting, local HTTP responses, relative assets, unique IDs, anchors and four original case-study links checked. Browser checks cover desktop, tablet and 390/320px layouts, image/font readiness, hover preview, menu open/close/Escape/focus, section navigation and pause/resume. No console warnings or errors observed. No physical-device benchmark or production Lighthouse/FPS result is claimed.
 
 Public sample route: `https://patch-flowstudio.github.io/Patch-Flow-Studios/s/mads-leao/`. It is not linked from the studio homepage.
+
+## Client feedback — 9 October 2026
+
+- All interface arrows are inline SVG paths, rather than Unicode characters that iOS may display as emoji. The hero CTA and blue-footer accent point up and right; the scroll indicator retains its directional meaning.
+- Work/About/Contact labels are removed from the outer header. Section navigation is inside the menu.
+- Europcar keeps its original transparency, with no artificial image backing, rounded frame or drop shadow in its thumbnail/hover preview.
+- The menu curve has a straight joining edge overlapping the panel by two pixels. Its previous detached ellipse could leave gaps during travel.
+- Opening the previous dialog reproduced a transient horizontal scroll as the browser focused an offscreen close button. The close control is now fixed outside the animated panel and explicitly owns autofocus. The dialog uses `overflow: clip`, while a separate inner container can scroll on short screens. See [MDN dialog focus guidance](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) and [overflow behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow).
+- Opening/closing state cancels queued opening frames. Background scroll is preserved with a fixed body; menu anchor navigation runs after closing. Escape, outside click and focus restoration remain available.
+
+Verification is through the local desktop browser at desktop and mobile viewport sizes. No physical iPhone or Safari session is available here; SVG paths eliminate the emoji font dependency, but device testing is still distinct from viewport testing.

@@ -593,11 +593,8 @@ html:not(.webgl-ready) .work {
   gap: 18px;
   padding: 18px 0 17px;
 }
-.project-details {
-  transform-origin: center top;
-}
-.webgl-ready .project-details {
-  will-change: transform, opacity;
+.webgl-card .project-details {
+  opacity: 0;
 }
 .project-caption h3 {
   font-size: 1.35rem;
@@ -616,7 +613,7 @@ html:not(.webgl-ready) .work {
   transition: transform 0.5s var(--ease);
   flex: none;
 }
-.project-link:hover .project-arrow {
+.project-link:not(.webgl-card):hover .project-arrow {
   transform: translate(3px, -3px);
 }
 .project-meta {

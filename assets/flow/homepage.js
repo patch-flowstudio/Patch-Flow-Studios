@@ -141,9 +141,9 @@ import("./world.js")
     } catch {
       document.getElementById("world").dataset.renderer = "fallback";
       root.classList.remove("webgl-ready");
-      document
-        .querySelectorAll(".webgl-media")
-        .forEach((el) => el.classList.remove("webgl-media"));
+      document.querySelectorAll(".webgl-media, .webgl-card").forEach((el) => {
+        el.classList.remove("webgl-media", "webgl-card");
+      });
     }
   })
   .catch(() => {

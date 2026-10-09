@@ -1,6 +1,7 @@
 import * as THREE from "./vendor/three.module.min.js";
 import { Reflector } from "./vendor/Reflector.js";
 import { createHeroArt } from "./hero-art.js";
+import { captureCaption } from "./card-caption.js";
 
 // Original geometry, materials and motion. No models or textures from the reference.
 export function createWorld({ canvas, enabled = true }) {
@@ -63,6 +64,8 @@ export function createWorld({ canvas, enabled = true }) {
     appliedLag = 0,
     layoutDirty = true;
   const layout = {};
+  let fontsReady = false,
+    fontRevision = 0;
   const wakes = Array.from(
     { length: 12 },
     () => new THREE.Vector4(0, 0, -100, 0),
@@ -137,13 +140,16 @@ export function createWorld({ canvas, enabled = true }) {
     "gl_Position=projectionMatrix*viewMatrix*p; }",
   ].join("\n");
   const previewFragment = [
-    "uniform sampler2D uImage; uniform vec2 uImageSize; uniform vec2 uPlaneSize; uniform vec2 uViewport; uniform float uHover;",
+    "uniform sampler2D uImage; uniform sampler2D uCaption; uniform float uCaptionFraction; uniform vec2 uImageSize; uniform vec2 uPlaneSize; uniform vec2 uViewport; uniform float uHover;",
     "varying vec2 vUv; varying float vDepth;",
-    "void main(){ vec2 uv=vUv; float i=uImageSize.x/uImageSize.y; float p=uPlaneSize.x/uPlaneSize.y;",
+    "void main(){ vec4 c; vec2 uv=vUv;",
+    "if(uv.y<uCaptionFraction){ uv.y/=uCaptionFraction; c=texture2D(uCaption,uv); }",
+    "else { uv.y=(uv.y-uCaptionFraction)/(1.-uCaptionFraction);",
+    "float i=uImageSize.x/uImageSize.y; float p=uPlaneSize.x/uPlaneSize.y;",
     "vec2 crop=i>p?vec2(p/i,1.):vec2(1.,i/p);",
-    "uv=(uv-.5)*crop/(1.+uHover*.025)+.5;",
+    "uv=(uv-.5)*crop/(1.+uHover*.025)+.5; c=texture2D(uImage,uv); }",
     "float alpha=1.-smoothstep(uViewport.y*.32,uViewport.y*1.05,vDepth);",
-    "vec4 c=texture2D(uImage,uv); gl_FragColor=vec4(c.rgb,alpha);",
+    "gl_FragColor=vec4(c.rgb,c.a*alpha);",
     "#include <colorspace_fragment>",
     "}",
   ].join("\n");
@@ -151,6 +157,8 @@ export function createWorld({ canvas, enabled = true }) {
     const image = element.querySelector("img");
     const uniforms = {
       uImage: { value: null },
+      uCaption: { value: null },
+      uCaptionFraction: { value: 0.2 },
       uImageSize: { value: new THREE.Vector2(1600, 1000) },
       uPlaneSize: { value: new THREE.Vector2(1, 1) },
       uMotion: { value: enabled ? 1 : 0 },
@@ -169,16 +177,20 @@ export function createWorld({ canvas, enabled = true }) {
       depthTest: false,
     });
     const object = new THREE.Mesh(
-      new THREE.PlaneGeometry(1, 1, 32, 40),
+      new THREE.PlaneGeometry(1, 1, 32, 56),
       material,
     );
     object.frustumCulled = false;
     gallery.add(object);
-    const details = [element.parentElement.querySelector(".project-details")];
+    const link = element.closest("a");
+    const detail = link.querySelector(".project-details");
     const item = {
       element,
       image,
-      details,
+      link,
+      detail,
+      captionTexture: null,
+      captionKey: "",
       object,
       uniforms,
       hover: 0,
@@ -200,7 +212,6 @@ export function createWorld({ canvas, enabled = true }) {
           texture.image.height,
         );
         item.ready = true;
-        element.classList.add("webgl-media");
         disposables.push(texture);
         dirty = true;
         wake();
@@ -210,7 +221,6 @@ export function createWorld({ canvas, enabled = true }) {
         item.ready = false;
       },
     );
-    const link = element.closest("a");
     link.addEventListener("pointerenter", () => {
       item.hover = 1;
       wake();
@@ -242,13 +252,39 @@ export function createWorld({ canvas, enabled = true }) {
       layout[element.id] = { top: rect.top + y, height: rect.height };
     });
     previews.forEach((item) => {
-      const rect = item.element.getBoundingClientRect();
+      const rect = item.link.getBoundingClientRect();
+      const mediaHeight = item.element.getBoundingClientRect().height;
+      const captionHeight = item.detail.getBoundingClientRect().height;
       item.layout = {
         top: rect.top + y - appliedLag,
         left: rect.left,
         width: rect.width,
         height: rect.height,
+        mediaHeight,
       };
+      item.uniforms.uCaptionFraction.value = captionHeight / rect.height;
+      const key = [
+        rect.width,
+        captionHeight,
+        fontRevision,
+        devicePixelRatio,
+        item.detail.textContent,
+      ].join("|");
+      if (fontsReady && item.captionKey !== key) {
+        const caption = captureCaption(item.detail);
+        if (caption) {
+          item.captionTexture?.dispose();
+          item.captionTexture = new THREE.CanvasTexture(caption);
+          item.captionTexture.colorSpace = THREE.SRGBColorSpace;
+          item.captionTexture.minFilter = THREE.LinearMipmapLinearFilter;
+          item.captionTexture.anisotropy = Math.min(
+            4,
+            renderer.capabilities.getMaxAnisotropy(),
+          );
+          item.uniforms.uCaption.value = item.captionTexture;
+          item.captionKey = key;
+        }
+      }
     });
     layoutDirty = false;
   }
@@ -257,15 +293,13 @@ export function createWorld({ canvas, enabled = true }) {
     dirty = true;
     wake();
   });
-  [
-    hero,
-    work,
-    contact,
-    ...media,
-    ...previews.flatMap((p) => p.details),
-  ].forEach((element) => layoutObserver.observe(element));
+  [hero, work, contact, ...previews.map((item) => item.link)].forEach(
+    (element) => layoutObserver.observe(element),
+  );
   document.fonts.ready.then(() => {
     if (disposed) return;
+    fontsReady = true;
+    fontRevision++;
     layoutDirty = true;
     dirty = true;
     wake();
@@ -421,24 +455,23 @@ export function createWorld({ canvas, enabled = true }) {
             bottom: box.top - y + lag + box.height,
           };
           const article = item.element.closest("article");
+          const ready = item.ready && !!item.captionTexture;
+          item.link.classList.toggle("webgl-card", ready);
+          item.element.classList.toggle("webgl-media", ready);
           const shown =
-            item.ready &&
+            ready &&
             !article.hidden &&
             rect.bottom > -height * 0.9 &&
             rect.top < height + 100;
           item.object.visible = shown;
-          if (!shown) {
-            item.details[0].style.transform = "";
-            item.details[0].style.opacity = "";
-            return;
-          }
+          if (!shown) return;
           item.object.position.set(
             rect.left + rect.width / 2 - width / 2,
             height / 2 - rect.top - rect.height / 2,
             0,
           );
           item.object.scale.set(rect.width, rect.height, 1);
-          item.uniforms.uPlaneSize.value.set(rect.width, rect.height);
+          item.uniforms.uPlaneSize.value.set(rect.width, rect.mediaHeight);
           item.uniforms.uMotion.value = enabled ? 1 : 0;
           item.uniforms.uTime.value = time;
           item.uniforms.uPointer.value.set(
@@ -455,28 +488,6 @@ export function createWorld({ canvas, enabled = true }) {
             enabled ? item.hover : 0,
             ease(4),
           );
-          // One rigid, readable caption follows the media's lower edge. It fades
-          // before the sheet turns away, avoiding tangent flattening and text jumps.
-          const bottom = rect.top + rect.height;
-          const originalY = height / 2 - bottom;
-          const start = height * 0.13,
-            radius = height * 0.44;
-          const arc = enabled
-            ? THREE.MathUtils.clamp((originalY - start) / radius, 0, 2.6)
-            : 0;
-          const curvedY = arc ? start + Math.sin(arc) * radius : originalY;
-          const depth = (1 - Math.cos(arc)) * radius * 1.6;
-          const scale =
-            galleryCamera.position.z / (galleryCamera.position.z + depth);
-          const dx = (rect.left + rect.width / 2 - width / 2) * (scale - 1);
-          const dy = height / 2 - curvedY * scale - bottom;
-          const detail = item.details[0];
-          detail.style.transform = arc
-            ? `translate3d(${dx.toFixed(3)}px,${dy.toFixed(3)}px,0) scale(${scale.toFixed(5)})`
-            : "";
-          detail.style.opacity = arc
-            ? String(1 - THREE.MathUtils.smoothstep(arc, 0.35, 1.05))
-            : "";
         });
         renderer.clearDepth();
         renderer.render(gallery, galleryCamera);
@@ -530,21 +541,13 @@ export function createWorld({ canvas, enabled = true }) {
     media.forEach((e) => e.classList.remove("webgl-media"));
     workGrid.style.transform = "";
     appliedLag = 0;
-    previews.forEach((p) =>
-      p.details.forEach((d) => {
-        d.style.transform = "";
-        d.style.opacity = "";
-      }),
-    );
+    previews.forEach((item) => item.link.classList.remove("webgl-card"));
     host.dataset.renderer = "fallback";
   });
   canvas.addEventListener("webglcontextrestored", () => {
     contextLost = false;
     dirty = true;
     root.classList.add("webgl-ready");
-    previews
-      .filter((p) => p.ready)
-      .forEach((p) => p.element.classList.add("webgl-media"));
     host.dataset.renderer = "webgl";
     wake();
   });
@@ -556,12 +559,6 @@ export function createWorld({ canvas, enabled = true }) {
       if (!enabled) {
         workGrid.style.transform = "";
         appliedLag = 0;
-        previews.forEach((p) =>
-          p.details.forEach((d) => {
-            d.style.transform = "";
-            d.style.opacity = "";
-          }),
-        );
       }
       previousTime = 0;
       dirty = true;
@@ -593,6 +590,11 @@ export function createWorld({ canvas, enabled = true }) {
       gallery.traverse((o) => {
         o.geometry?.dispose();
         o.material?.dispose();
+      });
+      previews.forEach((item) => {
+        item.captionTexture?.dispose();
+        item.link.classList.remove("webgl-card");
+        item.element.classList.remove("webgl-media");
       });
       disposables.forEach((d) => d.dispose());
       water.dispose();

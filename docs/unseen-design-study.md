@@ -108,19 +108,24 @@ Three.js 0.186.1 and its MIT-licensed Reflector utility are vendored locally.
   restrained fabric sway. Finite expanding ground ripples and the existing
   terracotta headline wash preserve the approved pointer response. Portrait
   framing retains the panorama at the foot of the hero and extends its sky.
-- The gallery's approved 32 × 40 surface shader is unchanged: continuous wobble,
-  progressive cylindrical depth roll, depth fading, local pointer displacement
-  and 2.5% internal hover zoom. The quiet floor retains its reflection shader.
-- Each business name, slogan, arrow and metadata row is now one real DOM group.
-  It follows the preview's lower edge with uniform scaling, then fades before
-  the sheet turns away. Vertical text squashing and separate metadata motion
-  have been removed. Links and image descriptions remain accessible.
+- Each gallery card now uses one 32 × 56 mesh for its thumbnail, business name,
+  slogan, arrow and metadata. The approved continuous wobble, cylindrical depth
+  roll, local pointer response and depth fade act on the entire card together.
+  The 2.5% internal hover zoom remains confined to the thumbnail. The quiet floor
+  retains its reflection shader.
+- Captions are captured from the browser's actual font metrics and line wrapping
+  into cached transparent textures. Mipmaps and bounded anisotropic filtering
+  smooth the type as the card turns away. Textures rebuild after font, layout or
+  content changes, never during ordinary scrolling. The original HTML remains
+  for accessible names, native links and the static fallback; it is hidden
+  visually only after both card textures are ready. There is no separate caption
+  transform, scale or fade, and no new runtime dependency.
 - Layout measurements are batched after resize, font loading or observed size
   changes. Scroll frames position cached rectangles arithmetically. The chapter
   indicator changes its content only when the chapter changes. The old hero's
   CPU geometry deformation, environment bake and shadow-map rendering are gone.
 - Elapsed-time damping and native scrolling remain. Motion pause resets the
-  gallery lag and captions, freezes the artwork and disables surface deformation.
+  gallery lag, freezes the artwork and disables surface deformation.
   The frame loop stops behind opaque chapters and when the document is hidden.
   Pixel ratio, reflection resolution and ripple history are bounded.
 - Category selectors and floating hover pills remain removed. The native dialog
@@ -170,23 +175,29 @@ under v4/work/ remain unchanged.
 
 ## Validation
 
-This refinement was checked at 1280 × 720, 768 × 1024, 390 × 844 and 320 × 700.
+The unified-card refinement was checked at 1280 × 720, 2084 × 658, 390 × 844
+and 320 × 700. The preceding artwork pass also checked 768 × 1024.
 There was no document-level horizontal overflow. The mobile gallery retained its
 single column; tablet and desktop retained two columns.
 
 - The layered artwork and all four gallery surfaces initialized without browser
   console errors. Pointer input visibly changed the ribbon, surrounding scene
   and headline. Short hero and gallery recordings were saved outside the repo.
-- Gallery recordings include continuous wobble, progressive scrolling through
-  the caption fade boundary, stopping and reversing direction. Captions move as
-  a group with uniform scale; lettering no longer flattens independently.
-- Pausing reset every caption transform and opacity and cleared the grid lag.
-  Two paused hero captures were pixel-identical, and the render counter stayed
-  at 3630 between them. Re-enabling motion preserved the completed entrance.
+- The supplied 18.9-second recording showed the thumbnail turning away while
+  its DOM caption followed a different path. The replacement was checked through
+  progressive recession, stopping and rapid scroll reversals: the image and
+  lettering now share the same curved surface and per-vertex depth fade.
+  A new gallery recording was saved outside the repo. Mobile caption wrapping,
+  including the stacked metadata at 320 pixels, follows the HTML layout.
+- Pausing cleared the grid lag and disabled deformation. Two paused gallery
+  captures were pixel-identical, and the render counter stayed at 9600 between
+  them. Re-enabling motion preserved the completed entrance. Original HTML
+  images and captions are restored on renderer initialization failure or
+  context loss; this fallback was checked in source rather than simulated.
 - The mobile menu opened, choosing Work dismissed it and focused the section.
-- The bakery concept opened and browser Back returned to the homepage with the
-  navigation curtain cleared. The column attachment was checked across changing
-  pointer positions and a complete ribbon-wave cycle after pinning its geometry.
+- The bakery concept opened and browser Back returned to the homepage. The
+  previous artwork pass checked the column attachment across changing pointer
+  positions and a complete ribbon-wave cycle after pinning its geometry.
 - Both new artwork layers preserve the original 1672 × 941 dimensions; the
   ribbon has a real alpha channel. Their combined WebP size is 204,432 bytes.
 - Authored JavaScript passed Node syntax checks. The HTML audit checked 42

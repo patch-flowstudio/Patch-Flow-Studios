@@ -54,7 +54,7 @@
     pageHeight = Math.max(1, document.body.scrollHeight - innerHeight);
     document
       .querySelector(".design-tabs")
-      .setAttribute(
+      ?.setAttribute(
         "aria-orientation",
         innerWidth > 760 ? "vertical" : "horizontal",
       );
@@ -187,82 +187,87 @@
   });
   reduced.addEventListener("change", updateMotion);
 
-  // Progressive enhancement: without JS, all three decisions and both versions remain visible.
+  // Without JS, all gallery panels and comparison versions remain visible.
   const explorer = document.querySelector(".design-explorer");
-  const tabs = [...document.querySelectorAll('.design-tabs [role="tab"]')];
-  const panels = [...document.querySelectorAll(".design-panel")];
-  const versionButtons = [
-    ...document.querySelectorAll(".comparison-controls button"),
-  ];
-  let selectedPanel = 0;
-  let version = "after";
-  let explorerWarmed = false;
-  function warmExplorer() {
-    if (explorerWarmed) return;
-    explorerWarmed = true;
-    explorer.querySelectorAll("img").forEach((img) => {
-      img.loading = "eager";
-      img.decode?.().catch(() => {
-        /* A native image load can still succeed. */
+  if (explorer) {
+    const tabs = [...document.querySelectorAll('.design-tabs [role="tab"]')];
+    const panels = [...document.querySelectorAll(".design-panel")];
+    const versionButtons = [
+      ...document.querySelectorAll(".comparison-controls button"),
+    ];
+    let selectedPanel = 0;
+    let version = "after";
+    let explorerWarmed = false;
+    function warmExplorer() {
+      if (explorerWarmed) return;
+      explorerWarmed = true;
+      explorer.querySelectorAll("img").forEach((img) => {
+        img.loading = "eager";
+        img.decode?.().catch(() => {
+          /* A native image load can still succeed. */
+        });
       });
-    });
-  }
-  if ("IntersectionObserver" in window) {
-    const warmObserver = new IntersectionObserver(
-      (entries) => {
-        if (!entries.some((entry) => entry.isIntersecting)) return;
-        warmExplorer();
-        warmObserver.disconnect();
-      },
-      { rootMargin: "700px 0px" },
-    );
-    warmObserver.observe(explorer);
-  } else warmExplorer();
-  function activate(index, focus = false) {
-    selectedPanel = index;
-    tabs.forEach((tab, i) => {
-      tab.setAttribute("aria-selected", String(i === index));
-      tab.tabIndex = i === index ? 0 : -1;
-    });
-    panels.forEach((panel, i) => {
-      panel.hidden = i !== index;
-      panel.classList.toggle("is-entering", i === index);
-      panel.querySelectorAll("figure").forEach((figure) => {
-        figure.hidden = figure.dataset.version !== version;
-      });
-    });
-    if (focus) tabs[index].focus({ preventScroll: true });
-    measure();
-  }
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => activate(index));
-    tab.addEventListener("keydown", (event) => {
-      let next;
-      if (event.key === "ArrowRight" || event.key === "ArrowDown")
-        next = (index + 1) % tabs.length;
-      else if (event.key === "ArrowLeft" || event.key === "ArrowUp")
-        next = (index - 1 + tabs.length) % tabs.length;
-      else if (event.key === "Home") next = 0;
-      else if (event.key === "End") next = tabs.length - 1;
-      else return;
-      event.preventDefault();
-      activate(next, true);
-    });
-  });
-  versionButtons.forEach((button) =>
-    button.addEventListener("click", () => {
-      warmExplorer();
-      version = button.dataset.version;
-      versionButtons.forEach((item) =>
-        item.setAttribute("aria-pressed", String(item === button)),
+    }
+    if ("IntersectionObserver" in window) {
+      const warmObserver = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          warmExplorer();
+          warmObserver.disconnect();
+        },
+        { rootMargin: "700px 0px" },
       );
-      activate(selectedPanel);
-    }),
-  );
-  explorer.classList.add("is-enhanced");
-  explorer.querySelector(".design-tabs").hidden = false;
-  explorer.querySelector(".comparison-controls").hidden = false;
-  activate(0);
+      warmObserver.observe(explorer);
+    } else warmExplorer();
+    function activate(index, focus = false) {
+      selectedPanel = index;
+      tabs.forEach((tab, i) => {
+        tab.setAttribute("aria-selected", String(i === index));
+        tab.tabIndex = i === index ? 0 : -1;
+      });
+      panels.forEach((panel, i) => {
+        panel.hidden = i !== index;
+        panel.classList.toggle("is-entering", i === index);
+        panel.querySelectorAll("figure").forEach((figure) => {
+          figure.hidden =
+            Boolean(figure.dataset.version) &&
+            figure.dataset.version !== version;
+        });
+      });
+      if (focus) tabs[index].focus({ preventScroll: true });
+      measure();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activate(index));
+      tab.addEventListener("keydown", (event) => {
+        let next;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown")
+          next = (index + 1) % tabs.length;
+        else if (event.key === "ArrowLeft" || event.key === "ArrowUp")
+          next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        activate(next, true);
+      });
+    });
+    versionButtons.forEach((button) =>
+      button.addEventListener("click", () => {
+        warmExplorer();
+        version = button.dataset.version;
+        versionButtons.forEach((item) =>
+          item.setAttribute("aria-pressed", String(item === button)),
+        );
+        activate(selectedPanel);
+      }),
+    );
+    explorer.classList.add("is-enhanced");
+    explorer.querySelector(".design-tabs").hidden = false;
+    const comparisons = explorer.querySelector(".comparison-controls");
+    if (comparisons) comparisons.hidden = false;
+    activate(0);
+  }
 
   function lockPage() {
     modalOpener = document.activeElement;

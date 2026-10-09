@@ -722,8 +722,9 @@
   margin: auto;
 }
 .image-view.is-actual-size .image-view-scroll img {
-  width: 2048px;
-  min-width: 2048px;
+  width: auto;
+  min-width: 0;
+  flex-shrink: 0;
   max-width: none;
   max-height: none;
   margin: 0;

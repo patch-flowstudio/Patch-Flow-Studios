@@ -2,7 +2,7 @@
 
 Local review route: `http://127.0.0.1:4173/s/mads-leao/wpp-open/`.
 
-This extends the Mads landing-page sample with one project. WPP Open now links here from the local selected-work list. The other three projects retain their original destinations. This branch is for design review before applying the case-study direction to other projects.
+The approved case-study design is published and now shares its CSS and interactions with the other three projects. WPP Open links here from selected work, and a related-work section connects to the other internal case studies.
 
 ## Content and assets
 

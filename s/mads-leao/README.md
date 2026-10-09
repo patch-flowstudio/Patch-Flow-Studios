@@ -1,6 +1,6 @@
 # Madalena Leão — landing-page sample
 
-Independent, buildless client concept at `/s/mads-leao/`. It is deliberately absent from the Patch & Flow homepage, gallery and sitemap. WPP Open has a local [case-study design sample](./wpp-open/README.md); the other project links open the existing Mads case studies. The sample has a `noindex` directive.
+Independent, buildless client portfolio at `/s/mads-leao/`. It is deliberately absent from the Patch & Flow homepage, gallery and sitemap. All four selected projects have internal case-study pages: [WPP Open](./wpp-open/), [Ethereal Nexus](./ethereal-nexus/), [Volkswagen One.Shop](./one-shop/) and [Volkswagen ft. Europcar](./europcar/). All pages retain a `noindex` directive.
 
 Local preview: `http://127.0.0.1:4173/s/mads-leao/`
 
@@ -42,7 +42,19 @@ This sample uses original HTML/CSS/JS to adapt those principles to Mads's identi
 
 Authored JavaScript syntax and formatting, local HTTP responses, relative assets, unique IDs, anchors and four original case-study links checked. Browser checks cover desktop, tablet and 390/320px layouts, image/font readiness, hover preview, menu open/close/Escape/focus, section navigation and pause/resume. No console warnings or errors observed. No physical-device benchmark or production Lighthouse/FPS result is claimed.
 
-Public sample route: `https://patch-flowstudio.github.io/Patch-Flow-Studios/s/mads-leao/`. It is not linked from the studio homepage.
+Public portfolio route: `https://patch-flowstudio.github.io/Patch-Flow-Studios/s/mads-leao/`. It is not linked from the studio homepage.
+
+## Complete case-study portfolio — 9 October 2026
+
+The approved WPP Open composition now extends to the remaining three projects. Original source text and imagery were reviewed on their respective pages at `madsleao.com`; the narratives are edited for the new composition without adding research counts, launch claims or measured business outcomes. One.Shop retains the original limit on public design details and uses the original Volkswagen cover and two workshop photographs.
+
+All case studies reuse `case.css` and `case.js`, with project compositions in `projects.css`. This retains the identity, menu, chapter progress, native scrolling, shared motion preference and fit/actual-size image dialogs. The gallery enhancement supports both WPP's comparisons and ordinary image tabs, and pages without galleries. Nexus has six interface views plus research and wireframe artifacts; Europcar has three exploration views; One.Shop has role, collaboration, process and reflection chapters. Every case links to the other three and back to selected work.
+
+New original PNG assets are converted to WebP at a maximum dimension of 2560px, preserving aspect ratios and alpha. They load lazily outside the cover, and gallery images warm near the viewport. No recreated product UI, new runtime dependency or external script is added.
+
+REA static analysis of three sanitized rendered HTML captures and the previously captured first-party script produced Evidence `ev_50fe3ee42ef20b8d2ff291845ac819e6e1b4b32693b58cb540ae93212ebf3541`: four source files, one JS file parsed, no parse failures or truncated scopes. Captures, original images, asset reports and QA screenshots are outside the repository in `remaining-projects-study/` beside the prior studies.
+
+Verification covers JavaScript syntax, formatting, IDs, ARIA references, exact image dimensions and 74 relative HTTP URLs across all five pages. Browser checks cover desktop and 390/320px layouts, all new gallery views, keyboard tab navigation, full-size diagrams, image Escape/focus/scroll restoration, menu routing, shared motion pause/resume and WPP comparison regression. No physical iPhone/Safari or performance benchmark is claimed.
 
 ## Client feedback — 9 October 2026
 

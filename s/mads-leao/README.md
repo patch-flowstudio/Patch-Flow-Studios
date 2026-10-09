@@ -1,6 +1,6 @@
 # Madalena Leão — landing-page sample
 
-Independent, buildless client concept at `/s/mads-leao/`. It is deliberately absent from the Patch & Flow homepage, gallery and sitemap. Project links open the existing Mads case studies; no project pages are recreated. The sample has a `noindex` directive.
+Independent, buildless client concept at `/s/mads-leao/`. It is deliberately absent from the Patch & Flow homepage, gallery and sitemap. WPP Open has a local [case-study design sample](./wpp-open/README.md); the other project links open the existing Mads case studies. The sample has a `noindex` directive.
 
 Local preview: `http://127.0.0.1:4173/s/mads-leao/`
 

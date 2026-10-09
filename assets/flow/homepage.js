@@ -24,6 +24,7 @@ try {
 let motion = !reduced.matches && storedMotion !== "off";
 let world = null;
 let frame = 0;
+let currentChapter = "";
 let evening = false;
 document
   .querySelector(".title-line:last-child")
@@ -89,24 +90,36 @@ if ("IntersectionObserver" in window) {
 
 function updateScroll() {
   frame = 0;
+  // Read together before any style writes, then update only a changed chapter.
   const y = scrollY;
   const total = root.scrollHeight - innerHeight;
-  progress.style.transform =
-    "scaleX(" + (total > 0 ? Math.min(y / total, 1) : 0) + ")";
-  header.classList.toggle("is-scrolled", y > hero.offsetHeight - 120);
+  const heroHeight = hero.offsetHeight;
   const contact = document.getElementById("contact").getBoundingClientRect();
   const work = document.getElementById("work").getBoundingClientRect();
-  if (contact.top < innerHeight * 0.5) {
-    indicator.innerHTML = 'Back to our world <span aria-hidden="true">↑</span>';
-    indicator.setAttribute("href", "#top");
-  } else if (work.top < innerHeight * 0.5 && work.bottom > innerHeight * 0.3) {
-    indicator.innerHTML =
-      'Your next little world <span aria-hidden="true">↗</span>';
-    indicator.setAttribute("href", "#contact");
-  } else {
-    indicator.innerHTML =
-      'Explore the possibilities <span aria-hidden="true">↘</span>';
-    indicator.setAttribute("href", "#work");
+  const chapter =
+    contact.top < innerHeight * 0.5
+      ? "contact"
+      : work.top < innerHeight * 0.5 && work.bottom > innerHeight * 0.3
+        ? "work"
+        : "home";
+  progress.style.transform =
+    "scaleX(" + (total > 0 ? Math.min(y / total, 1) : 0) + ")";
+  header.classList.toggle("is-scrolled", y > heroHeight - 120);
+  if (chapter !== currentChapter) {
+    const labels = {
+      contact: ['Back to our world <span aria-hidden="true">↑</span>', "#top"],
+      work: [
+        'Your next little world <span aria-hidden="true">↗</span>',
+        "#contact",
+      ],
+      home: [
+        'Explore the possibilities <span aria-hidden="true">↘</span>',
+        "#work",
+      ],
+    };
+    indicator.innerHTML = labels[chapter][0];
+    indicator.setAttribute("href", labels[chapter][1]);
+    currentChapter = chapter;
   }
 }
 function queueScroll() {

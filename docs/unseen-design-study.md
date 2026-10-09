@@ -93,51 +93,48 @@ reference's fluid solver or headline texture distortion.
 
 ## Original implementation
 
-The alternate page uses an original kinetic ribbon sculpture, folded paper forms,
-a reflective rippling floor, a blue/peach/green palette, new Patch & Flow copy,
-and the existing four studio concepts.
-No reference-site code, images, models, fonts, or audio are shipped.
+The alternate page uses the original Patch & Flow landscape as independently
+animated artwork layers, a quiet reflective gallery, the existing palette and
+four studio concepts. No reference-site code, images, models, fonts or audio ship.
+Three.js 0.186.1 and its MIT-licensed Reflector utility are vendored locally.
 
-The scene uses a locally vendored, version-pinned Three.js 0.186.1 and its MIT
-licensed Reflector utility. The renderer, procedural environment, ribbon
-geometry, wave shader, gallery shaders and camera choreography are authored for
-Patch & Flow. No reference-site source was used as implementation code.
+- The hero is a layered, 2.5D treatment of the selected original artwork. A clean
+  background plate sits behind a transparent satin ribbon on a 160 × 72 mesh.
+  Travelling waves and a damped local cursor lift deform the ribbon on the GPU;
+  its right attachment is fully pinned before the column, avoiding a gap as
+  the wave lifts. Procedural masks preserve the main architectural
+  occlusions. Its soft ground shadow follows the same displacement field.
+- The surrounding artwork responds with depth-weighted cursor parallax and
+  restrained fabric sway. Finite expanding ground ripples and the existing
+  terracotta headline wash preserve the approved pointer response. Portrait
+  framing retains the panorama at the foot of the hero and extends its sky.
+- The gallery's approved 32 × 40 surface shader is unchanged: continuous wobble,
+  progressive cylindrical depth roll, depth fading, local pointer displacement
+  and 2.5% internal hover zoom. The quiet floor retains its reflection shader.
+- Each business name, slogan, arrow and metadata row is now one real DOM group.
+  It follows the preview's lower edge with uniform scaling, then fades before
+  the sheet turns away. Vertical text squashing and separate metadata motion
+  have been removed. Links and image descriptions remain accessible.
+- Layout measurements are batched after resize, font loading or observed size
+  changes. Scroll frames position cached rectangles arithmetically. The chapter
+  indicator changes its content only when the chapter changes. The old hero's
+  CPU geometry deformation, environment bake and shadow-map rendering are gone.
+- Elapsed-time damping and native scrolling remain. Motion pause resets the
+  gallery lag and captions, freezes the artwork and disables surface deformation.
+  The frame loop stops behind opaque chapters and when the document is hidden.
+  Pixel ratio, reflection resolution and ripple history are bounded.
+- Category selectors and floating hover pills remain removed. The native dialog
+  menu, directional navigation curtain, reduced-motion preference and static
+  artwork fallback remain available.
 
-- One closed ribbon deforms within bounded dimensions, with a periodic seam.
-  Two distant folds stay outside its full depth range. The second ribbon,
-  intersecting plinths, ring, and floating folios have been removed.
-- A mirrored camera renders actual scene reflections; the custom floor shader
-  distorts reflections over time and retains a short wake after pointer movement.
-- Pointer movement orbits the camera, gently lifts nearby ribbon geometry, and
-  moves a restrained terracotta wash across the headline. Motion is damped using
-  elapsed time rather than a fixed per-frame interpolation factor.
-- The gallery uses a quiet reflective background. Project previews render on
-  32 × 40 subdivided surfaces and progressively roll into depth. Curvature stays
-  when scrolling stops; depth fading hides the distant tail. A continuous soft
-  wobble and a bounded local pointer response add elasticity. Hover zooms the
-  texture by 2.5%, without introducing a separate whole-card wobble.
-- Real DOM captions follow the curve's tangent; links and image descriptions
-  remain accessible. The native scroll gains a small bounded visual lag within
-  the gallery. Category selectors and floating hover labels have been removed.
-- The menu has a directional wipe and staggered links; project navigation has
-  an exit curtain. Ordinary scrolling remains native.
+This is an original adaptation of the observed mechanisms, rather than a copy
+of Unseen's models, fluid solver or postprocessing pipeline. The artwork layers
+provide depth and deformation within the chosen camera view; they are not a
+complete volumetric reconstruction of the pictured architecture.
 
-This is an original interpretation of the observed mechanisms. It does not
-recreate Unseen's GLB room, grass, butterfly simulation, fluid solver, postprocess
-pipeline, or spherical World gallery.
-
-There is no audio gate. System reduced-motion settings and a persisted page
-control pause time-based animation and disable the scroll-deformation shader.
-The renderer stops behind opaque chapters and while the tab is hidden. Pixel
-ratio and reflection resolution are bounded. A static artwork and normal image
-links remain when WebGL fails. Content and anchor navigation remain available
-without JavaScript. The menu uses a native dialog for focus containment and
-Escape-key dismissal.
-
-Existing business functionality is retained: concept-site links, service
-information, the keyboard-operable before/after comparison, pricing terms,
-payment details, FAQs, and the mailto project brief. Concept work remains
-clearly labelled as such.
+Existing business content and behavior remain: concepts, services, comparison,
+pricing and payment terms, FAQs and the mailto brief. The main branch and the
+concept routes under v4/work/ remain unchanged.
 
 ## Original artwork
 
@@ -173,43 +170,51 @@ under v4/work/ remain unchanged.
 
 ## Validation
 
-Checked in the browser at 1280 × 720, 768 × 1024, 390 × 844, and 320 × 700.
-No document-level horizontal overflow was present at those sizes.
+This refinement was checked at 1280 × 720, 768 × 1024, 390 × 844 and 320 × 700.
+There was no document-level horizontal overflow. The mobile gallery retained its
+single column; tablet and desktop retained two columns.
 
-- Menu opens, Escape dismisses it, and focus returns to the menu button.
-  Choosing a section closes the menu and moves focus to that section.
-- All four concepts remain visible without a category selector.
-- The ribbon update function was sampled at 482 time/pointer-presence states.
-  Its seam stayed closed (maximum error below 1e-14), and its minimum sampled
-  clearance above the floor was 0.396 scene units at desktop scale. Its full
-  depth range stayed more than 2.27 units in front of the conservative backdrop
-  boundary. The mobile sculpture is scaled to fit, rather than cropped across
-  the whole screen.
-- Pointer input produced ripple wakes, camera movement and the headline wash
-  in the browser. The gallery recording includes idle surface wobble followed
-  by progressive scrolling.
-- Comparison arrow keys and End update both the visual split and its accessible
-  value description.
-- FAQ disclosure, daylight/evening switching, and the motion pause control work.
-- Two paused scene captures were pixel-identical. Live scene captures changed
-  continuously; short hero and scrolling-gallery recordings were saved for review.
-- The refined gallery's paused captures were also pixel-identical, its render
-  count stayed fixed, and its captions and scroll lag reset. Re-enabling motion
-  no longer replays the entrance curtain.
-- Opening the bakery concept and returning with browser Back restored the
-  homepage without leaving the navigation curtain visible.
-- An empty brief focuses the required business field without opening email.
-  An invalid email address was also rejected by native form validation.
-  Sending an email was not tested; the page prepares a draft for the visitor's
-  email app, with a visible retry link.
-- WebGL scene and all four WebGL image surfaces initialized in the preview.
-- No browser console errors appeared. The preview's graphics driver emitted
-  a shader precision warning; rendering continued successfully.
-- Local assets, anchor targets, label associations and font paths passed a file
-  audit. Both authored JavaScript modules passed syntax and whitespace checks.
+- The layered artwork and all four gallery surfaces initialized without browser
+  console errors. Pointer input visibly changed the ribbon, surrounding scene
+  and headline. Short hero and gallery recordings were saved outside the repo.
+- Gallery recordings include continuous wobble, progressive scrolling through
+  the caption fade boundary, stopping and reversing direction. Captions move as
+  a group with uniform scale; lettering no longer flattens independently.
+- Pausing reset every caption transform and opacity and cleared the grid lag.
+  Two paused hero captures were pixel-identical, and the render counter stayed
+  at 3630 between them. Re-enabling motion preserved the completed entrance.
+- The mobile menu opened, choosing Work dismissed it and focused the section.
+- The bakery concept opened and browser Back returned to the homepage with the
+  navigation curtain cleared. The column attachment was checked across changing
+  pointer positions and a complete ribbon-wave cycle after pinning its geometry.
+- Both new artwork layers preserve the original 1672 × 941 dimensions; the
+  ribbon has a real alpha channel. Their combined WebP size is 204,432 bytes.
+- Authored JavaScript passed Node syntax checks. The HTML audit checked 42
+  unique IDs, all local asset paths and anchor targets, and four caption groups.
+- The existing comparison, brief validation, FAQs and concept navigation were
+  verified in the preceding pass; their behavior is retained by this refinement.
 
-The earlier raster landscape is now a WebGL fallback only. It weighs 134,970
-bytes. Reduced-motion behavior is implemented in CSS, the controller and the
-renderer; browser checks exercised the page control rather than changing the
-operating system's settings. Email delivery and a complete cross-browser or
-low-end device performance audit were not performed.
+The rendering and layout work is reduced, but this is not a quantified frame-rate
+benchmark or a complete cross-browser/low-end device performance audit. System
+reduced motion is handled by code; browser checks used the page's motion control.
+Email sending was not exercised.
+
+## Layered artwork assets and prompts
+
+Built-in ImageGen edit mode derived two non-destructive layers from
+assets/flow/landscape.webp. No reference-site artwork was used. The exact original
+artwork remains the no-WebGL fallback. Generated PNGs were inspected, then
+encoded as WebP with alpha preserved; the original was not overwritten.
+
+Saved project assets:
+
+- C:/Projetos/Patch&Flow/assets/flow/landscape-plate.webp
+- C:/Projetos/Patch&Flow/assets/flow/landscape-ribbon.webp
+
+Clean plate prompt (built-in ImageGen, opaque):
+
+> Use case: precise-object-edit. Asset type: clean background plate for a layered interactive website hero. Edit target: the attached original landscape. Remove ONLY the long copper / terracotta satin ribbon that snakes from the lower-left across the ground and into the architecture on the right, including all visible copper ribbon segments and its direct shadows. Inpaint those removed pixels with the same uninterrupted pale warm stone ground, distant scenery or architecture as appropriate. Preserve everything else exactly: original framing and camera, blue cloudy sky, large peach drape at left, flowers and stones, ivory curved buildings and pleated blue fabric at right, lighting, textures, warm palette, horizon. Do not shift, resize, redesign, add objects or crop any element. Keep the same wide 1672:941 aspect ratio and pixel-aligned composition; this plate will sit under the original ribbon. No text or watermark.
+
+Ribbon prompt (built-in ImageGen, transparent):
+
+> Use case: background-extraction. Asset type: pixel-aligned transparent foreground layer for an animated website. Edit target: attached original landscape. Extract ONLY the single copper / terracotta satin ribbon into an actual transparent RGBA image. Preserve the exact original ribbon silhouette, highlights, material, all visible segments, and exact original pixel positions within the FULL original 1672 by 941 wide canvas. The ribbon curves from x~50 y~650 over the left foreground into a low long band along the ground, then forms the low arch at center-right, and snakes up into the architecture at the right. Keep those ribbon pixels in precisely the same composition; all other pixels must be transparent. Remove all buildings, fabric drapes, flowers, rocks, ground and sky; remove ground cast shadows. Do not crop, center, enlarge, redraw, simplify, invent segments or move the ribbon. Preserve transparent holes around the ribbon and transparent occlusions where foreground plants or buildings hide it. No background color, no checkerboard, no text or watermark. Must keep the full original canvas so compositing this layer over the matching background plate reproduces the input.

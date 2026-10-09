@@ -593,9 +593,11 @@ html:not(.webgl-ready) .work {
   gap: 18px;
   padding: 18px 0 17px;
 }
-.project-caption,
-.project-meta {
-  transform-origin: center;
+.project-details {
+  transform-origin: center top;
+}
+.webgl-ready .project-details {
+  will-change: transform, opacity;
 }
 .project-caption h3 {
   font-size: 1.35rem;

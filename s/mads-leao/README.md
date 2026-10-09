@@ -4,7 +4,7 @@ Independent, buildless client concept at `/s/mads-leao/`. It is deliberately abs
 
 Local preview: `http://127.0.0.1:4173/s/mads-leao/`
 
-From the repository root, run `python -m http.server 4173 --bind 127.0.0.1`. All asset references are relative, so the same directory works under the repository's GitHub Pages base path. This task has not published it.
+From the repository root, run `python -m http.server 4173 --bind 127.0.0.1`. All asset references are relative, so the same directory works under the repository's GitHub Pages base path.
 
 ## Identity and content
 
@@ -42,4 +42,4 @@ This sample uses original HTML/CSS/JS to adapt those principles to Mads's identi
 
 Authored JavaScript syntax and formatting, local HTTP responses, relative assets, unique IDs, anchors and four original case-study links checked. Browser checks cover desktop, tablet and 390/320px layouts, image/font readiness, hover preview, menu open/close/Escape/focus, section navigation and pause/resume. No console warnings or errors observed. No physical-device benchmark or production Lighthouse/FPS result is claimed.
 
-Before publication, the user should review the local concept. Publishing would expose this standalone sample at `https://patch-flowstudio.github.io/Patch-Flow-Studios/s/mads-leao/` without adding it to the studio homepage.
+Public sample route: `https://patch-flowstudio.github.io/Patch-Flow-Studios/s/mads-leao/`. It is not linked from the studio homepage.

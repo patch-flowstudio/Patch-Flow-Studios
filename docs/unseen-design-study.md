@@ -131,6 +131,11 @@ Three.js 0.186.1 and its MIT-licensed Reflector utility are vendored locally.
 - Category selectors and floating hover pills remain removed. The native dialog
   menu, directional navigation curtain, reduced-motion preference and static
   artwork fallback remain available.
+- The before-and-after comparison is limited to 1100 pixels with a taller,
+  softly rounded frame and capped headline sizes. Its original/revised layouts
+  share the same content width. The illustrative old-site copy is compact enough
+  to fit on narrow screens. Dragging and keyboard control remain native; the
+  outer focus ring appears for keyboard focus.
 
 This is an original adaptation of the observed mechanisms, rather than a copy
 of Unseen's models, fluid solver or postprocessing pipeline. The artwork layers
@@ -204,6 +209,9 @@ single column; tablet and desktop retained two columns.
   unique IDs, all local asset paths and anchor targets, and four caption groups.
 - The existing comparison, brief validation, FAQs and concept navigation were
   verified in the preceding pass; their behavior is retained by this refinement.
+- The comparison cleanup was checked at 2084 × 1000 and 320 × 800, including
+  both slider endpoints and arrow-key increments. Neither mock site overflowed
+  the 320-pixel frame vertically, and there was no page-level horizontal overflow.
 
 The rendering and layout work is reduced, but this is not a quantified frame-rate
 benchmark or a complete cross-browser/low-end device performance audit. System

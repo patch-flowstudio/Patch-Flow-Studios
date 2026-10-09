@@ -705,34 +705,47 @@ details[open] > p {
   background: #ebe6dc;
   padding-top: 85px;
 }
+.comparison-heading,
+.comparison,
+.comparison-section .five-second {
+  max-width: 1100px;
+  margin-inline: auto;
+}
 .comparison-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 35px;
-  margin-bottom: 45px;
+  margin-bottom: 34px;
 }
 .comparison-heading .eyebrow {
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+}
+.comparison-heading .section-title {
+  font-size: clamp(2.65rem, 4.5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
 }
 .comparison-heading > p {
-  font-size: 1rem;
+  max-width: 260px;
+  font-size: 0.9375rem;
   color: var(--muted);
   padding-bottom: 5px;
 }
 .comparison-frame {
   --split: 50%;
-  height: 450px;
+  height: clamp(420px, 40vw, 480px);
   position: relative;
   isolation: isolate;
   overflow: hidden;
   border: 1px solid var(--line);
+  border-radius: 10px;
 }
 .comparison-before,
 .comparison-after {
   position: absolute;
   inset: 0;
-  padding: 70px 55px 45px;
+  padding: 74px 44px 36px;
 }
 .comparison-before {
   background: #dadade;
@@ -757,15 +770,15 @@ details[open] > p {
 }
 .old-site {
   font:
-    15px/1.5 Arial,
+    14px/1.5 Arial,
     sans-serif;
   color: #27275e;
-  max-width: 850px;
+  max-width: 920px;
   margin: auto;
 }
 .old-site h3 {
   font:
-    bold 27px/1.2 Georgia,
+    bold 24px/1.2 Georgia,
     serif;
   text-align: center;
   color: #112776;
@@ -798,20 +811,24 @@ details[open] > p {
 }
 .new-site {
   height: 100%;
+  max-width: 920px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .new-site h3 {
-  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
-  letter-spacing: -0.05em;
-  line-height: 1.05;
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  letter-spacing: -0.035em;
+  line-height: 1.12;
   font-weight: 400;
 }
 .new-site h3 i {
   color: #617852;
   display: inline-block;
   padding-bottom: 0.07em;
+  font-size: 1.1em;
+  letter-spacing: -0.035em;
 }
 .new-site > div {
   display: flex;
@@ -843,8 +860,8 @@ details[open] > p {
   transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   background: var(--paper);
   border: 1px solid var(--ink);
   border-radius: 50%;
@@ -859,7 +876,7 @@ details[open] > p {
   opacity: 0;
   cursor: ew-resize;
 }
-.comparison-frame:focus-within {
+.comparison-frame:has(#comparison-range:focus-visible) {
   outline: 2px solid #7b4a30;
   outline-offset: 5px;
 }
@@ -1654,14 +1671,14 @@ html:not(.webgl-ready) .contact {
     margin-bottom: 30px;
   }
   .comparison-heading .eyebrow {
-    margin-bottom: 35px;
+    margin-bottom: 26px;
   }
   .comparison-heading > p {
     font-size: 0.9375rem;
     margin-top: 25px;
   }
   .comparison-frame {
-    height: 375px;
+    height: 400px;
   }
   .comparison-before,
   .comparison-after {
@@ -1677,7 +1694,8 @@ html:not(.webgl-ready) .contact {
     right: 16px;
   }
   .old-site {
-    font-size: 11px;
+    font-size: 10px;
+    line-height: 1.4;
   }
   .old-site h3 {
     font-size: 19px;
@@ -1702,7 +1720,7 @@ html:not(.webgl-ready) .contact {
     max-width: 200px;
   }
   .new-site h3 {
-    font-size: 2.2rem;
+    font-size: clamp(1.9rem, 8.7vw, 2.2rem);
   }
   .new-site > div {
     flex-direction: column;

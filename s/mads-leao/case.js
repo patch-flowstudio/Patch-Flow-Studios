@@ -79,7 +79,7 @@
     if (motion && heroVisible && !menu.open && !imageView.open) {
       pointerX += (targetX - pointerX) * (1 - Math.exp(-4 * dt));
       star.style.transform = `rotate(${(Math.sin(elapsed * 0.3) * 8 + pointerX * 18).toFixed(2)}deg)`;
-      heroImage.style.transform = `translate3d(0,${clamp(scroll * 0.025, 0, 22).toFixed(2)}px,0)`;
+      if (heroImage) heroImage.style.transform = `translate3d(0,${clamp(scroll * 0.025, 0, 22).toFixed(2)}px,0)`;
       wake();
     } else previousTime = 0;
   }
@@ -96,7 +96,7 @@
     toggle.disabled = reduced.matches;
     if (!motion) {
       star.style.transform = "";
-      heroImage.style.transform = "";
+      if (heroImage) heroImage.style.transform = "";
       reveals.forEach((el) => el.classList.add("is-visible"));
     }
     wake();
